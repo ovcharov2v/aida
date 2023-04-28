@@ -1,0 +1,6 @@
+mixin svg(name, isEmbedded = false)
+	svg&attributes(attributes)
+		if isEmbedded == false
+			use(xlink:href=`${baseDir}images/svg-sprite/static/sprite.svg#${name}`)
+		else
+			use(xlink:href=`#${name}`)

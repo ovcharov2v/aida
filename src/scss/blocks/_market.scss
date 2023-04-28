@@ -1,0 +1,23 @@
+.market {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px;
+	background-color: $color-white;
+	border: 1px solid rgba(#BEBEBE, .3);
+
+	&__img-box {
+		position: relative;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		filter: grayscale(1);
+		transition: filter $transition-default;
+
+		&:hover {
+			filter: grayscale(0);
+		}
+	}
+}

@@ -1,0 +1,4 @@
+mixin market(name, link, alt = "")
+	a.market(href=link, target="_blank", rel="noreferrer nofollow")&attributes(attributes)
+		.market__img-box
+			+picture("section-markets/"+name, "market__img", "png", alt)

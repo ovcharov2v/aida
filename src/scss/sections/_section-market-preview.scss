@@ -1,0 +1,42 @@
+.section-market-preview {
+	padding-top: 155px;
+	padding-bottom: 155px;
+	background: linear-gradient(359.8deg, #F8F8F8 0.17%, rgba(247, 247, 247, 0.6) 99.82%);
+
+	&__grid {
+		display: grid;
+		grid-template: auto / 363px auto;
+		grid-column-gap: 30px;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__col {
+	}
+
+	&__title {
+		margin-bottom: 28px;
+	}
+
+	&__text {
+		margin-bottom: 32px;
+	}
+
+	&__link {
+		width: 100%;
+		max-width: 240px;
+		font-size: 22px;
+	}
+
+	&__markets-grid {
+		display: grid;
+		grid-template-columns: repeat(3, minmax(308px, 1fr));
+		grid-auto-rows: 180px;
+		grid-gap: 14px 14px;
+	}
+
+	&__market-link {
+		//width: 100%;
+		//max-width: 308px;
+	}
+}

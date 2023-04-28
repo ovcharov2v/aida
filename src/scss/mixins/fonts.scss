@@ -1,0 +1,205 @@
+@use 'media';
+
+$font-calluna: "calluna", "Times New Roman", serif;
+$font-alt-gothic: "alternate-gothic-no-3-d", "Trebuchet MS", Arial, Helvetica, sans-serif;
+$font-ivymode: "ivymode", "Times New Roman", serif;
+
+@mixin headline-xl {
+  font-family: $font-ivymode;
+  letter-spacing: 0.04em;
+  font-weight: bold;
+
+  @include media.desktoptablet {
+    font-size: 80px;
+    line-height: 95px;
+  }
+  @include media.mobile {
+    font-size: 60px;
+    line-height: 80px;
+  }
+}
+
+@mixin headline-1 {
+  font-family: $font-ivymode;
+  letter-spacing: 0.03em;
+  font-weight: bold;
+
+  @include media.desktoptablet {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  @include media.mobile {
+    font-size: 30px;
+    line-height: 35px;
+  }
+}
+
+@mixin headline-2 {
+  @include headline-2-desktop;
+  @include headline-2-tablet;
+  @include headline-2-mobile;
+}
+
+@mixin headline-3 {
+  @include headline-3-any;
+}
+
+@mixin headline-4 {
+  @include headline-4-desktop;
+  @include headline-4-tablet;
+  @include headline-4-mobile;
+}
+
+@mixin headline-5 {
+  font-family: $font-alt-gothic;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: normal;
+
+  @include media.desktoptablet {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  @include media.mobile {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@mixin eyebrow {
+  @include headline-5;
+}
+
+@mixin body {
+  font-family: $font-calluna;
+  letter-spacing: 0;
+
+  @include media.desktoptablet {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  @include media.mobile {
+    font-size: 16px;
+    line-height: 25px;
+  }
+}
+
+@mixin caption {
+  font-family: $font-calluna;
+  letter-spacing: 0;
+
+  @include media.desktoptablet {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  @include media.mobile {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@mixin special-truity-menu {
+  font-family: $font-alt-gothic;
+  font-weight: normal;
+
+  @include media.desktop {
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  @include media.tabletmobile {
+    font-size: 26px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+  }
+}
+
+// Additional mixins for rare cases where we need to have different
+// headers h2-h3-h4 in different resolutions.
+
+@mixin headline-2-desktop {
+  @include media.desktop {
+    font-family: $font-ivymode;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+  }
+}
+
+@mixin headline-2-tablet {
+  @include media.tablet {
+    font-family: $font-ivymode;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+  }
+}
+
+@mixin headline-2-mobile {
+  @include media.mobile {
+    font-family: $font-ivymode;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.025em;
+  }
+}
+
+@mixin headline-3-any {
+  font-family: $font-alt-gothic;
+  letter-spacing: 0.05em;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 25px;
+}
+
+@mixin headline-3-desktop {
+  @include media.desktop {
+    @include headline-3-any;
+  }
+}
+
+@mixin headline-3-tablet {
+  @include media.tablet {
+    @include headline-3-any;
+  }
+}
+
+@mixin headline-3-mobile {
+  @include media.mobile {
+    @include headline-3-any;
+  }
+}
+
+@mixin headline-4-desktop {
+  @include media.desktop {
+    font-family: $font-alt-gothic;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
+  }
+}
+
+@mixin headline-4-tablet {
+  @include media.tablet {
+    font-family: $font-alt-gothic;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
+  }
+}
+
+@mixin headline-4-mobile {
+  @include media.mobile {
+    font-family: $font-alt-gothic;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 20px;
+  }
+}

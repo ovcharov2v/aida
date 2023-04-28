@@ -1,0 +1,22 @@
+.hidden {
+	display: none;
+	width: 0;
+	height: 0;
+	overflow: hidden;
+}
+
+.overflow-hidden {
+	overflow: hidden !important;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.text-red {
+	color: $color-red;
+}
+
+.text-black {
+	color: $color-black;
+}

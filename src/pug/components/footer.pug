@@ -1,0 +1,28 @@
+footer.footer
+	.container.footer__container
+		.footer__contacts
+			.footer__contacts-col
+				p.footer__contacts-title Остались Вопросы?
+				a.button.button--white.footer__contacts-mail-link(href="#") Напишите нам
+			.footer__contacts-col
+				ul.socials.footer__socilals
+					li.socials__elem
+						a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+							+svg("social-vk", true)(class="socials__link-icon")
+					li.socials__elem
+						a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+							+svg("social-dzen", true)(class="socials__link-icon")
+			.footer__contacts-col
+				p.footer__contacts-title Подпишитесь на рассылку
+				form.footer__form(action="#")
+					input.footer__form-input(type="email", placeholder="Email", required)
+					button.button.button--gold.footer__form-submit(type="submit") Отправить
+		.footer__copyright
+			a.footer__copyright-link(href="#") Политика
+			.footer__copyright-text-box
+				p.footer__copyright-text © 2023 AIDA
+				p.footer__copyright-text © 2023 Разработка сайта - Dreamheads
+	video.footer__video-bg(preload='true', autoplay, loop, muted, poster="images/common/footer-video-cover.jpg")
+		source(src='videos/footer.mp4', type='video/mp4')
+		//-source(src='videos/footer.ogv', type='video/ogv')
+		//-source(src='videos/footer.webm', type='video/webm')

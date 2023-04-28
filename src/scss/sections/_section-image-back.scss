@@ -1,0 +1,41 @@
+.section-image-back {
+	position: relative;
+	max-height: 883px;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	overflow: hidden;
+
+	&::before {
+		display: block;
+		padding-top: 55%;
+		content: "";
+	}
+
+	&::after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(#000, .35);
+		content: "";
+	}
+
+	&--bg1 {
+		@include background-image("../images/section-image-back/bg1");
+	}
+
+	&--bg2 {
+		@include background-image("../images/section-image-back/bg2");
+	}
+
+	&--bg3 {
+		@include background-image("../images/section-image-back/bg3");
+	}
+
+	&--bg5 {
+		@include background-image("../images/section-image-back/bg5");
+	}
+}

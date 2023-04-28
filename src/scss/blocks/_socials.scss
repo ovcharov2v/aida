@@ -1,0 +1,30 @@
+.socials {
+	display: flex;
+	column-gap: 14px;
+
+	&__elem {
+		display: inline-block;
+	}
+
+	&__link {
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 72px;
+		height: 72px;
+		background-color: $color-white;
+		border-radius: 50%;
+		color: #303030;
+		transition: background-color $transition-default;
+
+		&:hover {
+			background-color: #E9E9E9;
+		}
+	}
+
+	&__link-icon {
+		width: 46px;
+		height: 46px;
+	}
+}

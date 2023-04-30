@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="./css/main.css?v=1682862355089">
+	</head>
+	<body>
+		<!-- Header-->
+		<header class="header">
+			<div class="container header__container"><a class="header__logo-link" href="index.html">
+					<picture>
+						<source srcset="images/common/logo@1x.webp, images/common/logo@2x.webp 2x" type="image/webp"/><img class="nav-block__logo" src="images/common/logo@1x.png" srcset="images/common/logo@2x.png 2x" alt=""/>
+					</picture></a>
+				<nav class="header__nav">
+					<ul class="header__nav-list">
+						<li class="header__nav-elem"><a class="header__nav-link" href="#">История</a></li>
+						<li class="header__nav-elem"><a class="header__nav-link" href="#">Технология</a></li>
+						<li class="header__nav-elem"><a class="header__nav-link" href="#">Продукция</a></li>
+						<li class="header__nav-elem"><a class="header__nav-link" href="#">Рецепты</a></li>
+						<li class="header__nav-elem"><a class="header__nav-link" href="#">Новости</a></li>
+						<li class="header__nav-elem"><a class="header__nav-link" href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<ul class="header__lang-list">
+					<li class="header__lang"><a class="header__lang-link header__lang-link--active" href="#">Ru</a></li>
+					<li class="header__lang"><a class="header__lang-link" href="#">En</a></li>
+				</ul><a class="button button--red button--nav-block header__button" href="#">Купить</a>
+			</div>
+		</header>
+		<div class="loader">
+			<picture>
+				<source srcset="images/common/logo-big@1x.webp, images/common/logo-big@2x.webp 2x" type="image/webp"/><img class="loader__logo" src="images/common/logo-big@1x.png" srcset="images/common/logo-big@2x.png 2x" alt=""/>
+			</picture>
+			<div class="loader__white-block"></div>
+		</div>
+		<!-- Section Video back-->
+		<section class="section-hero-main">
+			<div class="container section-hero-main__container">
+				<h1 class="h1 text-uppercase section-hero-main__title"><span class="section-hero-main__title-block">Паста</span><br><span class="section-hero-main__title-block">по</span>
+					<span class="section-hero-main__title-block">всем</span><br><span class="section-hero-main__title-block">правилам</span>
+				</h1>
+				<div class="section-hero-main__button-block">
+					<button class="section-hero-main__next-btn" aria-label="Scroll next">
+						<svg class="section-hero-main__next-icon">
+							<use xlink:href="./images/svg-sprite/static/sprite.svg#arrow-down"></use>
+						</svg>
+					</button><a class="button button--white section-hero-main__link-btn" href="#">Насладись вкусом</a>
+				</div>
+			</div>
+			<video class="section-hero-main__video-bg" preload="true" autoplay loop muted poster="images/section-hero-main/video-cover.jpg">
+				<source src="videos/intro.mp4" type="video/mp4">
+			</video>
+		</section>
+		<!-- Section History-->
+		<section class="section-history">
+			<div class="container">
+				<div class="section-history__content-box">
+					<h2 class="h2 text-red section-history__title">История</h2>
+					<p class="section-history__text">История бренда пасты из твердых сортов пшеницы AIDA насчитывает более семи лет. Мы производим  нашу продукцию в поистине уникальном месте – Оренбургской области. Именно здесь раскинулись самые широкие поля пшеницы твердых сортов, а климат Оренбургской области сопоставим с климатом Италии по количеству солнечных дней в году.</p><a class="button button--gold button--uppercase section-history__link" href="#">Узнать больше</a>
+				</div>
+				<div class="section-history__gallery">
+					<div class="section-history__img-box section-history__img-box--n1">
+						<picture>
+							<source srcset="images/section-history/history1@1x.webp, images/section-history/history1@2x.webp 2x" type="image/webp"/><img class="section-history__img" src="images/section-history/history1@1x.jpg" srcset="images/section-history/history1@2x.jpg 2x" alt=""/>
+						</picture>
+					</div>
+					<div class="section-history__img-box section-history__img-box--n2">
+						<picture>
+							<source srcset="images/section-history/history2@1x.webp, images/section-history/history2@2x.webp 2x" type="image/webp"/><img class="section-history__img" src="images/section-history/history2@1x.jpg" srcset="images/section-history/history2@2x.jpg 2x" alt=""/>
+						</picture>
+					</div>
+					<div class="section-history__img-box section-history__img-box--n3">
+						<picture>
+							<source srcset="images/section-history/history3@1x.webp, images/section-history/history3@2x.webp 2x" type="image/webp"/><img class="section-history__img" src="images/section-history/history3@1x.jpg" srcset="images/section-history/history3@2x.jpg 2x" alt=""/>
+						</picture>
+					</div>
+					<div class="section-history__gallery-back"></div>
+				</div>
+			</div>
+		</section>
+		<!-- Section Image back-->
+		<div class="section-image-back section-image-back--bg1"></div>
+		<!-- Section Collection-->
+		<section class="section-collection">
+			<div class="container">
+				<div class="section-collection__grid">
+					<div class="section-collection__text-col">
+						<div class="section-collection__text-box">
+							<h2 class="h2 text-red section-collection__title">Разнообразие<br>форм</h2>
+							<p class="section-collection__text">Откройте мир вкусов с нашей коллекцией макарон разных форм и размеров. Выберите свои любимые и создавайте вкусные блюда, которые будут удивлять ваших близких и друзей!</p><a class="button button--gold button--uppercase section-collection__link" href="#">Смотреть все</a>
+						</div>
+					</div>
+					<div class="section-collection__gallery-grid">
+						<div class="section-collection__gallery-col section-collection__gallery-col--n1"><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product1@1x.webp, images/section-collection/product1@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product1@1x.png" srcset="images/section-collection/product1@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product2@1x.webp, images/section-collection/product2@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product2@1x.png" srcset="images/section-collection/product2@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product3@1x.webp, images/section-collection/product3@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product3@1x.png" srcset="images/section-collection/product3@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product4@1x.webp, images/section-collection/product4@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product4@1x.png" srcset="images/section-collection/product4@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product5@1x.webp, images/section-collection/product5@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product5@1x.png" srcset="images/section-collection/product5@2x.png 2x" alt=""/>
+								</picture></a></div>
+						<div class="section-collection__gallery-col section-collection__gallery-col--n2"><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product6@1x.webp, images/section-collection/product6@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product6@1x.png" srcset="images/section-collection/product6@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product7@1x.webp, images/section-collection/product7@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product7@1x.png" srcset="images/section-collection/product7@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product8@1x.webp, images/section-collection/product8@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product8@1x.png" srcset="images/section-collection/product8@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product9@1x.webp, images/section-collection/product9@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product9@1x.png" srcset="images/section-collection/product9@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product10@1x.webp, images/section-collection/product10@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product10@1x.png" srcset="images/section-collection/product10@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product11@1x.webp, images/section-collection/product11@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product11@1x.png" srcset="images/section-collection/product11@2x.png 2x" alt=""/>
+								</picture></a></div>
+						<div class="section-collection__gallery-col section-collection__gallery-col--n3"><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product12@1x.webp, images/section-collection/product12@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product12@1x.png" srcset="images/section-collection/product12@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product13@1x.webp, images/section-collection/product13@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product13@1x.png" srcset="images/section-collection/product13@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product14@1x.webp, images/section-collection/product14@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product14@1x.png" srcset="images/section-collection/product14@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product15@1x.webp, images/section-collection/product15@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product15@1x.png" srcset="images/section-collection/product15@2x.png 2x" alt=""/>
+								</picture></a><a class="section-collection__product-link" href="product.html">
+								<picture>
+									<source srcset="images/section-collection/product16@1x.webp, images/section-collection/product16@2x.webp 2x" type="image/webp"/><img class="section-collection__product-img" src="images/section-collection/product16@1x.png" srcset="images/section-collection/product16@2x.png 2x" alt=""/>
+								</picture></a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section Image back-->
+		<div class="section-image-back section-image-back--bg2"></div>
+		<!-- Section We produce-->
+		<section class="section-we-produce container">
+			<div class="section-we-produce__grid">
+				<div class="section-we-produce__video-box">
+					<video class="section-we-produce__video" preload="true" autoplay loop muted poster="images/section-we-produce/video-cover.jpg">
+						<source src="videos/field.mp4" type="video/mp4">
+					</video>
+				</div>
+				<div class="section-we-produce__content">
+					<h2 class="h2 text-red section-we-produce__title"><span class="section-we-produce__title-part section-we-produce__title-part--n1">От колоска до вашего стола:</span><br><span class="section-we-produce__title-part section-we-produce__title-part--n2">как мы производим пасту AIDA</span></h2>
+					<p class="section-we-produce__text">Паста AIDA производится в России на Орской макаронной фабрике на современном оборудовании от итальянских и швейцарских производителей. Благодаря традиционной итальянской технологии и пшенице непревзойденного качества паста AIDA получается бесподобно вкусной.</p><a class="button button--gold button--uppercase section-we-produce__link" href="#">О технологии</a>
+				</div>
+			</div>
+			<div class="section-we-produce__row">
+				<picture>
+					<source srcset="images/section-we-produce/img2@1x.webp, images/section-we-produce/img2@2x.webp 2x" type="image/webp"/><img class="section-we-produce__img section-we-produce__img--n2" src="images/section-we-produce/img2@1x.jpg" srcset="images/section-we-produce/img2@2x.jpg 2x" alt=""/>
+				</picture>
+			</div>
+		</section>
+		<!-- Section Image back-->
+		<div class="section-image-back-anim section-image-back-anim--bg1">
+			<div class="section-image-back-anim__box"></div>
+		</div>
+		<!-- Section Recipes preview-->
+		<section class="section-recipes-preview container">
+			<div class="section-recipes-preview__grid">
+				<div class="section-recipes-preview__text-col">
+					<h2 class="h2 text-red section-recipes-preview__title">Рецепты</h2>
+					<p class="section-recipes-preview__text">Экспериментируйте с разными формами пасты, соусами и специями. Еще больше интересных рецептов с пастой AIDA вы найдете в нашей коллекции.</p><a class="button button--gold button--uppercase section-recipes-preview__link" href="#">Ко всем рецептам</a>
+				</div>
+				<div class="section-recipes-preview__col">
+					<div class="section-recipes-preview__recipes-cols">
+						<div class="section-recipes-preview__recipe-col section-recipes-preview__recipe-col--n1"><a class="section-recipes-preview__recipe" href="#">
+								<div class="section-recipes-preview__video-box">
+									<video class="section-recipes-preview__video" preload="true" autoplay loop muted poster="images/section-recipes-preview/video-cover.jpg">
+										<source src="videos/pasta.mp4" type="video/mp4">
+									</video>
+								</div>
+								<p class="section-recipes-preview__recipe-title">Цельнозерновая паста с тунцом</p></a><a class="section-recipes-preview__recipe" href="#">
+								<picture>
+									<source srcset="images/section-recipes-preview/recipe2@1x.webp, images/section-recipes-preview/recipe2@2x.webp 2x" type="image/webp"/><img class="section-recipes-preview__recipe-img" src="images/section-recipes-preview/recipe2@1x.jpg" srcset="images/section-recipes-preview/recipe2@2x.jpg 2x" alt=""/>
+								</picture>
+								<p class="section-recipes-preview__recipe-title">Спагетти Болоньезе</p></a></div>
+						<div class="section-recipes-preview__recipe-col section-recipes-preview__recipe-col--n2"><a class="section-recipes-preview__recipe" href="#">
+								<picture>
+									<source srcset="images/section-recipes-preview/recipe3@1x.webp, images/section-recipes-preview/recipe3@2x.webp 2x" type="image/webp"/><img class="section-recipes-preview__recipe-img" src="images/section-recipes-preview/recipe3@1x.jpg" srcset="images/section-recipes-preview/recipe3@2x.jpg 2x" alt=""/>
+								</picture>
+								<p class="section-recipes-preview__recipe-title">Цельнозерновая паста с цукини</p></a><a class="section-recipes-preview__recipe" href="#">
+								<picture>
+									<source srcset="images/section-recipes-preview/recipe4@1x.webp, images/section-recipes-preview/recipe4@2x.webp 2x" type="image/webp"/><img class="section-recipes-preview__recipe-img" src="images/section-recipes-preview/recipe4@1x.jpg" srcset="images/section-recipes-preview/recipe4@2x.jpg 2x" alt=""/>
+								</picture>
+								<p class="section-recipes-preview__recipe-title">Мясное рагу</p></a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section Image back-->
+		<div class="section-image-back section-image-back--bg3"></div>
+		<!-- Section News preview-->
+		<section class="section-news-preview container">
+			<div class="section-news-preview__grid">
+				<div class="section-news-preview__text-col">
+					<h2 class="h2 text-red section-news-preview__title">Новости</h2><a class="button button--gold button--uppercase section-news-preview__link" href="#">Ко всем рецептам</a>
+				</div>
+				<div class="section-news-preview__col">
+					<div class="section-news-preview__news-cols">
+						<div class="section-news-preview__news-col section-news-preview__news-col--n1"><a class="section-news-preview__news" href="#">
+								<picture>
+									<source srcset="images/section-news-preview/news1@1x.webp, images/section-news-preview/news1@2x.webp 2x" type="image/webp"/><img class="section-news-preview__news-img" src="images/section-news-preview/news1@1x.jpg" srcset="images/section-news-preview/news1@2x.jpg 2x" alt=""/>
+								</picture>
+								<p class="section-news-preview__news-title">4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»</p></a><a class="section-news-preview__news" href="#">
+								<picture>
+									<source srcset="images/section-news-preview/news2@1x.webp, images/section-news-preview/news2@2x.webp 2x" type="image/webp"/><img class="section-news-preview__news-img" src="images/section-news-preview/news2@1x.jpg" srcset="images/section-news-preview/news2@2x.jpg 2x" alt=""/>
+								</picture>
+								<p class="section-news-preview__news-title">Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи</p></a></div>
+						<div class="section-news-preview__news-col section-news-preview__news-col--n2"><a class="section-news-preview__news" href="#">
+								<picture>
+									<source srcset="images/section-news-preview/news3@1x.webp, images/section-news-preview/news3@2x.webp 2x" type="image/webp"/><img class="section-news-preview__news-img" src="images/section-news-preview/news3@1x.jpg" srcset="images/section-news-preview/news3@2x.jpg 2x" alt=""/>
+								</picture>
+								<p class="section-news-preview__news-title">Покупаем онлайн: теперь наша продукция доступна к покупкена самых разных онлайн-площадках</p></a><a class="section-news-preview__news" href="#">
+								<picture>
+									<source srcset="images/section-news-preview/news4@1x.webp, images/section-news-preview/news4@2x.webp 2x" type="image/webp"/><img class="section-news-preview__news-img" src="images/section-news-preview/news4@1x.jpg" srcset="images/section-news-preview/news4@2x.jpg 2x" alt=""/>
+								</picture>
+								<p class="section-news-preview__news-title">Встречайте обновление! Мы подарили новое дыхание упаковке пасты AIDA</p></a></div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Section Image back-->
+		<div class="section-image-back section-image-back--bg5"></div>
+		<!-- Section Market preview-->
+		<section class="section-market-preview">
+			<div class="container">
+				<div class="section-market-preview__grid">
+					<div class="section-market-preview__col">
+						<h2 class="h2 text-red section-market-preview__title">Мы уже здесь</h2>
+						<p class="section-market-preview__text">Пасту AIDA можно найти в магазине рядом с вами или заказать онлайн.</p><a class="button button--gold button--uppercase section-market-preview__link" href="#">Выбрать магазин</a>
+					</div>
+					<div class="section-market-preview__col section-market-preview__markets-grid"><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/ozon@1x.webp, images/section-markets/ozon@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/ozon@1x.png" srcset="images/section-markets/ozon@2x.png 2x" alt=""/>
+								</picture>
+							</div></a><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/utkonos@1x.webp, images/section-markets/utkonos@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/utkonos@1x.png" srcset="images/section-markets/utkonos@2x.png 2x" alt=""/>
+								</picture>
+							</div></a><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/detmir@1x.webp, images/section-markets/detmir@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/detmir@1x.png" srcset="images/section-markets/detmir@2x.png 2x" alt=""/>
+								</picture>
+							</div></a><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/wildberries@1x.webp, images/section-markets/wildberries@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/wildberries@1x.png" srcset="images/section-markets/wildberries@2x.png 2x" alt=""/>
+								</picture>
+							</div></a><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/samokat@1x.webp, images/section-markets/samokat@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/samokat@1x.png" srcset="images/section-markets/samokat@2x.png 2x" alt=""/>
+								</picture>
+							</div></a><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/ya-market@1x.webp, images/section-markets/ya-market@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/ya-market@1x.png" srcset="images/section-markets/ya-market@2x.png 2x" alt=""/>
+								</picture>
+							</div></a><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/kazan-express@1x.webp, images/section-markets/kazan-express@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/kazan-express@1x.png" srcset="images/section-markets/kazan-express@2x.png 2x" alt=""/>
+								</picture>
+							</div></a><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/vprok@1x.webp, images/section-markets/vprok@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/vprok@1x.png" srcset="images/section-markets/vprok@2x.png 2x" alt=""/>
+								</picture>
+							</div></a><a class="market section-market-preview__market-link" href="#" target="_blank" rel="noreferrer nofollow">
+							<div class="market__img-box">
+								<picture>
+									<source srcset="images/section-markets/sber@1x.webp, images/section-markets/sber@2x.webp 2x" type="image/webp"/><img class="market__img" src="images/section-markets/sber@1x.png" srcset="images/section-markets/sber@2x.png 2x" alt=""/>
+								</picture>
+							</div></a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container footer__container">
+				<div class="footer__contacts">
+					<div class="footer__contacts-col">
+						<p class="footer__contacts-title">Остались Вопросы?</p><a class="button button--white footer__contacts-mail-link" href="#">Напишите нам</a>
+					</div>
+					<div class="footer__contacts-col">
+						<ul class="socials footer__socilals">
+							<li class="socials__elem"><a class="socials__link" href="#" target="_blank" rel="noreferrer nofollow">
+									<svg class="socials__link-icon">
+										<use xlink:href="#social-vk"></use>
+									</svg></a></li>
+							<li class="socials__elem"><a class="socials__link" href="#" target="_blank" rel="noreferrer nofollow">
+									<svg class="socials__link-icon">
+										<use xlink:href="#social-dzen"></use>
+									</svg></a></li>
+						</ul>
+					</div>
+					<div class="footer__contacts-col">
+						<p class="footer__contacts-title">Подпишитесь на рассылку</p>
+						<form class="footer__form" action="#">
+							<input class="footer__form-input" type="email" placeholder="Email" required>
+							<button class="button button--gold footer__form-submit" type="submit">Отправить</button>
+						</form>
+					</div>
+				</div>
+				<div class="footer__copyright"><a class="footer__copyright-link" href="#">Политика</a>
+					<div class="footer__copyright-text-box">
+						<p class="footer__copyright-text">© 2023 AIDA</p>
+						<p class="footer__copyright-text">© 2023 Разработка сайта - Dreamheads</p>
+					</div>
+				</div>
+			</div>
+			<video class="footer__video-bg" preload="true" autoplay loop muted poster="images/common/footer-video-cover.jpg">
+				<source src="videos/footer.mp4" type="video/mp4">
+			</video>
+		</footer>
+		<script src="./js/vendor.js?v=1682862355090"></script>
+		<script src="./js/main.js?v=1682862355090"></script><img class="hidden" src="images/svg-sprite/static/sprite.svg"><svg width="0" height="0" class="hidden">
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 42" id="social-dzen">
+    <g clip-path="url(#clip0_109_254)">
+      <path d="M26.6184 24.253C24.0867 26.8573 23.9025 30.104 23.6839 37.217C30.3354 37.217 34.927 37.1941 37.2976 34.8995C39.5991 32.5362 39.6221 27.7406 39.6221 21.3275C32.4873 21.5569 29.2306 21.729 26.6184 24.253ZM7.40039 21.3275C7.40039 27.7406 7.42341 32.5362 9.72496 34.8995C12.0956 37.1941 16.6872 37.217 23.3387 37.217C23.1085 30.104 22.9359 26.8573 20.4042 24.253C17.7919 21.729 14.5352 21.5454 7.40039 21.3275ZM23.3387 5.09375C16.6987 5.09375 12.0956 5.1167 9.72496 7.41121C7.42341 9.77457 7.40039 14.5701 7.40039 20.9833C14.5352 20.7538 17.7919 20.5818 20.4042 18.0578C22.9359 15.4535 23.12 12.2068 23.3387 5.09375ZM26.6184 18.0578C24.0867 15.4535 23.9025 12.2068 23.6839 5.09375C30.3354 5.09375 34.927 5.1167 37.2976 7.41121C39.5991 9.77457 39.6221 14.5701 39.6221 20.9833C32.4873 20.7538 29.2306 20.5818 26.6184 18.0578Z" fill="currentColor"></path>
+      <path d="M39.6221 21.3275L39.6221 20.9833C32.4873 20.7538 29.2306 20.5818 26.6184 18.0578C24.0867 15.4535 23.9025 12.2068 23.6839 5.09375L23.3387 5.09375C23.1085 12.2068 22.9359 15.4535 20.4042 18.0578C17.7919 20.5818 14.5352 20.7653 7.40039 20.9833L7.40039 21.3275C14.5352 21.5569 17.7919 21.729 20.4042 24.253C22.9359 26.8573 23.12 30.104 23.3387 37.217L23.6839 37.217C23.914 30.104 24.0867 26.8573 26.6184 24.253C29.2306 21.729 32.4873 21.5454 39.6221 21.3275Z" fill="none"></path>
+    </g>
+    <defs>
+      <clipPath id="clip0_109_254">
+        <rect width="32.2218" height="32.1233" fill="white" transform="translate(7.40039 5.09375)"></rect>
+      </clipPath>
+    </defs>
+  </symbol>
+  <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41 25" id="social-vk">
+    <path d="M1.55334 0.144531C2.96174 0.144531 5.10786 0.144531 6.31505 0.144531C6.91865 0.144531 7.38811 0.550278 7.58931 1.09127C8.1929 2.8495 9.53423 6.70409 11.0768 9.34144C13.1558 12.7903 14.4971 14.0751 15.369 13.9399C16.2409 13.737 15.9726 11.4378 15.9726 9.61194C15.9726 7.78608 16.1738 4.67536 15.3019 3.25525L13.9606 1.29415C13.6253 0.820775 13.9606 0.212156 14.4971 0.212156H22.1427C22.8804 0.212156 23.484 0.820775 23.484 1.56464V11.3702C23.484 11.3702 23.8193 13.1284 25.6972 11.3025C27.5751 9.47669 29.587 6.09547 31.2637 2.64663L31.9344 1.02365C32.1356 0.550277 32.605 0.212156 33.1416 0.212156H38.1045C39.0434 0.212156 39.7141 1.1589 39.3787 2.03801L38.8422 3.45812C38.8422 3.45812 37.0314 7.10984 35.1535 9.67956C33.2757 12.3169 32.8733 12.9255 33.1416 13.6018C33.4098 14.278 38.2386 18.8088 39.4458 20.9728C39.7811 21.5814 40.0494 22.1224 40.3176 22.5958C40.7871 23.4749 40.1164 24.6245 39.1105 24.6245H33.4769C33.0074 24.6245 32.538 24.354 32.3368 23.9483L31.8002 23.0692C31.8002 23.0692 28.3799 19.0117 26.3008 17.7269C24.1547 16.5096 24.2217 18.2678 24.2217 18.2678V21.8519C24.2217 23.3397 23.0145 24.5569 21.5391 24.5569H20.1978C20.1978 24.5569 12.8205 24.5569 6.91865 15.6981C2.29107 8.80044 0.748549 4.33724 0.212019 1.76751C0.0778866 0.956023 0.681483 0.144531 1.55334 0.144531Z" fill="currentColor"></path>
+  </symbol>
+</svg>
+	</body>
+</html>

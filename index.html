@@ -6,14 +6,14 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="description" content="Описание Aida">
 		<title>Aida</title>
-		<link rel="stylesheet" href="./css/main.css?v=1682862892084">
+		<link rel="stylesheet" href="./css/main.css?v=1682952986432">
 	</head>
 	<body>
 		<!-- Header-->
 		<header class="header">
 			<div class="container header__container"><a class="header__logo-link" href="index.html">
 					<picture>
-						<source srcset="images/common/logo@1x.webp, images/common/logo@2x.webp 2x" type="image/webp"/><img class="nav-block__logo" src="images/common/logo@1x.png" srcset="images/common/logo@2x.png 2x" alt=""/>
+						<source srcset="images/common/logo@1x.webp, images/common/logo@2x.webp 2x" type="image/webp"/><img class="header__logo" src="images/common/logo@1x.png" srcset="images/common/logo@2x.png 2x" alt=""/>
 					</picture></a>
 				<nav class="header__nav">
 					<ul class="header__nav-list">
@@ -64,26 +64,35 @@
 				</div>
 				<div class="section-history__gallery">
 					<div class="section-history__img-box section-history__img-box--n1">
-						<picture>
-							<source srcset="images/section-history/history1@1x.webp, images/section-history/history1@2x.webp 2x" type="image/webp"/><img class="section-history__img" src="images/section-history/history1@1x.jpg" srcset="images/section-history/history1@2x.jpg 2x" alt=""/>
-						</picture>
+						<div class="animated-image animated-image--history">
+							<picture>
+								<source srcset="images/section-history/history1@1x.webp, images/section-history/history1@2x.webp 2x" type="image/webp"/><img class="section-history__img animated-image__img" src="images/section-history/history1@1x.jpg" srcset="images/section-history/history1@2x.jpg 2x" alt=""/>
+							</picture>
+						</div>
 					</div>
 					<div class="section-history__img-box section-history__img-box--n2">
-						<picture>
-							<source srcset="images/section-history/history2@1x.webp, images/section-history/history2@2x.webp 2x" type="image/webp"/><img class="section-history__img" src="images/section-history/history2@1x.jpg" srcset="images/section-history/history2@2x.jpg 2x" alt=""/>
-						</picture>
+						<div class="animated-image animated-image--history">
+							<picture>
+								<source srcset="images/section-history/history2@1x.webp, images/section-history/history2@2x.webp 2x" type="image/webp"/><img class="section-history__img animated-image__img" src="images/section-history/history2@1x.jpg" srcset="images/section-history/history2@2x.jpg 2x" alt=""/>
+							</picture>
+						</div>
 					</div>
 					<div class="section-history__img-box section-history__img-box--n3">
-						<picture>
-							<source srcset="images/section-history/history3@1x.webp, images/section-history/history3@2x.webp 2x" type="image/webp"/><img class="section-history__img" src="images/section-history/history3@1x.jpg" srcset="images/section-history/history3@2x.jpg 2x" alt=""/>
-						</picture>
+						<div class="animated-image animated-image--history">
+							<picture>
+								<source srcset="images/section-history/history3@1x.webp, images/section-history/history3@2x.webp 2x" type="image/webp"/><img class="section-history__img animated-image__img" src="images/section-history/history3@1x.jpg" srcset="images/section-history/history3@2x.jpg 2x" alt=""/>
+							</picture>
+						</div>
 					</div>
 					<div class="section-history__gallery-back"></div>
 				</div>
 			</div>
 		</section>
 		<!-- Section Image back-->
-		<div class="section-image-back section-image-back--bg1"></div>
+		<div class="section-image-back section-image-back--bg1">
+			<div class="section-image-back__bg"></div>
+			<!--+picture("section-image-back/bg1", "section-image-back__img", "jpg", "")-->
+		</div>
 		<!-- Section Collection-->
 		<section class="section-collection">
 			<div class="container">
@@ -151,12 +160,14 @@
 			</div>
 		</section>
 		<!-- Section Image back-->
-		<div class="section-image-back section-image-back--bg2"></div>
+		<div class="section-image-back section-image-back--bg2">
+			<div class="section-image-back__bg"></div>
+		</div>
 		<!-- Section We produce-->
 		<section class="section-we-produce container">
 			<div class="section-we-produce__grid">
-				<div class="section-we-produce__video-box">
-					<video class="section-we-produce__video" preload="true" autoplay loop muted poster="images/section-we-produce/video-cover.jpg">
+				<div class="section-we-produce__video-box animated-image animated-image--technology1">
+					<video class="animated-image__img" preload="true" autoplay loop muted poster="images/section-we-produce/video-cover.jpg">
 						<source src="videos/field.mp4" type="video/mp4">
 					</video>
 				</div>
@@ -166,14 +177,20 @@
 				</div>
 			</div>
 			<div class="section-we-produce__row">
-				<picture>
-					<source srcset="images/section-we-produce/img2@1x.webp, images/section-we-produce/img2@2x.webp 2x" type="image/webp"/><img class="section-we-produce__img section-we-produce__img--n2" src="images/section-we-produce/img2@1x.jpg" srcset="images/section-we-produce/img2@2x.jpg 2x" alt=""/>
-				</picture>
+				<div class="section-we-produce__img-box animated-image animated-image--technology1">
+					<picture>
+						<source srcset="images/section-we-produce/img2@1x.webp, images/section-we-produce/img2@2x.webp 2x" type="image/webp"/><img class="section-we-produce__img animated-image__img" src="images/section-we-produce/img2@1x.jpg" srcset="images/section-we-produce/img2@2x.jpg 2x" alt=""/>
+					</picture>
+				</div>
 			</div>
 		</section>
 		<!-- Section Image back-->
-		<div class="section-image-back-anim section-image-back-anim--bg1">
-			<div class="section-image-back-anim__box"></div>
+		<div class="section-image-back-anim">
+			<div class="section-image-back-anim__box">
+				<picture>
+					<source srcset="images/section-image-back/bg4@1x.webp, images/section-image-back/bg4@2x.webp 2x" type="image/webp"/><img class="section-image-back-anim__img" src="images/section-image-back/bg4@1x.jpg" srcset="images/section-image-back/bg4@2x.jpg 2x" alt=""/>
+				</picture>
+			</div>
 		</div>
 		<!-- Section Recipes preview-->
 		<section class="section-recipes-preview container">
@@ -209,12 +226,14 @@
 			</div>
 		</section>
 		<!-- Section Image back-->
-		<div class="section-image-back section-image-back--bg3"></div>
+		<div class="section-image-back section-image-back--bg3">
+			<div class="section-image-back__bg"></div>
+		</div>
 		<!-- Section News preview-->
 		<section class="section-news-preview container">
 			<div class="section-news-preview__grid">
 				<div class="section-news-preview__text-col">
-					<h2 class="h2 text-red section-news-preview__title">Новости</h2><a class="button button--gold button--uppercase section-news-preview__link" href="#">Ко всем рецептам</a>
+					<h2 class="h2 text-red section-news-preview__title">Новости</h2><a class="button button--gold button--uppercase section-news-preview__link" href="#">Смотреть все</a>
 				</div>
 				<div class="section-news-preview__col">
 					<div class="section-news-preview__news-cols">
@@ -241,7 +260,9 @@
 			</div>
 		</section>
 		<!-- Section Image back-->
-		<div class="section-image-back section-image-back--bg5"></div>
+		<div class="section-image-back section-image-back--bg5">
+			<div class="section-image-back__bg"></div>
+		</div>
 		<!-- Section Market preview-->
 		<section class="section-market-preview">
 			<div class="container">
@@ -328,8 +349,19 @@
 				</div>
 				<div class="footer__copyright"><a class="footer__copyright-link" href="#">Политика</a>
 					<div class="footer__copyright-text-box">
-						<p class="footer__copyright-text">© 2023 AIDA</p>
-						<p class="footer__copyright-text">© 2023 Разработка сайта - Dreamheads</p>
+						<p class="footer__copyright-text">
+							©
+							
+							<span class="font-secondary">2023</span>
+							
+							AIDA
+						</p>
+						<p class="footer__copyright-text">
+							©
+							<span class="font-secondary">2023</span>
+							
+							Разработка сайта - Dreamheads
+						</p>
 					</div>
 				</div>
 			</div>
@@ -337,8 +369,8 @@
 				<source src="videos/footer.mp4" type="video/mp4">
 			</video>
 		</footer>
-		<script src="./js/vendor.js?v=1682862892085"></script>
-		<script src="./js/main.js?v=1682862892085"></script><img class="hidden" src="images/svg-sprite/static/sprite.svg"><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1682952986433"></script>
+		<script src="./js/main.js?v=1682952986433"></script><img class="hidden" src="images/svg-sprite/static/sprite.svg"><svg width="0" height="0" class="hidden">
   <symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 47 42" id="social-dzen">
     <g clip-path="url(#clip0_109_254)">
       <path d="M26.6184 24.253C24.0867 26.8573 23.9025 30.104 23.6839 37.217C30.3354 37.217 34.927 37.1941 37.2976 34.8995C39.5991 32.5362 39.6221 27.7406 39.6221 21.3275C32.4873 21.5569 29.2306 21.729 26.6184 24.253ZM7.40039 21.3275C7.40039 27.7406 7.42341 32.5362 9.72496 34.8995C12.0956 37.1941 16.6872 37.217 23.3387 37.217C23.1085 30.104 22.9359 26.8573 20.4042 24.253C17.7919 21.729 14.5352 21.5454 7.40039 21.3275ZM23.3387 5.09375C16.6987 5.09375 12.0956 5.1167 9.72496 7.41121C7.42341 9.77457 7.40039 14.5701 7.40039 20.9833C14.5352 20.7538 17.7919 20.5818 20.4042 18.0578C22.9359 15.4535 23.12 12.2068 23.3387 5.09375ZM26.6184 18.0578C24.0867 15.4535 23.9025 12.2068 23.6839 5.09375C30.3354 5.09375 34.927 5.1167 37.2976 7.41121C39.5991 9.77457 39.6221 14.5701 39.6221 20.9833C32.4873 20.7538 29.2306 20.5818 26.6184 18.0578Z" fill="currentColor"></path>

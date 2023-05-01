@@ -194,14 +194,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _helpers_check_webp_support__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_helpers_check_webp_support__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _sections_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sections/loader */ "./src/js/sections/loader.js");
 /* harmony import */ var _sections_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sections/header */ "./src/js/sections/header.js");
-/* harmony import */ var _sections_section_hero_main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/section-hero-main */ "./src/js/sections/section-hero-main.js");
-/* harmony import */ var _sections_section_history__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/section-history */ "./src/js/sections/section-history.js");
-/* harmony import */ var _sections_section_collection__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/section-collection */ "./src/js/sections/section-collection.js");
-/* harmony import */ var _sections_section_image_back_anim__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/section-image-back-anim */ "./src/js/sections/section-image-back-anim.js");
-/* harmony import */ var _sections_section_we_produce__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/section-we-produce */ "./src/js/sections/section-we-produce.js");
-/* harmony import */ var _sections_section_recipes_preview__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/section-recipes-preview */ "./src/js/sections/section-recipes-preview.js");
-/* harmony import */ var _sections_section_news_preview__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/section-news-preview */ "./src/js/sections/section-news-preview.js");
-/* harmony import */ var _sections_section_market_preview__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/section-market-preview */ "./src/js/sections/section-market-preview.js");
+/* harmony import */ var _sections_animated_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/animated-image */ "./src/js/sections/animated-image.js");
+/* harmony import */ var _sections_section_image_back__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/section-image-back */ "./src/js/sections/section-image-back.js");
+/* harmony import */ var _sections_section_hero_main__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/section-hero-main */ "./src/js/sections/section-hero-main.js");
+/* harmony import */ var _sections_section_history__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/section-history */ "./src/js/sections/section-history.js");
+/* harmony import */ var _sections_section_collection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/section-collection */ "./src/js/sections/section-collection.js");
+/* harmony import */ var _sections_section_image_back_anim__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/section-image-back-anim */ "./src/js/sections/section-image-back-anim.js");
+/* harmony import */ var _sections_section_we_produce__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/section-we-produce */ "./src/js/sections/section-we-produce.js");
+/* harmony import */ var _sections_section_recipes_preview__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/section-recipes-preview */ "./src/js/sections/section-recipes-preview.js");
+/* harmony import */ var _sections_section_news_preview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./sections/section-news-preview */ "./src/js/sections/section-news-preview.js");
+/* harmony import */ var _sections_section_market_preview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./sections/section-market-preview */ "./src/js/sections/section-market-preview.js");
 
 
 
@@ -214,6 +216,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+/***/ }),
+
+/***/ "./src/js/sections/animated-image.js":
+/*!*******************************************!*\
+  !*** ./src/js/sections/animated-image.js ***!
+  \*******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
+var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.animated-image');
+boxList.forEach(function (box) {
+  var img = box.querySelector('.animated-image__img');
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, {
+    scrollTrigger: {
+      trigger: box,
+      scrub: 4,
+      invalidateOnRefresh: true
+    },
+    y: box.offsetHeight - img.offsetHeight,
+    ease: "none"
+  });
+});
 
 /***/ }),
 
@@ -462,7 +496,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__title', {
     trigger: '.section-history__title',
     // markers: true,
     end: 'center center',
-    scrub: true,
+    scrub: 1.2,
     toggleActions: "restart none none none"
   },
   y: 0,
@@ -476,7 +510,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__text', {
     trigger: '.section-history__text',
     // markers: true,
     end: 'center center',
-    scrub: true,
+    scrub: 1.1,
     toggleActions: "restart none none none"
   },
   y: 0,
@@ -490,7 +524,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__link', {
     trigger: '.section-history__link',
     // markers: true,
     end: 'center center',
-    scrub: true,
+    scrub: 1.3,
     toggleActions: "restart none none none"
   },
   y: 0,
@@ -502,7 +536,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--
 }, {
   scrollTrigger: {
     trigger: '.section-history__gallery',
-    scrub: true,
+    scrub: 1.4,
     // markers: true,
     end: 'center center'
   },
@@ -515,7 +549,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--
 }, {
   scrollTrigger: {
     trigger: '.section-history__gallery',
-    scrub: true,
+    scrub: 1.3,
     // markers: true,
     end: 'center center'
   },
@@ -527,7 +561,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__gallery-b
 }, {
   scrollTrigger: {
     trigger: '.section-history__gallery',
-    scrub: true,
+    scrub: 1.2,
     // markers: true,
     end: 'center center'
   },
@@ -551,18 +585,75 @@ __webpack_require__.r(__webpack_exports__);
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
   width: 0,
-  height: 0,
-  marginTop: -350
+  height: 0
 }, {
   scrollTrigger: {
     trigger: '.section-image-back-anim .section-image-back-anim__box',
-    // markers: true,
-    scrub: 2,
-    start: 'top 40%'
+    //markers: true,
+    scrub: .5,
+    start: 'top 40%',
+    end: "bottom 300px"
   },
   width: '100%',
-  height: '100%',
-  marginTop: 0
+  height: '100%'
+});
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
+  y: -650
+}, {
+  scrollTrigger: {
+    trigger: '.section-image-back-anim .section-image-back-anim__box',
+    //markers: true,
+    scrub: .5,
+    start: '200px 40%',
+    end: "+=800px top"
+  },
+  y: 200
+});
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__img', {
+  xPercent: -.6,
+  scale: .4,
+  height: "540%"
+}, {
+  scrollTrigger: {
+    trigger: '.section-image-back-anim .section-image-back-anim__img',
+    // markers: true,
+    scrub: .5,
+    start: 'top 40%',
+    end: "bottom -=300px"
+  },
+  xPercent: 0,
+  scale: 1,
+  height: "100%"
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/section-image-back.js":
+/*!***********************************************!*\
+  !*** ./src/js/sections/section-image-back.js ***!
+  \***********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
+var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-image-back');
+boxList.forEach(function (box) {
+  var img = box.querySelector('.section-image-back__bg');
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, {
+    scrollTrigger: {
+      trigger: box,
+      scrub: 1.3,
+      invalidateOnRefresh: true
+    },
+    backgroundPosition: "center top -" + img.offsetHeight / 10 + 100 + 'px',
+    ease: "none"
+  });
 });
 
 /***/ }),
@@ -783,7 +874,7 @@ recipes.forEach(function (recipe) {
       trigger: recipe,
       scrub: 2,
       // markers: true,
-      start: "top bottom",
+      start: "200px bottom",
       end: "top 70%",
       toggleActions: "restart none none none"
     },
@@ -834,7 +925,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__title-
     trigger: '.section-we-produce__title',
     // markers: true,
     end: 'bottom 70%',
-    scrub: true
+    scrub: 1.5
   }
 });
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__title-part--n2', {
@@ -851,7 +942,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__title-
     trigger: '.section-we-produce__title',
     // markers: true,
     end: 'bottom 70%',
-    scrub: true
+    scrub: 1.5
   }
 });
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__text', {
@@ -864,7 +955,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__text',
     trigger: '.section-we-produce__text',
     // markers: true,
     end: 'bottom 70%',
-    scrub: true
+    scrub: 1.5
   }
 });
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__link', {
@@ -877,18 +968,18 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__link',
     trigger: '.section-we-produce__link',
     // markers: true,
     end: 'bottom 70%',
-    scrub: true
+    scrub: 1.5
   }
 });
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__img--n2', {
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__img-box', {
   opacity: 0
 }, {
   opacity: 1,
   scrollTrigger: {
-    trigger: '.section-we-produce__img--n2',
+    trigger: '.section-we-produce__img-box',
     // markers: true,
     end: 'bottom 60%',
-    scrub: true
+    scrub: 1.5
   }
 });
 

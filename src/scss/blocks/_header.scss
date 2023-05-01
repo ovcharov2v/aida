@@ -27,10 +27,15 @@
 		margin-right: 30px;
 		transform: translateY(-100px);
 		opacity: 0;
+		transition: width .5s ease;
+
+		.header--white & {
+			width: 116px;
+		}
 	}
 
 	&__logo {
-		max-width: 100%;
+		width: 100%;
 	}
 
 	&__nav {

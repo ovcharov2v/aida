@@ -1,6 +1,6 @@
 .section-we-produce {
 	padding-top: 97px;
-	padding-bottom: 94px;
+	padding-bottom: 394px;
 
 	&__grid {
 		display: grid;
@@ -20,6 +20,10 @@
 		max-width: 716px;
 		padding-bottom: 38px;
 		align-self: end;
+	}
+
+	&__img-box {
+		width: 442px;
 	}
 
 	&__img {
@@ -43,27 +47,5 @@
 	&__link {
 		width: 100%;
 		max-width: 240px;
-	}
-
-	&__video-box {
-		position: relative;
-		width: 100%;
-
-		&::before {
-			display: block;
-			padding-top: 144%;
-			content: "";
-		}
-	}
-
-	&__video {
-		position: absolute;
-		z-index: -2;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		object-position: center;
 	}
 }

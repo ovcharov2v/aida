@@ -36,14 +36,19 @@ block content
 				a.button.button--gold.button--uppercase.section-history__link(href="#") Узнать больше
 			.section-history__gallery
 				.section-history__img-box.section-history__img-box--n1
-					+picture("section-history/history1", "section-history__img", "jpg", "")
+					.animated-image.animated-image--history
+						+picture("section-history/history1", "section-history__img animated-image__img", "jpg", "")
 				.section-history__img-box.section-history__img-box--n2
-					+picture("section-history/history2", "section-history__img", "jpg", "")
+					.animated-image.animated-image--history
+						+picture("section-history/history2", "section-history__img animated-image__img", "jpg", "")
 				.section-history__img-box.section-history__img-box--n3
-					+picture("section-history/history3", "section-history__img", "jpg", "")
+					.animated-image.animated-image--history
+						+picture("section-history/history3", "section-history__img animated-image__img", "jpg", "")
 				.section-history__gallery-back
 	// Section Image back
 	.section-image-back.section-image-back--bg1
+		.section-image-back__bg
+		//+picture("section-image-back/bg1", "section-image-back__img", "jpg", "")
 	// Section Collection
 	section.section-collection
 		.container
@@ -94,11 +99,12 @@ block content
 							+picture("section-collection/product16", "section-collection__product-img")
 	// Section Image back
 	.section-image-back.section-image-back--bg2
+		.section-image-back__bg
 	// Section We produce
 	section.section-we-produce.container
 		.section-we-produce__grid
-			.section-we-produce__video-box
-				video.section-we-produce__video(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg")
+			.section-we-produce__video-box.animated-image.animated-image--technology1
+				video.animated-image__img(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg")
 					source(src='videos/field.mp4', type='video/mp4')
 			.section-we-produce__content
 				h2.h2.text-red.section-we-produce__title
@@ -108,10 +114,12 @@ block content
 				p.section-we-produce__text Паста AIDA производится в России на Орской макаронной фабрике на современном оборудовании от итальянских и швейцарских производителей. Благодаря традиционной итальянской технологии и пшенице непревзойденного качества паста AIDA получается бесподобно вкусной.
 				a.button.button--gold.button--uppercase.section-we-produce__link(href="#") О технологии
 		.section-we-produce__row
-			+picture("section-we-produce/img2", "section-we-produce__img section-we-produce__img--n2", "jpg", "")
+			.section-we-produce__img-box.animated-image.animated-image--technology1
+				+picture("section-we-produce/img2", "section-we-produce__img animated-image__img", "jpg", "")
 	// Section Image back
-	.section-image-back-anim.section-image-back-anim--bg1
+	.section-image-back-anim
 		.section-image-back-anim__box
+			+picture("section-image-back/bg4", "section-image-back-anim__img", "jpg", "")
 	// Section Recipes preview
 	section.section-recipes-preview.container
 		.section-recipes-preview__grid
@@ -139,12 +147,13 @@ block content
 							p.section-recipes-preview__recipe-title Мясное рагу
 	// Section Image back
 	.section-image-back.section-image-back--bg3
+		.section-image-back__bg
 	// Section News preview
 	section.section-news-preview.container
 		.section-news-preview__grid
 			.section-news-preview__text-col
 				h2.h2.text-red.section-news-preview__title Новости
-				a.button.button--gold.button--uppercase.section-news-preview__link(href="#") Ко всем рецептам
+				a.button.button--gold.button--uppercase.section-news-preview__link(href="#") Смотреть все
 			.section-news-preview__col
 				.section-news-preview__news-cols
 					.section-news-preview__news-col.section-news-preview__news-col--n1
@@ -163,6 +172,7 @@ block content
 							p.section-news-preview__news-title Встречайте обновление! Мы подарили новое дыхание упаковке пасты AIDA
 	// Section Image back
 	.section-image-back.section-image-back--bg5
+		.section-image-back__bg
 	// Section Market preview
 	section.section-market-preview
 		.container

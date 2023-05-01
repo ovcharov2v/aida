@@ -1,5 +1,5 @@
 .section-recipes-preview {
-	padding-top: 180px;
+	padding-top: 480px;
 	padding-bottom: 180px;
 
 	&__grid {
@@ -66,6 +66,7 @@
 	&__video-box {
 		position: relative;
 		width: 100%;
+		margin-bottom: 31px;
 
 		&::before {
 			display: block;

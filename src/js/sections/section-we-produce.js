@@ -19,7 +19,7 @@ gsap.fromTo('.section-we-produce__title-part--n1',
 			trigger: '.section-we-produce__title',
 			// markers: true,
 			end: 'bottom 70%',
-			scrub: true,
+			scrub: 1.5,
 		},
 	}
 )
@@ -39,7 +39,7 @@ gsap.fromTo('.section-we-produce__title-part--n2',
 			trigger: '.section-we-produce__title',
 			// markers: true,
 			end: 'bottom 70%',
-		scrub: true,
+		scrub: 1.5,
 		},
 	}
 )
@@ -55,7 +55,7 @@ gsap.fromTo('.section-we-produce__text',
 			trigger: '.section-we-produce__text',
 			// markers: true,
 			end: 'bottom 70%',
-			scrub: true,
+			scrub: 1.5,
 		},
 	}
 )
@@ -72,21 +72,21 @@ gsap.fromTo('.section-we-produce__link',
 			trigger: '.section-we-produce__link',
 			// markers: true,
 			end: 'bottom 70%',
-			scrub: true,
+			scrub: 1.5,
 		},
 	}
 )
-gsap.fromTo('.section-we-produce__img--n2',
+gsap.fromTo('.section-we-produce__img-box',
 	{
 		opacity: 0,
 	},
 	{
 		opacity: 1,
 		scrollTrigger: {
-			trigger: '.section-we-produce__img--n2',
+			trigger: '.section-we-produce__img-box',
 			// markers: true,
 			end: 'bottom 60%',
-			scrub: true,
+			scrub: 1.5,
 		},
 	}
 )

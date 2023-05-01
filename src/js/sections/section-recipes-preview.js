@@ -69,7 +69,7 @@ recipes.forEach((recipe) => {
 				trigger: recipe,
 				scrub: 2,
 				// markers: true,
-				start: "top bottom",
+				start: "200px bottom",
 				end: "top 70%",
 				toggleActions: "restart none none none"
 			},

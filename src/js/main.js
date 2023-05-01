@@ -3,6 +3,8 @@ import './helpers/check-webp-support';
 
 import './sections/loader';
 import './sections/header';
+import './sections/animated-image';
+import './sections/section-image-back';
 import './sections/section-hero-main';
 import './sections/section-history';
 import './sections/section-collection';

@@ -24,7 +24,8 @@
 	&__gallery {
 		position: relative;
 		z-index: 0;
-		display: flex;
+		display: grid;
+		grid-template: auto / 1fr 1.25fr 1fr;
 		column-gap: 32px;
 		padding-bottom: 292px;
 	}

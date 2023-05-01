@@ -590,7 +590,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .s
   scrollTrigger: {
     trigger: '.section-image-back-anim .section-image-back-anim__box',
     //markers: true,
-    scrub: .5,
+    scrub: true,
     start: 'top 40%',
     end: "bottom 300px"
   },
@@ -603,7 +603,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .s
   scrollTrigger: {
     trigger: '.section-image-back-anim .section-image-back-anim__box',
     //markers: true,
-    scrub: .5,
+    scrub: true,
     start: '200px 40%',
     end: "+=800px top"
   },
@@ -617,7 +617,7 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .s
   scrollTrigger: {
     trigger: '.section-image-back-anim .section-image-back-anim__img',
     // markers: true,
-    scrub: .5,
+    scrub: true,
     start: 'top 40%',
     end: "bottom -=300px"
   },

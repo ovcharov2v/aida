@@ -789,40 +789,7 @@ h2, .h2 {
 
 .section-image-back-anim {
   position: relative;
-  height: 883px;
-  /*&__box {
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		min-width: 400px;
-		min-height: 400px;
-		margin: 0 auto;
-		background-repeat: no-repeat;
-		*background-position: center;
-		background-size: cover;
-		background-attachment: fixed;*
-	background-image: url("../images/section-image-back/bg4.jpg");
-		/*width: 0;
-		height: 0;
-		background-position: 50% 0;
-		background-size: auto 100%;*
-
-		&::after {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: rgba(#000, .35);
-			content: "";
-		}
-	}*/ }
-  .section-image-back-anim::before {
-    display: block;
-    padding-top: 55%; }
+  height: 883px; }
   .section-image-back-anim__box {
     position: relative;
     display: -webkit-box;

@@ -3,12 +3,6 @@
 	height: 883px;
 	overflow: hidden;
 
-	&::before {
-		display: block;
-		padding-top: 55%;
-		//content: "";
-	}
-
 	&::after {
 		position: absolute;
 		top: 0;
@@ -43,18 +37,5 @@
 			@include background-image("../images/section-image-back/bg5");
 		}
 
-	}
-
-
-	&--bg2 {
-		@include background-image("../images/section-image-back/bg2");
-	}
-
-	&--bg3 {
-		@include background-image("../images/section-image-back/bg3");
-	}
-
-	&--bg5 {
-		@include background-image("../images/section-image-back/bg5");
 	}
 }

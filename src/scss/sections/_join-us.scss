@@ -1,0 +1,23 @@
+.join-us {
+	padding: 65px 0 58px;
+	background-color: #F1F1F1;
+	font-family: $font-additional;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+
+	&__text {
+		max-width: 800px;
+		margin: 0 auto;
+
+		&:not(:last-child) {
+			margin-bottom: 28px;
+		}
+	}
+
+	&__link {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}

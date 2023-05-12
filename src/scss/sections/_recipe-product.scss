@@ -1,0 +1,36 @@
+.recipe-product {
+	padding-top: 55px;
+	padding-bottom: 100px;
+
+	&__row {
+
+		display: grid;
+		grid-template: auto / 1fr 1.3fr;
+		grid-column-gap: 63px;
+		align-items: center;
+	}
+
+	&__text-box {
+		max-width: 490px;
+	}
+
+	&__title {
+		color: $color-red;
+		margin-bottom: 41px;
+	}
+
+	&__button-row {
+		display: flex;
+		column-gap: 10px;
+	}
+
+	&__button {
+		flex: 1 0;
+	}
+
+	&__col-img {
+		text-align: center;
+	}
+
+	&__img {}
+}

@@ -9,8 +9,13 @@ body {
 	font-family: $font-primary;
 	font-size: 28px;
 	line-height: 32px;
+	font-weight: 500;
 	color: $color-gray;
 	-webkit-text-size-adjust: none;
+
+	&.body-top-offset {
+		padding-top: 136px;
+	}
 }
 
 button {

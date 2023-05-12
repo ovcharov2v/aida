@@ -13,6 +13,15 @@
 		content: "";
 	}
 
+	&--bg6,
+	&--bg7 {
+		height: 701px;
+	}
+
+	&--bg8 {
+		height: 574px;
+	}
+
 	&__bg {
 		width: 100%;
 		height: 110%;
@@ -37,5 +46,16 @@
 			@include background-image("../images/section-image-back/bg5");
 		}
 
+		.section-image-back--bg6 & {
+			@include background-image("../images/section-image-back/bg6");
+		}
+
+		.section-image-back--bg7 & {
+			@include background-image("../images/section-image-back/bg7");
+		}
+
+		.section-image-back--bg8 & {
+			@include background-image("../images/section-image-back/bg8");
+		}
 	}
 }

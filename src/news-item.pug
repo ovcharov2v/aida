@@ -1,0 +1,42 @@
+extends pug/base
+append vars
+	-
+		title = "AIDA Карточка новости"
+		meta.description = "Описание AIDA"
+		isHeaderWhite = true
+		body.classList = "body-top-offset"
+block content
+	.back-link-box.container
+		a.back-link(href="#")
+			+svg("arrow-back", true)(class="back-link__icon")
+			| Вернуться
+	// Section Image back
+	.section-image-back.section-image-back--bg8
+		.section-image-back__bg
+	// News content
+	section.news-content.container
+		.news-content__box
+			time.news-content__time 13 Апреля 2022
+			h1.h2.news-content__title Орскую Макаронную
+				br
+				|фабрику посетил губернатор
+				br
+				|Оренбургской области
+			p.news-content__text 1 апреля 2022 г. Орскую Макаронную Фабрику, входящую в состав холдинга «Агро-Альянс», посетил губернатор Оренбургской области, Денис Паслер. Губернатору показали весь производственный цикл — от замеса теста до фасовки готовой продукции.
+			p.news-content__text Фабрика в этом году планирует произвести 18 тысяч тонн макарон по классической итальянской технологии. За последние 3 года на фабрике была произведена реконструкция и установлены новые производственные линии, которые позволяют производить такие же макароны, как итальянские ручной работы.
+			p.news-content__text Секрет качества в том, что макароны производятся из муки твердых сортов оренбургской пшеницы. Эта пшеница известна всей стране, ее с советских времен добавляли в мучные изделия для улучшения вкуса. Муку макаронная фабрика получает с собственной мельницы. Уникальная технология воспроизводит все те же процессы, которые проходят итальянские макароны при производстве вручную, в том числе позволяет их правильно высушить.
+			p.news-content__text Предприятие выпускает классические итальянские рецептуры и в прошлом году, благодаря запуску новой линии, ассортимент расширился листами для лазаньи, тальятелло и капелини. Продукцию Орской Макаронной Фабрики можно купить в розничных магазинах по всей стране.
+			.news-content__bottom-box
+				p.news-content__share-text Поделиться
+				.news-content__bottom
+					ul.socials.socials--small.news-content__socilals
+						li.socials__elem
+							a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+								+svg("social-vk", true)(class="socials__link-icon")
+						li.socials__elem
+							a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+								+svg("social-dzen", true)(class="socials__link-icon")
+					.news-content__print-box
+						p.news-content__print-text Распечатать
+						a.news-content__print-link(href="#", target="_blank", rel="noreferrer nofollow")
+							+svg("print", true)(class="recipe-intro__print-link-icon")

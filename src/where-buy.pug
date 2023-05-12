@@ -1,0 +1,62 @@
+extends pug/base
+append vars
+	-
+		title = "AIDA Где купить"
+		meta.description = "Описание AIDA"
+		isHeaderWhite = true
+		body.classList = "body-top-offset"
+block content
+	// Where buy intro
+	section.where-buy-intro
+		.container.where-buy-intro__container
+			h1.h2.where-buy-intro__title Где купить
+			p.where-buy-intro__text Пасту AIDA можно найти в магазине
+				br
+				|рядом с вами или заказать онлайн.
+	// Where buy shops
+	section.where-buy-shops
+		.container
+			h2.h4.where-buy-shops__title Онлайн-магазины
+			.where-buy-shops__grid
+				+market("ozon", "#", "")(class="shops-list__shop")
+				+market("wildberries", "#", "")(class="shops-list__shop")
+				+market("vprok", "#", "")(class="shops-list__shop")
+				+market("ya-market", "#", "")(class="shops-list__shop")
+				+market("detmir", "#", "")(class="shops-list__shop")
+				+market("samokat", "#", "")(class="shops-list__shop")
+				+market("utkonos", "#", "")(class="shops-list__shop")
+				+market("sber", "#", "")(class="shops-list__shop")
+				+market("kazan-express", "#", "")(class="shops-list__shop")
+			h3.h4.where-buy-shops__title Оффлайн-магазины
+			.where-buy-shops__grid
+				+market("ashan", "#", "")(class="shops-list__shop")
+				+market("spar", "#", "")(class="shops-list__shop")
+				+market("lenta", "#", "")(class="shops-list__shop")
+				+market("absolut", "#", "")(class="shops-list__shop")
+				+market("bolshe-menshe", "#", "")(class="shops-list__shop")
+				+market("okey", "#", "")(class="shops-list__shop")
+				+market("magnit", "#", "")(class="shops-list__shop")
+				+market("perekrestok", "#", "")(class="shops-list__shop")
+				+market("verniy", "#", "")(class="shops-list__shop")
+				+market("viktoria", "#", "")(class="shops-list__shop")
+				+market("vulkan", "#", "")(class="shops-list__shop")
+				+market("evropa", "#", "")(class="shops-list__shop")
+				+market("lama", "#", "")(class="shops-list__shop")
+				+market("maksi", "#", "")(class="shops-list__shop")
+				+market("ra", "#", "")(class="shops-list__shop")
+				+market("narodniy", "#", "")(class="shops-list__shop")
+				+market("azbuka", "#", "")(class="shops-list__shop")
+				+market("real", "#", "")(class="shops-list__shop")
+				+market("tvoi-vkus", "#", "")(class="shops-list__shop")
+				+market("yarche", "#", "")(class="shops-list__shop")
+				+market("globus", "#", "")(class="shops-list__shop")
+				+market("hleb-chelni", "#", "")(class="shops-list__shop")
+				+market("pyatiorochka", "#", "")(class="shops-list__shop")
+				+market("semiya", "#", "")(class="shops-list__shop")
+				+market("selgros", "#", "")(class="shops-list__shop")
+				+market("metro", "#", "")(class="shops-list__shop")
+				+market("kazan-express", "#", "")(class="shops-list__shop")
+				+market("dixi", "#", "")(class="shops-list__shop")
+				+market("gulliver", "#", "")(class="shops-list__shop")
+				+market("aleaf", "#", "")(class="shops-list__shop")
+				+market("allea", "#", "")(class="shops-list__shop")

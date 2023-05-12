@@ -2,6 +2,10 @@
 	display: flex;
 	column-gap: 14px;
 
+	&--small {
+		column-gap: 10px;
+	}
+
 	&__elem {
 		display: inline-block;
 	}
@@ -21,10 +25,28 @@
 		&:hover {
 			background-color: #E9E9E9;
 		}
+
+		.socials--small & {
+			width: 55px;
+			height: 55px;
+		}
+
+		.socials--gray & {
+			background-color: #FAFAFA;
+
+			&:hover {
+				background-color: darken(#E9E9E9, 5%);
+			}
+		}
 	}
 
 	&__link-icon {
 		width: 46px;
 		height: 46px;
+
+		.socials--small & {
+			width: 35px;
+			height: 35px;
+		}
 	}
 }

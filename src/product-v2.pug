@@ -1,0 +1,174 @@
+extends pug/base
+append vars
+	-
+		title = "AIDA Карточка продукта"
+		meta.description = "Описание AIDA"
+		isHeaderWhite = true
+		body.classList = "body-top-offset"
+block content
+	.container
+		a.back-link(href="#")
+			+svg("arrow-back", true)(class="back-link__icon")
+			| Вернуться
+	// Product features
+	.product-features.container
+		.product-features__col.product-features__col--img.product-features__col--border-bottom.product-features__col--border-right
+			+picture("product-features/img1", ".product-features__img", "jpg", "")
+		.product-features__col.product-features__col--border-bottom
+			h1.h2.product-features__title Fusilli integrale
+			p.product-features__text Fusilli integrale представляют собой тёмные спирали, изготовленные из пшеницы твёрдых сортов. Цельнозерновые спирали можно использовать для приготовления гарниров с различными соусами или в салаты. Такие макароны высоко ценятся теми, кто придерживается здорового образа и следит за рационом питания.
+			p.product-features__text
+				strong.text-black Состав:
+				|
+				|
+				| Мука цельнозерновая из твёрдых сортов пшеницы, вода питьевая
+			a.button.button--gold.button--uppercase.product-features__button(href="#") Купить
+		.product-features__col.product-features__col--align-center
+			p.h2.product-features__title-second Чтобы почувствовать вкус спирали,
+				br
+				|попробуйте наш рецепт!
+			a.button.button--gold.button--uppercase.product-features__button(href="#") Приготовить
+		.product-features__col.product-features__col--no-padding
+			// Recipe card
+			a.recipe-card.recipe-card--big.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img6", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Цельнозерновая паста
+						br
+						|в томатном соусе с тунцом
+					ul.recipe-features.recipe-features--big.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+		.product-features__col.product-features__col--img.product-features__col--gray
+			+picture("product-features/img2", ".product-features__img", "jpg", "")
+		.product-features__col
+			h3.h4.product-features__sub-title Питательные вещества:
+			p.product-features__text-small Пищевая ценность на 100 г продукта:
+			ul.product-features__data-list
+				li.product-features__data-box
+					span.product-features__data-value 15 г
+					span.product-features__data-text Белки
+				li.product-features__data-box
+					span.product-features__data-value 0,5 г
+					span.product-features__data-text Жиры
+				li.product-features__data-box
+					span.product-features__data-value 62 г
+					span.product-features__data-text Углеводы
+				li.product-features__data-box
+					span.product-features__data-value 1410
+						br
+						| кДж
+					span.product-features__data-text Энергетическая
+						br
+						|ценность
+				li.product-features__data-box
+					span.product-features__data-value 13 г
+					span.product-features__data-text Клетчатка
+				li.product-features__data-box
+					span.product-features__data-value 330
+						br
+						|Ккал
+					span Калорийность
+			hr.product-features__line
+			h3.h4.product-features__sub-title Характеристики:
+			ul.product-features__data-list
+				li.product-features__data-box
+					span.product-features__data-value 6 мин
+					span.product-features__data-text Время
+						br
+						|приготовления
+				li.product-features__data-box
+					span.product-features__data-value 400 г
+					span.product-features__data-text Вес
+				li.product-features__data-box
+					span.product-features__data-value 24 мес
+					span.product-features__data-text Срок
+						br
+						|хранения
+
+	// Products sample
+	section.products-sample.container
+		h2.h3.products-sample__title Откройте для себя больше продуктов AIDA
+		// Product grid
+		.product-grid.product-grid--page-product
+			// Product card
+			a.product-card.product-card--small(href="#")
+				+picture("product-card/back1", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							|450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							|30 минут
+					.product-card__titles
+						span.text-white Лазанья
+						span.text-red Lasagne
+				.product-card__product-img-box
+					+picture("product-card/product1", "product-card__product-img", "jpg", "")
+				+picture("product-card/angle1", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.product-card--small(href="#")
+				+picture("product-card/back2", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 11 минут
+					.product-card__titles
+						span.text-white Цельнозерновые
+							br
+							|перья
+						span.text-red Penne rigate
+							br
+							|integrale
+				.product-card__product-img-box
+					+picture("product-card/product2", "product-card__product-img", "jpg", "")
+				+picture("product-card/angle2", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.product-card--small(href="#")
+				+picture("product-card/back3", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30 минут
+					.product-card__titles
+						span.text-white Рожок витой
+						span.text-red Cellentani
+				.product-card__product-img-box
+					+picture("product-card/product3", "product-card__product-img", "jpg", "")
+				+picture("product-card/angle3", "product-card__angle-img", "jpg", "")
+
+			// Product card
+			a.product-card.product-card--small(href="#")
+				+picture("product-card/back4", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 10 минут
+					.product-card__titles
+						span.text-white Ракушки
+						span.text-red Conchiglie
+				.product-card__product-img-box
+					+picture("product-card/product4", "product-card__product-img", "jpg", "")
+				+picture("product-card/angle4", "product-card__angle-img", "jpg", "")

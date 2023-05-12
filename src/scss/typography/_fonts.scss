@@ -1,92 +1,153 @@
 /* cormorant-garamond-regular - cyrillic_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Cormorant Garamond';
+  font-display: swap;
+  font-family: 'Cormorant Mix';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.svg#CormorantGaramond') format('svg'); /* Legacy iOS */
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.eot');
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.woff2') format('woff2'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.woff') format('woff'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.ttf') format('truetype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-regular.svg#CormorantGaramond') format('svg');
+	unicode-range: U+0410-044F, U+002-002F, U+0040-007F;
 }
 /* cormorant-garamond-500 - cyrillic_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Cormorant Garamond';
+  font-display: swap;
+  font-family: 'Cormorant Mix';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.svg#CormorantGaramond') format('svg'); /* Legacy iOS */
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.eot');
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.woff2') format('woff2'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.woff') format('woff'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.ttf') format('truetype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500.svg#CormorantGaramond') format('svg');
+	unicode-range: U+0410-044F, U+002-002F, U+0040-007F;
 }
 /* cormorant-garamond-500italic - cyrillic_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Cormorant Garamond';
+  font-display: swap;
+  font-family: 'Cormorant Mix';
   font-style: italic;
   font-weight: 500;
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.svg#CormorantGaramond') format('svg'); /* Legacy iOS */
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.eot');
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.woff2') format('woff2'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.woff') format('woff'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.ttf') format('truetype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-500italic.svg#CormorantGaramond') format('svg');
+	unicode-range: U+0410-044F, U+002-002F, U+0040-007F;
 }
 /* cormorant-garamond-600 - cyrillic_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Cormorant Garamond';
+  font-display: swap;
+  font-family: 'Cormorant Mix';
   font-style: normal;
   font-weight: 600;
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.svg#CormorantGaramond') format('svg'); /* Legacy iOS */
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.eot');
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.woff2') format('woff2'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.woff') format('woff'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.ttf') format('truetype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-600.svg#CormorantGaramond') format('svg');
+	unicode-range: U+0410-044F, U+002-002F, U+0040-007F;
 }
 /* cormorant-garamond-700 - cyrillic_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Cormorant Garamond';
+  font-display: swap;
+  font-family: 'Cormorant Mix';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.svg#CormorantGaramond') format('svg'); /* Legacy iOS */
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.eot');
+  src: url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.woff2') format('woff2'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.woff') format('woff'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.ttf') format('truetype'),
+  url('../fonts/cormorant-garamond/cormorant-garamond-v16-cyrillic_latin-700.svg#CormorantGaramond') format('svg');
+	unicode-range: U+0410-044F, U+002-002F, U+0040-007F;
 }
-
 /* cormorant-infant-regular - cyrillic_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Cormorant Infant';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.svg#CormorantInfant') format('svg'); /* Legacy iOS */
+	font-display: swap;
+	font-family: 'Cormorant Mix';
+	font-style: normal;
+	font-weight: 400;
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.eot');
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.woff2') format('woff2'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.woff') format('woff'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.ttf') format('truetype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-regular.svg#CormorantInfant') format('svg');
+	unicode-range: U+0030-0039;
+}
+/* cormorant-infant-500 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Cormorant Mix';
+	font-style: normal;
+	font-weight: 500;
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500.eot');
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500.woff2') format('woff2'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500.woff') format('woff'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500.ttf') format('truetype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500.svg#CormorantInfant') format('svg');
+	unicode-range: U+0030-0039;
+}
+/* cormorant-infant-500italic - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Cormorant Mix';
+	font-style: italic;
+	font-weight: 500;
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500italic.eot');
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500italic.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500italic.woff2') format('woff2'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500italic.woff') format('woff'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500italic.ttf') format('truetype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-500italic.svg#CormorantInfant') format('svg');
+	unicode-range: U+0030-0039;
 }
 /* cormorant-infant-600 - cyrillic_latin */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: 'Cormorant Infant';
-  font-style: normal;
-  font-weight: 600;
-  src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-  url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.woff') format('woff'), /* Modern Browsers */
-  url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-  url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.svg#CormorantInfant') format('svg'); /* Legacy iOS */
+	font-display: swap;
+	font-family: 'Cormorant Mix';
+	font-style: normal;
+	font-weight: 600;
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.eot');
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.woff2') format('woff2'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.woff') format('woff'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.ttf') format('truetype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-600.svg#CormorantInfant') format('svg');
+	unicode-range: U+0030-0039;
+}
+/* cormorant-infant-700 - cyrillic_latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Cormorant Mix';
+	font-style: normal;
+	font-weight: 700;
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-700.eot');
+	src: url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-700.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-700.woff2') format('woff2'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-700.woff') format('woff'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-700.ttf') format('truetype'),
+	url('../fonts/cormorant-infant/cormorant-infant-v17-cyrillic_latin-700.svg#CormorantInfant') format('svg');
+	unicode-range: U+0030-0039;
+}
+@font-face {
+	font-family: 'SangBleu Sunrise';
+	font-display: swap;
+	src: url('../fonts/sang-bleu-sunrise/sang-bleu-sunrise.eot');
+	src: url('../fonts/sang-bleu-sunrise/sang-bleu-sunrise.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/sang-bleu-sunrise/sang-bleu-sunrise.woff2') format('woff2'),
+	url('../fonts/sang-bleu-sunrise/sang-bleu-sunrise.woff') format('woff'),
+	url('../fonts/sang-bleu-sunrise/sang-bleu-sunrise.ttf') format('truetype'),
+	url('../fonts/sang-bleu-sunrise/sang-bleu-sunrise.svg#sangbleu_sunriseregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+
 }

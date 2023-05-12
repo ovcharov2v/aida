@@ -1,0 +1,93 @@
+.recipe-intro {
+	@include background-image("../images/recipe-intro/bg");
+	padding-top: 196px;
+	padding-bottom: 60px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	color: $color-white;
+
+	&__top {
+		margin-bottom: 31px;
+	}
+
+	&__content {
+		display: grid;
+		grid-template: auto/ auto minmax(300px, 706px);
+		justify-content: space-between;
+		margin-bottom: 148px;
+		padding-right: 105px;
+	}
+
+	&__col {
+		flex-grow: 1;
+	}
+
+	&__title {
+		margin-bottom: 33px;
+	}
+
+	&__features {
+		max-width: 300px;
+	}
+
+	&__text {
+		font-size: 28px;
+		line-height: 32px;
+		font-weight: 500;
+	}
+
+	&__bottom {
+		display: flex;
+	}
+
+	&__socilals {
+		margin-right: 24px;
+	}
+
+	&__print-box {
+		position: relative;
+		display: flex;
+		align-items: center;
+		padding-left: 29px;
+
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: 1px;
+			height: 42px;
+			background-color: rgba(#BBB, .4);
+			content: "";
+		}
+	}
+
+	&__print-text {
+		margin-right: 14px;
+		font-size: 18px;
+		line-height: 1.2;
+	}
+
+	&__print-link {
+		flex-shrink: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 55px;
+		height: 55px;
+		background-color: $color-white;
+		border-radius: 50%;
+		color: #303030;
+		transition: background-color $transition-default;
+
+		&:hover {
+			background-color: #E9E9E9;
+		}
+	}
+
+	&__print-link-icon {
+		width: 35px;
+		height: 35px;
+	}
+}

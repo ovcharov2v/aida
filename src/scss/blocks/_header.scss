@@ -10,9 +10,15 @@
 	color: $color-white;
 	transition: color 1s ease, background-color .4s ease-in;
 
-	&--white {
+	&--middle,
+	&--permanently-white {
 		background-color: $color-white;
 		color: $color-black;
+	}
+
+	&--bottom {
+		background-color: $color-transparent;
+		color: $color-white;
 	}
 
 	&__container {
@@ -29,7 +35,7 @@
 		opacity: 0;
 		transition: width .5s ease;
 
-		.header--white & {
+		.header--middle & {
 			width: 116px;
 		}
 	}

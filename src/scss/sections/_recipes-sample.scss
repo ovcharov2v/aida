@@ -1,0 +1,11 @@
+.recipes-sample {
+	padding-top: 48px;
+	padding-bottom: 40px;
+
+	&__title {
+		margin-bottom: 114px;
+		text-transform: uppercase;
+		color: $color-red;
+		text-align: center;
+	}
+}

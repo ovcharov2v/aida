@@ -1,0 +1,15 @@
+.contacts-intro {
+	@include background-image("../images/contacts-intro/bg");
+	background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+	padding-top: 97px;
+	padding-bottom: 97px;
+	height: 666px;
+
+	&__title {
+		max-width: 660px;
+		text-transform: uppercase;
+		color: $color-red;
+	}
+}

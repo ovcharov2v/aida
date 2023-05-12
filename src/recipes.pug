@@ -1,0 +1,311 @@
+extends pug/base
+append vars
+	-
+		title = "AIDA Рецепты"
+		meta.description = "Описание AIDA"
+		isHeaderWhite = true
+block content
+	// Recipes list
+	section.recipes-list
+		.container.recipes-list__container
+			.recipes-list__col-text
+				p.h2.recipes-list__title1 "Se vuoi vivere per sempre,
+					br
+					|mangia pasta e bevi vino"
+				h1.h2.recipes-list__title2 «Если ты хочешь жить
+					br
+					| вечно, ешь пасту и пей вино»
+				p.recipes-list__text Так говорят в Италии, где паста давно стала популярным и любимым блюдом. Именно в Италии она получила настоящую известность и стала шедевром мировой кулинарии. Рецептов пасты множество — выбирайте по вкусу и под случай. А мы делимся некоторыми секретами, которые помогут сделать любую пасту по-настоящему вкусной. С пастой AIDA результат гарантирован и всегда предсказуем.
+				ul.recipes-list__list
+					li.recipes-list__list-elem Для идеальной пасты важно соблюдать пропорции воды, пасты и соли. Лучшей считается 1000:100:10: на 1000 мл воды приходится 100 г пасты и 10 г соли.
+					li.recipes-list__list-elem Опустите пасту в подсоленную кипящую воду: после того, как вода закипела, добавьте соль, подождите 20 секунд и только после этого опустите пасту в воду.
+					li.recipes-list__list-elem Перемешивайте пасту каждые две минуты.
+					li.recipes-list__list-elem Итальянские шеф-повара советуют сливать воду непосредственно из кастрюли, оставив в ней немного воды, не перекладывая пасту в дуршлаг. Добавьте к пасте одну столовую ложку оливкового масла или сливок, и вы получите необычайно нежный вкус.
+					li.recipes-list__list-elem Главный секрет при приготовлении итальянской пасты — состояние al dente (то есть «на зубок»). Как его определить? Если края стали более темными, а центр остался светлее, то продукт готов. Паста al dente считается более полезной, ведь при таком способе варки лучше сохраняются ее важные свойства.
+					li.recipes-list__list-elem Подбирая соус к пасте, важно помнить, что для мясных и томатных соусов лучше всего подходит паста с плоской и шероховатой поверхностью, которая буквально удерживает каждую каплю соуса (например, тальятелли). А вот сливочные и легкие соусы на основе трав отлично сочетаются с тонкой длинной пастой (капеллини).
+			.recipes-list__col-img
+				+picture("recipes-list/img1", "recipes-list__img", "jpg", "")
+		// Recipes-grid
+		.container.recipes-grid.recipes-grid--cols-4.recipes-list__grid
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					span.recipe-card__label Острое
+					+picture("recipe-card/img1", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Паста букатини с белыми
+						br
+						|грибами и стручковой фасолью
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					span.recipe-card__label Морепродукты
+					+picture("recipe-card/img2", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Паста капеллини с креветками,
+						br
+						|помидорами и базиликом
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-medium", true)(class="recipe-features__complexity-icon")
+							| средне
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					span.recipe-card__label Праздничное
+					+picture("recipe-card/img3", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Лазанья классическая
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-hard", true)(class="recipe-features__complexity-icon")
+							| сложно
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img4", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Мясное рагу в итальянском
+						br
+						| стиле (ракушки)
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					span.recipe-card__label Праздничное
+					+picture("recipe-card/img5", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Паста «Альфредо»
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img6", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Мясное рагу в итальянском стиле (спирали)
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					span.recipe-card__label Без лактозы
+					+picture("recipe-card/img7", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Паста Болоньезе
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-medium", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img8", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Цельнозерновая паста
+						br
+						|в томатном соусе с тунцом
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-hard", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img9", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Паста алла норма
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					span.recipe-card__label Праздничное
+					+picture("recipe-card/img10", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Тальятелли с куриной
+						br
+						|грудкой и вялеными томатами
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img11", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Гнёзда с фаршем
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					span.recipe-card__label Праздничное
+					+picture("recipe-card/img12", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Мясное рагу в итальянском
+						br
+						|стиле (рожки)
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img13", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Цельнозерновая паста
+						br
+						|с баклажанами и курицей
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img14", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Цельнозерновая паста
+						br
+						|с цукини и рикоттой
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					+picture("recipe-card/img15", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Паста с беконом и грибами
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+			// Recipe card
+			a.recipe-card.recipes-grid__elem(href="#")
+				.recipe-card__img-box
+					span.recipe-card__label Морепродукты
+					+picture("recipe-card/img16", "recipe-card__img", "jpg", "")
+				.recipe-card__text-box
+					p.recipe-card__title Паста с креветками
+						br
+						|и шпинатом
+					ul.recipe-features.recipe-card__feature-list
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут

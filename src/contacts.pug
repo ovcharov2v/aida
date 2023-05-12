@@ -1,0 +1,68 @@
+extends pug/base
+append vars
+	-
+		title = "AIDA Контакты"
+		meta.description = "Описание AIDA"
+		isHeaderWhite = true
+		body.classList = "body-top-offset"
+block content
+	// Contacts intro
+	section.contacts-intro
+		.container
+			h1.h2.contacts-intro__title Вы можете связаться с нами в наших социальных сетях или просто напишите нам.
+	// Contacts content
+	.contacts-content
+		.container.contacts-content__container
+			.contacts-content__col-gray
+				h2.h2.contacts-content__title Заполните форму, и мы
+					br
+					|с радостью вам ответим!
+				form.contacts-content__form
+					.contacts-content__form-grid
+						input.input(type="text", name="name", placeholder="Имя")
+						input.input(type="email", name="email", placeholder="Email")
+						input.input(type="tel", name="tel", placeholder="Номер телефона")
+					textarea.input.input--textarea(name="tel", placeholder="Комментарий")
+					label.checkbox.contacts-content__form-checkbox
+						input.checkbox__input(type="checkbox", name="agreement")
+						span.checkbox__text Даю согласие на обработку персональных данных.
+					.contacts-content__form-submit-box
+						button.button.button--gold.button--uppercase.contacts-content__form-submit Отправить
+			.contacts-content__col-info
+				.contacts-content__col.contacts-content__col--social-title-box
+					p.h4.contacts-content__subtitle Наши социальные сети
+				.contacts-content__col.contacts-content__col--social-box
+					ul.socials.socials--gray
+						li.socials__elem
+							a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+								+svg("social-vk", true)(class="socials__link-icon")
+						li.socials__elem
+							a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+								+svg("social-dzen", true)(class="socials__link-icon")
+				.contacts-content__col
+					p.h4.contacts-content__subtitle OOO “АГРО-АЛЬЯНС”
+					p.contacts-content__text 197198, Санкт-Петербург, Левашовский проспект 11/7, ст. 4
+				.contacts-content__col
+					p.contacts-content__text тел.
+						|
+						|
+						a(href="tel:+7 (812) 240-43-10") +7 (812) 240-43-10
+					a.contacts-content__map-link(href="#", target="_blank", rel="noreferrer noopener") посмотреть на карте
+				.contacts-content__col
+					p.h4.contacts-content__subtitle OOO “АГРО-АЛЬЯНС”
+					p.contacts-content__text 123290, Москва, 1-ый Магистральный тупик, д. 5А, корпус Д., бизнес-центр «Магистраль Плаза», офис 701
+				.contacts-content__col
+					p.contacts-content__text тел.
+						|
+						|
+						a(href="tel:+7(495) 792-19-12") +7(495) 792-19-12
+					a.contacts-content__map-link(href="#", target="_blank", rel="noreferrer noopener") посмотреть на карте
+				.contacts-content__col
+					p.h4.contacts-content__subtitle OOO “АГРО-АЛЬЯНС ОМФ”
+					p.contacts-content__text 462431, Оренбургская область, город Орск, улица Дорожная, д. 4
+				.contacts-content__col
+					p.contacts-content__text тел.
+						|
+						|
+						a(href="tel:+7 (3537) 37-22-33") +7 (3537) 37-22-33
+					a.contacts-content__map-link(href="#", target="_blank", rel="noreferrer noopener") посмотреть на карте

@@ -1,0 +1,77 @@
+.text-with-image {
+	background-image: linear-gradient(90deg, #F8F8F8 0%, rgba(247, 247, 247, 0.6) 65.08%);
+	overflow: hidden;
+
+	&__container {
+		display: flex;
+		column-gap: 146px;
+
+		.text-with-image--reverse & {
+			flex-direction: row-reverse;
+			column-gap: 60px;
+		}
+	}
+
+	&__col-img {
+		position: relative;
+		flex: 1 0;
+		width: 100%;
+		max-width: 677px;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50vw;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+
+		.text-with-image--reverse & {
+			left: unset;
+			right: 0;
+		}
+	}
+
+	&__col-text {
+		flex: 1 1;
+		padding-top: 195px;
+		padding-bottom: 195px;
+
+		.text-with-image--reverse & {
+			padding-top: 148px;
+			padding-bottom: 214px;
+		}
+
+		.text-with-image--page-news & {
+			padding-top: 88px;
+			padding-bottom: 100px;
+		}
+	}
+
+	&__title {
+		margin-bottom: 33px;
+
+		.text-with-image--page-news & {
+			max-width: 560px;
+		}
+	}
+
+	&__text {
+		display: block;
+		max-width: 610px;
+
+		&:not(:last-child) {
+			margin-bottom: 32px;
+		}
+
+		.text-with-image--reverse & {
+			max-width: 100%;
+		}
+
+		.text-with-image--page-news & {
+			max-width: 560px;
+		}
+	}
+}

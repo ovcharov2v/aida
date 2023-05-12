@@ -1,0 +1,70 @@
+.recipes-list {
+	padding-top: 180px;
+	padding-bottom: 94px;
+	overflow: hidden;
+
+	&__container {
+		display: grid;
+		grid-template: auto / 1.16fr 1fr;
+		grid-column-gap: 120px;
+		margin-bottom: 170px;
+	}
+
+	&__col-text {
+		padding-top: 32px;
+	}
+
+	&__title1 {
+		margin-bottom: 30px;
+		color: $color-red;
+	}
+
+	&__title2 {
+		max-width: 575px;
+		margin-left: auto;
+		margin-bottom: 34px;
+		color: $color-black;
+	}
+
+	&__text {
+		max-width: 710px;
+		margin-bottom: 34px;
+	}
+
+	&__list {
+		max-width: 647px;
+	}
+
+	&__list-elem {
+		position: relative;
+		padding-left: 24px;
+
+		&::before {
+			position: absolute;
+			top: 14px;
+			left: 0;
+			width: 5px;
+			height: 5px;
+			border-radius: 50%;
+			background-color: currentColor;
+			content: "";
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 35px;
+		}
+	}
+
+	&__col-img {
+		position: relative;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 50vw;
+		height: 624px;
+		object-fit: cover;
+	}
+}

@@ -16,7 +16,7 @@
 		filter: grayscale(1);
 		transition: filter $transition-default;
 
-		&:hover {
+		.market:hover & {
 			filter: grayscale(0);
 		}
 	}

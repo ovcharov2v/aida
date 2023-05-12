@@ -1,0 +1,75 @@
+.recipe-card {
+	display: block;
+	background-color: #FAFAFA;
+
+	&__img-box {
+		position: relative;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__label {
+		position: absolute;
+		top: 19px;
+		right: 15px;
+		padding: 1px 12px 3px;
+		font-size: 18px;
+		line-height: 1.2;
+		background-color: $color-white;
+		color: $color-black;
+
+		.recipe-card--medium & {
+			font-size: 20px;
+		}
+
+		.recipe-card--big & {
+			font-size: 24px;
+		}
+	}
+
+	&__text-box {
+		padding: 32px 16px 16px;
+
+		.recipe-card--medium & {
+			padding: 46px 28px 13px;
+		}
+
+		.recipe-card--big & {
+			padding: 62px 38px 38px;
+		}
+	}
+
+	&__title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 44px;
+		margin-bottom: 30px;
+		font-size: 20px;
+		line-height: 22px;
+		color: $color-red;
+		text-align: center;
+
+		.recipe-card--medium & {
+			min-height: 64px;
+			margin-bottom: 38px;
+			font-size: 28px;
+			line-height: 32px;
+		}
+
+		.recipe-card--big & {
+			min-height: 64px;
+			margin-bottom: 56px;
+			font-size: 46px;
+			line-height: 52px;
+		}
+	}
+
+	&__feature-list {
+		color: #8A8A8A;
+	}
+}

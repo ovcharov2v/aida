@@ -1,8 +1,8 @@
 extends pug/base
 append vars
 	-
-		title = "Aida"
-		meta.description = "Описание Aida"
+		title = "AIDA Главная"
+		meta.description = "Описание AIDA"
 block content
 	.loader
 		+picture("common/logo-big", "loader__logo")
@@ -31,7 +31,7 @@ block content
 	section.section-history
 		.container
 			.section-history__content-box
-				h2.h2.text-red.section-history__title История
+				h2.h2.text-semibold.text-red.section-history__title История
 				p.section-history__text История бренда пасты из твердых сортов пшеницы AIDA насчитывает более семи лет. Мы производим  нашу продукцию в поистине уникальном месте – Оренбургской области. Именно здесь раскинулись самые широкие поля пшеницы твердых сортов, а климат Оренбургской области сопоставим с климатом Италии по количеству солнечных дней в году.
 				a.button.button--gold.button--uppercase.section-history__link(href="#") Узнать больше
 			.section-history__gallery
@@ -55,7 +55,7 @@ block content
 			.section-collection__grid
 				.section-collection__text-col
 					.section-collection__text-box
-						h2.h2.text-red.section-collection__title
+						h2.h2.text-semibold.text-red.section-collection__title
 							|Разнообразие
 							br
 							|форм
@@ -107,7 +107,7 @@ block content
 				video.animated-image__img(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg")
 					source(src='videos/field.mp4', type='video/mp4')
 			.section-we-produce__content
-				h2.h2.text-red.section-we-produce__title
+				h2.h2.text-semibold.text-red.section-we-produce__title
 					span.section-we-produce__title-part.section-we-produce__title-part--n1 От колоска до вашего стола:
 					br
 					span.section-we-produce__title-part.section-we-produce__title-part--n2 как мы производим пасту AIDA
@@ -124,7 +124,7 @@ block content
 	section.section-recipes-preview.container
 		.section-recipes-preview__grid
 			.section-recipes-preview__text-col
-				h2.h2.text-red.section-recipes-preview__title Рецепты
+				h2.h2.text-semibold.text-red.section-recipes-preview__title Рецепты
 				p.section-recipes-preview__text Экспериментируйте с разными формами пасты, соусами и специями. Еще больше интересных рецептов с пастой AIDA вы найдете в нашей коллекции.
 				a.button.button--gold.button--uppercase.section-recipes-preview__link(href="#") Ко всем рецептам
 			.section-recipes-preview__col
@@ -152,7 +152,7 @@ block content
 	section.section-news-preview.container
 		.section-news-preview__grid
 			.section-news-preview__text-col
-				h2.h2.text-red.section-news-preview__title Новости
+				h2.h2.text-semibold.text-red.section-news-preview__title Новости
 				a.button.button--gold.button--uppercase.section-news-preview__link(href="#") Смотреть все
 			.section-news-preview__col
 				.section-news-preview__news-cols
@@ -178,7 +178,7 @@ block content
 		.container
 			.section-market-preview__grid
 				.section-market-preview__col
-					h2.h2.text-red.section-market-preview__title Мы уже здесь
+					h2.h2.text-semibold.text-red.section-market-preview__title Мы уже здесь
 					p.section-market-preview__text Пасту AIDA можно найти в магазине рядом с вами или заказать онлайн.
 					a.button.button--gold.button--uppercase.section-market-preview__link(href="#") Выбрать магазин
 				.section-market-preview__col.section-market-preview__markets-grid

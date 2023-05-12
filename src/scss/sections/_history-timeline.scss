@@ -1,0 +1,59 @@
+.history-timeline {
+	padding-top: 100px;
+
+	&__elem {
+		display: flex;
+	}
+
+	&__elem-col {
+		width: 100%;
+		max-width: 50%;
+		padding-bottom: 110px;
+
+		&--left {
+			padding-right: 24px;
+		}
+
+		&--right {
+			padding-left: 60px;
+			border-left: 2px solid #F1F1F1;
+		}
+
+		.history-timeline__elem:last-child & {
+			padding-bottom: 164px;
+		}
+	}
+
+	&__img {
+		display: block;
+		max-width: 100%;
+
+		.history-timeline__elem-col--left & {
+			margin-right: 36px;
+			max-width: calc(100% - 36px);
+		}
+	}
+
+	&__title {
+		position: relative;
+		margin-bottom: 33px;
+		color: $color-red;
+
+		&::before {
+			position: absolute;
+			top: 18px;
+			left: -87px;
+			width: 52px;
+			height: 52px;
+			border-radius: 50%;
+			background-color: $color-gold;
+			border: 18px solid #F1F1F1;
+			box-shadow: 0 0 0 19px #FBFBFB;
+			content: "";
+		}
+	}
+
+	&__text {
+		margin-top: 32px;
+	}
+}

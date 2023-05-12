@@ -1,0 +1,25 @@
+.recipe-other {
+	padding-top: 170px;
+	padding-bottom: 50px;
+
+	&__row {
+		display: grid;
+		grid-template: auto / 1fr 1.3fr;
+		grid-column-gap: 63px;
+		align-items: center;
+	}
+
+	&__col-grid {
+	}
+
+	&__col-text {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: 100px;
+	}
+
+	&__text {
+		max-width: 635px;
+	}
+}

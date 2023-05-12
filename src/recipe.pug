@@ -1,0 +1,160 @@
+extends pug/base
+append vars
+	-
+		title = "AIDA Карточка рецепта"
+		meta.description = "Описание AIDA"
+		isHeaderWhite = true
+block content
+	// Recipe intro
+	section.recipe-intro
+		.container
+			.recipe-intro__top
+				a.back-link.recipe-intro__back(href="#")
+					+svg("arrow-back", true)(class="back-link__icon")
+					|Вернуться
+			.recipe-intro__content
+				.recipe-intro__col
+					h1.h2.recipe-intro__title Паста «Альфредо»
+					ul.recipe-features.recipe-intro__features
+						li.recipe-features__elem
+							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+							| легко
+						li.recipe-features__elem
+							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+							| 4 порции
+						li.recipe-features__elem
+							+svg("recipe-time", true)(class="recipe-features__time-icon")
+							| 20 минут
+				.recipe-intro__col
+					p.recipe-intro__text Паста «Альфредо» — это очень простое и вкусное блюдо. Особенность классического рецепта заключается в сливочном соусе, который не содержит сливок, а состоит из большого количества сливочного масла и тертого сыра "пармезан".
+						br
+						|Мы же предлагаем вам добавить сливки, чтобы сделать соус еще более насыщенным и нежным. Такой соус прекрасно сочетается практически с любыми ингредиентами, что позволяет экспериментировать и создавать уникальные варианты этого блюда.
+			.recipe-intro__bottom
+				ul.socials.socials--small.recipe-intro__socilals
+					li.socials__elem
+						a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+							+svg("social-vk", true)(class="socials__link-icon")
+					li.socials__elem
+						a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+							+svg("social-dzen", true)(class="socials__link-icon")
+				.recipe-intro__print-box
+					p.recipe-intro__print-text Распечатать
+					a.recipe-intro__print-link(href="#", target="_blank", rel="noreferrer nofollow")
+						+svg("print", true)(class="recipe-intro__print-link-icon")
+	// Recipe ingredients
+	section.recipe-ingredients.container
+		// Row
+		.recipe-ingredients__row
+			.recipe-ingredients__col.recipe-ingredients__col--gray
+				h2.h2.recipe-ingredients__title Ингредиенты
+				ul.recipe-ingredients__list
+					li.recipe-ingredients__list-elem.recipe-ingredients__list-elem--selected Куриная грудка  — 1 Штука
+					li.recipe-ingredients__list-elem.recipe-ingredients__list-elem--selected Лапша AIDA — 500 Грамм
+					li.recipe-ingredients__list-elem Репчатый лук  — 1-2 Штук (В зависимости от размера.)
+					li.recipe-ingredients__list-elem Оливковое масло  — 2 Ст. ложки
+					li.recipe-ingredients__list-elem.recipe-ingredients__list-elem--selected Пучок базилика  — 1 Штука (Маленький.)
+					li.recipe-ingredients__list-elem Пучок петрушки — 1 Штука (Маленький.)
+					li.recipe-ingredients__list-elem Белое вино  — 30 мл
+					li.recipe-ingredients__list-elem Сливки  — 400 мл
+					li.recipe-ingredients__list-elem Соль  — по вкусу
+					li.recipe-ingredients__list-elem Чёрный молотый перец  — по вкусу
+			.recipe-ingredients__col
+				ol.recipe-ingredients__todo
+					li.recipe-ingredients__todo-elem Поставьте макароны вариться. Разрежьте куриную грудку на небольшие кусочки одинакового размера.
+					li.recipe-ingredients__todo-elem Обжарьте  курицу на оливковом масле до готовности.
+					li.recipe-ingredients__todo-elem Достаньте курицу, отложите в сторону. Дальше на том  же оливковом масле жарьте мелко рубленный репчатый лук.
+					li.recipe-ingredients__todo-elem Когда репчатый лук начнёт золотиться, добавьте белого вина.
+					li.recipe-ingredients__todo-elem Налейте сливки, перемешайте. Затем выложите в сливки курицу. Потушите всё вместе а течение 5 мин.
+					li.recipe-ingredients__todo-elem Мелко порубите зелень. Добавьте в сливочный соус с курицей.
+					li.recipe-ingredients__todo-elem Отварите макароны, выложите в сливочный соус с курицей. Всё перемешайте. Потушите 3 мин. под закрытой крышкой на медленном огне. Подавайте к столу.
+	// Recipe product
+	section.recipe-product.container
+		.recipe-product__row
+			.recipe-product__col-text
+				.recipe-product__text-box
+					h2.h2.recipe-product__title Приготовлено с пастой AIDA Спагетти
+					.recipe-product__button-row
+						a.button.button--gold.button--uppercase.recipe-product__button(href="#") О продукте
+						a.button.button--gold.button--uppercase.recipe-product__button(href="#") Купить
+			.recipe-product__col-img
+				+picture("recipe-product/img1", "recipe-product__img", "jpg", "")
+	// Recipe other
+	.recipe-other.container
+		.recipe-other__row
+			.recipe-other__col-grid
+				.recipes-grid.recipes-grid--cols-2
+					// Recipe card
+					a.recipe-card.recipes-grid__elem(href="#")
+						.recipe-card__img-box
+							span.recipe-card__label Острое
+							+picture("recipe-card/img1", "recipe-card__img", "jpg", "")
+						.recipe-card__text-box
+							p.recipe-card__title Паста букатини с белыми
+								br
+								| грибами и стручковой фасолью
+							ul.recipe-features.recipe-card__feature-list
+								li.recipe-features__elem
+									+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+									| легко
+								li.recipe-features__elem
+									+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+									| 4 порции
+								li.recipe-features__elem
+									+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20 минут
+					// Recipe card
+					a.recipe-card.recipes-grid__elem(href="#")
+						.recipe-card__img-box
+							span.recipe-card__label Морепродукты
+							+picture("recipe-card/img2", "recipe-card__img", "jpg", "")
+						.recipe-card__text-box
+							p.recipe-card__title Паста капеллини с креветками,
+								br
+								| помидорами и базиликом
+							ul.recipe-features.recipe-card__feature-list
+								li.recipe-features__elem
+									+svg("recipe-complexity-medium", true)(class="recipe-features__complexity-icon")
+									| средне
+								li.recipe-features__elem
+									+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+									| 4 порции
+								li.recipe-features__elem
+									+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20 минут
+					// Recipe card
+					a.recipe-card.recipes-grid__elem(href="#")
+						.recipe-card__img-box
+							span.recipe-card__label Праздничное
+							+picture("recipe-card/img3", "recipe-card__img", "jpg", "")
+						.recipe-card__text-box
+							p.recipe-card__title Лазанья классическая
+							ul.recipe-features.recipe-card__feature-list
+								li.recipe-features__elem
+									+svg("recipe-complexity-hard", true)(class="recipe-features__complexity-icon")
+									| сложно
+								li.recipe-features__elem
+									+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+									| 4 порции
+								li.recipe-features__elem
+									+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20 минут
+					// Recipe card
+					a.recipe-card.recipes-grid__elem(href="#")
+						.recipe-card__img-box
+							+picture("recipe-card/img4", "recipe-card__img", "jpg", "")
+						.recipe-card__text-box
+							p.recipe-card__title Мясное рагу в итальянском
+								br
+								| стиле (ракушки)
+							ul.recipe-features.recipe-card__feature-list
+								li.recipe-features__elem
+									+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon recipe-features__complexity-icon--easy")
+									| легко
+								li.recipe-features__elem
+									+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+									| 4 порции
+								li.recipe-features__elem
+									+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20 минут
+			.recipe-other__col-text
+				p.recipe-other__text Еще больше интересных рецептов с пастой AIDA вы найдете в нашей коллекции. Экспериментируйте с разными формами пасты, соусами и специями. С пастой AIDA вы можете приготовить что угодно — от простых и легких салатов до интересных гастрономических блюд. Приглашаем вас окунуться в мир кулинарных открытий и создать свои собственные кулинарные шедевры с AIDA.

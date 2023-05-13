@@ -4,11 +4,6 @@ function headerWatcher() {
 	const header = document.querySelector('.header');
 	const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
 
-	/*if ((window.scrollY > 0.1) && (window.scrollY < document.body.scrollHeight - windowHeight - 2)) {
-		header.classList.add('header--white');
-	} else {
-		header.classList.remove('header--white');
-	}*/
 	if (window.scrollY < 0.1) {
 		header.classList.add('header--top')
 		header.classList.remove('header--middle')

@@ -265,10 +265,15 @@ __webpack_require__.r(__webpack_exports__);
 function headerWatcher() {
   var header = document.querySelector('.header');
   var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  if (window.scrollY > 0.1 && window.scrollY < document.body.scrollHeight - windowHeight - 2) {
-    header.classList.add('header--white');
+  if (window.scrollY < 0.1) {
+    header.classList.add('header--top');
+    header.classList.remove('header--middle');
+  } else if (window.scrollY > document.body.scrollHeight - windowHeight - 2) {
+    header.classList.add('header--bottom');
+    header.classList.remove('header--middle');
   } else {
-    header.classList.remove('header--white');
+    header.classList.remove('header--top', 'header--bottom');
+    header.classList.add('header--middle');
   }
   requestAnimationFrame(headerWatcher);
 }
@@ -308,35 +313,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
-document.body.classList.add('overflow-hidden');
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-  onComplete: function onComplete() {
-    var evt = new Event('loader-animation-complete', {
-      bubbles: true
-    });
+var loader = document.querySelector('.loader');
+var evt = new Event('loader-animation-complete', {
+  bubbles: true
+});
+if (loader) {
+  document.body.classList.add('overflow-hidden');
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    onComplete: function onComplete() {
+      document.dispatchEvent(evt);
+    }
+  }).to('.loader__logo', {
+    scale: 1.5,
+    duration: 2
+  }).to('.loader__white-block', {
+    xPercent: 100,
+    duration: 2
+  }, '-=2').to('.loader', {
+    backgroundColor: '#000',
+    duration: 3
+  }).to('.loader__logo', {
+    opacity: 0,
+    duration: 1.5
+  }, '-=3.2').to('.loader', {
+    opacity: 0,
+    duration: 1
+  }).to('.loader', {
+    display: 'none',
+    onComplete: function onComplete() {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }, '-=.5');
+} else {
+  setTimeout(function () {
     document.dispatchEvent(evt);
-  }
-}).to('.loader__logo', {
-  scale: 1.5,
-  duration: 2
-}).to('.loader__white-block', {
-  xPercent: 100,
-  duration: 2
-}, '-=2').to('.loader', {
-  backgroundColor: '#000',
-  duration: 3
-}).to('.loader__logo', {
-  opacity: 0,
-  duration: 1.5
-}, '-=3.2').to('.loader', {
-  opacity: 0,
-  duration: 1
-}).to('.loader', {
-  display: 'none',
-  onComplete: function onComplete() {
-    document.body.classList.remove('overflow-hidden');
-  }
-}, '-=.5');
+  }, 100);
+}
 
 /***/ }),
 
@@ -354,83 +366,87 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__title', {
-  y: 50,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-collection__title',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__text', {
-  y: 75,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-collection__text',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__link', {
-  y: 100,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-collection__link',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__gallery-grid', {
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-collection__gallery-grid',
-    scrub: 1.5,
-    // markers: true,
-    end: '400px center',
-    toggleActions: "restart none none none"
-  },
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__gallery-grid', {
-  y: 200
-}, {
-  scrollTrigger: {
-    trigger: '.section-collection__gallery-grid',
-    scrub: 1.5,
-    // markers: true,
-    toggleActions: "restart none none none"
-  },
-  y: 0
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-collection__gallery-col--n2'], {
-  y: 200
-}, {
-  scrollTrigger: {
-    trigger: '.section-collection__gallery-col--n2',
-    // markers: true,
-    start: 'top bottom',
-    end: '70% top',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: -600
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-collection');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__title', {
+    y: 50,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-collection__title',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__text', {
+    y: 75,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-collection__text',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__link', {
+    y: 100,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-collection__link',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__gallery-grid', {
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-collection__gallery-grid',
+      scrub: 1.5,
+      // markers: true,
+      end: '400px center',
+      toggleActions: "restart none none none"
+    },
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__gallery-grid', {
+    y: 200
+  }, {
+    scrollTrigger: {
+      trigger: '.section-collection__gallery-grid',
+      scrub: 1.5,
+      // markers: true,
+      toggleActions: "restart none none none"
+    },
+    y: 0
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-collection__gallery-col--n2'], {
+    y: 200
+  }, {
+    scrollTrigger: {
+      trigger: '.section-collection__gallery-col--n2',
+      // markers: true,
+      start: 'top bottom',
+      end: '70% top',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: -600
+  });
 });
 
 /***/ }),
@@ -446,29 +462,33 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-collection__galle
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-hero-main__next-btn', {
-  y: -7
-}, {
-  y: 7,
-  yoyo: true,
-  repeat: -1,
-  duration: .7
-});
-document.addEventListener('loader-animation-complete', function () {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({}).to('.section-hero-main__link-btn', {
-    opacity: 1,
-    duration: .7,
-    delay: 2
-  }).to('.section-hero-main__title-block', {
-    y: 0,
-    opacity: 1,
-    stagger: 0.5,
-    'webkitFilter': 'blur(0px)',
-    'filter': 'blur(0px)',
-    duration: 2
-  }).to('.section-hero-main__next-btn', {
-    opacity: 1,
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-hero-main');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-hero-main__next-btn', {
+    y: -7
+  }, {
+    y: 7,
+    yoyo: true,
+    repeat: -1,
     duration: .7
+  });
+  document.addEventListener('loader-animation-complete', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({}).to('.section-hero-main__link-btn', {
+      opacity: 1,
+      duration: .7,
+      delay: 2
+    }).to('.section-hero-main__title-block', {
+      y: 0,
+      opacity: 1,
+      stagger: 0.5,
+      'webkitFilter': 'blur(0px)',
+      'filter': 'blur(0px)',
+      duration: 2
+    }).to('.section-hero-main__next-btn', {
+      opacity: 1,
+      duration: .7
+    });
   });
 });
 
@@ -488,84 +508,88 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__title', {
-  y: 50,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-history__title',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.2,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__text', {
-  y: 75,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-history__text',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.1,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__link', {
-  y: 100,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-history__link',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.3,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n2', {
-  y: 300,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-history__gallery',
-    scrub: 1.4,
-    // markers: true,
-    end: 'center center'
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n3', {
-  y: -200,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-history__gallery',
-    scrub: 1.3,
-    // markers: true,
-    end: 'center center'
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__gallery-back', {
-  y: 100
-}, {
-  scrollTrigger: {
-    trigger: '.section-history__gallery',
-    scrub: 1.2,
-    // markers: true,
-    end: 'center center'
-  },
-  y: 0
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-history');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__title', {
+    y: 50,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-history__title',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.2,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__text', {
+    y: 75,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-history__text',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.1,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__link', {
+    y: 100,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-history__link',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.3,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n2', {
+    y: 300,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-history__gallery',
+      scrub: 1.4,
+      // markers: true,
+      end: 'center center'
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n3', {
+    y: -200,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-history__gallery',
+      scrub: 1.3,
+      // markers: true,
+      end: 'center center'
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__gallery-back', {
+    y: 100
+  }, {
+    scrollTrigger: {
+      trigger: '.section-history__gallery',
+      scrub: 1.2,
+      // markers: true,
+      end: 'center center'
+    },
+    y: 0
+  });
 });
 
 /***/ }),
@@ -580,50 +604,52 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__gallery-b
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 
-
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
-  width: 0,
-  height: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-image-back-anim .section-image-back-anim__box',
-    //markers: true,
-    scrub: true,
-    start: 'top 40%',
-    end: "bottom 300px"
-  },
-  width: '100%',
-  height: '100%'
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
-  y: -650
-}, {
-  scrollTrigger: {
-    trigger: '.section-image-back-anim .section-image-back-anim__box',
-    //markers: true,
-    scrub: true,
-    start: '200px 40%',
-    end: "+=800px top"
-  },
-  y: 200
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__img', {
-  xPercent: -.6,
-  scale: .4,
-  height: "540%"
-}, {
-  scrollTrigger: {
-    trigger: '.section-image-back-anim .section-image-back-anim__img',
-    // markers: true,
-    scrub: true,
-    start: 'top 40%',
-    end: "bottom -=300px"
-  },
-  xPercent: 0,
-  scale: 1,
-  height: "100%"
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-image-back-anim');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
+    width: 0,
+    height: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-image-back-anim .section-image-back-anim__box',
+      //markers: true,
+      scrub: true,
+      start: 'top 40%',
+      end: "bottom 300px"
+    },
+    width: '100%',
+    height: '100%'
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
+    y: -650
+  }, {
+    scrollTrigger: {
+      trigger: '.section-image-back-anim .section-image-back-anim__box',
+      //markers: true,
+      scrub: true,
+      start: '200px 40%',
+      end: "+=800px top"
+    },
+    y: 200
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__img', {
+    xPercent: -.6,
+    scale: .4,
+    height: "540%"
+  }, {
+    scrollTrigger: {
+      trigger: '.section-image-back-anim .section-image-back-anim__img',
+      // markers: true,
+      scrub: true,
+      start: 'top 40%',
+      end: "bottom -=300px"
+    },
+    xPercent: 0,
+    scale: 1,
+    height: "100%"
+  });
 });
 
 /***/ }),
@@ -642,17 +668,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
-var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-image-back');
-boxList.forEach(function (box) {
-  var img = box.querySelector('.section-image-back__bg');
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, {
-    scrollTrigger: {
-      trigger: box,
-      scrub: 1.3,
-      invalidateOnRefresh: true
-    },
-    backgroundPosition: "center top -" + img.offsetHeight / 10 + 100 + 'px',
-    ease: "none"
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-image-back');
+  if (!target) return;
+  var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-image-back');
+  boxList.forEach(function (box) {
+    var img = box.querySelector('.section-image-back__bg');
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, {
+      scrollTrigger: {
+        trigger: box,
+        scrub: 1.3,
+        invalidateOnRefresh: true
+      },
+      backgroundPosition: "center top -" + img.offsetHeight / 10 + 100 + 'px',
+      ease: "none"
+    });
   });
 });
 
@@ -672,64 +702,68 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-market-preview__title', {
-  y: 50,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-market-preview__title',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-market-preview__text', {
-  y: 75,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-market-preview__text',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-market-preview__link', {
-  y: 100,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-market-preview__link',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-var recipes = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-market-preview__market-link');
-recipes.forEach(function (recipe) {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
-    opacity: 0,
-    y: 50
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-market-preview');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-market-preview__title', {
+    y: 50,
+    opacity: 0
   }, {
     scrollTrigger: {
-      trigger: recipe,
-      scrub: 2,
+      trigger: '.section-market-preview__title',
       // markers: true,
-      start: "top bottom",
-      end: "top 70%",
+      end: 'center center',
+      scrub: 1.5,
       toggleActions: "restart none none none"
     },
-    opacity: 1,
-    y: 0
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-market-preview__text', {
+    y: 75,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-market-preview__text',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-market-preview__link', {
+    y: 100,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-market-preview__link',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  var recipes = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-market-preview__market-link');
+  recipes.forEach(function (recipe) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
+      opacity: 0,
+      y: 50
+    }, {
+      scrollTrigger: {
+        trigger: recipe,
+        scrub: 2,
+        // markers: true,
+        start: "top bottom",
+        end: "top 70%",
+        toggleActions: "restart none none none"
+      },
+      opacity: 1,
+      y: 0
+    });
   });
 });
 
@@ -749,62 +783,66 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-news-preview__title', {
-  y: 50,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-news-preview__title',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-news-preview__link', {
-  y: 100,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-news-preview__link',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-var newsList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-news-preview__news');
-newsList.forEach(function (news) {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(news, {
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-news-preview');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-news-preview__title', {
+    y: 50,
     opacity: 0
   }, {
     scrollTrigger: {
-      trigger: news,
-      scrub: 2,
+      trigger: '.section-news-preview__title',
       // markers: true,
-      start: "top bottom",
-      end: "top 70%",
+      end: 'center center',
+      scrub: 1.5,
       toggleActions: "restart none none none"
     },
+    y: 0,
     opacity: 1
   });
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-news-preview__news-col--n2'], {
-  y: 200
-}, {
-  scrollTrigger: {
-    trigger: '.section-news-preview__news-col--n2',
-    // markers: true,
-    start: 'top bottom',
-    end: '70% top',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: -200
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-news-preview__link', {
+    y: 100,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-news-preview__link',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  var newsList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-news-preview__news');
+  newsList.forEach(function (news) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(news, {
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: news,
+        scrub: 2,
+        // markers: true,
+        start: "top bottom",
+        end: "top 70%",
+        toggleActions: "restart none none none"
+      },
+      opacity: 1
+    });
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-news-preview__news-col--n2'], {
+    y: 200
+  }, {
+    scrollTrigger: {
+      trigger: '.section-news-preview__news-col--n2',
+      // markers: true,
+      start: 'top bottom',
+      end: '70% top',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: -200
+  });
 });
 
 /***/ }),
@@ -823,76 +861,80 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__title', {
-  y: 50,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-recipes-preview__title',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__text', {
-  y: 75,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-recipes-preview__text',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__link', {
-  y: 100,
-  opacity: 0
-}, {
-  scrollTrigger: {
-    trigger: '.section-recipes-preview__link',
-    // markers: true,
-    end: 'center center',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: 0,
-  opacity: 1
-});
-var recipes = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-recipes-preview__recipe');
-recipes.forEach(function (recipe) {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-recipes-preview');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__title', {
+    y: 50,
     opacity: 0
   }, {
     scrollTrigger: {
-      trigger: recipe,
-      scrub: 2,
+      trigger: '.section-recipes-preview__title',
       // markers: true,
-      start: "200px bottom",
-      end: "top 70%",
+      end: 'center center',
+      scrub: 1.5,
       toggleActions: "restart none none none"
     },
+    y: 0,
     opacity: 1
   });
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-recipes-preview__recipe-col--n2'], {
-  y: 200
-}, {
-  scrollTrigger: {
-    trigger: '.section-recipes-preview__recipe-col--n2',
-    // markers: true,
-    start: 'top bottom',
-    end: '70% top',
-    scrub: 1.5,
-    toggleActions: "restart none none none"
-  },
-  y: -200
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__text', {
+    y: 75,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-recipes-preview__text',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__link', {
+    y: 100,
+    opacity: 0
+  }, {
+    scrollTrigger: {
+      trigger: '.section-recipes-preview__link',
+      // markers: true,
+      end: 'center center',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: 0,
+    opacity: 1
+  });
+  var recipes = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-recipes-preview__recipe');
+  recipes.forEach(function (recipe) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: recipe,
+        scrub: 2,
+        // markers: true,
+        start: "200px bottom",
+        end: "top 70%",
+        toggleActions: "restart none none none"
+      },
+      opacity: 1
+    });
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-recipes-preview__recipe-col--n2'], {
+    y: 200
+  }, {
+    scrollTrigger: {
+      trigger: '.section-recipes-preview__recipe-col--n2',
+      // markers: true,
+      start: 'top bottom',
+      end: '70% top',
+      scrub: 1.5,
+      toggleActions: "restart none none none"
+    },
+    y: -200
+  });
 });
 
 /***/ }),
@@ -911,76 +953,80 @@ __webpack_require__.r(__webpack_exports__);
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__title-part--n1', {
-  y: 30,
-  opacity: 0,
-  'webkitFilter': 'blur(5px)',
-  'filter': 'blur(5px)'
-}, {
-  y: 0,
-  opacity: 1,
-  'webkitFilter': 'blur(0px)',
-  'filter': 'blur(0px)',
-  scrollTrigger: {
-    trigger: '.section-we-produce__title',
-    // markers: true,
-    end: 'bottom 70%',
-    scrub: 1.5
-  }
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__title-part--n2', {
-  y: 70,
-  opacity: 0,
-  'webkitFilter': 'blur(5px)',
-  'filter': 'blur(5px)'
-}, {
-  y: 0,
-  opacity: 1,
-  'webkitFilter': 'blur(0px)',
-  'filter': 'blur(0px)',
-  scrollTrigger: {
-    trigger: '.section-we-produce__title',
-    // markers: true,
-    end: 'bottom 70%',
-    scrub: 1.5
-  }
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__text', {
-  y: 70,
-  opacity: 0
-}, {
-  y: 0,
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.section-we-produce__text',
-    // markers: true,
-    end: 'bottom 70%',
-    scrub: 1.5
-  }
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__link', {
-  y: 100,
-  opacity: 0
-}, {
-  y: 0,
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.section-we-produce__link',
-    // markers: true,
-    end: 'bottom 70%',
-    scrub: 1.5
-  }
-});
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__img-box', {
-  opacity: 0
-}, {
-  opacity: 1,
-  scrollTrigger: {
-    trigger: '.section-we-produce__img-box',
-    // markers: true,
-    end: 'bottom 60%',
-    scrub: 1.5
-  }
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-we-produce');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__title-part--n1', {
+    y: 30,
+    opacity: 0,
+    'webkitFilter': 'blur(5px)',
+    'filter': 'blur(5px)'
+  }, {
+    y: 0,
+    opacity: 1,
+    'webkitFilter': 'blur(0px)',
+    'filter': 'blur(0px)',
+    scrollTrigger: {
+      trigger: '.section-we-produce__title',
+      // markers: true,
+      end: 'bottom 70%',
+      scrub: 1.5
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__title-part--n2', {
+    y: 70,
+    opacity: 0,
+    'webkitFilter': 'blur(5px)',
+    'filter': 'blur(5px)'
+  }, {
+    y: 0,
+    opacity: 1,
+    'webkitFilter': 'blur(0px)',
+    'filter': 'blur(0px)',
+    scrollTrigger: {
+      trigger: '.section-we-produce__title',
+      // markers: true,
+      end: 'bottom 70%',
+      scrub: 1.5
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__text', {
+    y: 70,
+    opacity: 0
+  }, {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: '.section-we-produce__text',
+      // markers: true,
+      end: 'bottom 70%',
+      scrub: 1.5
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__link', {
+    y: 100,
+    opacity: 0
+  }, {
+    y: 0,
+    opacity: 1,
+    scrollTrigger: {
+      trigger: '.section-we-produce__link',
+      // markers: true,
+      end: 'bottom 70%',
+      scrub: 1.5
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__img-box', {
+    opacity: 0
+  }, {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: '.section-we-produce__img-box',
+      // markers: true,
+      end: 'bottom 60%',
+      scrub: 1.5
+    }
+  });
 });
 
 /***/ }),

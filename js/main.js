@@ -195,15 +195,57 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sections_loader__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sections/loader */ "./src/js/sections/loader.js");
 /* harmony import */ var _sections_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sections/header */ "./src/js/sections/header.js");
 /* harmony import */ var _sections_animated_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/animated-image */ "./src/js/sections/animated-image.js");
-/* harmony import */ var _sections_section_image_back__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/section-image-back */ "./src/js/sections/section-image-back.js");
-/* harmony import */ var _sections_section_hero_main__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/section-hero-main */ "./src/js/sections/section-hero-main.js");
-/* harmony import */ var _sections_section_history__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/section-history */ "./src/js/sections/section-history.js");
-/* harmony import */ var _sections_section_collection__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/section-collection */ "./src/js/sections/section-collection.js");
-/* harmony import */ var _sections_section_image_back_anim__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/section-image-back-anim */ "./src/js/sections/section-image-back-anim.js");
-/* harmony import */ var _sections_section_we_produce__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/section-we-produce */ "./src/js/sections/section-we-produce.js");
-/* harmony import */ var _sections_section_recipes_preview__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/section-recipes-preview */ "./src/js/sections/section-recipes-preview.js");
-/* harmony import */ var _sections_section_news_preview__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./sections/section-news-preview */ "./src/js/sections/section-news-preview.js");
-/* harmony import */ var _sections_section_market_preview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./sections/section-market-preview */ "./src/js/sections/section-market-preview.js");
+/* harmony import */ var _sections_show_up__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/show-up */ "./src/js/sections/show-up.js");
+/* harmony import */ var _sections_section_image_back__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/section-image-back */ "./src/js/sections/section-image-back.js");
+/* harmony import */ var _sections_section_video_back__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/section-video-back */ "./src/js/sections/section-video-back.js");
+/* harmony import */ var _sections_section_hero_main__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/section-hero-main */ "./src/js/sections/section-hero-main.js");
+/* harmony import */ var _sections_section_history__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/section-history */ "./src/js/sections/section-history.js");
+/* harmony import */ var _sections_section_collection__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/section-collection */ "./src/js/sections/section-collection.js");
+/* harmony import */ var _sections_section_image_back_anim__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/section-image-back-anim */ "./src/js/sections/section-image-back-anim.js");
+/* harmony import */ var _sections_section_we_produce__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./sections/section-we-produce */ "./src/js/sections/section-we-produce.js");
+/* harmony import */ var _sections_section_recipes_preview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./sections/section-recipes-preview */ "./src/js/sections/section-recipes-preview.js");
+/* harmony import */ var _sections_section_news_preview__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./sections/section-news-preview */ "./src/js/sections/section-news-preview.js");
+/* harmony import */ var _sections_section_market_preview__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./sections/section-market-preview */ "./src/js/sections/section-market-preview.js");
+/* harmony import */ var _sections_history_intro__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./sections/history-intro */ "./src/js/sections/history-intro.js");
+/* harmony import */ var _sections_history_timeline__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./sections/history-timeline */ "./src/js/sections/history-timeline.js");
+/* harmony import */ var _sections_text_with_image__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./sections/text-with-image */ "./src/js/sections/text-with-image.js");
+/* harmony import */ var _sections_product_grid__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./sections/product-grid */ "./src/js/sections/product-grid.js");
+/* harmony import */ var _sections_news_nav__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./sections/news-nav */ "./src/js/sections/news-nav.js");
+/* harmony import */ var _sections_news_sample__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./sections/news-sample */ "./src/js/sections/news-sample.js");
+/* harmony import */ var _sections_news_content__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./sections/news-content */ "./src/js/sections/news-content.js");
+/* harmony import */ var _sections_where_buy_intro__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./sections/where-buy-intro */ "./src/js/sections/where-buy-intro.js");
+/* harmony import */ var _sections_where_buy_shops__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./sections/where-buy-shops */ "./src/js/sections/where-buy-shops.js");
+/* harmony import */ var _sections_contacts_intro__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./sections/contacts-intro */ "./src/js/sections/contacts-intro.js");
+/* harmony import */ var _sections_contacts_content__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./sections/contacts-content */ "./src/js/sections/contacts-content.js");
+/* harmony import */ var _sections_recipes_list__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./sections/recipes-list */ "./src/js/sections/recipes-list.js");
+/* harmony import */ var _sections_recipes_grid__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./sections/recipes-grid */ "./src/js/sections/recipes-grid.js");
+/* harmony import */ var _sections_product_features__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./sections/product-features */ "./src/js/sections/product-features.js");
+/* harmony import */ var _sections_recipe_intro__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./sections/recipe-intro */ "./src/js/sections/recipe-intro.js");
+/* harmony import */ var _sections_recipe_ingredients__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./sections/recipe-ingredients */ "./src/js/sections/recipe-ingredients.js");
+/* harmony import */ var _sections_recipe_product__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./sections/recipe-product */ "./src/js/sections/recipe-product.js");
+/* harmony import */ var _sections_recipe_other__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./sections/recipe-other */ "./src/js/sections/recipe-other.js");
+/* harmony import */ var _sections_technology_block__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./sections/technology-block */ "./src/js/sections/technology-block.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -231,21 +273,108 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
-/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 
-
-gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
 var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.animated-image');
-boxList.forEach(function (box) {
+var counter = 1;
+boxList.forEach(function (box, index) {
   var img = box.querySelector('.animated-image__img');
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, {
+  var scrub = 1.3 * counter;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(img, {
+    yPercent: -10,
+    scale: 1.2
+  }, {
     scrollTrigger: {
       trigger: box,
-      scrub: 4,
+      scrub: scrub,
       invalidateOnRefresh: true
     },
-    y: box.offsetHeight - img.offsetHeight,
+    yPercent: 10,
+    scale: 1.2,
     ease: "none"
+  });
+  if (counter > 3) {
+    counter = 0;
+  } else {
+    counter++;
+  }
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/contacts-content.js":
+/*!*********************************************!*\
+  !*** ./src/js/sections/contacts-content.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.contacts-content');
+  if (!target) return;
+  var textColsList = document.querySelectorAll('.contacts-content__col');
+  textColsList.forEach(function (textCol) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(textCol, {
+      opacity: 0,
+      x: 100
+    }, {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: textCol,
+        start: "center 90%"
+      }
+    });
+  });
+  var leftColElems = document.querySelectorAll(['.contacts-content__title', '.contacts-content__form']);
+  leftColElems.forEach(function (elem) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
+      opacity: 0,
+      x: -200
+    }, {
+      opacity: 1,
+      x: 0,
+      duration: .7,
+      scrollTrigger: {
+        trigger: elem,
+        start: "center 90%"
+      }
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/contacts-intro.js":
+/*!*******************************************!*\
+  !*** ./src/js/sections/contacts-intro.js ***!
+  \*******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.contacts-intro');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.contacts-intro__title-block', {
+    y: 200,
+    opacity: 0,
+    'webkitFilter': 'blur(10px)',
+    'filter': 'blur(10px)'
+  }, {
+    y: 0,
+    opacity: 1,
+    stagger: 0.2,
+    'webkitFilter': 'blur(0px)',
+    'filter': 'blur(0px)',
+    duration: 1.5
   });
 });
 
@@ -294,6 +423,93 @@ document.addEventListener('loader-animation-complete', function () {
     y: 0,
     opacity: 1,
     duration: 1
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/history-intro.js":
+/*!******************************************!*\
+  !*** ./src/js/sections/history-intro.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.history-intro');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({}).to('.history-intro__title-block', {
+    y: 0,
+    opacity: 1,
+    stagger: 0.5,
+    'webkitFilter': 'blur(0px)',
+    'filter': 'blur(0px)',
+    duration: 2
+  }).to('.history-intro__col-img-back', {
+    opacity: 1,
+    duration: 1
+  }, "-=1.5").to('.history-intro__img--n1', {
+    opacity: 1,
+    y: 0,
+    duration: 1
+  }, "-=.7").to('.history-intro__img--n2', {
+    opacity: 1,
+    y: 130,
+    duration: 1
+  }, "-=.5");
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/history-timeline.js":
+/*!*********************************************!*\
+  !*** ./src/js/sections/history-timeline.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.history-timeline');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.history-timeline__marker', {
+    boxShadow: "0 0 0 19px rgba(251, 251, 251, 0.5)",
+    duration: .7,
+    delay: 2,
+    repeat: -1,
+    yoyo: true
+  });
+  var elemList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.history-timeline__elem-col');
+  elemList.forEach(function (el) {
+    var marker = el.querySelector('.history-timeline__marker');
+    var title = el.querySelector('.history-timeline__title');
+    var text = el.querySelector('.history-timeline__text');
+    var img = el.querySelector('.history-timeline__img');
+    var config = {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 70%"
+      },
+      x: 0,
+      opacity: 1
+    };
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(title, config);
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(text, config);
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, config);
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(marker, {
+      scrollTrigger: {
+        trigger: el,
+        start: "top 90%"
+      },
+      scale: 1
+    });
   });
 });
 
@@ -349,6 +565,496 @@ if (loader) {
     document.dispatchEvent(evt);
   }, 100);
 }
+
+/***/ }),
+
+/***/ "./src/js/sections/news-content.js":
+/*!*****************************************!*\
+  !*** ./src/js/sections/news-content.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.news-content');
+  if (!target) return;
+  var productList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray(['.news-content__time', '.news-content__title', '.news-content__text', '.news-content__bottom-box']);
+  productList.forEach(function (product, index) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(product, {
+      y: 100,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: product
+      },
+      y: 0,
+      delay: .2,
+      opacity: 1
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/news-nav.js":
+/*!*************************************!*\
+  !*** ./src/js/sections/news-nav.js ***!
+  \*************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.news-nav');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.news-nav__elem', {
+    scrollTrigger: {
+      trigger: target
+    },
+    opacity: 1,
+    y: 0,
+    stagger: .15,
+    duration: 1,
+    ease: 'ease-in-out'
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/news-sample.js":
+/*!****************************************!*\
+  !*** ./src/js/sections/news-sample.js ***!
+  \****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.news-sample');
+  if (!target) return;
+  var newsList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.news-sample__card');
+  newsList.forEach(function (news) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(news, {
+      y: 100,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: news,
+        start: "center bottom"
+      },
+      y: 0,
+      stagger: .2,
+      opacity: 1
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/product-features.js":
+/*!*********************************************!*\
+  !*** ./src/js/sections/product-features.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.product-features');
+  if (!target) return;
+  var colList = document.querySelectorAll('.product-features__col');
+  colList.forEach(function (col, index) {
+    if (index % 2 === 0) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+        y: 100,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: col,
+          start: "20% bottom"
+        }
+      });
+    } else {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+        y: 100,
+        opacity: 0
+      }, {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+        scrollTrigger: {
+          trigger: col,
+          start: "20% bottom"
+        }
+      });
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/product-grid.js":
+/*!*****************************************!*\
+  !*** ./src/js/sections/product-grid.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.product-grid');
+  if (!target) return;
+  var productList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.product-grid .product-card');
+  var haveFourCols = target.classList.contains('product-grid--page-product');
+  var counter = haveFourCols ? 4 : 3;
+  var productRowArr = [];
+  productList.forEach(function (product, index) {
+    productRowArr.push(product);
+    if (productRowArr.length >= counter || productList.length === index + 1) {
+      console.log(productRowArr);
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo([productRowArr], {
+        y: 100,
+        opacity: 0
+      }, {
+        scrollTrigger: {
+          trigger: productRowArr[0]
+        },
+        y: 0,
+        stagger: .3,
+        opacity: 1
+      });
+      productRowArr = [];
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/recipe-ingredients.js":
+/*!***********************************************!*\
+  !*** ./src/js/sections/recipe-ingredients.js ***!
+  \***********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.recipe-ingredients');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipe-ingredients__col', {
+    opacity: 1,
+    y: 0,
+    stagger: .5,
+    delay: 1,
+    scrollTrigger: {
+      trigger: '.recipe-ingredients__col'
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/recipe-intro.js":
+/*!*****************************************!*\
+  !*** ./src/js/sections/recipe-intro.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.recipe-intro');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline().to('.recipe-intro', {
+    opacity: 1,
+    scrollTrigger: {
+      trigger: '.recipe-intro'
+    }
+  }).to(['.recipe-intro__back', '.recipe-intro__title', '.recipe-intro__features', '.recipe-intro__text', '.recipe-intro__bottom'], {
+    opacity: 1,
+    x: 0,
+    delay: .5,
+    duration: .7,
+    stagger: .3
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/recipe-other.js":
+/*!*****************************************!*\
+  !*** ./src/js/sections/recipe-other.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.recipe-other');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipe-other__text', {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: {
+      trigger: '.recipe-other__text'
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/recipe-product.js":
+/*!*******************************************!*\
+  !*** ./src/js/sections/recipe-product.js ***!
+  \*******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.recipe-product');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.recipe-product__title', '.recipe-product__button', '.recipe-product__img'], {
+    opacity: 1,
+    y: 0,
+    stagger: .2,
+    scrollTrigger: {
+      trigger: '.recipe-product__title'
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/recipes-grid.js":
+/*!*****************************************!*\
+  !*** ./src/js/sections/recipes-grid.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.recipes-grid');
+  if (!target) return;
+
+  // col 4
+  if (target.classList.contains('recipes-grid--cols-4')) {
+    var colList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__col');
+    colList.forEach(function (col, index) {
+      if (index % 2 === 0) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+          y: -60
+        }, {
+          y: 60,
+          scrollTrigger: {
+            trigger: col,
+            scrub: 1.2
+          }
+        });
+      } else {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+          y: 60
+        }, {
+          y: -60,
+          scrollTrigger: {
+            trigger: col,
+            scrub: 1.2
+          }
+        });
+      }
+    });
+  }
+
+  // col 3
+  if (target.classList.contains('recipes-grid--cols-3')) {
+    var _colList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__col');
+    _colList.forEach(function (col, index) {
+      if (index % 2 === 0) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+          y: -60
+        }, {
+          y: 60,
+          scrollTrigger: {
+            trigger: col,
+            scrub: 1.2
+          }
+        });
+      } else {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+          y: 60
+        }, {
+          y: -60,
+          scrollTrigger: {
+            trigger: col,
+            scrub: 1.2
+          }
+        });
+      }
+    });
+  }
+
+  // col 2
+  if (target.classList.contains('recipes-grid--cols-2')) {
+    var _colList2 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__col');
+    _colList2.forEach(function (col, index) {
+      if (index % 2 === 0) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+          y: -60
+        }, {
+          y: 60,
+          scrollTrigger: {
+            trigger: col,
+            scrub: 1.2
+          }
+        });
+      } else {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+          y: 60
+        }, {
+          y: -60,
+          scrollTrigger: {
+            trigger: col,
+            scrub: 1.2
+          }
+        });
+      }
+    });
+  }
+  var cardList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__elem');
+  cardList.forEach(function (card) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(card, {
+      opacity: 0
+    }, {
+      opacity: 1,
+      scrollTrigger: {
+        trigger: card,
+        start: "top bottom",
+        end: "top 70%",
+        scrub: true
+      }
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/recipes-list.js":
+/*!*****************************************!*\
+  !*** ./src/js/sections/recipes-list.js ***!
+  \*****************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.recipes-list');
+  if (!target) return;
+  gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"].create({
+    trigger: ".recipes-list__col-text",
+    start: "top 121px",
+    end: "bottom bottom",
+    pin: '.recipes-list__img'
+    //markers: true
+  });
+
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__img', {
+    opacity: 0,
+    x: 200
+  }, {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    delay: .5,
+    scrollTrigger: {
+      trigger: '.recipes-list__img'
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__title1', {
+    opacity: 0,
+    x: -200
+  }, {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.recipes-list__title1'
+    }
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__title2', {
+    opacity: 0,
+    x: 200
+  }, {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: '.recipes-list__title2'
+    }
+  });
+  var textElems = document.querySelectorAll(['.recipes-list__text', '.recipes-list__list-elem']);
+  textElems.forEach(function (elem) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
+      opacity: 0,
+      y: 200
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: elem,
+        start: 'top bottom'
+      }
+    });
+  });
+});
 
 /***/ }),
 
@@ -939,6 +1645,42 @@ document.addEventListener('DOMContentLoaded', function () {
 
 /***/ }),
 
+/***/ "./src/js/sections/section-video-back.js":
+/*!***********************************************!*\
+  !*** ./src/js/sections/section-video-back.js ***!
+  \***********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.section-video-back');
+  if (!target) return;
+  var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-video-back');
+  boxList.forEach(function (box) {
+    var video = box.querySelector('.section-video-back__bg');
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(video, {
+      yPercent: -10
+    }, {
+      scrollTrigger: {
+        trigger: box,
+        scrub: .7,
+        invalidateOnRefresh: true
+      },
+      yPercent: 10,
+      ease: "none"
+    });
+  });
+});
+
+/***/ }),
+
 /***/ "./src/js/sections/section-we-produce.js":
 /*!***********************************************!*\
   !*** ./src/js/sections/section-we-produce.js ***!
@@ -1026,6 +1768,197 @@ document.addEventListener('DOMContentLoaded', function () {
       end: 'bottom 60%',
       scrub: 1.5
     }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/show-up.js":
+/*!************************************!*\
+  !*** ./src/js/sections/show-up.js ***!
+  \************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
+document.addEventListener('DOMContentLoaded', function () {
+  var targets = document.querySelectorAll('.show-up');
+  if (!targets.length) return;
+  targets.forEach(function (target) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(target, {
+      y: 30,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1,
+      duration: .7,
+      delay: .5,
+      scrollTrigger: {
+        trigger: target
+      }
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/technology-block.js":
+/*!*********************************************!*\
+  !*** ./src/js/sections/technology-block.js ***!
+  \*********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var targetsList = document.querySelectorAll('.technology-block');
+  if (!targetsList.length) return;
+  targetsList.forEach(function (target) {
+    if (target.classList.contains('technology-block--type1')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline().to('.technology-block--type1 .technology-block__title-block', {
+        y: 0,
+        opacity: 1,
+        stagger: 0.5,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2
+      }).to('.technology-block--type1 .technology-block__img-box--n1', {
+        y: 77,
+        opacity: 1,
+        duration: 1
+      }, "-=1.5").to('.technology-block--type1 .technology-block__img-box--n2', {
+        y: -57,
+        opacity: 1,
+        duration: .7
+      }, "-=.8").to('.technology-block--type1 .technology-block__img-box--n3', {
+        x: 0,
+        opacity: 1,
+        duration: .7
+      }, "-=.8");
+    }
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/text-with-image.js":
+/*!********************************************!*\
+  !*** ./src/js/sections/text-with-image.js ***!
+  \********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.text-with-image');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.text-with-image__img', '.text-with-image__title', '.text-with-image__text'], {
+    scrollTrigger: {
+      trigger: target
+    },
+    opacity: 1,
+    x: 0,
+    stagger: .5,
+    duration: 1
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/where-buy-intro.js":
+/*!********************************************!*\
+  !*** ./src/js/sections/where-buy-intro.js ***!
+  \********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.where-buy-intro');
+  if (!target) return;
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.where-buy-intro__title', '.where-buy-intro__text-block'], {
+    y: 0,
+    opacity: 1,
+    stagger: 0.5,
+    'webkitFilter': 'blur(0px)',
+    'filter': 'blur(0px)',
+    duration: 2
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/where-buy-shops.js":
+/*!********************************************!*\
+  !*** ./src/js/sections/where-buy-shops.js ***!
+  \********************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var target = document.querySelector('.where-buy-shops');
+  if (!target) return;
+  var titlesList = document.querySelectorAll('.where-buy-shops__title');
+  titlesList.forEach(function (title) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(title, {
+      y: -30,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: title,
+        start: "center bottom"
+      },
+      y: 0,
+      delay: .2,
+      opacity: 1
+    });
+  });
+  var gridsList = document.querySelectorAll('.where-buy-shops__grid');
+  gridsList.forEach(function (grid) {
+    var shopsList = grid.querySelectorAll('.where-buy-shops__item');
+    var shopsRowArr = [];
+    var trigger = null;
+    shopsList.forEach(function (product, index) {
+      shopsRowArr.push(product);
+      if (shopsRowArr.length < 5 && shopsList.length !== index + 1) {} else {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo([shopsRowArr], {
+          x: 50,
+          y: 100,
+          opacity: 0
+        }, {
+          scrollTrigger: {
+            trigger: product
+          },
+          x: 0,
+          y: 0,
+          stagger: .2,
+          opacity: 1
+        });
+        shopsRowArr = [];
+        trigger = null;
+      }
+    });
   });
 });
 

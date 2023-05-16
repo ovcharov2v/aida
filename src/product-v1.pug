@@ -77,116 +77,119 @@ block content
 			|попробуйте наш рецепт!
 		// Recipes-grid
 		.recipes-grid.recipes-grid--cols-3
-			// Recipe card
-			a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
-				.recipe-card__img-box
-					span.recipe-card__label Острое
-					+picture("recipe-card/img1", "recipe-card__img", "jpg", "")
-				.recipe-card__text-box
-					p.recipe-card__title Паста букатини с белыми
-						br
-						|грибами и стручковой фасолью
-					ul.recipe-features.recipe-features--medium.recipe-card__feature-list
-						li.recipe-features__elem
-							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
-							| легко
-						li.recipe-features__elem
-							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-							| 4 порции
-						li.recipe-features__elem
-							+svg("recipe-time", true)(class="recipe-features__time-icon")
-							| 20 минут
-			// Recipe card
-			a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
-				.recipe-card__img-box
-					span.recipe-card__label Морепродукты
-					+picture("recipe-card/img2", "recipe-card__img", "jpg", "")
-				.recipe-card__text-box
-					p.recipe-card__title Паста капеллини с креветками,
-						br
-						|помидорами и базиликом
-					ul.recipe-features.recipe-features--medium.recipe-card__feature-list
-						li.recipe-features__elem
-							+svg("recipe-complexity-medium", true)(class="recipe-features__complexity-icon")
-							| средне
-						li.recipe-features__elem
-							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-							| 4 порции
-						li.recipe-features__elem
-							+svg("recipe-time", true)(class="recipe-features__time-icon")
-							| 20 минут
-			// Recipe card
-			a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
-				.recipe-card__img-box
-					span.recipe-card__label Праздничное
-					+picture("recipe-card/img3", "recipe-card__img", "jpg", "")
-				.recipe-card__text-box
-					p.recipe-card__title Лазанья классическая
-					ul.recipe-features.recipe-features--medium.recipe-card__feature-list
-						li.recipe-features__elem
-							+svg("recipe-complexity-hard", true)(class="recipe-features__complexity-icon")
-							| сложно
-						li.recipe-features__elem
-							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-							| 4 порции
-						li.recipe-features__elem
-							+svg("recipe-time", true)(class="recipe-features__time-icon")
-							| 20 минут
-			// Recipe card
-			a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
-				.recipe-card__img-box
-					+picture("recipe-card/img4", "recipe-card__img", "jpg", "")
-				.recipe-card__text-box
-					p.recipe-card__title Мясное рагу в итальянском
-						br
-						| стиле (ракушки)
-					ul.recipe-features.recipe-features--medium.recipe-card__feature-list
-						li.recipe-features__elem
-							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
-							| легко
-						li.recipe-features__elem
-							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-							| 4 порции
-						li.recipe-features__elem
-							+svg("recipe-time", true)(class="recipe-features__time-icon")
-							| 20 минут
-			// Recipe card
-			a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
-				.recipe-card__img-box
-					span.recipe-card__label Праздничное
-					+picture("recipe-card/img5", "recipe-card__img", "jpg", "")
-				.recipe-card__text-box
-					p.recipe-card__title Паста «Альфредо»
-					ul.recipe-features.recipe-features--medium.recipe-card__feature-list
-						li.recipe-features__elem
-							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
-							| легко
-						li.recipe-features__elem
-							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-							| 4 порции
-						li.recipe-features__elem
-							+svg("recipe-time", true)(class="recipe-features__time-icon")
-							| 20 минут
-			// Recipe card
-			a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
-				.recipe-card__img-box
-					+picture("recipe-card/img6", "recipe-card__img", "jpg", "")
-				.recipe-card__text-box
-					p.recipe-card__title Мясное рагу в итальянском стиле (спирали)
-					ul.recipe-features.recipe-features--medium.recipe-card__feature-list
-						li.recipe-features__elem
-							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
-							| легко
-						li.recipe-features__elem
-							+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-							| 4 порции
-						li.recipe-features__elem
-							+svg("recipe-time", true)(class="recipe-features__time-icon")
-							| 20 минут
+			.recipes-grid__col
+				// Recipe card
+				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+					.recipe-card__img-box
+						span.recipe-card__label Острое
+						+picture("recipe-card/img1", "recipe-card__img", "jpg", "")
+					.recipe-card__text-box
+						p.recipe-card__title Паста букатини с белыми
+							br
+							|грибами и стручковой фасолью
+						ul.recipe-features.recipe-features--medium.recipe-card__feature-list
+							li.recipe-features__elem
+								+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+								| легко
+							li.recipe-features__elem
+								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+								| 4 порции
+							li.recipe-features__elem
+								+svg("recipe-time", true)(class="recipe-features__time-icon")
+								| 20 минут
+				// Recipe card
+				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+					.recipe-card__img-box
+						span.recipe-card__label Морепродукты
+						+picture("recipe-card/img2", "recipe-card__img", "jpg", "")
+					.recipe-card__text-box
+						p.recipe-card__title Паста капеллини с креветками,
+							br
+							|помидорами и базиликом
+						ul.recipe-features.recipe-features--medium.recipe-card__feature-list
+							li.recipe-features__elem
+								+svg("recipe-complexity-medium", true)(class="recipe-features__complexity-icon")
+								| средне
+							li.recipe-features__elem
+								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+								| 4 порции
+							li.recipe-features__elem
+								+svg("recipe-time", true)(class="recipe-features__time-icon")
+								| 20 минут
+			.recipes-grid__col
+				// Recipe card
+				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+					.recipe-card__img-box
+						span.recipe-card__label Праздничное
+						+picture("recipe-card/img3", "recipe-card__img", "jpg", "")
+					.recipe-card__text-box
+						p.recipe-card__title Лазанья классическая
+						ul.recipe-features.recipe-features--medium.recipe-card__feature-list
+							li.recipe-features__elem
+								+svg("recipe-complexity-hard", true)(class="recipe-features__complexity-icon")
+								| сложно
+							li.recipe-features__elem
+								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+								| 4 порции
+							li.recipe-features__elem
+								+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20 минут
+				// Recipe card
+				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+					.recipe-card__img-box
+						+picture("recipe-card/img4", "recipe-card__img", "jpg", "")
+					.recipe-card__text-box
+						p.recipe-card__title Мясное рагу в итальянском
+							br
+							| стиле (ракушки)
+						ul.recipe-features.recipe-features--medium.recipe-card__feature-list
+							li.recipe-features__elem
+								+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+								| легко
+							li.recipe-features__elem
+								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+								| 4 порции
+							li.recipe-features__elem
+								+svg("recipe-time", true)(class="recipe-features__time-icon")
+								| 20 минут
+			.recipes-grid__col
+				// Recipe card
+				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+					.recipe-card__img-box
+						span.recipe-card__label Праздничное
+						+picture("recipe-card/img5", "recipe-card__img", "jpg", "")
+					.recipe-card__text-box
+						p.recipe-card__title Паста «Альфредо»
+						ul.recipe-features.recipe-features--medium.recipe-card__feature-list
+							li.recipe-features__elem
+								+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+								| легко
+							li.recipe-features__elem
+								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+								| 4 порции
+							li.recipe-features__elem
+								+svg("recipe-time", true)(class="recipe-features__time-icon")
+								| 20 минут
+				// Recipe card
+				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+					.recipe-card__img-box
+						+picture("recipe-card/img6", "recipe-card__img", "jpg", "")
+					.recipe-card__text-box
+						p.recipe-card__title Мясное рагу в итальянском стиле (спирали)
+						ul.recipe-features.recipe-features--medium.recipe-card__feature-list
+							li.recipe-features__elem
+								+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+								| легко
+							li.recipe-features__elem
+								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+								| 4 порции
+							li.recipe-features__elem
+								+svg("recipe-time", true)(class="recipe-features__time-icon")
+								| 20 минут
 
 	// Products sample
 	section.products-sample.container
-		h2.h3.products-sample__title Откройте для себя больше продуктов AIDA
+		h2.h3.products-sample__title.show-up Откройте для себя больше продуктов AIDA
 		// Product grid
 		.product-grid.product-grid--page-product
 			// Product card

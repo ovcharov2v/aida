@@ -27,6 +27,7 @@
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
+		opacity: 0;
 
 		.text-with-image--reverse & {
 			left: unset;
@@ -52,6 +53,12 @@
 
 	&__title {
 		margin-bottom: 33px;
+		opacity: 0;
+		transform: translateX(-100px);
+
+		.text-with-image--reverse & {
+			transform: translateX(100px);
+		}
 
 		.text-with-image--page-news & {
 			max-width: 560px;
@@ -61,6 +68,8 @@
 	&__text {
 		display: block;
 		max-width: 610px;
+		opacity: 0;
+		transform: translateX(-100px);
 
 		&:not(:last-child) {
 			margin-bottom: 32px;
@@ -68,6 +77,7 @@
 
 		.text-with-image--reverse & {
 			max-width: 100%;
+			transform: translateX(100px);
 		}
 
 		.text-with-image--page-news & {

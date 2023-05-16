@@ -9,11 +9,16 @@ block content
 	section.history-intro.container
 		.history-intro__row
 			.history-intro__col-text
-				h1.h1.history-intro__title.text-uppercase История
+				h1.h1.history-intro__title.text-uppercase
+					span.history-intro__title-block История
 					br
-					|паcты AIDA
+					span.history-intro__title-block паcты
+					|
+					|
+					span.history-intro__title-block AIDA
 			.history-intro__col-img
 				+picture("history-intro/img1", "history-intro__img history-intro__img--n1", "jpg", "")
+				.history-intro__col-img-back
 				+picture("history-intro/img2", "history-intro__img history-intro__img--n2", "jpg", "")
 
 	// Section History timeline
@@ -23,7 +28,9 @@ block content
 			.history-timeline__elem-col.history-timeline__elem-col--left
 				+picture("history-timeline/img1", "history-timeline__img", "jpg", "")
 			.history-timeline__elem-col.history-timeline__elem-col--right
-				h2.history-timeline__title 2016 октябрь.
+				span.history-timeline__marker
+				h2.history-timeline__title
+					|2016 октябрь.
 					br
 					| Начало
 				p.history-timeline__text Начало производства пасты AIDA из твердых сортов пшеницы на Орской макаронной фабрике. На современном итальянском оборудовании Pavan из муки собственного помола первыми были произведены AIDA fusilli (спирали), AIDA penne rigate (перья) и AIDA mezzi gomiti (рожки).
@@ -33,6 +40,7 @@ block content
 				p.history-timeline__text Мы идем в ногу со временем и проводим модернизацию собственного мельничного комплекса, увеличив его мощность до 120 тонн в сутки.
 				p.history-timeline__text Благодаря опыту и экспертизе наших технологов была разработана совершено новая схема помола, которая позволила значительно улучшить качество выпускаемой муки.
 			.history-timeline__elem-col.history-timeline__elem-col--right
+				span.history-timeline__marker
 				h2.history-timeline__title 2017
 					br
 					| Мы развиваемся
@@ -42,6 +50,7 @@ block content
 			.history-timeline__elem-col.history-timeline__elem-col--left
 				+picture("history-timeline/img3", "history-timeline__img", "jpg", "")
 			.history-timeline__elem-col.history-timeline__elem-col--right
+				span.history-timeline__marker
 				h2.history-timeline__title 2018
 					br
 					| Мы меняемся
@@ -52,6 +61,7 @@ block content
 			.history-timeline__elem-col.history-timeline__elem-col--left
 				p.history-timeline__text У нас новинки! Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини. Специально для этого мы установили современное итальянское оборудование Storci.
 			.history-timeline__elem-col.history-timeline__elem-col--right
+				span.history-timeline__marker
 				h2.history-timeline__title 2019
 					br
 					|Мы не стоим на месте
@@ -61,6 +71,7 @@ block content
 			.history-timeline__elem-col.history-timeline__elem-col--left
 				+picture("history-timeline/img5", "history-timeline__img", "jpg", "")
 			.history-timeline__elem-col.history-timeline__elem-col--right
+				span.history-timeline__marker
 				h2.history-timeline__title 2020
 					br
 					| Мы продолжаем расти
@@ -77,6 +88,7 @@ block content
 				p.history-timeline__text Еще ближе к потребителю, который относится с особым вниманием к своему рациону.
 				p.history-timeline__text В 2021 году мы выпускаем линейку AIDA integrale – цельнозерновой пасты, которая отличается повышенным содержанием белка – 15 г (среднее значение в 100 г продукта). Такая паста обогатит вегетарианское и постное меню, рацион сторонников здорового образа жизни, спортсменов, а также детей.
 			.history-timeline__elem-col.history-timeline__elem-col--right
+				span.history-timeline__marker
 				h2.history-timeline__title 2021
 					br
 					|Мы становимся ближе
@@ -86,6 +98,7 @@ block content
 			.history-timeline__elem-col.history-timeline__elem-col--left
 				+picture("history-timeline/img7", "history-timeline__img", "jpg", "")
 			.history-timeline__elem-col.history-timeline__elem-col--right
+				span.history-timeline__marker
 				h2.history-timeline__title 2022
 					br
 					| Мы побеждаем

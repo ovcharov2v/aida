@@ -5,6 +5,8 @@
 
 	&__col {
 		padding: 70px;
+		opacity: 0;
+		transform: translateY(100px);
 
 		&:nth-child(2n) {
 			padding-right: 0;

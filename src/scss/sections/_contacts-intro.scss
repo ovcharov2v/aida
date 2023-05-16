@@ -12,4 +12,8 @@
 		text-transform: uppercase;
 		color: $color-red;
 	}
+
+	&__title-block {
+		display: inline-block;
+	}
 }

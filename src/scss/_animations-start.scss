@@ -1,0 +1,29 @@
+.animation-start-opacity {
+	opacity: 0;
+}
+
+.animation-start-opacity-show-left {
+	opacity: 0;
+	transform: translateX(-100px);
+}
+
+.animation-start-opacity-show-right {
+	opacity: 0;
+	transform: translateX(100px);
+}
+
+.animation-start-opacity-show-bottom {
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+.animation-start-opacity-show-top {
+	opacity: 0;
+	transform: translateY(-100px);
+}
+
+.animation-start-blur {
+	opacity: 0;
+	transform: translateY(30px);
+	filter: blur(10px);
+}

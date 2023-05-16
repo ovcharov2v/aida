@@ -1,20 +1,29 @@
 import gsap from "gsap";
-import {ScrollTrigger} from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const boxList = gsap.utils.toArray('.animated-image')
 
-boxList.forEach((box) => {
+let counter = 1
+boxList.forEach((box, index) => {
 	const img = box.querySelector('.animated-image__img')
-	gsap.to(img, {
+	const scrub = 1.3 * counter
+	gsap.fromTo(img, {
+		yPercent: -10,
+		scale: 1.2,
+	}, {
 		scrollTrigger: {
 			trigger: box,
-			scrub: 4,
-			invalidateOnRefresh: true
+			scrub: scrub,
+			invalidateOnRefresh: true,
 		},
-		y: box.offsetHeight - img.offsetHeight,
-		ease: "none"
+		yPercent: 10,
+		scale: 1.2,
+		ease: "none",
 	});
+	if(counter > 3) {
+		counter = 0
+	}
+	else {
+		counter++
+	}
 })
 

@@ -4,6 +4,9 @@
 	padding-bottom: 42px;
 
 	&__elem {
+		transform: translateY(-100px);
+		opacity: 0;
+
 		&:not(:last-child) {
 			border-right: 1px solid $color-black;
 		}

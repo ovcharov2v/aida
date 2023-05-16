@@ -57,6 +57,7 @@
 	&__container {
 		display: flex;
 		column-gap: 146px;
+		align-items: flex-start;
 
 		.technology-block--type1 & {
 			column-gap: 30px;
@@ -124,13 +125,13 @@
 		}
 	}
 
-	&__img {
+	&__img-box {
 		display: block;
 		max-width: 100%;
 
 		&--n1 {
 			.technology-block--type1 & {
-				transform: translateY(77px)
+				//transform: translateY(77px)
 			}
 
 			.technology-block--type5 & {
@@ -155,7 +156,7 @@
 
 		&--n2 {
 			.technology-block--type1 & {
-				transform: translateY(-57px)
+				//transform: translateY(-57px)
 			}
 
 			.technology-block--type3 & {
@@ -180,7 +181,7 @@
 
 		&--n3 {
 			.technology-block--type1 & {
-				margin-left: auto;
+				text-align: right;
 				transform: translateX(93px)
 			}
 		}

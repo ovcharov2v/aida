@@ -1,0 +1,12 @@
+.section-video-back {
+	position: relative;
+	height: 701px;
+	overflow: hidden;
+
+	&__bg {
+		width: 100%;
+		min-height: 100%;
+		object-fit: cover;
+		transform: scale(1.2);
+	}
+}

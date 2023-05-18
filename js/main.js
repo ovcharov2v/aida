@@ -196,35 +196,40 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sections_header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sections/header */ "./src/js/sections/header.js");
 /* harmony import */ var _sections_animated_image__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./sections/animated-image */ "./src/js/sections/animated-image.js");
 /* harmony import */ var _sections_show_up__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./sections/show-up */ "./src/js/sections/show-up.js");
-/* harmony import */ var _sections_section_image_back__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/section-image-back */ "./src/js/sections/section-image-back.js");
-/* harmony import */ var _sections_section_video_back__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/section-video-back */ "./src/js/sections/section-video-back.js");
-/* harmony import */ var _sections_section_hero_main__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/section-hero-main */ "./src/js/sections/section-hero-main.js");
-/* harmony import */ var _sections_section_history__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/section-history */ "./src/js/sections/section-history.js");
-/* harmony import */ var _sections_section_collection__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/section-collection */ "./src/js/sections/section-collection.js");
-/* harmony import */ var _sections_section_image_back_anim__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/section-image-back-anim */ "./src/js/sections/section-image-back-anim.js");
-/* harmony import */ var _sections_section_we_produce__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./sections/section-we-produce */ "./src/js/sections/section-we-produce.js");
-/* harmony import */ var _sections_section_recipes_preview__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./sections/section-recipes-preview */ "./src/js/sections/section-recipes-preview.js");
-/* harmony import */ var _sections_section_news_preview__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./sections/section-news-preview */ "./src/js/sections/section-news-preview.js");
-/* harmony import */ var _sections_section_market_preview__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./sections/section-market-preview */ "./src/js/sections/section-market-preview.js");
-/* harmony import */ var _sections_history_intro__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./sections/history-intro */ "./src/js/sections/history-intro.js");
-/* harmony import */ var _sections_history_timeline__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./sections/history-timeline */ "./src/js/sections/history-timeline.js");
-/* harmony import */ var _sections_text_with_image__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./sections/text-with-image */ "./src/js/sections/text-with-image.js");
-/* harmony import */ var _sections_product_grid__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./sections/product-grid */ "./src/js/sections/product-grid.js");
-/* harmony import */ var _sections_news_nav__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./sections/news-nav */ "./src/js/sections/news-nav.js");
-/* harmony import */ var _sections_news_sample__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./sections/news-sample */ "./src/js/sections/news-sample.js");
-/* harmony import */ var _sections_news_content__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./sections/news-content */ "./src/js/sections/news-content.js");
-/* harmony import */ var _sections_where_buy_intro__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./sections/where-buy-intro */ "./src/js/sections/where-buy-intro.js");
-/* harmony import */ var _sections_where_buy_shops__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./sections/where-buy-shops */ "./src/js/sections/where-buy-shops.js");
-/* harmony import */ var _sections_contacts_intro__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./sections/contacts-intro */ "./src/js/sections/contacts-intro.js");
-/* harmony import */ var _sections_contacts_content__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./sections/contacts-content */ "./src/js/sections/contacts-content.js");
-/* harmony import */ var _sections_recipes_list__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./sections/recipes-list */ "./src/js/sections/recipes-list.js");
-/* harmony import */ var _sections_recipes_grid__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./sections/recipes-grid */ "./src/js/sections/recipes-grid.js");
-/* harmony import */ var _sections_product_features__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./sections/product-features */ "./src/js/sections/product-features.js");
-/* harmony import */ var _sections_recipe_intro__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./sections/recipe-intro */ "./src/js/sections/recipe-intro.js");
-/* harmony import */ var _sections_recipe_ingredients__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./sections/recipe-ingredients */ "./src/js/sections/recipe-ingredients.js");
-/* harmony import */ var _sections_recipe_product__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./sections/recipe-product */ "./src/js/sections/recipe-product.js");
-/* harmony import */ var _sections_recipe_other__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./sections/recipe-other */ "./src/js/sections/recipe-other.js");
-/* harmony import */ var _sections_technology_block__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./sections/technology-block */ "./src/js/sections/technology-block.js");
+/* harmony import */ var _sections_dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./sections/dropdown */ "./src/js/sections/dropdown.js");
+/* harmony import */ var _sections_dropdown__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_sections_dropdown__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _sections_modal_success__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./sections/modal-success */ "./src/js/sections/modal-success.js");
+/* harmony import */ var _sections_section_image_back__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./sections/section-image-back */ "./src/js/sections/section-image-back.js");
+/* harmony import */ var _sections_section_video_back__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./sections/section-video-back */ "./src/js/sections/section-video-back.js");
+/* harmony import */ var _sections_section_hero_main__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./sections/section-hero-main */ "./src/js/sections/section-hero-main.js");
+/* harmony import */ var _sections_section_history__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./sections/section-history */ "./src/js/sections/section-history.js");
+/* harmony import */ var _sections_section_collection__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./sections/section-collection */ "./src/js/sections/section-collection.js");
+/* harmony import */ var _sections_section_image_back_anim__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./sections/section-image-back-anim */ "./src/js/sections/section-image-back-anim.js");
+/* harmony import */ var _sections_section_we_produce__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./sections/section-we-produce */ "./src/js/sections/section-we-produce.js");
+/* harmony import */ var _sections_section_recipes_preview__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./sections/section-recipes-preview */ "./src/js/sections/section-recipes-preview.js");
+/* harmony import */ var _sections_section_news_preview__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./sections/section-news-preview */ "./src/js/sections/section-news-preview.js");
+/* harmony import */ var _sections_section_market_preview__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./sections/section-market-preview */ "./src/js/sections/section-market-preview.js");
+/* harmony import */ var _sections_history_intro__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./sections/history-intro */ "./src/js/sections/history-intro.js");
+/* harmony import */ var _sections_history_timeline__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./sections/history-timeline */ "./src/js/sections/history-timeline.js");
+/* harmony import */ var _sections_text_with_image__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./sections/text-with-image */ "./src/js/sections/text-with-image.js");
+/* harmony import */ var _sections_product_grid__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./sections/product-grid */ "./src/js/sections/product-grid.js");
+/* harmony import */ var _sections_news_nav__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./sections/news-nav */ "./src/js/sections/news-nav.js");
+/* harmony import */ var _sections_news_sample__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./sections/news-sample */ "./src/js/sections/news-sample.js");
+/* harmony import */ var _sections_news_content__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./sections/news-content */ "./src/js/sections/news-content.js");
+/* harmony import */ var _sections_where_buy_intro__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ./sections/where-buy-intro */ "./src/js/sections/where-buy-intro.js");
+/* harmony import */ var _sections_where_buy_shops__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ./sections/where-buy-shops */ "./src/js/sections/where-buy-shops.js");
+/* harmony import */ var _sections_contacts_intro__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ./sections/contacts-intro */ "./src/js/sections/contacts-intro.js");
+/* harmony import */ var _sections_contacts_content__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ./sections/contacts-content */ "./src/js/sections/contacts-content.js");
+/* harmony import */ var _sections_recipes_list__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ./sections/recipes-list */ "./src/js/sections/recipes-list.js");
+/* harmony import */ var _sections_recipes_grid__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ./sections/recipes-grid */ "./src/js/sections/recipes-grid.js");
+/* harmony import */ var _sections_product_features__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ./sections/product-features */ "./src/js/sections/product-features.js");
+/* harmony import */ var _sections_recipe_intro__WEBPACK_IMPORTED_MODULE_32__ = __webpack_require__(/*! ./sections/recipe-intro */ "./src/js/sections/recipe-intro.js");
+/* harmony import */ var _sections_recipe_ingredients__WEBPACK_IMPORTED_MODULE_33__ = __webpack_require__(/*! ./sections/recipe-ingredients */ "./src/js/sections/recipe-ingredients.js");
+/* harmony import */ var _sections_recipe_product__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./sections/recipe-product */ "./src/js/sections/recipe-product.js");
+/* harmony import */ var _sections_recipe_other__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./sections/recipe-other */ "./src/js/sections/recipe-other.js");
+/* harmony import */ var _sections_technology_block__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./sections/technology-block */ "./src/js/sections/technology-block.js");
+
+
 
 
 
@@ -278,7 +283,7 @@ var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.anima
 var counter = 1;
 boxList.forEach(function (box, index) {
   var img = box.querySelector('.animated-image__img');
-  var scrub = 1.3 * counter;
+  var scrub = counter + 1.7;
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(img, {
     yPercent: -10,
     scale: 1.2
@@ -376,6 +381,68 @@ document.addEventListener('DOMContentLoaded', function () {
     'filter': 'blur(0px)',
     duration: 1.5
   });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/dropdown.js":
+/*!*************************************!*\
+  !*** ./src/js/sections/dropdown.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+document.addEventListener('DOMContentLoaded', function () {
+  var dropdownList = document.querySelectorAll('.dropdown');
+  if (dropdownList.length) {
+    dropdownList.forEach(function (dropdown) {
+      // Multi select
+      if (dropdown.classList.contains('dropdown--multi-select')) {
+        var counter = dropdown.querySelector('.dropdown__value-counter');
+        dropdown.addEventListener('click', function (evt) {
+          evt.stopPropagation();
+          if (!evt.target.closest('.dropdown__options-list')) {
+            dropdown.classList.toggle('dropdown--active');
+          } else {
+            var checkedOptions = dropdown.querySelectorAll(':checked').length;
+            counter.innerHTML = checkedOptions.toString();
+          }
+        });
+      }
+      // Single select
+      else {
+        dropdown.addEventListener('click', function (evt) {
+          evt.stopPropagation();
+          dropdown.classList.toggle('dropdown--active');
+        });
+        var input = dropdown.querySelector('.dropdown__value');
+        var optionsList = dropdown.querySelectorAll('.dropdown__option');
+        optionsList.forEach(function (option) {
+          option.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (dropdown.classList.contains('dropdown--navigate')) {
+              window.location.href = option.dataset.value;
+            } else {
+              input.value = option.dataset.value;
+              dropdown.querySelector('.dropdown__option--selected').classList.remove('dropdown__option--selected');
+              option.classList.add('dropdown__option--selected');
+              if (dropdown.classList.contains('dropdown--with-flag')) {
+                var currentFlag = dropdown.querySelector('.dropdown__value-box .dropdown__flag');
+                var nextFlag = option.querySelector('.dropdown__flag');
+                currentFlag.src = nextFlag.src;
+              }
+            }
+          });
+        });
+      }
+    });
+  }
+  document.addEventListener('click', closeAllSelect);
+  function closeAllSelect() {
+    dropdownList.forEach(function (dropdown) {
+      dropdown.classList.remove('dropdown--active');
+    });
+  }
 });
 
 /***/ }),
@@ -565,6 +632,58 @@ if (loader) {
     document.dispatchEvent(evt);
   }, 100);
 }
+
+/***/ }),
+
+/***/ "./src/js/sections/modal-success.js":
+/*!******************************************!*\
+  !*** ./src/js/sections/modal-success.js ***!
+  \******************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var boxList = document.querySelectorAll('.js-modal-success-box');
+  if (!boxList.length) return;
+  boxList.forEach(function (box) {
+    var form = box.querySelector('.js-modal-success-trigger');
+    var modal = box.querySelector('.modal-success');
+    var modalWindow = box.querySelector('.modal-success__window');
+    var animTl = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+      paused: true
+    });
+    animTl.fromTo(modal, {
+      opacity: 0
+    }, {
+      opacity: 1,
+      duration: .5
+    }).fromTo(modalWindow, {
+      opacity: 0,
+      y: 100
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: .5
+    }, '-=0.3');
+    form.addEventListener('submit', function (evt) {
+      evt.preventDefault();
+      form.reset();
+      modal.classList.add('modal-success--show');
+      animTl.play();
+    });
+    var closeButton = box.querySelector('.modal-success__close');
+    closeButton.addEventListener('click', function () {
+      animTl.reverse();
+      setTimeout(function () {
+        modal.classList.remove('modal-success--show');
+      }, 700);
+    });
+  });
+});
 
 /***/ }),
 
@@ -1825,27 +1944,435 @@ document.addEventListener('DOMContentLoaded', function () {
   var targetsList = document.querySelectorAll('.technology-block');
   if (!targetsList.length) return;
   targetsList.forEach(function (target) {
+    // Type 1
     if (target.classList.contains('technology-block--type1')) {
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline().to('.technology-block--type1 .technology-block__title-block', {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__title-block', {
         y: 0,
         opacity: 1,
         stagger: 0.5,
         'webkitFilter': 'blur(0px)',
         'filter': 'blur(0px)',
-        duration: 2
-      }).to('.technology-block--type1 .technology-block__img-box--n1', {
-        y: 77,
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type1 .technology-block__title-block'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.technology-block--type1 .technology-block__img-box--n1', '.technology-block--type1 .technology-block__img-box--n2'], {
+        y: 0,
         opacity: 1,
-        duration: 1
-      }, "-=1.5").to('.technology-block--type1 .technology-block__img-box--n2', {
-        y: -57,
+        duration: 1,
+        stagger: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type1 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img-box--n3', {
+        y: 0,
         opacity: 1,
-        duration: .7
-      }, "-=.8").to('.technology-block--type1 .technology-block__img-box--n3', {
-        x: 0,
+        duration: .7,
+        delay: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type1 .technology-block__img-box--n3'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n3', {
+        x: -300,
+        scrollTrigger: {
+          trigger: '.technology-block--type1 .technology-block__img--n3',
+          scrub: 2
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n1', {
+        y: 200,
+        scrollTrigger: {
+          trigger: '.technology-block--type1 .technology-block__img--n1',
+          scrub: 2
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n2', {
+        y: -50,
+        scrollTrigger: {
+          trigger: '.technology-block--type1 .technology-block__img--n2',
+          scrub: 2
+        }
+      });
+    }
+
+    // Type 2
+    if (target.classList.contains('technology-block--type2')) {
+      var textList = document.querySelectorAll('.technology-block--type2 .technology-block__text');
+      textList.forEach(function (text) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(text, {
+          opacity: 1,
+          y: 0,
+          duration: 1.5,
+          scrollTrigger: {
+            trigger: text
+          }
+        });
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type2 .technology-block__img-box--n1', {
         opacity: 1,
-        duration: .7
-      }, "-=.8");
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type2 .technology-block__img-box--n1'
+        }
+      });
+    }
+
+    // Type 3
+    if (target.classList.contains('technology-block--type3')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type3 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type3 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type3 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: '.technology-block--type3 .technology-block__text'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type3 .technology-block__col-img', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type3 .technology-block__col-img'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.technology-block--type3 .technology-block__img-box--n2', {
+        y: 0
+      }, {
+        y: -193,
+        scrollTrigger: {
+          trigger: '.technology-block--type3 .technology-block__img-box--n2',
+          scrub: 1.7,
+          start: "top 110%"
+          //markers: true,
+        }
+      });
+    }
+
+    // Type 4
+    if (target.classList.contains('technology-block--type4')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img-box--n1', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type4 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type4 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type4 .technology-block__text'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img-box--n2', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type4 .technology-block__img-box--n2'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img--n2', {
+        x: -600,
+        scrollTrigger: {
+          trigger: '.technology-block--type4 .technology-block__img-box--n2',
+          scrub: 1.7
+        }
+      });
+    }
+
+    // Type 5
+    if (target.classList.contains('technology-block--type5')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.technology-block--type5 .technology-block__img-box--n1', '.technology-block--type5 .technology-block__img-box--n2'], {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: .5,
+        scrollTrigger: {
+          trigger: '.technology-block--type5 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type5 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type5 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type5 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type5 .technology-block__text'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type5 .technology-block__img--n1', {
+        y: -200,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type5 .technology-block__img--n1',
+          scrub: 1.7
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.technology-block--type5 .technology-block__img--n2', {
+        y: -100
+      }, {
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type5 .technology-block__img--n2',
+          scrub: 1.7
+        }
+      });
+    }
+
+    // Type 6
+    if (target.classList.contains('technology-block--type6')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type6 .technology-block__img-box--n1', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type6 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type6 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type6 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type6 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type6 .technology-block__text'
+        }
+      });
+    }
+
+    // Type 7
+    if (target.classList.contains('technology-block--type7')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.technology-block--type7 .technology-block__img-box--n1', '.technology-block--type7 .technology-block__img-box--n2'], {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: .5,
+        scrollTrigger: {
+          trigger: '.technology-block--type7 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type7 .technology-block__img--n2', {
+        y: -200,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type7 .technology-block__img--n1',
+          scrub: 2,
+          start: "center bottom"
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type7 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type7 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type7 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type7 .technology-block__text'
+        }
+      });
+    }
+
+    // Type 8
+    if (target.classList.contains('technology-block--type8')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type8 .technology-block__img-box--n1', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type8 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type8 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type8 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type8 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type8 .technology-block__text'
+        }
+      });
+    }
+
+    // Type 9
+    if (target.classList.contains('technology-block--type9')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.technology-block--type9 .technology-block__img-box--n1', '.technology-block--type9 .technology-block__img-box--n2'], {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: .5,
+        scrollTrigger: {
+          trigger: '.technology-block--type9 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n1', {
+        y: 200,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type9 .technology-block__img--n1',
+          scrub: 2,
+          start: "center bottom"
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n2', {
+        y: -200,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type9 .technology-block__img--n2',
+          scrub: 2,
+          start: "center bottom"
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type9 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type9 .technology-block__text'
+        }
+      });
+    }
+
+    // Type 10
+    if (target.classList.contains('technology-block--type10')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.technology-block--type10 .technology-block__img-box--n1', '.technology-block--type10 .technology-block__img-box--n2'], {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: .5,
+        scrollTrigger: {
+          trigger: '.technology-block--type10 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img--n1', {
+        x: 100,
+        scrollTrigger: {
+          trigger: '.technology-block--type10 .technology-block__img--n1',
+          scrub: 2,
+          start: "center bottom"
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type10 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type10 .technology-block__text'
+        }
+      });
+    }
+
+    // Type 11
+    if (target.classList.contains('technology-block--type11')) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type11 .technology-block__img-box--n1', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: '.technology-block--type11 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type11 .technology-block__title', {
+        y: 0,
+        opacity: 1,
+        'webkitFilter': 'blur(0px)',
+        'filter': 'blur(0px)',
+        duration: 2,
+        scrollTrigger: {
+          trigger: '.technology-block--type11 .technology-block__title'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type11 .technology-block__text', {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        delay: .5,
+        scrollTrigger: {
+          trigger: '.technology-block--type11 .technology-block__text'
+        }
+      });
     }
   });
 });

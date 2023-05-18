@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (!target) return
 
 	const textColsList = document.querySelectorAll('.contacts-content__col')
-	textColsList.forEach((textCol)=>{
+	textColsList.forEach((textCol) => {
 
 		gsap.fromTo(textCol, {
 			opacity: 0,
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 
 	const leftColElems = document.querySelectorAll(['.contacts-content__title', '.contacts-content__form'])
-	leftColElems.forEach((elem)=>{
+	leftColElems.forEach((elem) => {
 
 		gsap.fromTo(elem, {
 			opacity: 0,

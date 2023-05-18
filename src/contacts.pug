@@ -21,13 +21,13 @@ block content
 				|
 				span.contacts-intro__title-block просто напишите нам.
 	// Contacts content
-	.contacts-content
+	.contacts-content.js-modal-success-box
 		.container.contacts-content__container
 			.contacts-content__col-gray
 				h2.h2.contacts-content__title Заполните форму, и мы
 					br
 					|с радостью вам ответим!
-				form.contacts-content__form
+				form.contacts-content__form.js-modal-success-trigger
 					.contacts-content__form-grid
 						input.input(type="text", name="name", placeholder="Имя")
 						input.input(type="email", name="email", placeholder="Email")
@@ -76,3 +76,5 @@ block content
 						|
 						a(href="tel:+7 (3537) 37-22-33") +7 (3537) 37-22-33
 					a.contacts-content__map-link(href="#", target="_blank", rel="noreferrer noopener") посмотреть на карте
+		// Success modal
+		include pug/components/modal-success

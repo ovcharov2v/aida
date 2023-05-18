@@ -1,4 +1,4 @@
-footer.footer
+footer.footer.js-modal-success-box
 	.container.footer__container
 		.footer__contacts
 			.footer__contacts-col
@@ -14,7 +14,7 @@ footer.footer
 							+svg("social-dzen", true)(class="socials__link-icon")
 			.footer__contacts-col
 				p.footer__contacts-title Подпишитесь на рассылку
-				form.footer__form(action="#")
+				form.footer__form(action="#").js-modal-success-trigger
 					input.footer__form-input(type="email", placeholder="Email", required)
 					button.button.button--gold.footer__form-submit(type="submit") Отправить
 		.footer__copyright
@@ -26,3 +26,5 @@ footer.footer
 		source(src='videos/footer.mp4', type='video/mp4')
 		//-source(src='videos/footer.ogv', type='video/ogv')
 		//-source(src='videos/footer.webm', type='video/webm')
+	// Success modal
+	include modal-success

@@ -1,0 +1,85 @@
+.dropdown {
+	position: relative;
+	z-index: 10;
+	color: $color-black;
+
+	&--active {
+		z-index: 10;
+	}
+
+	&__value-box {
+		position: relative;
+		cursor: pointer;
+		border: 1px solid #8A8A8A;
+		background-color: $color-white;
+		overflow: hidden;
+	}
+
+	&__value {
+		width: 100%;
+		padding: 15px 14px;
+		border: none;
+		background-color: $color-transparent;
+		font-size: 18px;
+		line-height: 22px;
+		color: $color-black;
+		pointer-events: none;
+
+		&::placeholder {
+			color: #8A8A8A;
+			opacity: 1;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	&__options-list {
+		position: absolute;
+		z-index: -1;
+		top: calc(100% - 1px);
+		left: 0;
+		min-width: 100%;
+		margin: 0;
+		padding: 15px 0;
+		border: 1px solid #8A8A8A;
+		background-color: $color-white;
+		font-size: 18px;
+		line-height: 22px;
+		color: $color-black;
+		transform: scaleY(0);
+		transform-origin: 50% 0;
+		transition: transform $transition-default;
+
+		.dropdown--active & {
+			transform: scaleY(1);
+		}
+	}
+
+	&__option {
+		position: relative;
+		padding: 6px 14px;
+		cursor: pointer;
+		transition: background-color $transition-default;
+
+		&:hover {
+			background-color: rgba($color-red, .1);
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		top: 50%;
+		right: 14px;
+		transform: translateY(-50%) translateY(-2px);
+		width: 20px;
+		height:20px;
+		color: $color-red;
+		transition: transform $transition-default;
+
+		.dropdown--active & {
+			transform: translateY(-50%) translateY(2px) rotate(-180deg);
+		}
+	}
+}

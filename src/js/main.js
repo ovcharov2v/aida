@@ -5,6 +5,8 @@ import './sections/loader';
 import './sections/header';
 import './sections/animated-image';
 import './sections/show-up';
+import './sections/dropdown';
+import './sections/modal-success';
 import './sections/section-image-back';
 import './sections/section-video-back';
 import './sections/section-hero-main';

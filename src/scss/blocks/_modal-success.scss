@@ -1,0 +1,52 @@
+.modal-success {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 10;
+	display: none;
+	background-color: rgba($color-black, .5);
+
+	&--show {
+		display: block;
+	}
+
+	&__container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&__window {
+		position: relative;
+		padding: 91px 58px;
+		background-color: $color-white;
+	}
+
+	&__close {
+		position: absolute;
+		top: 16px;
+		right: 16px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 6px;
+		background-color: $color-transparent;
+		border: none;
+	}
+
+	&__close-icon {
+		width: 14px;
+		height: 14px;
+		color: $color-red;
+	}
+
+	&__text {
+		text-align: center;
+		text-transform: uppercase;
+		line-height: 32px;
+		color: $color-red;
+	}
+}

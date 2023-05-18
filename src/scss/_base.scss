@@ -29,6 +29,7 @@ a {
 
 
 input, textarea {
+	font-family: inherit;
 	&:focus {
 		outline: none;
 	}

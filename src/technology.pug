@@ -9,11 +9,11 @@ block content
 	.technology-block.technology-block--type1
 		.container.technology-block__container
 			.technology-block__col-img
-				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity
-					.animated-image
-						+picture("technology-block/img1", "technology-block__img animated-image__img", "jpg", "")
-				.technology-block__img-box.technology-block__img-box--n2.animation-start-opacity
-					.animated-image
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n1.animated-image
+						+picture("technology-block/img1", "animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n2.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n2.animated-image
 						+picture("technology-block/img2", "technology-block__img technology-block__img--n2 animated-image__img", "jpg", "")
 			.technology-block__col-text
 				h1.text-uppercase.technology-block__title
@@ -21,20 +21,22 @@ block content
 					|
 					|
 					span.technology-block__title-block.animation-start-blur как мы производим пасту AIDA
-				.technology-block__img-box.technology-block__img-box--n3.animation-start-opacity
-					.animated-image
-						+picture("technology-block/img3", "technology-block__img technology-block__img--n3 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n3.animation-start-opacity-show-bottom
+					.technology-block__img-box.technology-block__img-box--n3.animation-start-opacity-show-bottom
+						.technology-block__img.technology-block__img--n3.animated-image
+							+picture("technology-block/img3", "animated-image__img", "jpg", "")
 	// Technology block
 	.technology-block.technology-block--type2
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img4", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n1.animated-image
+						+picture("technology-block/img4", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				p.technology-block__text В составе нашей продукции ничего лишнего: только мука из твердых сортов пшеницы  и специально подготовленная вода.
+				p.technology-block__text.animation-start-opacity-show-bottom В составе нашей продукции ничего лишнего: только мука из твердых сортов пшеницы  и специально подготовленная вода.
 					br
 					|Несмотря на простой состав пасты процесс ее производства требует внимания к деталям и перфекционизма, ведь только соблюдая технологии можно получить поистине качественный и вкусный продукт.
-				p.technology-block__text Как же производят пасту AIDA?
+				p.technology-block__text.animation-start-opacity-show-bottom Как же производят пасту AIDA?
 	// Section Video back
 	.section-video-back
 		video.section-video-back__bg(preload='true', autoplay, loop, muted, poster="images/section-image-back/bg7@1x.jpg")
@@ -42,51 +44,58 @@ block content
 	// Technology block
 	.technology-block.technology-block--type3
 		.container.technology-block__container
-			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img5", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
-				.animated-image
-					+picture("technology-block/img6", "technology-block__img technology-block__img--n2 animated-image__img", "jpg", "")
+			.technology-block__col-img.animation-start-opacity-show-bottom
+				.technology-block__img-box.technology-block__img-box--n1
+					.animated-image.technology-block__img
+						+picture("technology-block/img5", " animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n2
+					.animated-image.technology-block__img
+						+picture("technology-block/img6", " animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Оренбургская область –
+				h2.h2.technology-block__title.animation-start-blur Оренбургская область –
 					br
 					|лучший регион для выращивания пшеницы твердых сортов
-				p.technology-block__text Пшеницу для пасты AIDA выращивают именно здесь, в Оренбургской области, ведь по количеству солнечных дней местный климат сопоставим с южными областями Италии, что обеспечивает наивысшие показатели по стекловидности зерна пшеницы, содержанию и качеству белка.
+				p.technology-block__text.animation-start-opacity-show-bottom Пшеницу для пасты AIDA выращивают именно здесь, в Оренбургской области, ведь по количеству солнечных дней местный климат сопоставим с южными областями Италии, что обеспечивает наивысшие показатели по стекловидности зерна пшеницы, содержанию и качеству белка.
 	// Technology block
 	.technology-block.technology-block--type4
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img7", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.animated-image.technology-block__img
+						+picture("technology-block/img7", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Все начинается с поля
-				p.technology-block__text Их для выращивания пшеницы засеивают
+				h2.h2.technology-block__title.animation-start-blur Все начинается с поля
+				p.technology-block__text.animation-start-opacity-show-bottom Их для выращивания пшеницы засеивают
 					br
 					|по очереди – земля должна отдыхать и быть идеально чистой. Чтобы вырастить урожай пшеницы твердых сортов нужно 90-100 дней, регулярной заботы.
-				.animated-image
-					+picture("technology-block/img20", "technology-block__img technology-block__img--n2 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n2.animation-start-opacity-show-bottom
+					.animated-image.technology-block__img.technology-block__img--n2
+						+picture("technology-block/img20", "animated-image__img", "jpg", "")
 	// Technology block
 	.technology-block.technology-block--type5
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img8", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
-				.animated-image
-					+picture("technology-block/img9", "technology-block__img technology-block__img--n2 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.animated-image.technology-block__img.technology-block__img--n1
+						+picture("technology-block/img8", "animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n2.animation-start-opacity-show-bottom
+					.animated-image.technology-block__img.technology-block__img--n2
+						+picture("technology-block/img9", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Время собирать урожай!
-				p.technology-block__text Сбор урожая начинается в августе. Зерно бережно собирает специальный комбайн. Собранное зерно очищают, сушат, сортируют и отправляют на хранение в элеваторы. Для правильного хранения зерна в элеваторе соблюдаются специальные условия: от 6 до 8°С и влажность 60–70%.
+				h2.h2.technology-block__title.animation-start-blur Время собирать урожай!
+				p.technology-block__text.animation-start-opacity-show-bottom Сбор урожая начинается в августе. Зерно бережно собирает специальный комбайн. Собранное зерно очищают, сушат, сортируют и отправляют на хранение в элеваторы. Для правильного хранения зерна в элеваторе соблюдаются специальные условия: от 6 до 8°С и влажность 60–70%.
 	// Technology block
 	.technology-block.technology-block--type6
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img10", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.animated-image
+						+picture("technology-block/img10", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Как мы контролируем
+				h2.h2.technology-block__title.animation-start-blur Как мы контролируем
 					br
 					|качество сырья
-				p.technology-block__text Из элеватора зерно попадает на собственную мельницу. Но процесс производства муки начинается задолго до этого – с предварительной проверки.
+				p.technology-block__text.animation-start-opacity-show-bottom Из элеватора зерно попадает на собственную мельницу. Но процесс производства муки начинается задолго до этого – с предварительной проверки.
 					br
 					|Агрономы и специалисты службы качества отбирают образцы культур с полей, тестируют и проверяют на важные показатели.
 					br
@@ -99,22 +108,25 @@ block content
 	.technology-block.technology-block--type7
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img11", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
-				.animated-image
-					+picture("technology-block/img12", "technology-block__img technology-block__img--n2 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.animated-image.technology-block__img.technology-block__img--n1
+						+picture("technology-block/img11", "animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n2.animation-start-opacity-show-bottom
+					.animated-image.technology-block__img.technology-block__img--n2
+						+picture("technology-block/img12", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Замес теста
-				p.technology-block__text На этапе подготовке муки для будущей пасты AIDA происходит ее просеивание, отделение примесей и подготовка воды. В тесте для пасты AIDA только два ингредиента – мука из твердых сортов пшеницы и специально подготовленная вода. Мы никогда не используем  улучшители цвета и вкуса изделия!
+				h2.h2.technology-block__title.animation-start-blur Замес теста
+				p.technology-block__text.animation-start-opacity-show-bottom На этапе подготовке муки для будущей пасты AIDA происходит ее просеивание, отделение примесей и подготовка воды. В тесте для пасты AIDA только два ингредиента – мука из твердых сортов пшеницы и специально подготовленная вода. Мы никогда не используем  улучшители цвета и вкуса изделия!
 	// Technology block
 	.technology-block.technology-block--type8
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img13", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n1.animated-image
+						+picture("technology-block/img13", " animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Разнообразие форм и видов
-				p.technology-block__text Готовое тесто аккуратно прессуют, раскатывают до получения однородной массы и отправляют на этап резания.
+				h2.h2.technology-block__title.animation-start-blur Разнообразие форм и видов
+				p.technology-block__text.animation-start-opacity-show-bottom Готовое тесто аккуратно прессуют, раскатывают до получения однородной массы и отправляют на этап резания.
 					br
 					|В зависимости от формы фильеров получают разные
 					|
@@ -127,35 +139,40 @@ block content
 	.technology-block.technology-block--type9
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img14", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
-				.animated-image
-					+picture("technology-block/img15", "technology-block__img technology-block__img--n2 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n1.animated-image
+						+picture("technology-block/img14", "animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n2.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n2.animated-image
+						+picture("technology-block/img15", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Итальянские технологии в российском производстве
-				p.technology-block__text Сформированная в готовое изделие паста AIDA попадает на длительную сушку по традиционной итальянской технологии, которая предполагает удаление влаги из изделия естественным путем. Сушится паста в специальном цилиндре, а время сушки зависит от вида пасты. Далее происходит не менее важный этап – медленное охлаждение и стабилизация продукта в естественных условиях для структуры и качества макаронного изделия.
+				h2.h2.technology-block__title.animation-start-blur Итальянские технологии в российском производстве
+				p.technology-block__text.animation-start-opacity-show-bottom Сформированная в готовое изделие паста AIDA попадает на длительную сушку по традиционной итальянской технологии, которая предполагает удаление влаги из изделия естественным путем. Сушится паста в специальном цилиндре, а время сушки зависит от вида пасты. Далее происходит не менее важный этап – медленное охлаждение и стабилизация продукта в естественных условиях для структуры и качества макаронного изделия.
 	// Technology block
 	.technology-block.technology-block--type10
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img16", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
-				.animated-image
-					+picture("technology-block/img17", "technology-block__img technology-block__img--n2 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n1.animated-image
+						+picture("technology-block/img16", "animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n2.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n2.animated-image
+						+picture("technology-block/img17", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Пора в путь!
-				p.technology-block__text Перед фасовкой паста AIDA проходит дополнительную проверку качества.
+				h2.h2.technology-block__title.animation-start-blur Пора в путь!
+				p.technology-block__text.animation-start-opacity-show-bottom Перед фасовкой паста AIDA проходит дополнительную проверку качества.
 					br
 					|Только после этого она попадает в фирменную упаковку и отправляется в торговые точки по всей стране.
 	// Technology block
 	.technology-block.technology-block--type11
 		.container.technology-block__container
 			.technology-block__col-img
-				.animated-image
-					+picture("technology-block/img18", "technology-block__img technology-block__img--n1 animated-image__img", "jpg", "")
+				.technology-block__img-box.technology-block__img-box--n1.animation-start-opacity-show-bottom
+					.technology-block__img.technology-block__img--n1.animated-image
+						+picture("technology-block/img18", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title Всё под контролем
-				p.technology-block__text Высокое качество продукции Орской макаронной фабрики подтверждается внедренной на предприятии международной системой пищевой безопасности HACCP. Все макаронные изделия выпускаются в соответствии с ГОСТ 31743-2017 2017 и проходят строгий контроль на всех этапах производства.
+				h2.h2.technology-block__title.animation-start-blur Всё под контролем
+				p.technology-block__text.animation-start-opacity-show-bottom Высокое качество продукции Орской макаронной фабрики подтверждается внедренной на предприятии международной системой пищевой безопасности HACCP. Все макаронные изделия выпускаются в соответствии с ГОСТ 31743-2017 2017 и проходят строгий контроль на всех этапах производства.
 	// Text with image
 	.text-with-image
 		.container.text-with-image__container

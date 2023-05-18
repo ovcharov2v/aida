@@ -135,19 +135,20 @@
 			}
 
 			.technology-block--type5 & {
-				transform: translateY(-157px)
+				//transform: translateY(-157px)
 			}
 
 			.technology-block--type6 & {
-				transform: translateY(20px)
+				//transform: translateY(20px)
 			}
 
 			.technology-block--type9 & {
-				transform: translateY(117px)
+				//transform: translateY(117px)
 			}
 
 			.technology-block--type10 & {
 				position: absolute;
+				z-index: 1;
 				top: 50%;
 				left: 0;
 				transform: translateY(-50%);
@@ -160,22 +161,22 @@
 			}
 
 			.technology-block--type3 & {
-				margin-top: -193px;
-				transform: translateX(92px);
+				//margin-left: 92px;
 			}
 
 			.technology-block--type4 & {
-				margin-left: auto;
-				margin-top: 78px;
+				//margin-left: auto;
+				//margin-top: 78px;
 			}
 
 			.technology-block--type7 & {
-				margin-left: auto;
-				margin-top: -192px;
+				//margin-left: auto;
+				//margin-top: -192px;
+				margin-top: 50px;
 			}
 
 			.technology-block--type9 & {
-				transform: translateY(-96px);
+				//transform: translateY(-96px);
 			}
 		}
 

@@ -1,17 +1,33 @@
 .technology-block {
+	overflow: hidden;
+
 	&--type1 {
-		padding-top: 245px;
+		padding-top: 70px;
 		padding-bottom: 100px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 120px;
+		}
 	}
 
 	&--type2 {
-		padding-top: 82px;
-		padding-bottom: 135px;
+		padding-top: 31px;
+		padding-bottom: 70px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 82px;
+			padding-bottom: 135px;
+		}
 	}
 
 	&--type3 {
-		padding-top: 133px;
+		padding-top: 80px;
 		padding-bottom: 40px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 133px;
+			padding-bottom: 40px;
+		}
 	}
 
 	&--type4 {
@@ -25,39 +41,71 @@
 	}
 
 	&--type6 {
-		padding-top: 48px;
-		padding-bottom: 113px;
+		padding-top: 10px;
+		padding-bottom: 70px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 48px;
+			padding-bottom: 113px;
+		}
 	}
 
 	&--type7 {
-		padding-top: 134px;
+		padding-top: 80px;
 		padding-bottom: 40px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 134px;
+			padding-bottom: 40px;
+		}
 	}
 
 	&--type8 {
-		padding-top: 34px;
-		padding-bottom: 120px;
+		padding-bottom: 40px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 34px;
+			padding-bottom: 120px;
+		}
 	}
 
 	&--type9 {
-		padding-top: 225px;
-		padding-bottom: 70px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 225px;
+			padding-bottom: 70px;
+		}
 	}
 
 	&--type10 {
-		padding-top: 70px;
-		padding-bottom: 120px;
+		padding-top: 40px;
+		padding-bottom: 40px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 70px;
+			padding-bottom: 120px;}
 	}
 
 	&--type11 {
-		padding-top: 90px;
-		padding-bottom: 156px;
+		padding-top: 40px;
+		padding-bottom: 80px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 90px;
+			padding-bottom: 156px;}
 	}
 
 	&__container {
 		display: flex;
 		column-gap: 146px;
 		align-items: flex-start;
+		flex-direction: column;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			flex-direction: row;
+		}
 
 		.technology-block--type1 & {
 			column-gap: 30px;
@@ -68,7 +116,18 @@
 		}
 
 		.technology-block--type3 & {
-			flex-direction: row-reverse;
+			flex-direction: column-reverse;
+			@media (min-width: $breakpoint-desktop-min) {
+				flex-direction: row-reverse;
+			}
+		}
+
+		.technology-block--type4 & {
+			flex-direction: column-reverse;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				flex-direction: row;
+			}
 		}
 
 		.technology-block--type5 & {
@@ -76,12 +135,28 @@
 		}
 
 		.technology-block--type6 & {
-			flex-direction: row-reverse;
+			flex-direction: column;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				flex-direction: row-reverse;
+			}
+		}
+
+		.technology-block--type7 & {
+			flex-direction: column-reverse;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				flex-direction: row;
+			}
 		}
 
 		.technology-block--type8 & {
-			flex-direction: row-reverse;
+			flex-direction: column;
 			align-items: center;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				flex-direction: row-reverse;
+			}
 		}
 
 		.technology-block--type9 & {
@@ -89,8 +164,12 @@
 		}
 
 		.technology-block--type10 & {
-			flex-direction: row-reverse;
+			flex-direction: column;
 			align-items: center;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				flex-direction: row-reverse;
+			}
 		}
 
 		.technology-block--type11 & {
@@ -106,22 +185,92 @@
 
 		.technology-block--type1 & {
 			display: flex;
-			column-gap: 29px;
+			column-gap: 12px;
+			padding-left: 40px;
+			margin-bottom: 40px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				column-gap: 29px;
+				padding-left: 0;
+				margin-bottom: 0;
+			}
+		}
+
+		.technology-block--type2 & {
+			margin-bottom: 30px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 0;
+			}
+		}
+
+		.technology-block--type3 & {
+			margin-bottom: -90px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 0;
+			}
+		}
+
+		.technology-block--type7 & {
+			margin-bottom: -90px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 0;
+			}
 		}
 
 		.technology-block--type5 & {
 			display: flex;
-			column-gap: 33px;
+			column-gap: 12px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				column-gap: 33px;
+			}
+		}
+
+		.technology-block--type8 & {
+			margin-bottom: 30px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 0;
+			}
 		}
 
 		.technology-block--type9 & {
 			display: flex;
-			column-gap: 33px;
+			column-gap: 12px;
+			padding-bottom: 80px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				column-gap: 33px;
+				padding-bottom: 0;
+			}
 		}
 
 		.technology-block--type10 & {
 			display: flex;
 			justify-content: flex-end;
+		}
+
+		.technology-block--type11 & {
+			margin-bottom: 40px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__img {
+		max-height: 100%;
+
+		&--n1 {
+			.technology-block--type7 & {
+				@media (min-width: $breakpoint-desktop-min) {
+					width: 100%;
+				}
+			}
 		}
 	}
 
@@ -140,6 +289,20 @@
 
 			.technology-block--type6 & {
 				//transform: translateY(20px)
+				margin-bottom: 30px;
+
+				@media (min-width: $breakpoint-desktop-min) {
+					margin-bottom: 0;
+				}
+			}
+
+			.technology-block--type7 & {
+				max-width: 80%;
+
+				@media (min-width: $breakpoint-desktop-min) {
+					max-width: 100%;
+					width: 100%;
+				}
 			}
 
 			.technology-block--type9 & {
@@ -149,9 +312,13 @@
 			.technology-block--type10 & {
 				position: absolute;
 				z-index: 1;
-				top: 50%;
+				top: 10%;
 				left: 0;
-				transform: translateY(-50%);
+				max-width: 65%;
+
+				@media (min-width: $breakpoint-desktop-min) {
+					top: 10%;max-width: 100%;}
+
 			}
 		}
 
@@ -161,29 +328,62 @@
 			}
 
 			.technology-block--type3 & {
-				//margin-left: 92px;
+				margin-left: 30px;
+				max-width: 35%;
+
+				@media (min-width: $breakpoint-desktop-min) {
+					margin-left: 92px;
+					max-width: 100%;
+				}
 			}
 
 			.technology-block--type4 & {
 				//margin-left: auto;
 				//margin-top: 78px;
+				max-width: 205px;
+				margin-bottom: 30px;
+
+				@media (min-width: $breakpoint-desktop-min) {
+					max-width: 100%;
+					margin-bottom: 0;
+				}
 			}
 
 			.technology-block--type7 & {
 				//margin-left: auto;
 				//margin-top: -192px;
-				margin-top: 50px;
+				max-width: 35%;
+				margin-left: auto;
+
+				@media (min-width: $breakpoint-desktop-min) {
+					margin-top: 50px;
+					max-width: 100%;
+					margin-left: 40px;
+				}
 			}
 
 			.technology-block--type9 & {
 				//transform: translateY(-96px);
+			}
+
+			.technology-block--type10 & {
+				max-width: 80%;
+
+				@media (min-width: $breakpoint-desktop-min) {
+					max-width: 100%;
+				}
 			}
 		}
 
 		&--n3 {
 			.technology-block--type1 & {
 				text-align: right;
-				transform: translateX(93px)
+				transform: translateX(93px);
+				max-height: 161px;
+
+				@media (min-width: $breakpoint-desktop-min) {
+					max-height: auto;
+				}
 			}
 		}
 	}
@@ -191,16 +391,38 @@
 	&__col-text {
 		flex: 1 1;
 
+		.technology-block--type3 & {
+			margin-bottom: 30px;
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 0;
+			}
+		}
+
 		.technology-block--type4 & {
-			padding-top: 93px;
+			display: flex;
+			flex-direction: column-reverse;
+			margin-bottom: 30px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				display: block;
+				padding-top: 93px;
+				margin-bottom: 0;
+			}
 		}
 
 		.technology-block--type7 & {
-			padding-top: 28px;
+			margin-bottom: 40px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				padding-top: 28px;
+				margin-bottom: 0;
+			}
 		}
 
 		.technology-block--type8 & {
-			padding-top: 28px;
+			@media (min-width: $breakpoint-desktop-min) {
+				padding-top: 28px;
+			}
 		}
 
 		.technology-block--type10 & {
@@ -215,9 +437,14 @@
 		.technology-block--type1 & {
 			max-width: 700px;
 			margin-bottom: 25px;
-			font-size: 45px;
-			line-height: 1.14;
+			font-size: 28px;
+			line-height: 40px;
 			color: $color-black;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				font-size: 45px;
+				line-height: 1.14;
+			}
 		}
 	}
 

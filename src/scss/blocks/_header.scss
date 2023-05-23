@@ -24,45 +24,109 @@
 	&__container {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 	}
 
 	&__logo-link {
 		display: inline-block;
-		width: 154px;
-		margin-top: 5px;
-		margin-right: 30px;
+		width: 83px;
 		transform: translateY(-100px);
 		opacity: 0;
 		transition: width .5s ease;
 
+		@media (min-width: $breakpoint-desktop-min) {
+			width: 154px;
+			margin-top: 5px;
+			margin-right: 30px;
+		}
+
 		.header--middle & {
-			width: 116px;
+			width: 64px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				width: 116px;
+			}
 		}
 	}
 
 	&__logo {
 		width: 100%;
+		flex-shrink: 0;
+	}
+
+	&__nav-box {
+		position: fixed;
+		z-index: 10;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		max-width: 244px;
+		height: 100%;
+		padding: 20px 24px 46px 48px;
+		background-color: $color-white;
+		//box-shadow: 0 0 0 200vw rgba($color-black, .56);
+		transform: translateX(100%);
+		opacity: 0;
+
+
+		@media (max-width: $breakpoint-desktop-min) {
+			color: $color-black;
+		}
+
+		@media (min-width: $breakpoint-desktop-min) {
+			display: flex;
+			flex-grow: 1;
+			position: static;
+			flex-direction: row;
+			align-items: center;
+			width: auto;
+			max-width: 100%;
+			padding: 0;
+			background-color: $color-transparent;
+			box-shadow: none;
+			transform: none;
+			opacity: 1;
+		}
 	}
 
 	&__nav {
-		margin: 0 auto;
-		padding-bottom: 2px;
-		transform: translateY(-100px);
+		height: 100%;
+		overflow-y: auto;
+		@media (min-width: $breakpoint-desktop-min) {
+			margin: 0 auto;
+			padding-bottom: 2px;
+			transform: translateY(-100px);
+			height: unset;
+			overflow-y: unset;
+		}
 	}
 
 	&__nav-list {
 		display: flex;
-		column-gap: 35px;
+		flex-direction: column;
+		row-gap: 29px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			flex-direction: row;
+			column-gap: 35px;
+		}
 	}
 
 	&__nav-elem {
 	}
 
 	&__nav-link {
-		font-size: 22px;
+		font-size: 16px;
 		line-height: 24px;
 		font-weight: 500;
 		transition: color $transition-default;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			font-size: 22px;
+		}
 
 		&:hover {
 			color: $color-red;
@@ -71,10 +135,16 @@
 
 	&__lang-list {
 		display: flex;
-		margin-right: 30px;
-		margin-left: 15px;
-		padding-bottom: 2px;
-		transform: translateY(-100px);
+		margin-top: auto;
+		margin-bottom: 16px;
+		padding-top: 30px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin: 0 30px 0 15px;
+			padding-top: 0;
+			padding-bottom: 2px;
+			transform: translateY(-100px);
+		}
 	}
 
 	&__lang {
@@ -97,11 +167,15 @@
 	}
 
 	&__lang-link {
-		font-size: 20px;
+		font-size: 16px;
 		line-height: 22px;
 		font-weight: 500;
 		text-transform: uppercase;
 		transition: color $transition-default;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			font-size: 20px;
+		}
 
 		&:hover {
 			color: $color-red;
@@ -114,7 +188,50 @@
 
 	&__button {
 		width: 100%;
-		max-width: 196px;
+		max-width: 179px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			max-width: 196px;
+			transform: translateY(-100px);
+		}
+	}
+
+	&__burger {
+		padding: 4px;
+		border: none;
+		background-color: $color-transparent;
+		color: inherit;
+		opacity: 0;
 		transform: translateY(-100px);
+
+		@media (min-width: $breakpoint-desktop-min) {
+			display: none;
+		}
+	}
+
+	&__burger-icon {
+		width: 32px;
+		height: 32px;
+	}
+
+	&__close-box {
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 12px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			display: none;
+		}
+	}
+
+	&__close {
+		padding: 4px;
+		border: none;
+		background-color: $color-transparent;
+	}
+
+	&__close-icon {
+		width: 18px;
+		height: 18px;
 	}
 }

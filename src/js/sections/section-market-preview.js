@@ -43,23 +43,26 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	)
 
-	gsap.fromTo('.section-market-preview__link',
-		{
-			y: 100,
-			opacity: 0
-		},
-		{
-			scrollTrigger: {
-				trigger: '.section-market-preview__link',
-				// markers: true,
-				end: 'center center',
-				scrub: 1.5,
-				toggleActions: "restart none none none"
+	const linkList = document.querySelectorAll('.section-market-preview__link')
+	linkList.forEach((link) => {
+		gsap.fromTo(link,
+			{
+				y: 100,
+				opacity: 0
 			},
-			y: 0,
-			opacity: 1
-		}
-	)
+			{
+				scrollTrigger: {
+					trigger: link,
+					// markers: true,
+					end: 'center center',
+					scrub: 1.5,
+					toggleActions: "restart none none none"
+				},
+				y: 0,
+				opacity: 1
+			}
+		)
+	})
 
 	const recipes = gsap.utils.toArray('.section-market-preview__market-link')
 

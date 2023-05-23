@@ -1,7 +1,10 @@
 .section-image-back {
 	position: relative;
-	height: 883px;
+	height: 342px;
 	overflow: hidden;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		height: 883px;}
 
 	&::after {
 		position: absolute;
@@ -13,8 +16,10 @@
 		content: "";
 	}
 
-	&--bg8 {
-		height: 574px;
+	&--news-item {
+		@media (min-width: $breakpoint-desktop-min) {
+			height: 574px;
+		}
 	}
 
 	&__bg {
@@ -43,6 +48,10 @@
 
 		.section-image-back--bg8 & {
 			@include background-image("../images/section-image-back/bg8");
+		}
+
+		.section-image-back--bg9 & {
+			@include background-image("../images/section-image-back/bg9");
 		}
 	}
 }

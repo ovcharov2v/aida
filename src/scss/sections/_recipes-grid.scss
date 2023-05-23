@@ -2,19 +2,44 @@
 	display: grid;
 
 	&--cols-4 {
-		grid-template: auto / repeat(4, 1fr);
+		grid-template: auto / 100%;
 		grid-gap: 13px 14px;
+
+		@media (min-width: $breakpoint-tablet-min) {
+			grid-template: auto / repeat(2, 1fr);
+			grid-gap: 13px 14px;
+		}
+
+		@media (min-width: $breakpoint-desktop-min) {
+			grid-template: auto / repeat(4, 1fr);
+			grid-gap: 13px 14px;
+		}
 	}
 
 	&--cols-2 {
-		grid-template: auto / repeat(2, 1fr);
-		grid-gap: 12px 11px;
+		display: flex;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			display: grid;
+			grid-template: auto / repeat(2, 1fr);
+			grid-gap: 12px 11px;
+		}
 	}
 
 	&--cols-3 {
-		padding-top: 37px;
-		grid-template: auto / repeat(3, 1fr);
+		grid-template: auto / 100%;
 		grid-gap: 19px 19px;
+
+		@media (min-width: $breakpoint-tablet-min) {
+			grid-template: auto / repeat(2, 1fr);
+			grid-gap: 19px 19px;
+		}
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 37px;
+			grid-template: auto / repeat(3, 1fr);
+			grid-gap: 19px 19px;
+		}
 	}
 
 	&__elem {
@@ -23,9 +48,12 @@
 				margin-bottom: 13px;
 			}
 		}
+
 		.recipes-grid--cols-2 & {
 			&:not(:last-child) {
-				margin-bottom: 12px;
+				@media (min-width: $breakpoint-desktop-min) {
+					margin-bottom: 12px;
+				}
 			}
 		}
 

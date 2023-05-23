@@ -4,23 +4,29 @@ header.header(class=(isHeaderWhite == true ? "header--permanently-white" : null)
 	.container.header__container
 		a.header__logo-link(href="index.html")
 			+picture("common/logo", "header__logo")
-		nav.header__nav
-			ul.header__nav-list
-				li.header__nav-elem
-					a.header__nav-link(href="history.html") История
-				li.header__nav-elem
-					a.header__nav-link(href="technology.html") Технология
-				li.header__nav-elem
-					a.header__nav-link(href="products.html") Продукция
-				li.header__nav-elem
-					a.header__nav-link(href="recipes.html") Рецепты
-				li.header__nav-elem
-					a.header__nav-link(href="news-list.html") Новости
-				li.header__nav-elem
-					a.header__nav-link(href="contacts.html") Контакты
-		ul.header__lang-list
-			li.header__lang
-				a.header__lang-link.header__lang-link--active(href="#") Ru
-			li.header__lang
-				a.header__lang-link(href="#") En
-		a.button.button--red.button--nav-block.header__button(href="#") Купить
+		.header__nav-box
+			.header__close-box
+				button.header__close
+					+svg("close", true)(class="header__close-icon")
+			nav.header__nav
+				ul.header__nav-list
+					li.header__nav-elem
+						a.header__nav-link(href="history.html") История
+					li.header__nav-elem
+						a.header__nav-link(href="technology.html") Технология
+					li.header__nav-elem
+						a.header__nav-link(href="products.html") Продукция
+					li.header__nav-elem
+						a.header__nav-link(href="recipes.html") Рецепты
+					li.header__nav-elem
+						a.header__nav-link(href="news-list.html") Новости
+					li.header__nav-elem
+						a.header__nav-link(href="contacts.html") Контакты
+			ul.header__lang-list
+				li.header__lang
+					a.header__lang-link.header__lang-link--active(href="#") Ru
+				li.header__lang
+					a.header__lang-link(href="#") En
+			a.button.button--red.button--nav-block.header__button(href="#") Купить
+		button.header__burger
+			+svg("burger", true)(class="header__burger-icon")

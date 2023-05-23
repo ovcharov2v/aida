@@ -1,12 +1,16 @@
 .input {
 	display: block;
 	width: 100%;
-	padding: 17px 15px;
+	padding: 14px 13px;
 	border: 1px solid #8C8C8C;
 	font-size: 16px;
 	line-height: 1;
-	color:  $color-black;
+	color: $color-black;
 	transition: border-color $transition-default;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		padding: 17px 15px;
+	}
 
 	&::placeholder {
 		color: #8C8C8C;
@@ -19,7 +23,11 @@
 	}
 
 	&--textarea {
-		min-height: 182px;
+		min-height: 160px;
 		resize: none;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			min-height: 182px;
+		}
 	}
 }

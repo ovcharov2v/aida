@@ -4,30 +4,48 @@
 
 	&__container {
 		display: flex;
-		column-gap: 146px;
+		flex-direction: column-reverse;
+
+		@media (min-width: $breakpoint-tablet-min) {
+			flex-direction: row;
+			column-gap: 146px;
+		}
 
 		.text-with-image--reverse & {
-			flex-direction: row-reverse;
-			column-gap: 60px;
+
+			@media (min-width: $breakpoint-tablet-min) {
+				flex-direction: row-reverse;
+				column-gap: 60px;
+			}
 		}
 	}
 
 	&__col-img {
 		position: relative;
 		flex: 1 0;
-		width: 100%;
-		max-width: 677px;
+		width: 100vw;
+		margin-left: -24px;
+		min-height: 342px;
+
+		@media (min-width: $breakpoint-tablet-min) {
+			width: 100%;
+			max-width: 677px;
+		}
 	}
 
 	&__img {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 50vw;
+		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		object-position: center;
 		opacity: 0;
+
+		@media (min-width: $breakpoint-tablet-min) {
+			width: 50vw;
+		}
 
 		.text-with-image--reverse & {
 			left: unset;
@@ -37,17 +55,26 @@
 
 	&__col-text {
 		flex: 1 1;
-		padding-top: 195px;
-		padding-bottom: 195px;
+		padding: 80px 0;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding: 195px 0;
+		}
 
 		.text-with-image--reverse & {
-			padding-top: 148px;
-			padding-bottom: 214px;
+			@media (min-width: $breakpoint-desktop-min) {
+				padding: 148px 0 214px;
+			}
 		}
 
 		.text-with-image--page-news & {
-			padding-top: 88px;
-			padding-bottom: 100px;
+			padding-top: 55px;
+			padding-bottom: 75px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				padding-top: 88px;
+				padding-bottom: 100px;
+			}
 		}
 	}
 

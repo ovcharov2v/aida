@@ -1,13 +1,31 @@
 .recipe-product {
-	padding-top: 55px;
-	padding-bottom: 100px;
+	padding-top: 42px;
+	padding-bottom: 30px;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		padding-top: 55px;
+		padding-bottom: 100px;
+	}
 
 	&__row {
-
 		display: grid;
-		grid-template: auto / 1fr 1.3fr;
-		grid-column-gap: 63px;
+		grid-template: auto / repeat(2, 1fr);
+		grid-column-gap: 40px;
 		align-items: center;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			grid-template: auto / 1fr 1.3fr;
+			grid-column-gap: 63px;
+		}
+	}
+
+	&__col-text {
+		grid-column: 2/3;
+		grid-row: 1/2;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			grid-column: 1/2;
+		}
 	}
 
 	&__text-box {
@@ -21,16 +39,35 @@
 
 	&__button-row {
 		display: flex;
-		column-gap: 10px;
+		flex-direction: column;
+		row-gap: 6px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			flex-direction: row;
+			column-gap: 10px;
+		}
 	}
 
 	&__button {
 		flex: 1 0;
+		width: 100%;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: auto;
+		}
 	}
 
 	&__col-img {
+		grid-column: 1/2;
+		grid-row: 1/2;
 		text-align: center;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			grid-column: 2/3;
+		}
 	}
 
-	&__img {}
+	&__img {
+		max-width: 100%;
+	}
 }

@@ -1,7 +1,14 @@
 .news-nav {
 	display: flex;
-	padding-top: 27px;
-	padding-bottom: 42px;
+	margin-bottom: 15px;
+	padding-top: 32px;
+	padding-bottom: 12px;
+	max-width: 100%;
+	overflow-x: auto;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		padding-top: 27px;
+		padding-bottom: 27px;}
 
 	&__elem {
 		transform: translateY(-100px);
@@ -16,12 +23,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		padding: 4px 50px;
-		font-size: 16px;
+		padding: 4px 13px;
+		font-size: 14px;
 		line-height: 18px;
 		color: #8A8A8A;
 		text-transform: uppercase;
+		white-space: nowrap;
 		transition: color $transition-default;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding: 4px 50px;
+			font-size: 16px;}
 
 		&:hover {
 			color: $color-black;

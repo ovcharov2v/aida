@@ -4,6 +4,7 @@ append vars
 		title = "AIDA Карточка рецепта"
 		meta.description = "Описание AIDA"
 		isHeaderWhite = true
+		body.classList = "body-top-offset"
 block content
 	// Recipe intro
 	section.recipe-intro.animation-start-opacity
@@ -15,7 +16,7 @@ block content
 			.recipe-intro__content
 				.recipe-intro__col
 					h1.h2.recipe-intro__title.animation-start-opacity-show-left Паста «Альфредо»
-					ul.recipe-features.recipe-intro__features.animation-start-opacity-show-left
+					ul.recipe-features.recipe-features--page-recipe.recipe-intro__features.animation-start-opacity-show-left
 						li.recipe-features__elem
 							+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
 							| легко
@@ -46,6 +47,8 @@ block content
 		// Row
 		.recipe-ingredients__row
 			.recipe-ingredients__col.recipe-ingredients__col--gray.animation-start-opacity-show-bottom
+				p.recipe-ingredients__switcher.recipe-ingredients__switcher--right Рецепт
+					+svg("arrow-back", true)(class="recipe-ingredients__switcher-icon")
 				h2.h2.recipe-ingredients__title Ингредиенты
 				ul.recipe-ingredients__list
 					li.recipe-ingredients__list-elem
@@ -88,7 +91,9 @@ block content
 						label.recipe-ingredients__checkbox
 							input.recipe-ingredients__checkbox-input(type="checkbox")
 							span.recipe-ingredients__checkbox-text Чёрный молотый перец  — по вкусу
-			.recipe-ingredients__col.animation-start-opacity-show-bottom
+			.recipe-ingredients__col.recipe-ingredients__col--white.animation-start-opacity-show-bottom
+				p.recipe-ingredients__switcher.recipe-ingredients__switcher--left Ингредиенты
+					+svg("arrow-back", true)(class="recipe-ingredients__switcher-icon")
 				ol.recipe-ingredients__todo
 					li.recipe-ingredients__todo-elem Поставьте макароны вариться. Разрежьте куриную грудку на небольшие кусочки одинакового размера.
 					li.recipe-ingredients__todo-elem Обжарьте  курицу на оливковом масле до готовности.
@@ -102,7 +107,7 @@ block content
 		.recipe-product__row
 			.recipe-product__col-text
 				.recipe-product__text-box
-					h2.h2.recipe-product__title.animation-start-opacity-show-bottom Приготовлено с пастой AIDA Спагетти
+					h2.h2.recipe-product__title.animation-start-opacity-show-bottom Приготовлено с пастой AIDA Спагетти
 					.recipe-product__button-row
 						a.button.button--gold.button--uppercase.recipe-product__button.animation-start-opacity-show-bottom(href="#") О продукте
 						a.button.button--gold.button--uppercase.recipe-product__button.animation-start-opacity-show-bottom(href="#") Купить
@@ -111,82 +116,94 @@ block content
 	// Recipe other
 	.recipe-other.container
 		.recipe-other__row
-			.recipe-other__col-grid
-				.recipes-grid.recipes-grid--cols-2
-					.recipes-grid__col
-						// Recipe card
-						a.recipe-card.recipes-grid__elem(href="#")
-							.recipe-card__img-box
-								span.recipe-card__label Острое
-								+picture("recipe-card/img1", "recipe-card__img", "jpg", "")
-							.recipe-card__text-box
-								p.recipe-card__title Паста букатини с белыми
-									br
-									| грибами и стручковой фасолью
-								ul.recipe-features.recipe-card__feature-list
-									li.recipe-features__elem
-										+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
-										| легко
-									li.recipe-features__elem
-										+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-										| 4 порции
-									li.recipe-features__elem
-										+svg("recipe-time", true)(class="recipe-features__time-icon")
-										| 20 минут
-						// Recipe card
-						a.recipe-card.recipes-grid__elem(href="#")
-							.recipe-card__img-box
-								span.recipe-card__label Морепродукты
-								+picture("recipe-card/img2", "recipe-card__img", "jpg", "")
-							.recipe-card__text-box
-								p.recipe-card__title Паста капеллини с креветками,
-									br
-									| помидорами и базиликом
-								ul.recipe-features.recipe-card__feature-list
-									li.recipe-features__elem
-										+svg("recipe-complexity-medium", true)(class="recipe-features__complexity-icon")
-										| средне
-									li.recipe-features__elem
-										+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-										| 4 порции
-									li.recipe-features__elem
-										+svg("recipe-time", true)(class="recipe-features__time-icon")
-										| 20 минут
-					.recipes-grid__col
-						// Recipe card
-						a.recipe-card.recipes-grid__elem(href="#")
-							.recipe-card__img-box
-								span.recipe-card__label Праздничное
-								+picture("recipe-card/img3", "recipe-card__img", "jpg", "")
-							.recipe-card__text-box
-								p.recipe-card__title Лазанья классическая
-								ul.recipe-features.recipe-card__feature-list
-									li.recipe-features__elem
-										+svg("recipe-complexity-hard", true)(class="recipe-features__complexity-icon")
-										| сложно
-									li.recipe-features__elem
-										+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-										| 4 порции
-									li.recipe-features__elem
-										+svg("recipe-time", true)(class="recipe-features__time-icon")
-										| 20 минут
-						// Recipe card
-						a.recipe-card.recipes-grid__elem(href="#")
-							.recipe-card__img-box
-								+picture("recipe-card/img4", "recipe-card__img", "jpg", "")
-							.recipe-card__text-box
-								p.recipe-card__title Мясное рагу в итальянском
-									br
-									| стиле (ракушки)
-								ul.recipe-features.recipe-card__feature-list
-									li.recipe-features__elem
-										+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon recipe-features__complexity-icon--easy")
-										| легко
-									li.recipe-features__elem
-										+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-										| 4 порции
-									li.recipe-features__elem
-										+svg("recipe-time", true)(class="recipe-features__time-icon")
-										| 20 минут
+			.recipe-other__col-grid.swiper
+				.recipes-grid.recipes-grid--cols-2.swiper-wrapper
+					// Recipe card
+					a.recipe-card.recipes-grid__elem.swiper-slide(href="#")
+						.recipe-card__img-box
+							span.recipe-card__label Острое
+							+picture("recipe-card/img1", "recipe-card__img", "jpg", "")
+						.recipe-card__text-box
+							p.recipe-card__title Паста букатини с белыми
+								br
+								| грибами и стручковой фасолью
+							ul.recipe-features.recipe-card__feature-list
+								li.recipe-features__elem
+									+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon")
+									| легко
+								li.recipe-features__elem
+									+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+									| 4
+									span.show-tablet-inline &nbsp;порции
+								li.recipe-features__elem
+									+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20
+									span.show-tablet-inline &nbsp;минут
+					// Recipe card
+					a.recipe-card.recipes-grid__elem.swiper-slide(href="#")
+						.recipe-card__img-box
+							span.recipe-card__label Морепродукты
+							+picture("recipe-card/img2", "recipe-card__img", "jpg", "")
+						.recipe-card__text-box
+							p.recipe-card__title Паста капеллини с креветками,
+								br
+								| помидорами и базиликом
+							ul.recipe-features.recipe-card__feature-list
+								li.recipe-features__elem
+									+svg("recipe-complexity-medium", true)(class="recipe-features__complexity-icon")
+									| средне
+								li.recipe-features__elem
+									+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+									| 4
+									span.show-tablet-inline &nbsp;порции
+								li.recipe-features__elem
+									+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20
+									span.show-tablet-inline &nbsp;минут
+					// Recipe card
+					a.recipe-card.recipes-grid__elem.swiper-slide(href="#")
+						.recipe-card__img-box
+							span.recipe-card__label Праздничное
+							+picture("recipe-card/img3", "recipe-card__img", "jpg", "")
+						.recipe-card__text-box
+							p.recipe-card__title Лазанья классическая
+							ul.recipe-features.recipe-card__feature-list
+								li.recipe-features__elem
+									+svg("recipe-complexity-hard", true)(class="recipe-features__complexity-icon")
+									| сложно
+								li.recipe-features__elem
+									+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+									| 4
+									span.show-tablet-inline &nbsp;порции
+								li.recipe-features__elem
+									+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20
+									span.show-tablet-inline &nbsp;минут
+					// Recipe card
+					a.recipe-card.recipes-grid__elem.swiper-slide(href="#")
+						.recipe-card__img-box
+							+picture("recipe-card/img4", "recipe-card__img", "jpg", "")
+						.recipe-card__text-box
+							p.recipe-card__title Мясное рагу в итальянском
+								br
+								| стиле (ракушки)
+							ul.recipe-features.recipe-card__feature-list
+								li.recipe-features__elem
+									+svg("recipe-complexity-easy", true)(class="recipe-features__complexity-icon recipe-features__complexity-icon--easy")
+									| легко
+								li.recipe-features__elem
+									+svg("recipe-portion", true)(class="recipe-features__portion-icon")
+									| 4
+									span.show-tablet-inline &nbsp;порции
+								li.recipe-features__elem
+									+svg("recipe-time", true)(class="recipe-features__time-icon")
+									| 20
+									span.show-tablet-inline &nbsp;минут
 			.recipe-other__col-text
 				p.recipe-other__text.animation-start-opacity-show-bottom Еще больше интересных рецептов с пастой AIDA вы найдете в нашей коллекции. Экспериментируйте с разными формами пасты, соусами и специями. С пастой AIDA вы можете приготовить что угодно — от простых и легких салатов до интересных гастрономических блюд. Приглашаем вас окунуться в мир кулинарных открытий и создать свои собственные кулинарные шедевры с AIDA.
+		.slider-nav
+			button.slider-nav__btn.slider-nav__btn--prev
+				+svg("chevron-dropdown", true)(class="slider-nav__btn-icon")
+			.slider-nav__pagination
+			button.slider-nav__btn.slider-nav__btn--next
+				+svg("chevron-dropdown", true)(class="slider-nav__btn-icon")

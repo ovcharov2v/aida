@@ -21,8 +21,11 @@
 
 	&__window {
 		position: relative;
-		padding: 91px 58px;
+		padding: 54px 36px;
 		background-color: $color-white;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding: 91px 58px;}
 	}
 
 	&__close {
@@ -46,7 +49,12 @@
 	&__text {
 		text-align: center;
 		text-transform: uppercase;
+		font-size: 18px;
 		line-height: 32px;
 		color: $color-red;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			font-size: 28px;
+		}
 	}
 }

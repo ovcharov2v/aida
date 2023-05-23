@@ -64,20 +64,43 @@ document.addEventListener('DOMContentLoaded', () => {
 		)
 	})
 
-	gsap.fromTo(['.section-news-preview__news-col--n2'],
-		{
-			y: 200,
-		},
-		{
-			scrollTrigger: {
-				trigger: '.section-news-preview__news-col--n2',
-				// markers: true,
-				start: 'top bottom',
-				end: '70% top',
-				scrub: 1.5,
-				toggleActions: "restart none none none"
+	const mm = gsap.matchMedia()
+	// Desktop
+	mm.add('(min-width: 1200px)', () => {
+		gsap.fromTo(['.section-news-preview__news-col--n2'],
+			{
+				y: 200,
 			},
-			y: -200,
-		}
-	)
+			{
+				scrollTrigger: {
+					trigger: '.section-news-preview__news-col--n2',
+					// markers: true,
+					start: 'top bottom',
+					end: '70% top',
+					scrub: 1.5,
+					toggleActions: "restart none none none"
+				},
+				y: -200,
+			}
+		)
+	})
+	// Tablet-mobile
+	mm.add('(max-width: 1199px)', () => {
+		gsap.fromTo(['.section-news-preview__news-col--n2'],
+			{
+				y: 30,
+			},
+			{
+				scrollTrigger: {
+					trigger: '.section-news-preview__news-col--n2',
+					// markers: true,
+					start: 'top bottom',
+					end: '70% top',
+					scrub: 1.5,
+					toggleActions: "restart none none none"
+				},
+				y: -30,
+			}
+		)
+	})
 })

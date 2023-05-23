@@ -13,7 +13,7 @@ block content
 	// Product features
 	.product-features.container
 		.product-features__col.product-features__col--img.product-features__col--border-bottom.product-features__col--border-right
-			+picture("product-features/img1", ".product-features__img", "jpg", "")
+			+picture("product-features/img1", "product-features__img", "jpg", "")
 		.product-features__col.product-features__col--border-bottom
 			h1.h2.product-features__title Fusilli integrale
 			p.product-features__text Fusilli integrale представляют собой тёмные спирали, изготовленные из пшеницы твёрдых сортов. Цельнозерновые спирали можно использовать для приготовления гарниров с различными соусами или в салаты. Такие макароны высоко ценятся теми, кто придерживается здорового образа и следит за рационом питания.
@@ -24,8 +24,8 @@ block content
 				| Мука цельнозерновая из твёрдых сортов пшеницы, вода питьевая
 			a.button.button--gold.button--uppercase.product-features__button(href="#") Купить
 		.product-features__col.product-features__col--img.product-features__col--gray.product-features__col--border-right
-			+picture("product-features/img2", ".product-features__img", "jpg", "")
-		.product-features__col
+			+picture("product-features/img2", "product-features__img", "jpg", "")
+		.product-features__col.product-features__col--data
 			h3.h4.product-features__sub-title Питательные вещества:
 			p.product-features__text-small Пищевая ценность на 100 г продукта:
 			ul.product-features__data-list
@@ -55,7 +55,7 @@ block content
 					span Калорийность
 			hr.product-features__line
 			h3.h4.product-features__sub-title Характеристики:
-			ul.product-features__data-list
+			ul.product-features__data-list.product-features__data-list--short
 				li.product-features__data-box
 					span.product-features__data-value 6 мин
 					span.product-features__data-text Время
@@ -71,13 +71,13 @@ block content
 						|хранения
 
 	// Recipes sample
-	section.recipes-sample.container
-		h2.h3.recipes-sample__title Чтобы почувствовать вкус спирали,
-			br
-			|попробуйте наш рецепт!
-		// Recipes-grid
-		.recipes-grid.recipes-grid--cols-3
-			.recipes-grid__col
+	.show-more
+		section.recipes-sample.container.show-more__container
+			h2.h3.recipes-sample__title Чтобы почувствовать вкус спирали,
+				br
+				|попробуйте наш рецепт!
+			// Recipes-grid
+			.recipes-grid.recipes-grid--cols-3
 				// Recipe card
 				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
 					.recipe-card__img-box
@@ -93,12 +93,18 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								|
+								|
+								span.show-desktop-inline порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								|
+								|
+								span.show-desktop-inline минут
 				// Recipe card
-				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+				a.recipe-card.recipe-card--medium.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						span.recipe-card__label Морепродукты
 						+picture("recipe-card/img2", "recipe-card__img", "jpg", "")
@@ -112,13 +118,18 @@ block content
 								| средне
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								|
+								|
+								span.show-desktop-inline порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
-			.recipes-grid__col
+								| 20
+								|
+								|
+								span.show-desktop-inline минут
 				// Recipe card
-				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+				a.recipe-card.recipe-card--medium.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						span.recipe-card__label Праздничное
 						+picture("recipe-card/img3", "recipe-card__img", "jpg", "")
@@ -130,12 +141,18 @@ block content
 								| сложно
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								|
+								|
+								span.show-desktop-inline порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-									| 20 минут
+								| 20
+								|
+								|
+								span.show-desktop-inline минут
 				// Recipe card
-				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+				a.recipe-card.recipe-card--medium.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img4", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -148,13 +165,18 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								|
+								|
+								span.show-desktop-inline порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
-			.recipes-grid__col
+								| 20
+								|
+								|
+								span.show-desktop-inline минут
 				// Recipe card
-				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+				a.recipe-card.recipe-card--medium.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						span.recipe-card__label Праздничное
 						+picture("recipe-card/img5", "recipe-card__img", "jpg", "")
@@ -166,12 +188,18 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								|
+								|
+								span.show-desktop-inline порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								|
+								|
+								span.show-desktop-inline минут
 				// Recipe card
-				a.recipe-card.recipe-card--medium.recipes-grid__elem(href="#")
+				a.recipe-card.recipe-card--medium.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img6", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -182,86 +210,94 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								|
+								|
+								span.show-desktop-inline порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								|
+								|
+								span.show-desktop-inline минут
+			.show-more__button-box
+				button.button.button--gold.button--uppercase.show-more__button Показать еще
+
 
 	// Products sample
 	section.products-sample.container
 		h2.h3.products-sample__title.show-up Откройте для себя больше продуктов AIDA
-		// Product grid
-		.product-grid.product-grid--page-product
-			// Product card
-			a.product-card.product-card--small(href="#")
-				+picture("product-card/back1", "product-card__back-img", "jpg", "")
-				.product-card__content
-					.product-card__features
-						span.text-white
-							+svg("product-weight", true)(class="product-card__weight-icon")
-							|450 г
-						span
-							+svg("recipe-time", true)(class="product-card__time-icon")
-							|30 минут
-					.product-card__titles
-						span.text-white Лазанья
-						span.text-red Lasagne
-				.product-card__product-img-box
+		.show-more
+			// Product grid
+			.product-grid.product-grid--page-product.show-more__container
+				// Product card
+				a.product-card.product-card--small.animation-start-opacity-show-bottom(href="#")
+					+picture("product-card/back1", "product-card__back-img", "jpg", "")
+					.product-card__content
+						.product-card__features
+							span.text-white
+								+svg("product-weight", true)(class="product-card__weight-icon")
+								|450 г
+							span
+								+svg("recipe-time", true)(class="product-card__time-icon")
+								|30 минут
+						.product-card__titles
+							span.text-white Лазанья
+							span.text-red Lasagne
 					+picture("product-card/product1", "product-card__product-img", "jpg", "")
-				+picture("product-card/angle1", "product-card__angle-img", "jpg", "")
-			// Product card
-			a.product-card.product-card--small(href="#")
-				+picture("product-card/back2", "product-card__back-img", "jpg", "")
-				.product-card__content
-					.product-card__features
-						span.text-white
-							+svg("product-weight", true)(class="product-card__weight-icon")
-							| 450 г
-						span
-							+svg("recipe-time", true)(class="product-card__time-icon")
-							| 11 минут
-					.product-card__titles
-						span.text-white Цельнозерновые
-							br
-							|перья
-						span.text-red Penne rigate
-							br
-							|integrale
-				.product-card__product-img-box
+					+picture("product-card/angle1", "product-card__angle-img", "jpg", "")
+				// Product card
+				a.product-card.product-card--small.animation-start-opacity-show-bottom.show-more__element.show-more__element--block(href="#")
+					+picture("product-card/back2", "product-card__back-img", "jpg", "")
+					.product-card__content
+						.product-card__features
+							span.text-white
+								+svg("product-weight", true)(class="product-card__weight-icon")
+								| 450 г
+							span
+								+svg("recipe-time", true)(class="product-card__time-icon")
+								| 11 минут
+						.product-card__titles
+							span.text-white Цельнозерновые
+								br
+								|перья
+							span.text-red Penne rigate
+								br
+								|integrale
 					+picture("product-card/product2", "product-card__product-img", "jpg", "")
-				+picture("product-card/angle2", "product-card__angle-img", "jpg", "")
-			// Product card
-			a.product-card.product-card--small(href="#")
-				+picture("product-card/back3", "product-card__back-img", "jpg", "")
-				.product-card__content
-					.product-card__features
-						span.text-white
-							+svg("product-weight", true)(class="product-card__weight-icon")
-							| 450 г
-						span
-							+svg("recipe-time", true)(class="product-card__time-icon")
-							| 30 минут
-					.product-card__titles
-						span.text-white Рожок витой
-						span.text-red Cellentani
-				.product-card__product-img-box
+					+picture("product-card/angle2", "product-card__angle-img", "jpg", "")
+				// Product card
+				a.product-card.product-card--small.animation-start-opacity-show-bottom.show-more__element.show-more__element--block(href="#")
+					+picture("product-card/back3", "product-card__back-img", "jpg", "")
+					.product-card__content
+						.product-card__features
+							span.text-white
+								+svg("product-weight", true)(class="product-card__weight-icon")
+								| 450 г
+							span
+								+svg("recipe-time", true)(class="product-card__time-icon")
+								| 30 минут
+						.product-card__titles
+							span.text-white Рожок витой
+							span.text-red Cellentani
 					+picture("product-card/product3", "product-card__product-img", "jpg", "")
-				+picture("product-card/angle3", "product-card__angle-img", "jpg", "")
+					+picture("product-card/angle3", "product-card__angle-img", "jpg", "")
 
-			// Product card
-			a.product-card.product-card--small(href="#")
-				+picture("product-card/back4", "product-card__back-img", "jpg", "")
-				.product-card__content
-					.product-card__features
-						span.text-white
-							+svg("product-weight", true)(class="product-card__weight-icon")
-							| 450 г
-						span
-							+svg("recipe-time", true)(class="product-card__time-icon")
-							| 10 минут
-					.product-card__titles
-						span.text-white Ракушки
-						span.text-red Conchiglie
-				.product-card__product-img-box
+				// Product card
+				a.product-card.product-card--small.animation-start-opacity-show-bottom.show-more__element.show-more__element--block(href="#")
+					+picture("product-card/back4", "product-card__back-img", "jpg", "")
+					.product-card__content
+						.product-card__features
+							span.text-white
+								+svg("product-weight", true)(class="product-card__weight-icon")
+								| 450 г
+							span
+								+svg("recipe-time", true)(class="product-card__time-icon")
+								| 10 минут
+						.product-card__titles
+							span.text-white Ракушки
+							span.text-red Conchiglie
 					+picture("product-card/product4", "product-card__product-img", "jpg", "")
-				+picture("product-card/angle4", "product-card__angle-img", "jpg", "")
+					+picture("product-card/angle4", "product-card__angle-img", "jpg", "")
+			.show-more__button-box
+				button.button.button--gold.button--uppercase.show-more__button Показать еще

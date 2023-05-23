@@ -57,53 +57,54 @@ block content
 					.section-collection__text-box
 						h2.h2.text-semibold.text-red.section-collection__title
 							|Разнообразие
-							br
+							|
+							|
+							br.show-desktop
 							|форм
 						p.section-collection__text Откройте мир вкусов с нашей коллекцией макарон разных форм и размеров. Выберите свои любимые и создавайте вкусные блюда, которые будут удивлять ваших близких и друзей!
-						a.button.button--gold.button--uppercase.section-collection__link(href="#") Смотреть все
+						a.button.button--gold.button--uppercase.section-collection__link.show-desktop(href="#") Смотреть все
 				.section-collection__gallery-grid
-					.section-collection__gallery-col.section-collection__gallery-col--n1
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product1", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product2", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product3", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product4", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product5", "section-collection__product-img")
-					.section-collection__gallery-col.section-collection__gallery-col--n2
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product6", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product7", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product8", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product9", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product10", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product11", "section-collection__product-img")
-					.section-collection__gallery-col.section-collection__gallery-col--n3
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product12", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product13", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product14", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product15", "section-collection__product-img")
-						a.section-collection__product-link(href="product.html")
-							+picture("section-collection/product16", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product1", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product2", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product3", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product4", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product5", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product6", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product7", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product8", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product9", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product10", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product11", "section-collection__product-img")
+					a.section-collection__product-link(href="product.html")
+						+picture("section-collection/product12", "section-collection__product-img")
+					a.section-collection__product-link.show-desktop(href="product.html")
+						+picture("section-collection/product13", "section-collection__product-img")
+					a.section-collection__product-link.show-desktop(href="product.html")
+						+picture("section-collection/product14", "section-collection__product-img")
+					a.section-collection__product-link.show-desktop(href="product.html")
+						+picture("section-collection/product15", "section-collection__product-img")
+					a.section-collection__product-link.show-desktop(href="product.html")
+						+picture("section-collection/product16", "section-collection__product-img")
+				.section-collection__link-box.hide-desktop
+					a.button.button--gold.button--uppercase.section-collection__link(href="#") Смотреть все
 	// Section Image back
 	.section-image-back.section-image-back--bg2
 		.section-image-back__bg
 	// Section We produce
 	section.section-we-produce.container
 		.section-we-produce__grid
-			.section-we-produce__video-box.animated-image.animated-image--technology1
+			.section-we-produce__video-box.animated-image.animated-image--technology1.show-desktop
 				video.animated-image__img(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg")
 					source(src='videos/field.mp4', type='video/mp4')
 			.section-we-produce__content
@@ -114,6 +115,9 @@ block content
 				p.section-we-produce__text Паста AIDA производится в России на Орской макаронной фабрике на современном оборудовании от итальянских и швейцарских производителей. Благодаря традиционной итальянской технологии и пшенице непревзойденного качества паста AIDA получается бесподобно вкусной.
 				a.button.button--gold.button--uppercase.section-we-produce__link(href="#") О технологии
 		.section-we-produce__row
+			.section-we-produce__video-box.section-we-produce__video-box--mobile.animated-image.animated-image--technology1.hide-desktop
+				video.animated-image__img(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg")
+					source(src='videos/field.mp4', type='video/mp4')
 			.section-we-produce__img-box.animated-image.animated-image--technology1
 				+picture("section-we-produce/img2", "section-we-produce__img animated-image__img", "jpg", "")
 	// Section Image back
@@ -126,7 +130,7 @@ block content
 			.section-recipes-preview__text-col
 				h2.h2.text-semibold.text-red.section-recipes-preview__title Рецепты
 				p.section-recipes-preview__text Экспериментируйте с разными формами пасты, соусами и специями. Еще больше интересных рецептов с пастой AIDA вы найдете в нашей коллекции.
-				a.button.button--gold.button--uppercase.section-recipes-preview__link(href="#") Ко всем рецептам
+				a.button.button--gold.button--uppercase.section-recipes-preview__link.show-desktop(href="#") Ко всем рецептам
 			.section-recipes-preview__col
 				.section-recipes-preview__recipes-cols
 					.section-recipes-preview__recipe-col.section-recipes-preview__recipe-col--n1
@@ -145,6 +149,8 @@ block content
 						a.section-recipes-preview__recipe(href="#")
 							+picture("section-recipes-preview/recipe4", "section-recipes-preview__recipe-img", "jpg", "")
 							p.section-recipes-preview__recipe-title Мясное рагу
+			.section-recipes-preview__link-box.hide-desktop
+				a.button.button--gold.button--uppercase.section-recipes-preview__link(href="#") Ко всем рецептам
 	// Section Image back
 	.section-image-back.section-image-back--bg3
 		.section-image-back__bg
@@ -153,7 +159,7 @@ block content
 		.section-news-preview__grid
 			.section-news-preview__text-col
 				h2.h2.text-semibold.text-red.section-news-preview__title Новости
-				a.button.button--gold.button--uppercase.section-news-preview__link(href="#") Смотреть все
+				a.button.button--gold.button--uppercase.section-news-preview__link(href="#").show-desktop Смотреть все
 			.section-news-preview__col
 				.section-news-preview__news-cols
 					.section-news-preview__news-col.section-news-preview__news-col--n1
@@ -170,6 +176,8 @@ block content
 						a.section-news-preview__news(href="#")
 							+picture("section-news-preview/news4", "section-news-preview__news-img", "jpg", "")
 							p.section-news-preview__news-title Встречайте обновление! Мы подарили новое дыхание упаковке пасты AIDA
+			.section-news-preview__link-box.hide-desktop
+				a.button.button--gold.button--uppercase.section-news-preview__link(href="#") Смотреть все
 	// Section Image back
 	.section-image-back.section-image-back--bg5
 		.section-image-back__bg
@@ -180,7 +188,7 @@ block content
 				.section-market-preview__col
 					h2.h2.text-semibold.text-red.section-market-preview__title Мы уже здесь
 					p.section-market-preview__text Пасту AIDA можно найти в магазине рядом с вами или заказать онлайн.
-					a.button.button--gold.button--uppercase.section-market-preview__link(href="#") Выбрать магазин
+					a.button.button--gold.button--uppercase.section-market-preview__link.show-desktop(href="#") Выбрать магазин
 				.section-market-preview__col.section-market-preview__markets-grid
 					+market("ozon", "#", "")(class="section-market-preview__market-link")
 					+market("utkonos", "#", "")(class="section-market-preview__market-link")
@@ -191,3 +199,5 @@ block content
 					+market("kazan-express", "#", "")(class="section-market-preview__market-link")
 					+market("vprok", "#", "")(class="section-market-preview__market-link")
 					+market("sber", "#", "")(class="section-market-preview__market-link")
+				.section-market-preview__link-box.hide-desktop
+					a.button.button--gold.button--uppercase.section-market-preview__link(href="#") Выбрать магазин

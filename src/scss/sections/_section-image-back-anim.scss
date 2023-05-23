@@ -1,6 +1,9 @@
 .section-image-back-anim {
 	position: relative;
-	height: 883px;
+	height: 342px;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		height: 883px;}
 
 	&__box {
 		position: relative;
@@ -8,10 +11,15 @@
 		justify-content: center;
 		width: 0;
 		height: 0;
-		min-width: 400px;
-		min-height: 400px;
+		min-width: 150px;
+		min-height: 150px;
 		margin: 0 auto;
 		overflow: hidden;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			min-width: 400px;
+			min-height: 400px;}
+
 	}
 
 	&__img {

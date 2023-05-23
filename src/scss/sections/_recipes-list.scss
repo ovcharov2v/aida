@@ -1,34 +1,70 @@
 .recipes-list {
-	padding-top: 180px;
-	padding-bottom: 94px;
 	overflow: hidden;
 
+	@media (min-width: $breakpoint-tablet-min) {
+		padding-bottom: 94px;
+	}
+
+	@media (min-width: $breakpoint-desktop-min) {
+		padding-top: 30px;
+	}
+
 	&__container {
-		display: grid;
-		grid-template: auto / 1.16fr 1fr;
-		grid-column-gap: 120px;
-		margin-bottom: 170px;
+		position: relative;
+		display: flex;
+		flex-direction: column-reverse;
+		padding-top: 342px;
+		margin-bottom:60px;
+
+		@media (min-width: $breakpoint-tablet-min) {
+			padding-top: 500px;
+		}
+
+		@media (min-width: $breakpoint-desktop-min) {
+			display: grid;
+			grid-template: auto / 1.16fr 1fr;
+			grid-column-gap: 120px;
+			padding-top: 0;
+			margin-bottom: 170px;
+		}
 	}
 
 	&__col-text {
-		padding-top: 32px;
+		padding-top: 38px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 32px;
+		}
 	}
 
 	&__title1 {
-		margin-bottom: 30px;
+		margin-bottom: 15px;
 		color: $color-red;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__title2 {
 		max-width: 575px;
-		margin-left: auto;
-		margin-bottom: 34px;
+		margin-bottom: 17px;
+		margin-left: 54px;
 		color: $color-black;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 34px;
+			margin-left: auto;
+		}
 	}
 
 	&__text {
 		max-width: 710px;
-		margin-bottom: 34px;
+		margin-bottom: 13px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 34px;
+		}
 	}
 
 	&__list {
@@ -37,34 +73,67 @@
 
 	&__list-elem {
 		position: relative;
-		padding-left: 24px;
+		padding-left: 14px;
 
 		&::before {
 			position: absolute;
-			top: 14px;
 			left: 0;
-			width: 5px;
-			height: 5px;
+			top: 9px;
+			width: 4px;
+			height: 4px;
 			border-radius: 50%;
 			background-color: currentColor;
 			content: "";
 		}
 
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-left: 24px;
+
+			&::before {
+				top: 14px;
+				width: 5px;
+				height: 5px;
+			}
+		}
+
 		&:not(:last-child) {
-			margin-bottom: 35px;
+			margin-bottom: 19px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 35px;
+			}
 		}
 	}
 
 	&__col-img {
-		position: relative;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 100vw;
+		height: 342px;
+		@media (min-width: $breakpoint-tablet-min) {
+			height: 500px;
+		}
+		@media (min-width: $breakpoint-desktop-min) {
+			position: relative;
+			left: 0;
+			transform: none;
+			width: auto;
+			height: 624px;
+		}
 	}
 
 	&__img {
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 50vw;
-		height: 624px;
+		width: 100%;
+		height: 100%;
 		object-fit: cover;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: 50vw;
+		}
 	}
 }

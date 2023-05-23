@@ -5,27 +5,81 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (!target) return
 
 	const productList = gsap.utils.toArray('.product-grid .product-card')
-	const haveFourCols = target.classList.contains('product-grid--page-product')
-	const counter = haveFourCols ? 4 : 3
-	let productRowArr = []
+	let colCounter = target.classList.contains('product-grid--page-product') ? 4 : 3
 
-	productList.forEach((product, index) => {
-		productRowArr.push(product)
-		if (productRowArr.length >= counter || productList.length === index + 1) {
-			console.log(productRowArr)
-			gsap.fromTo([productRowArr], {
-				y: 100,
-				opacity: 0
-			}, {
-				scrollTrigger: {
-					trigger: productRowArr[0],
-				},
-				y: 0,
-				stagger: .3,
-				opacity: 1
+	const mm = gsap.matchMedia()
+	if(colCounter === 3) {
+		// Desktop
+		mm.add('(min-width: 1200px)', () => {
+			let count = 0
+			productList.forEach((product) => {
+				gsap.to(product, {
+					scrollTrigger: {
+						trigger: product,
+					},
+					y: 0,
+					opacity: 1,
+					delay: () => .3 * count
+				})
+				count >= 2 ? count = 0 : count++
 			})
-			productRowArr = []
-		}
-	})
+		})
+		// Tablet-mobile
+		mm.add('(max-width: 1199px)', () => {
+			productList.forEach((product) => {
+				gsap.to(product, {
+					scrollTrigger: {
+						trigger: product,
+					},
+					y: 0,
+					opacity: 1,
+				})
+			})
+		})
+	}
+	else {
+		// Desktop
+		mm.add('(min-width: 1200px)', () => {
+			let count = 0
+			productList.forEach((product) => {
+				gsap.to(product, {
+					scrollTrigger: {
+						trigger: product,
+					},
+					y: 0,
+					opacity: 1,
+					delay: () => .3 * count
+				})
+				count >= 3 ? count = 0 : count++
+			})
+		})
+		// Tablet
+		mm.add('(min-width: 768px) and (max-width: 1199px)', () => {
+			let count = 0
+			productList.forEach((product) => {
+				gsap.to(product, {
+					scrollTrigger: {
+						trigger: product,
+					},
+					y: 0,
+					opacity: 1,
+					delay: () => .3 * count
+				})
+				count >= 2 ? count = 0 : count++
+			})
+		})
+		// Mobile
+		mm.add('(max-width: 767px)', () => {
+			productList.forEach((product) => {
+				gsap.to(product, {
+					scrollTrigger: {
+						trigger: product,
+					},
+					y: 0,
+					opacity: 1,
+				})
+			})
+		})
+	}
 })
 

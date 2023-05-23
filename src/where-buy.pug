@@ -9,30 +9,31 @@ block content
 	// Where buy intro
 	section.where-buy-intro
 		.container.where-buy-intro__container
-			h1.h2.where-buy-intro__title Где купить
+			h1.h2.where-buy-intro__title.animation-start-blur Где купить
 			p.where-buy-intro__text
-				span.where-buy-intro__text-block Пасту AIDA можно
+				span.where-buy-intro__text-block.animation-start-blur Пасту AIDA можно
 				|
 				|
-				span.where-buy-intro__text-block найти в магазине
+				span.where-buy-intro__text-block.animation-start-blur найти в магазине
 				br
-				span.where-buy-intro__text-block рядом с вами
+				span.where-buy-intro__text-block.animation-start-blur рядом с вами
 				|
 				|
-				span.where-buy-intro__text-block или заказать онлайн.
+				span.where-buy-intro__text-block.animation-start-blur или заказать онлайн.
 	// Where buy shops
 	section.where-buy-shops
 		.container
-			.where-buy-shops__dropdown-box
-				.dropdown.where-buy-shops__dropdown
-					.dropdown__value-box
-						input.dropdown__value(type="text", placeholder="Выберите город", disabled)
-						+svg("chevron-dropdown", true)(class="dropdown__arrow")
-					ul.dropdown__options-list
-						li.dropdown__option(data-value="Москва") Москва
-						li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
-						li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
-			h2.h4.where-buy-shops__title Онлайн-магазины
+			.where-buy-shops__top-box
+				.where-buy-shops__dropdown-box
+					.dropdown.where-buy-shops__dropdown
+						.dropdown__value-box
+							input.dropdown__value(type="text", placeholder="Выберите город", disabled)
+							+svg("chevron-dropdown", true)(class="dropdown__arrow")
+						ul.dropdown__options-list
+							li.dropdown__option(data-value="Москва") Москва
+							li.dropdown__option(data-value="Санкт-Петербург") Санкт-Петербург
+							li.dropdown__option(data-value="Нижний Новгород") Нижний Новгород
+				h2.h4.where-buy-shops__title Онлайн-магазины
 			.where-buy-shops__grid
 				+market("ozon", "#", "")(class="where-buy-shops__item")
 				+market("wildberries", "#", "")(class="where-buy-shops__item")

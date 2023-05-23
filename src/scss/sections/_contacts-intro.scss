@@ -1,16 +1,57 @@
 .contacts-intro {
 	@include background-image("../images/contacts-intro/bg");
-	background-size: cover;
-	background-position: top center;
-	background-repeat: no-repeat;
-	padding-top: 97px;
+	height: 342px;
+	padding-top: 26px;
 	padding-bottom: 97px;
-	height: 666px;
+	background-size: auto 121%;
+	background-position: 59% 7%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+
+	@media (min-width: 900px) {
+		background-size: cover;
+		background-position: top center;
+	}
+
+	@media (min-width: $breakpoint-desktop-min) {
+		height: 666px;
+		padding-top: 97px;
+		padding-bottom: 97px;
+		background-size: cover;
+		background-position: top center;}
+
+	&__container {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			top: -184px;
+			left: -136px;
+			width: 400px;
+			height: 400px;
+			background: radial-gradient(58.53% 58.53% at 50% 50%, #FFFFFF 27%, rgba(255, 255, 255, 0) 100%);
+			filter: blur(28px);
+			content: "";
+		}
+
+		@media (min-width: $breakpoint-desktop-min) {
+			&::before {
+				content: none;
+			}
+		}
+
+	}
 
 	&__title {
 		max-width: 660px;
 		text-transform: uppercase;
 		color: $color-red;
+
+		@media (max-width: $breakpoint-desktop-min) {
+			max-width: 300px;
+			font-size: 18px;
+			line-height: 27px;
+		}
 	}
 
 	&__title-block {

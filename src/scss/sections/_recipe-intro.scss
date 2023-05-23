@@ -1,22 +1,29 @@
 .recipe-intro {
 	@include background-image("../images/recipe-intro/bg");
-	padding-top: 196px;
-	padding-bottom: 60px;
+	padding-top: 34px;
+	padding-bottom: 34px;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 	color: $color-white;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
 
 	&__top {
 		margin-bottom: 31px;
 	}
 
 	&__content {
-		display: grid;
-		grid-template: auto/ auto minmax(300px, 706px);
-		justify-content: space-between;
-		margin-bottom: 148px;
-		padding-right: 105px;
+		@media (min-width: $breakpoint-desktop-min) {
+			display: grid;
+			grid-template: auto/ auto minmax(300px, 706px);
+			justify-content: space-between;
+			margin-bottom: 148px;
+			padding-right: 105px;
+		}
 	}
 
 	&__col {
@@ -24,17 +31,33 @@
 	}
 
 	&__title {
-		margin-bottom: 33px;
+		margin-bottom: 19px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 33px;
+		}
 	}
 
 	&__features {
 		max-width: 300px;
+		margin-bottom: 33px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 0;
+		}
 	}
 
 	&__text {
-		font-size: 28px;
-		line-height: 32px;
+		margin-bottom: 46px;
+		font-size: 16px;
+		line-height: 20px;
 		font-weight: 500;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 0;
+			font-size: 28px;
+			line-height: 32px;
+		}
 	}
 
 	&__bottom {
@@ -57,9 +80,16 @@
 			left: 0;
 			transform: translateY(-50%);
 			width: 1px;
-			height: 42px;
+			height: 32px;
 			background-color: rgba(#BBB, .4);
 			content: "";
+		}
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-left: 29px;
+			&::before {
+				height: 42px;
+			}
 		}
 	}
 
@@ -74,12 +104,17 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 55px;
-		height: 55px;
+		width: 38px;
+		height: 38px;
 		background-color: $color-white;
 		border-radius: 50%;
 		color: #303030;
 		transition: background-color $transition-default;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: 55px;
+			height: 55px;
+		}
 
 		&:hover {
 			background-color: #E9E9E9;
@@ -87,7 +122,12 @@
 	}
 
 	&__print-link-icon {
-		width: 35px;
-		height: 35px;
+		width: 21px;
+		height: 21px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: 35px;
+			height: 35px;
+		}
 	}
 }

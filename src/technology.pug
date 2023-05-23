@@ -4,6 +4,7 @@ append vars
 		title = "AIDA Технология"
 		meta.description = "Описание AIDA"
 		isHeaderWhite = true
+		body.classList = "body-top-offset"
 block content
 	// Technology block
 	.technology-block.technology-block--type1
@@ -22,9 +23,8 @@ block content
 					|
 					span.technology-block__title-block.animation-start-blur как мы производим пасту AIDA
 				.technology-block__img-box.technology-block__img-box--n3.animation-start-opacity-show-bottom
-					.technology-block__img-box.technology-block__img-box--n3.animation-start-opacity-show-bottom
-						.technology-block__img.technology-block__img--n3.animated-image
-							+picture("technology-block/img3", "animated-image__img", "jpg", "")
+					.technology-block__img.technology-block__img--n3.animated-image
+						+picture("technology-block/img3", "animated-image__img", "jpg", "")
 	// Technology block
 	.technology-block.technology-block--type2
 		.container.technology-block__container
@@ -64,10 +64,11 @@ block content
 					.animated-image.technology-block__img
 						+picture("technology-block/img7", "animated-image__img", "jpg", "")
 			.technology-block__col-text
-				h2.h2.technology-block__title.animation-start-blur Все начинается с поля
-				p.technology-block__text.animation-start-opacity-show-bottom Их для выращивания пшеницы засеивают
-					br
-					|по очереди – земля должна отдыхать и быть идеально чистой. Чтобы вырастить урожай пшеницы твердых сортов нужно 90-100 дней, регулярной заботы.
+				.technology-block__col-text-wrap
+					h2.h2.technology-block__title.animation-start-blur Все начинается с поля
+					p.technology-block__text.animation-start-opacity-show-bottom Их для выращивания пшеницы засеивают
+						br
+						|по очереди – земля должна отдыхать и быть идеально чистой. Чтобы вырастить урожай пшеницы твердых сортов нужно 90-100 дней, регулярной заботы.
 				.technology-block__img-box.technology-block__img-box--n2.animation-start-opacity-show-bottom
 					.animated-image.technology-block__img.technology-block__img--n2
 						+picture("technology-block/img20", "animated-image__img", "jpg", "")

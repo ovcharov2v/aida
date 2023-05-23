@@ -1,6 +1,5 @@
 import gsap from "gsap"
 
-
 document.addEventListener('DOMContentLoaded', () => {
 	const target = document.querySelector('.section-image-back-anim')
 	if(!target) return
@@ -22,7 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			height: '100%',
 		}
 	)
-	gsap.fromTo('.section-image-back-anim .section-image-back-anim__box',
+	const mm = gsap.matchMedia()
+	// Desktop
+	mm.add('(min-width: 1200px)', () => {gsap.fromTo('.section-image-back-anim .section-image-back-anim__box',
 		{
 			y: -650,
 		},
@@ -37,6 +38,25 @@ document.addEventListener('DOMContentLoaded', () => {
 			y: 200,
 		}
 	)
+	})
+	// Tablet-mobile
+	mm.add('(max-width: 1199px)', () => {gsap.fromTo('.section-image-back-anim .section-image-back-anim__box',
+		{
+			y: -200,
+		},
+		{
+			scrollTrigger: {
+				trigger: '.section-image-back-anim .section-image-back-anim__box',
+				//markers: true,
+				scrub: true,
+				start: '200px 40%',
+				end: "+=800px top"
+			},
+			y: 200,
+		}
+	)
+	})
+
 	gsap.fromTo('.section-image-back-anim .section-image-back-anim__img',
 		{
 			xPercent: -.6,

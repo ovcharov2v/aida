@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (!target) return
 
 	gsap.to('.recipe-other__text', {
-			opacity: 1,
-			y: 0,
-			scrollTrigger: {
-				trigger: '.recipe-other__text'
-			}
-		})
+		opacity: 1,
+		y: 0,
+		scrollTrigger: {
+			trigger: '.recipe-other__text'
+		}
+	})
+
 })
 

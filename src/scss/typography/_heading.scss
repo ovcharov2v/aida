@@ -1,20 +1,37 @@
 .h1 {
-	font-size: 88px;
-	line-height: 92px;
+	font-size: 36px;
+	line-height: 40px;
 	font-weight: 400;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 88px;
+		line-height: 92px;
+	}
 }
 
 .h2 {
-	font-size: 46px;
+	font-size: 23px;
 	line-height: 1.1;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 46px;
+	}
 }
 
 .h3 {
-	font-size: 36px;
+	font-size: 23px;
 	line-height: 1.1;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 36px;
+	}
 }
 
 .h4 {
-	font-size: 28px;
-	line-height: 1.1;
+	font-size: 23px;
+	line-height: 27px;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 28px;
+		line-height: 1.1;}
 }

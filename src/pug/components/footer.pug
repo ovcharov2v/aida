@@ -4,7 +4,7 @@ footer.footer.js-modal-success-box
 			.footer__contacts-col
 				p.footer__contacts-title Остались Вопросы?
 				a.button.button--white.footer__contacts-mail-link(href="#") Напишите нам
-			.footer__contacts-col
+			.footer__contacts-col.footer__contacts-col--socials
 				ul.socials.footer__socilals
 					li.socials__elem
 						a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
@@ -12,7 +12,7 @@ footer.footer.js-modal-success-box
 					li.socials__elem
 						a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
 							+svg("social-dzen", true)(class="socials__link-icon")
-			.footer__contacts-col
+			.footer__contacts-col.footer__contacts-col--subscribe
 				p.footer__contacts-title Подпишитесь на рассылку
 				form.footer__form(action="#").js-modal-success-trigger
 					input.footer__form-input(type="email", placeholder="Email", required)

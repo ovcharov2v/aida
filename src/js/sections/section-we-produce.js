@@ -5,7 +5,7 @@ gsap.registerPlugin(ScrollTrigger)
 
 document.addEventListener('DOMContentLoaded', () => {
 	const target = document.querySelector('.section-we-produce')
-	if(!target) return
+	if (!target) return
 
 	gsap.fromTo('.section-we-produce__title-part--n1',
 		{
@@ -94,4 +94,24 @@ document.addEventListener('DOMContentLoaded', () => {
 			},
 		}
 	)
+
+	const mm = gsap.matchMedia()
+	// Tablet-mobile
+	mm.add('(max-width: 1199px)', () => {
+		gsap.fromTo('.section-we-produce__video-box--mobile',
+			{
+				opacity: 0,
+				y: 100,
+			},
+			{
+				opacity: 1,
+				y: 0,
+				scrollTrigger: {
+					trigger: '.section-we-produce__video-box--mobile',
+					// markers: true,
+					scrub: 1.5,
+				},
+			}
+		)
+	})
 })

@@ -4,6 +4,7 @@ append vars
 		title = "AIDA Рецепты"
 		meta.description = "Описание AIDA"
 		isHeaderWhite = true
+		body.classList = "body-top-offset"
 block content
 	// Recipes list
 	section.recipes-list
@@ -13,8 +14,14 @@ block content
 					br
 					|mangia pasta e bevi vino"
 				h1.h2.recipes-list__title2 «Если ты хочешь жить
-					br
-					| вечно, ешь пасту и пей вино»
+					br.show-desktop-block
+					|
+					|
+					| вечно,
+					|
+					|
+					br.hide-desktop
+					|ешь пасту и пей вино»
 				p.recipes-list__text Так говорят в Италии, где паста давно стала популярным и любимым блюдом. Именно в Италии она получила настоящую известность и стала шедевром мировой кулинарии. Рецептов пасты множество — выбирайте по вкусу и под случай. А мы делимся некоторыми секретами, которые помогут сделать любую пасту по-настоящему вкусной. С пастой AIDA результат гарантирован и всегда предсказуем.
 				ul.recipes-list__list
 					li.recipes-list__list-elem Для идеальной пасты важно соблюдать пропорции воды, пасты и соли. Лучшей считается 1000:100:10: на 1000 мл воды приходится 100 г пасты и 10 г соли.
@@ -25,9 +32,9 @@ block content
 					li.recipes-list__list-elem Подбирая соус к пасте, важно помнить, что для мясных и томатных соусов лучше всего подходит паста с плоской и шероховатой поверхностью, которая буквально удерживает каждую каплю соуса (например, тальятелли). А вот сливочные и легкие соусы на основе трав отлично сочетаются с тонкой длинной пастой (капеллини).
 			.recipes-list__col-img
 				+picture("recipes-list/img1", "recipes-list__img", "jpg", "")
-		// Recipes-grid
-		.container.recipes-grid.recipes-grid--cols-4.recipes-list__grid
-			.recipes-grid__col
+		.show-more
+			// Recipes-grid
+			.container.recipes-grid.recipes-grid--cols-4.recipes-list__grid.show-more__container
 				// Recipe card
 				a.recipe-card.recipes-grid__elem(href="#")
 					.recipe-card__img-box
@@ -43,10 +50,12 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
 				a.recipe-card.recipes-grid__elem(href="#")
 					.recipe-card__img-box
@@ -62,10 +71,12 @@ block content
 								| средне
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
 				a.recipe-card.recipes-grid__elem(href="#")
 					.recipe-card__img-box
@@ -79,10 +90,12 @@ block content
 								| сложно
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
 				a.recipe-card.recipes-grid__elem(href="#")
 					.recipe-card__img-box
@@ -97,11 +110,12 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
-			.recipes-grid__col
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
 				a.recipe-card.recipes-grid__elem(href="#")
 					.recipe-card__img-box
@@ -115,12 +129,15 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
+
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img6", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -131,12 +148,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						span.recipe-card__label Без лактозы
 						+picture("recipe-card/img7", "recipe-card__img", "jpg", "")
@@ -148,12 +167,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img8", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -166,13 +187,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
-			.recipes-grid__col
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img9", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -183,12 +205,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						span.recipe-card__label Праздничное
 						+picture("recipe-card/img10", "recipe-card__img", "jpg", "")
@@ -202,12 +226,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img11", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -218,12 +244,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						span.recipe-card__label Праздничное
 						+picture("recipe-card/img12", "recipe-card__img", "jpg", "")
@@ -237,13 +265,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
-			.recipes-grid__col
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img13", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -256,12 +285,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img14", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -274,12 +305,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						+picture("recipe-card/img15", "recipe-card__img", "jpg", "")
 					.recipe-card__text-box
@@ -290,12 +323,14 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
 				// Recipe card
-				a.recipe-card.recipes-grid__elem(href="#")
+				a.recipe-card.recipes-grid__elem.show-more__element.show-more__element--block(href="#")
 					.recipe-card__img-box
 						span.recipe-card__label Морепродукты
 						+picture("recipe-card/img16", "recipe-card__img", "jpg", "")
@@ -309,7 +344,11 @@ block content
 								| легко
 							li.recipe-features__elem
 								+svg("recipe-portion", true)(class="recipe-features__portion-icon")
-								| 4 порции
+								| 4
+								span.show-tablet-inline &nbsp;порции
 							li.recipe-features__elem
 								+svg("recipe-time", true)(class="recipe-features__time-icon")
-								| 20 минут
+								| 20
+								span.show-tablet-inline &nbsp;минут
+			.show-more__button-box
+				button.button.button--gold.button--uppercase.show-more__button Показать еще

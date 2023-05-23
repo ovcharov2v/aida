@@ -6,15 +6,30 @@
 	&__elem {
 		display: flex;
 		align-items: center;
-		font-size: 16px;
+		font-size: 23px;
 		line-height: 1.2;
+		padding-right: 18px;
+
+		@media (min-width: $breakpoint-tablet-min) {
+			padding-right: 0;
+		}
+
+		@media (min-width: $breakpoint-desktop-min) {
+			font-size: 16px;
+		}
 
 		.recipe-features--medium & {
 			font-size: 23px;
 		}
 
 		.recipe-features--big & {
-			font-size: 28px;
+			font-size: 23px;
+			@media (min-width: $breakpoint-desktop-min) {}
+
+		}
+
+		.recipe-features--page-recipe & {
+			font-size: 16px;
 		}
 	}
 

@@ -1,7 +1,10 @@
 .section-video-back {
 	position: relative;
-	height: 701px;
+	height: 340px;
 	overflow: hidden;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		height: 701px;}
 
 	&__bg {
 		width: 100%;

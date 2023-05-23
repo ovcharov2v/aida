@@ -21,5 +21,10 @@
 
 	&__logo {
 		display: inline-block;
+		width: 150px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: unset;
+		}
 	}
 }

@@ -3,13 +3,17 @@
 	z-index: 0;
 	display: flex;
 	flex-direction: column;
-	padding-bottom: 129px;
+	padding-bottom: 47px;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
 	color: $color-white;
 	min-height: 100vh;
 	overflow: hidden;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		padding-bottom: 129px;
+	}
 
 	&::before {
 		position: absolute;
@@ -27,7 +31,11 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		padding-top: 238px;
+		padding-top: 167px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 238px;
+		}
 	}
 
 	&__title {
@@ -44,6 +52,7 @@
 	&__button-block {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-start;
 		margin-top: auto;
 	}
 
@@ -51,13 +60,18 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 50px;
-		height: 50px;
-		margin: 0 20px;
+		width: 37px;
+		height: 37px;
 		padding: 0;
 		border: none;
 		background-color: $color-transparent;
 		opacity: 0;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: 50px;
+			height: 50px;
+			margin: 0 20px;
+		}
 	}
 
 	&__next-icon {
@@ -67,8 +81,13 @@
 
 	&__link-btn {
 		width: 100%;
-		max-width: 240px;
+		max-width: 154px;
 		opacity: 0;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			max-width: 240px;
+		}
+
 	}
 
 	&__video-bg {

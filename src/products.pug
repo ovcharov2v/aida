@@ -16,293 +16,328 @@ block content
 					|В линейке представлены короткие и длинные формы. Яркой новинкой, набирающей популярность среди покупателей, стала линейка цельнозерновой пасты из темной муки твердых сортов пшеницы.
 			.text-with-image__col-img
 				+picture("text-with-image/img2", "text-with-image__img", "jpg", "")
-	// Product grid
-	.product-grid.product-grid--page-products.container
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back1", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						|450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						|30 минут
-				.product-card__titles
-					span.text-white Лазанья
-					span.text-red Lasagne
-			.product-card__product-img-box
+	.show-more
+		// Product grid
+		.product-grid.product-grid--page-products.show-more__container.container
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom(href="#")
+				+picture("product-card/back1", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							|450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							|30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Лазанья
+						span.text-red Lasagne
 				+picture("product-card/product1", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle1", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back2", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 11 минут
-				.product-card__titles
-					span.text-white Цельнозерновые
-						br
-						|перья
-					span.text-red Penne rigate
-						br
-						|integrale
-			.product-card__product-img-box
+				+picture("product-card/angle1", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom(href="#")
+				+picture("product-card/back2", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 11
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Цельнозерновые
+							br
+							|перья
+						span.text-red Penne rigate
+							br
+							|integrale
 				+picture("product-card/product2", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle2", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back3", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Рожок витой
-					span.text-red Cellentani
-			.product-card__product-img-box
+				+picture("product-card/angle2", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom(href="#")
+				+picture("product-card/back3", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Рожок витой
+						span.text-red Cellentani
 				+picture("product-card/product3", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle3", "product-card__angle-img", "jpg", "")
+				+picture("product-card/angle3", "product-card__angle-img", "jpg", "")
 
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back4", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 10 минут
-				.product-card__titles
-					span.text-white Ракушки
-					span.text-red Conchiglie
-			.product-card__product-img-box
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom(href="#")
+				+picture("product-card/back4", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 10
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Ракушки
+						span.text-red Conchiglie
 				+picture("product-card/product4", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle4", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back5", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 11 минут
-				.product-card__titles
-					span.text-white Спирали
-					span.text-red Fusilli
-			.product-card__product-img-box
+				+picture("product-card/angle4", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom(href="#")
+				+picture("product-card/back5", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 11
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Спирали
+						span.text-red Fusilli
 				+picture("product-card/product5", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle5", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back6", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Улитки
-					span.text-red Lumache
-			.product-card__product-img-box
+				+picture("product-card/angle5", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom(href="#")
+				+picture("product-card/back6", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Улитки
+						span.text-red Lumache
 				+picture("product-card/product6", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle6", "product-card__angle-img", "jpg", "")
+				+picture("product-card/angle6", "product-card__angle-img", "jpg", "")
 
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back7", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Рожки
-					span.text-red Mezzi gomiti
-			.product-card__product-img-box
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back7", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Рожки
+						span.text-red Mezzi gomiti
 				+picture("product-card/product7", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle7", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back8", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Цельнозерновые
-						br
-						|спирали
-					span.text-red Fusilli
-						br
-						|integrale
-			.product-card__product-img-box
+				+picture("product-card/angle7", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back8", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Цельнозерновые
+							br
+							|спирали
+						span.text-red Fusilli
+							br
+							|integrale
 				+picture("product-card/product8", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle8", "product-card__angle-img", "jpg", "")
+				+picture("product-card/angle8", "product-card__angle-img", "jpg", "")
 
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back9", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Лапша
-					span.text-red Linguine
-			.product-card__product-img-box
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back9", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Лапша
+						span.text-red Linguine
 				+picture("product-card/product9", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle9", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back10", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Цельнозерновая
-						br
-						|лапша
-					span.text-red Linguine
-						br
-						|integrale
-			.product-card__product-img-box
+				+picture("product-card/angle9", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back10", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Цельнозерновая
+							br
+							|лапша
+						span.text-red Linguine
+							br
+							|integrale
 				+picture("product-card/product10", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle10", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back11", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Гнёзда
-					span.text-red Tagliatelle
-			.product-card__product-img-box
+				+picture("product-card/angle10", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back11", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Гнёзда
+						span.text-red Tagliatelle
 				+picture("product-card/product11", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle11", "product-card__angle-img", "jpg", "")
+				+picture("product-card/angle11", "product-card__angle-img", "jpg", "")
 
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back12", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Гнёзда
-					span.text-red Capellini
-			.product-card__product-img-box
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back12", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Гнёзда
+						span.text-red Capellini
 				+picture("product-card/product12", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle12", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back13", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Перья
-					span.text-red Penne rigate
-			.product-card__product-img-box
+				+picture("product-card/angle12", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back13", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Перья
+						span.text-red Penne rigate
 				+picture("product-card/product13", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle13", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back14", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Паста
-					span.text-red Bukatini
-			.product-card__product-img-box
+				+picture("product-card/angle13", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back14", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Паста
+						span.text-red Bukatini
 				+picture("product-card/product14", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle14", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back15", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Спагетти
-					span.text-red Spaghetti
-			.product-card__product-img-box
+				+picture("product-card/angle14", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back15", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Спагетти
+						span.text-red Spaghetti
 				+picture("product-card/product15", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle15", "product-card__angle-img", "jpg", "")
-		// Product card
-		a.product-card(href="#")
-			+picture("product-card/back16", "product-card__back-img", "jpg", "")
-			.product-card__content
-				.product-card__features
-					span.text-white
-						+svg("product-weight", true)(class="product-card__weight-icon")
-						| 450 г
-					span
-						+svg("recipe-time", true)(class="product-card__time-icon")
-						| 30 минут
-				.product-card__titles
-					span.text-white Паста
-					span.text-red Capellini
-			.product-card__product-img-box
+				+picture("product-card/angle15", "product-card__angle-img", "jpg", "")
+			// Product card
+			a.product-card.animation-start-opacity-show-bottom.show-more__element.show-more__element--flex(href="#")
+				+picture("product-card/back16", "product-card__back-img", "jpg", "")
+				.product-card__content
+					.product-card__features
+						span.text-white
+							+svg("product-weight", true)(class="product-card__weight-icon")
+							| 450 г
+						span
+							+svg("recipe-time", true)(class="product-card__time-icon")
+							| 30
+							|
+							|
+							span.show-tablet-inline минут
+					.product-card__titles
+						span.text-white Паста
+						span.text-red Capellini
 				+picture("product-card/product16", "product-card__product-img", "jpg", "")
-			+picture("product-card/angle16", "product-card__angle-img", "jpg", "")
+				+picture("product-card/angle16", "product-card__angle-img", "jpg", "")
+		.show-more__button-box
+			button.button.button--gold.button--uppercase.show-more__button Показать еще

@@ -1,0 +1,48 @@
+.show-more {
+	&__active {
+		padding-bottom: 100px;
+	}
+
+	&__container {
+	}
+
+	&__element {
+		@media (max-width: $breakpoint-mobile-max) {
+			display: none;
+		}
+
+		&--flex {
+			.show-more--active & {
+				display: flex;
+			}
+		}
+
+		&--block {
+			.show-more--active & {
+				display: block;
+			}
+		}
+	}
+
+	&__button-box {
+		display: none;
+
+		@media (max-width: $breakpoint-mobile-max) {
+			display: block;
+			padding: 33px 0;
+			text-align: center;
+		}
+	}
+
+	&__button {
+		display: none;
+
+		@media (max-width: $breakpoint-mobile-max) {
+			display: inline-block;
+		}
+
+		.show-more--active & {
+			display: none !important;
+		}
+	}
+}

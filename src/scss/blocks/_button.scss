@@ -1,18 +1,28 @@
 .button {
 	display: inline-block;
 	font-family: $font-primary;
-	padding: 16px;
+	padding: 11px;
 	border: none;
-	font-size: 24px;
-	line-height: 24px;
+	font-size: 16px;
+	line-height: 16px;
 	font-weight: 600;
 	text-align: center;
 	white-space: nowrap;
 	transition: background-color $transition-default;
 
+	@media (min-width: $breakpoint-desktop-min) {
+		padding: 16px;
+		font-size: 24px;
+		line-height: 24px;
+	}
+
 	&--uppercase {
-		font-size: 22px;
+		font-size: 16px;
 		text-transform: uppercase;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			font-size: 22px;
+		}
 	}
 
 	&--nav-block {

@@ -7,25 +7,46 @@ document.addEventListener('DOMContentLoaded', () => {
 	const target = document.querySelector('.recipes-list')
 	if (!target) return
 
-	ScrollTrigger.create({
-		trigger: ".recipes-list__col-text",
-		start: "top 121px",
-		end: "bottom bottom",
-		pin: '.recipes-list__img',
-		//markers: true
-	});
+	const container = document.querySelector('.recipes-list__container')
+	const img = document.querySelector('.recipes-list__img')
+	const mm = gsap.matchMedia()
 
-	gsap.fromTo('.recipes-list__img', {
-		opacity: 0,
-		x: 200
-	}, {
-		opacity: 1,
-		x: 0,
-		duration: 1,
-		delay: .5,
-		scrollTrigger: {
-			trigger: '.recipes-list__img'
-		}
+	// Desktop
+	mm.add('(min-width: 1200px)', () => {
+		ScrollTrigger.create({
+			trigger: img,
+			pin: '.recipes-list__img',
+			end: () => `+=${container.clientHeight - img.clientHeight}`,
+			//markers: true
+		});
+
+		gsap.fromTo('.recipes-list__img', {
+			opacity: 0,
+			x: 200
+		}, {
+			opacity: 1,
+			x: 0,
+			duration: 1,
+			delay: .5,
+			scrollTrigger: {
+				trigger: '.recipes-list__img'
+			}
+		})
+	})
+	// Tablet-mobile
+	mm.add('(max-width: 1199px)', () => {
+		gsap.fromTo('.recipes-list__img', {
+			opacity: 0,
+			y: 60
+		}, {
+			opacity: 1,
+			y: 0,
+			duration: 1,
+			delay: .5,
+			scrollTrigger: {
+				trigger: '.recipes-list__img'
+			}
+		})
 	})
 
 	gsap.fromTo('.recipes-list__title1', {
@@ -54,14 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
 	textElems.forEach((elem) => {
 		gsap.fromTo(elem, {
 			opacity: 0,
-			y: 200
+			y: 100
 		}, {
 			opacity: 1,
 			y: 0,
 			duration: 1,
 			scrollTrigger: {
 				trigger: elem,
-				start: 'top bottom'
 			}
 		})
 	})

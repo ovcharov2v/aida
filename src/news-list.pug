@@ -8,7 +8,10 @@ append vars
 block content
 	ul.news-nav.container
 		li.news-nav__elem
-			span.news-nav__link.news-nav__link--active Все новости
+			span.news-nav__link.news-nav__link--active Все
+				|
+				|
+				span.show-desktop-inline новости
 		li.news-nav__elem
 			a.news-nav__link(href="#") соцсети
 		li.news-nav__elem
@@ -28,7 +31,7 @@ block content
 	// News-sample
 	.news-sample.container
 		// News
-		a.news-sample__card(href="#")
+		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
 			.news-sample__img-box
 				+picture("news-sample/img1", "news-sample__img", "jpg", "")
 				.news-sample__social-link(href="#", target="_blank", rel="noreferrer nofollow")
@@ -37,35 +40,35 @@ block content
 				p.news-sample__text 4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»
 				time.news-sample__time 21 октября 2022
 		// News
-		a.news-sample__card(href="#")
+		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
 			.news-sample__img-box
 				+picture("news-sample/img2", "news-sample__img", "jpg", "")
 			.news-sample__text-box
 				p.news-sample__text Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи
 				time.news-sample__time 21 октября 2022
 		// News
-		a.news-sample__card(href="#")
+		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
 			.news-sample__img-box
 				+picture("news-sample/img3", "news-sample__img", "jpg", "")
 			.news-sample__text-box
 				p.news-sample__text Покупаем онлайн: теперь наша продукция доступна к покупке на самых разных онлайн-площадках
 				time.news-sample__time 21 октября 2022
 		// News
-		a.news-sample__card(href="#")
+		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
 			.news-sample__img-box
 				+picture("news-sample/img4", "news-sample__img", "jpg", "")
 			.news-sample__text-box
 				p.news-sample__text Выпускаем линейку AIDA integrale – цельнозерновой пасты
 				time.news-sample__time 21 октября 2021
 		// News
-		a.news-sample__card(href="#")
+		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
 			.news-sample__img-box
 				+picture("news-sample/img5", "news-sample__img", "jpg", "")
 			.news-sample__text-box
 				p.news-sample__text Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини
 				time.news-sample__time 21 октября 2019
 		// News
-		a.news-sample__card(href="#")
+		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
 			.news-sample__img-box
 				+picture("news-sample/img6", "news-sample__img", "jpg", "")
 			.news-sample__text-box

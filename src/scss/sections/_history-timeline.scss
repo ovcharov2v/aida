@@ -1,70 +1,117 @@
 .history-timeline {
 	padding-top: 100px;
+	overflow: hidden;
 
 	&__elem {
+		position: relative;
 		display: flex;
+		flex-direction: column;
+		padding-left: 70px;
+		padding-bottom: 80px;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 27px;
+			bottom: 0;
+			border-left: 2px solid #F1F1F1;
+			content: "";
+		}
+
+		&:first-child {
+			&::before {
+				top: 44px;
+			}
+		}
+
+		@media (min-width: $breakpoint-desktop-min) {
+			flex-direction: row;
+			padding-left: 0;
+			padding-bottom: 0;
+
+			&::before {
+				left: calc(50% - 1px);
+			}
+		}
 	}
 
 	&__elem-col {
 		position: relative;
 		width: 100%;
-		max-width: 50%;
-		padding-bottom: 110px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			max-width: 50%;
+			padding-bottom: 110px;
+		}
 
 		&--left {
-			padding-right: 24px;
+			@media (min-width: $breakpoint-desktop-min) {
+				padding-right: 24px;
+			}
 		}
 
 		&--right {
-			position: relative;
-			padding-left: 60px;
-
-			&::before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				bottom: 0;
-				border-left: 2px solid #F1F1F1;
-				content: "";
+			@media (min-width: $breakpoint-desktop-min) {
+				padding-left: 60px;
 			}
+		}
 
-			.history-timeline__elem:first-child & {
-				&::before {
-					top: 44px;
-				}
+		&--with-image {
+			order: -1;
+			display: flex;
+			flex-direction: column-reverse;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				order: 0;
+				display: block;
 			}
 		}
 
 		.history-timeline__elem:last-child & {
-			padding-bottom: 164px;
+			@media (min-width: $breakpoint-desktop-min) {
+				padding-bottom: 164px;
+			}
 		}
 	}
 
 	&__img {
 		display: block;
 		max-width: 100%;
+		opacity: 0;
+		margin-bottom: 24px;
+		transform: translateX(150px);
 
-		.history-timeline__elem-col--left & {
-			margin-right: 36px;
-			max-width: calc(100% - 36px);
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 0;
 		}
 
 		.history-timeline__elem-col--left & {
-			transform: translateX(-150px);
-			opacity: 0;
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-right: 36px;
+				max-width: calc(100% - 36px);
+				transform: translateX(-150px);
+			}
 		}
 
 		.history-timeline__elem-col--right & {
 			transform: translateX(150px);
-			opacity: 0;
 		}
 
 	}
 
 	&__title {
 		position: relative;
-		margin-bottom: 33px;
+		margin-bottom: 19px;
+		font-size: 23px;
+		line-height: 27px;
+		font-weight: 400;
 		color: $color-red;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 33px;
+			font-size: 46px;
+			line-height: 42px;
+		}
 
 		.history-timeline__elem-col--left & {
 			transform: translateX(-70px);
@@ -81,27 +128,36 @@
 	&__marker {
 		position: absolute;
 		top: 18px;
-		left: -25px;
-		width: 52px;
-		height: 52px;
+		left: 27px;
+		width: 32px;
+		height: 32px;
 		border-radius: 50%;
 		background-color: $color-gold;
-		border: 18px solid #F1F1F1;
-		box-shadow: 0 0 0 19px #FBFBFB;
-		transform: scale(.5);
+		border: 11px solid #F1F1F1;
+		box-shadow: 0 0 0 12px #FBFBFB;
+		transform: translateX(-50%) scale(.5);
+
+		@media (min-width: $breakpoint-desktop-min) {
+			left: 50%;
+			width: 52px;
+			height: 52px;
+			border-width: 18px;
+			box-shadow: 0 0 0 19px #FBFBFB;
+		}
 	}
 
 	&__text {
-		margin-top: 32px;
+		transform: translateX(200px);
+		opacity: 0;
 
-		.history-timeline__elem-col--left & {
-			transform: translateX(-200px);
-			opacity: 0;
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-top: 32px;
 		}
 
-		.history-timeline__elem-col--right & {
-			transform: translateX(200px);
-			opacity: 0;
+		.history-timeline__elem-col--left & {
+			@media (min-width: $breakpoint-desktop-min) {
+				transform: translateX(-200px);
+			}
 		}
 	}
 }

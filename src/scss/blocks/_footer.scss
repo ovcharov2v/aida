@@ -41,21 +41,53 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
 		margin-top: auto;
 		margin-bottom: 160px;
 	}
 
+	&__contacts-col {
+		&--socials {
+			margin-top: auto;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-top: 0;
+			}
+		}
+
+		&--subscribe {
+			order: -1;
+			width: 100%;
+			margin-bottom: 80px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				order: 0;
+				width: auto;
+				margin-bottom: 0;
+			}
+		}
+	}
+
 	&__contacts-title {
-		margin-bottom: 29px;
-		font-size: 24px;
+		margin-bottom: 8px;
+		font-size: 16px;
 		line-height: 24px;
 		font-weight: 600;
 		text-transform: uppercase;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 29px;
+			font-size: 24px;
+		}
 	}
 
 	&__contacts-mail-link {
 		width: 100%;
-		max-width: 240px;
+		max-width: 134px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			max-width: 240px;
+		}
 	}
 
 	&__form {
@@ -64,16 +96,22 @@
 
 	&__form-input {
 		display: block;
+		flex-grow: 1;
 		padding: 6px 0;
 		border-width: 0 0 1px 0;
 		border-color: $color-white;
 		border-style: solid;
 		background-color: $color-transparent;
-		font-size: 22px;
-		line-height: 22px;
+		font-size: 14px;
+		line-height: 16px;
 		font-weight: 500;
 		color: #fff;
 		text-transform: uppercase;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			font-size: 22px;
+			line-height: 22px;
+		}
 
 		&::placeholder {
 			opacity: 1;
@@ -84,25 +122,45 @@
 
 	&__form-submit {
 		display: block;
-		width: 240px;
+		width: 156px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: 240px;
+		}
 	}
 
 	&__copyright {
 		display: flex;
 		justify-content: space-between;
+		align-items: flex-end;
 		padding-top: 20px;
 		padding-bottom: 20px;
-		font-size: 22px;
+		font-size: 14px;
 		line-height: 22px;
 		font-weight: 600;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			align-items: center;
+			font-size: 22px;
+		}
 	}
 
 	&__copyright-link {
+		font-size: 16px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			font-size: inherit;
+		}
 	}
 
 	&__copyright-text-box {
-		display: flex;
-		column-gap: 65px;
+		text-align: right;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			display: flex;
+			column-gap: 65px;
+			text-align: left;
+		}
 	}
 
 	&__copyright-text {

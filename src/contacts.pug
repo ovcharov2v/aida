@@ -8,7 +8,7 @@ append vars
 block content
 	// Contacts intro
 	section.contacts-intro
-		.container
+		.container.contacts-intro__container
 			h1.h2.contacts-intro__title
 				span.contacts-intro__title-block Вы можете связаться
 				|
@@ -39,20 +39,21 @@ block content
 					.contacts-content__form-submit-box
 						button.button.button--gold.button--uppercase.contacts-content__form-submit Отправить
 			.contacts-content__col-info
-				.contacts-content__col.contacts-content__col--social-title-box
-					p.h4.contacts-content__subtitle Наши социальные сети
-				.contacts-content__col.contacts-content__col--social-box
-					ul.socials.socials--gray
-						li.socials__elem
-							a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
-								+svg("social-vk", true)(class="socials__link-icon")
-						li.socials__elem
-							a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
-								+svg("social-dzen", true)(class="socials__link-icon")
+				.contacts-content__col-info-top
+					.contacts-content__col.contacts-content__col--social-title-box
+						p.h4.contacts-content__subtitle.contacts-content__subtitle--main Наши социальные сети
+					.contacts-content__col.contacts-content__col--social-box
+						ul.socials.socials--gray
+							li.socials__elem
+								a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+									+svg("social-vk", true)(class="socials__link-icon")
+							li.socials__elem
+								a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
+									+svg("social-dzen", true)(class="socials__link-icon")
 				.contacts-content__col
 					p.h4.contacts-content__subtitle OOO “АГРО-АЛЬЯНС”
-					p.contacts-content__text 197198, Санкт-Петербург, Левашовский проспект 11/7, ст. 4
-				.contacts-content__col
+					p.contacts-content__text 197198, Санкт-Петербург, Левашовский проспект 11/7, ст. 4
+				.contacts-content__col.contacts-content__col--right
 					p.contacts-content__text тел.
 						|
 						|
@@ -61,7 +62,7 @@ block content
 				.contacts-content__col
 					p.h4.contacts-content__subtitle OOO “АГРО-АЛЬЯНС”
 					p.contacts-content__text 123290, Москва, 1-ый Магистральный тупик, д. 5А, корпус Д., бизнес-центр «Магистраль Плаза», офис 701
-				.contacts-content__col
+				.contacts-content__col.contacts-content__col--right
 					p.contacts-content__text тел.
 						|
 						|
@@ -70,7 +71,7 @@ block content
 				.contacts-content__col
 					p.h4.contacts-content__subtitle OOO “АГРО-АЛЬЯНС ОМФ”
 					p.contacts-content__text 462431, Оренбургская область, город Орск, улица Дорожная, д. 4
-				.contacts-content__col
+				.contacts-content__col.contacts-content__col--right
 					p.contacts-content__text тел.
 						|
 						|

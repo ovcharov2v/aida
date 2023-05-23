@@ -36,3 +36,4 @@ import './sections/recipe-ingredients';
 import './sections/recipe-product';
 import './sections/recipe-other';
 import './sections/technology-block';
+import './sections/show-more';

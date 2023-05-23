@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				trigger: '.recipe-intro'
 			}
 		})
-		.to(['.recipe-intro__back', '.recipe-intro__title', '.recipe-intro__features', '.recipe-intro__text', '.recipe-intro__bottom'], {
+		.to(['.recipe-intro__top', '.recipe-intro__title', '.recipe-intro__features', '.recipe-intro__text', '.recipe-intro__bottom'], {
 			opacity: 1,
 			x: 0,
 			delay: .5,

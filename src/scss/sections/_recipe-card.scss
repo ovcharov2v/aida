@@ -14,13 +14,18 @@
 
 	&__label {
 		position: absolute;
-		top: 19px;
-		right: 15px;
+		top: 14px;
+		right: 11px;
 		padding: 1px 12px 3px;
 		font-size: 18px;
 		line-height: 1.2;
 		background-color: $color-white;
 		color: $color-black;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			top: 19px;
+			right: 15px;
+		}
 
 		.recipe-card--medium & {
 			font-size: 20px;
@@ -32,14 +37,24 @@
 	}
 
 	&__text-box {
-		padding: 32px 16px 16px;
+		padding: 32px 11px 16px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding: 32px 16px 16px;
+		}
 
 		.recipe-card--medium & {
-			padding: 46px 28px 13px;
+			padding: 31px 16px 24px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				padding: 46px 28px 13px;}
 		}
 
 		.recipe-card--big & {
-			padding: 62px 38px 38px;
+			padding: 31px 16px 24px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				padding: 62px 38px 38px;}
 		}
 	}
 
@@ -48,24 +63,42 @@
 		justify-content: center;
 		align-items: center;
 		min-height: 44px;
-		margin-bottom: 30px;
-		font-size: 20px;
-		line-height: 22px;
+		margin-bottom: 37px;
+		font-size: 23px;
+		line-height: 27px;
+		font-weight: 500;
 		color: $color-red;
-		text-align: center;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			text-align: center;
+			margin-bottom: 30px;
+			font-size: 20px;
+			line-height: 22px;
+			font-weight: 400;
+		}
 
 		.recipe-card--medium & {
 			min-height: 64px;
-			margin-bottom: 38px;
-			font-size: 28px;
-			line-height: 32px;
+			margin-bottom: 35px;
+			font-size: 23px;
+			line-height: 27px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 38px;
+				font-size: 28px;
+				line-height: 32px;}
 		}
 
 		.recipe-card--big & {
 			min-height: 64px;
-			margin-bottom: 56px;
-			font-size: 46px;
-			line-height: 52px;
+			margin-bottom: 35px;
+			font-size: 23px;
+			line-height: 27px;
+
+			@media (min-width: $breakpoint-desktop-min) {
+				margin-bottom: 56px;
+				font-size: 46px;
+				line-height: 52px;}
 		}
 	}
 

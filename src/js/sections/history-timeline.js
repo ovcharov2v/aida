@@ -12,27 +12,43 @@ document.addEventListener('DOMContentLoaded', () => {
 		yoyo: true
 	})
 
-	const elemList = gsap.utils.toArray('.history-timeline__elem-col')
+	const elemList = gsap.utils.toArray('.history-timeline__elem')
 
 	elemList.forEach((el) => {
 		const marker = el.querySelector('.history-timeline__marker')
 		const title = el.querySelector('.history-timeline__title')
-		const text = el.querySelector('.history-timeline__text')
+		const textList = el.querySelectorAll('.history-timeline__text')
 		const img = el.querySelector('.history-timeline__img')
-		const config = {
+
+		gsap.to(title, {
 			scrollTrigger: {
-				trigger: el,
-				start: "top 70%"
+				trigger: title,
+				start: "top 90%"
 			},
 			x: 0,
 			opacity: 1,
-		}
-		gsap.to(title, config)
-		gsap.to(text, config)
-		gsap.to(img, config)
+		})
+		textList.forEach((text)=>{
+			gsap.to(text, {
+				scrollTrigger: {
+					trigger: text,
+					start: "top 90%"
+				},
+				x: 0,
+				opacity: 1,
+			})
+		})
+		gsap.to(img, {
+			scrollTrigger: {
+				trigger: img,
+				start: "top 90%"
+			},
+			x: 0,
+			opacity: 1,
+		})
 		gsap.to(marker, {
 			scrollTrigger: {
-				trigger: el,
+				trigger: marker,
 				start: "top 90%"
 			},
 			scale: 1,

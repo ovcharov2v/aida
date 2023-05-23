@@ -61,40 +61,79 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	)
 
-
-	gsap.fromTo('.section-history__img-box--n2',
-		{
-			y: 300,
-			opacity: 0
-		},
-		{
-			scrollTrigger: {
-				trigger: '.section-history__gallery',
-				scrub: 1.4,
-				// markers: true,
-				end: 'center center',
+	const mm = gsap.matchMedia()
+	// Desktop
+	mm.add('(min-width: 1200px)', () => {
+		gsap.fromTo('.section-history__img-box--n2',
+			{
+				y: 300,
+				opacity: 0
 			},
-			y: 0,
-			opacity: 1
-		}
-	)
+			{
+				scrollTrigger: {
+					trigger: '.section-history__gallery',
+					scrub: 1.4,
+					// markers: true,
+					end: 'center center',
+				},
+				y: 0,
+				opacity: 1
+			}
+		)
 
-	gsap.fromTo('.section-history__img-box--n3',
-		{
-			y: -200,
-			opacity: 0
-		},
-		{
-			scrollTrigger: {
-				trigger: '.section-history__gallery',
-				scrub: 1.3,
-				// markers: true,
-				end: 'center center',
+		gsap.fromTo('.section-history__img-box--n3',
+			{
+				y: -200,
+				opacity: 0
 			},
-			y: 0,
-			opacity: 1
-		}
-	)
+			{
+				scrollTrigger: {
+					trigger: '.section-history__gallery',
+					scrub: 1.3,
+					// markers: true,
+					end: 'center center',
+				},
+				y: 0,
+				opacity: 1
+			}
+		)
+	})
+	// Tablet-mobile
+	mm.add('(max-width: 1199px)', () => {
+		gsap.fromTo('.section-history__img-box--n2',
+			{
+				y: 0,
+				opacity: 0
+			},
+			{
+				scrollTrigger: {
+					trigger: '.section-history__gallery',
+					scrub: 1.4,
+					// markers: true,
+					end: 'center center',
+				},
+				y: -70,
+				opacity: 1
+			}
+		)
+
+		gsap.fromTo('.section-history__img-box--n3',
+			{
+				y: 0,
+				opacity: 0
+			},
+			{
+				scrollTrigger: {
+					trigger: '.section-history__gallery',
+					scrub: 1.3,
+					// markers: true,
+					end: 'center center',
+				},
+				y: -200,
+				opacity: 1
+			}
+		)
+	})
 
 	gsap.fromTo('.section-history__gallery-back',
 		{

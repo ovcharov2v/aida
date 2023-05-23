@@ -3,9 +3,13 @@
 	padding-bottom: 40px;
 
 	&__title {
-		margin-bottom: 114px;
+		margin-bottom: 83px;
 		text-transform: uppercase;
 		color: $color-red;
 		text-align: center;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-bottom: 114px;
+		}
 	}
 }

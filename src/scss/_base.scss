@@ -5,16 +5,25 @@
 }
 
 body {
-	min-width: $mobile-width-min;
+	min-width: 375px;
 	font-family: $font-primary;
-	font-size: 28px;
-	line-height: 32px;
+	font-size: 16px;
+	line-height: 20px;
 	font-weight: 500;
 	color: $color-gray;
 	-webkit-text-size-adjust: none;
 
+	@media (min-width: $breakpoint-desktop-min) {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
 	&.body-top-offset {
-		padding-top: 136px;
+		padding-top: 78px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 136px;
+		}
 	}
 }
 
@@ -30,6 +39,7 @@ a {
 
 input, textarea {
 	font-family: inherit;
+
 	&:focus {
 		outline: none;
 	}

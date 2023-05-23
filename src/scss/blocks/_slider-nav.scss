@@ -1,0 +1,58 @@
+.slider-nav {
+	display: flex;
+	justify-content: center;
+	column-gap: 15px;
+	margin: 50px auto 0;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		display: none;
+	}
+
+	&__pagintaion {
+		display: flex;
+		align-items: center;
+		column-gap: 20px;
+	}
+
+	&__bullet {
+		width: 8px;
+		height: 8px;
+		padding: 0;
+		border-radius: 50%;
+		border: none;
+		background-color: $color-gray;
+		margin: 0 6px;
+		transition: transform $transition-default, background-color $transition-default;
+
+		&--active {
+			background-color: $color-red;
+			transform: scale(2);
+		}
+
+		&:hover {
+			background-color: $color-red;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 4px;
+		border: none;
+		background-color: $color-transparent;
+	}
+
+	&__btn-icon {
+		width: 12px;
+		height: 8px;
+
+		.slider-nav__btn--prev & {
+			transform: rotate(90deg);
+		}
+
+		.slider-nav__btn--next & {
+			transform: rotate(-90deg);
+		}
+	}
+}

@@ -11,7 +11,9 @@ block content
 			+svg("arrow-back", true)(class="back-link__icon")
 			| Вернуться
 	// Section Image back
-	.section-image-back.section-image-back--bg8
+	.section-image-back.section-image-back--news-item.section-image-back--bg8.show-desktop-block
+		.section-image-back__bg
+	.section-image-back.section-image-back--news-item.section-image-back--bg9.hide-desktop
 		.section-image-back__bg
 	// News content
 	section.news-content.container
@@ -29,7 +31,7 @@ block content
 			.news-content__bottom-box
 				p.news-content__share-text Поделиться
 				.news-content__bottom
-					ul.socials.socials--small.news-content__socilals
+					ul.socials.socials--small.socials--gray.news-content__socilals
 						li.socials__elem
 							a.socials__link(href="#", target="_blank", rel="noreferrer nofollow")
 								+svg("social-vk", true)(class="socials__link-icon")
@@ -39,4 +41,4 @@ block content
 					.news-content__print-box
 						p.news-content__print-text Распечатать
 						a.news-content__print-link(href="#", target="_blank", rel="noreferrer nofollow")
-							+svg("print", true)(class="recipe-intro__print-link-icon")
+							+svg("print", true)(class="news-content__print-link-icon")

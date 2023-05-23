@@ -17,13 +17,18 @@
 
 	&__value {
 		width: 100%;
-		padding: 15px 14px;
+		padding: 13px;
 		border: none;
 		background-color: $color-transparent;
-		font-size: 18px;
+		font-size: 16px;
 		line-height: 22px;
 		color: $color-black;
 		pointer-events: none;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding: 15px 14px;
+			font-size: 18px;
+		}
 
 		&::placeholder {
 			color: #8A8A8A;
@@ -42,7 +47,7 @@
 		left: 0;
 		min-width: 100%;
 		margin: 0;
-		padding: 15px 0;
+		padding: 13px 0;
 		border: 1px solid #8A8A8A;
 		background-color: $color-white;
 		font-size: 18px;
@@ -51,6 +56,10 @@
 		transform: scaleY(0);
 		transform-origin: 50% 0;
 		transition: transform $transition-default;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			padding: 15px 0;
+		}
 
 		.dropdown--active & {
 			transform: scaleY(1);
@@ -73,10 +82,15 @@
 		top: 50%;
 		right: 14px;
 		transform: translateY(-50%) translateY(-2px);
-		width: 20px;
-		height:20px;
+		width: 16px;
+		height: 16px;
 		color: $color-red;
 		transition: transform $transition-default;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: 20px;
+			height: 20px;
+		}
 
 		.dropdown--active & {
 			transform: translateY(-50%) translateY(2px) rotate(-180deg);

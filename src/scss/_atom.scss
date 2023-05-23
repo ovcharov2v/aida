@@ -28,3 +28,37 @@
 .text-semibold {
 	font-weight: 600;
 }
+
+.show-desktop-block {
+	display: none;
+	@media (min-width: $breakpoint-desktop-min) {
+		display: block;
+	}
+}
+
+.show-desktop-inline {
+	display: none;
+	@media (min-width: $breakpoint-desktop-min) {
+		display: inline;
+	}
+}
+
+.show-desktop {
+	@media (max-width: $breakpoint-desktop-min) {
+		display: none !important;
+	}
+ }
+
+.show-tablet-inline {
+	display: none;
+	@media (min-width: $breakpoint-tablet-min) {
+		display: inline;
+	}
+}
+
+.hide-desktop {
+	@media (min-width: $breakpoint-desktop-min) {
+		display: none !important;
+	}
+}
+

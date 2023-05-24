@@ -228,6 +228,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _sections_recipe_product__WEBPACK_IMPORTED_MODULE_34__ = __webpack_require__(/*! ./sections/recipe-product */ "./src/js/sections/recipe-product.js");
 /* harmony import */ var _sections_recipe_other__WEBPACK_IMPORTED_MODULE_35__ = __webpack_require__(/*! ./sections/recipe-other */ "./src/js/sections/recipe-other.js");
 /* harmony import */ var _sections_technology_block__WEBPACK_IMPORTED_MODULE_36__ = __webpack_require__(/*! ./sections/technology-block */ "./src/js/sections/technology-block.js");
+/* harmony import */ var _sections_show_more__WEBPACK_IMPORTED_MODULE_37__ = __webpack_require__(/*! ./sections/show-more */ "./src/js/sections/show-more.js");
+
 
 
 
@@ -320,34 +322,69 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   var target = document.querySelector('.contacts-content');
   if (!target) return;
-  var textColsList = document.querySelectorAll('.contacts-content__col');
-  textColsList.forEach(function (textCol) {
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(textCol, {
-      opacity: 0,
-      x: 100
-    }, {
-      opacity: 1,
-      x: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: textCol,
-        start: "center 90%"
-      }
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    var textColsList = document.querySelectorAll('.contacts-content__col');
+    textColsList.forEach(function (textCol) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(textCol, {
+        opacity: 0,
+        x: 100
+      }, {
+        opacity: 1,
+        x: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: textCol,
+          start: "center 90%"
+        }
+      });
+    });
+    var leftColElems = document.querySelectorAll(['.contacts-content__title', '.contacts-content__form']);
+    leftColElems.forEach(function (elem) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
+        opacity: 0,
+        x: -200
+      }, {
+        opacity: 1,
+        x: 0,
+        duration: .7,
+        scrollTrigger: {
+          trigger: elem,
+          start: "center 90%"
+        }
+      });
     });
   });
-  var leftColElems = document.querySelectorAll(['.contacts-content__title', '.contacts-content__form']);
-  leftColElems.forEach(function (elem) {
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
-      opacity: 0,
-      x: -200
-    }, {
-      opacity: 1,
-      x: 0,
-      duration: .7,
-      scrollTrigger: {
-        trigger: elem,
-        start: "center 90%"
-      }
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    var textColsList = document.querySelectorAll('.contacts-content__col');
+    textColsList.forEach(function (textCol) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(textCol, {
+        opacity: 0,
+        y: 70
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        scrollTrigger: {
+          trigger: textCol
+        }
+      });
+    });
+    var leftColElems = document.querySelectorAll(['.contacts-content__title', '.contacts-content__form']);
+    leftColElems.forEach(function (elem) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
+        opacity: 0,
+        y: 70
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: .7,
+        scrollTrigger: {
+          trigger: elem
+        }
+      });
     });
   });
 });
@@ -475,21 +512,69 @@ function headerWatcher() {
 }
 headerWatcher();
 document.addEventListener('loader-animation-complete', function () {
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
-    onComplete: function onComplete() {
-      var evt = new Event('header-complete', {
-        bubbles: true
-      });
-      document.dispatchEvent(evt);
-    }
-  }).to('.header__logo-link', {
-    y: 0,
-    opacity: 1,
-    duration: 1
-  }).to(['.header__nav', '.header__lang-list', '.header__button'], {
-    y: 0,
-    opacity: 1,
-    duration: 1
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+      onComplete: function onComplete() {
+        var evt = new Event('header-complete', {
+          bubbles: true
+        });
+        document.dispatchEvent(evt);
+      }
+    }).to('.header__logo-link', {
+      y: 0,
+      opacity: 1,
+      duration: 1
+    }).to(['.header__nav', '.header__lang-list', '.header__button'], {
+      y: 0,
+      opacity: 1,
+      duration: 1
+    });
+  });
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+      onComplete: function onComplete() {
+        var evt = new Event('header-complete', {
+          bubbles: true
+        });
+        document.dispatchEvent(evt);
+      }
+    }).to('.header__logo-link', {
+      y: 0,
+      opacity: 1,
+      duration: 1
+    }).to('.header__burger', {
+      y: 0,
+      opacity: 1,
+      duration: 1
+    });
+
+    // Mobile menu
+    var burger = document.querySelector('.header__burger');
+    var close = document.querySelector('.header__close');
+    var anim = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+      paused: true
+    }).fromTo('.header__nav-box', {
+      boxShadow: "0 0 0 200vw rgba(6, 6, 6, 0)"
+    }, {
+      opacity: 1,
+      boxShadow: "0 0 0 200vw rgba(6, 6, 6, 0.56)",
+      duration: .7
+    }).to('.header__nav-box', {
+      x: 0,
+      duration: .7
+    });
+    burger.addEventListener('click', function () {
+      document.body.classList.add('overflow-hidden');
+      anim.play();
+    });
+    close.addEventListener('click', function () {
+      document.body.classList.remove('overflow-hidden');
+      anim.reverse();
+    });
   });
 });
 
@@ -509,25 +594,47 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   var target = document.querySelector('.history-intro');
   if (!target) return;
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({}).to('.history-intro__title-block', {
-    y: 0,
-    opacity: 1,
-    stagger: 0.5,
-    'webkitFilter': 'blur(0px)',
-    'filter': 'blur(0px)',
-    duration: 2
-  }).to('.history-intro__col-img-back', {
-    opacity: 1,
-    duration: 1
-  }, "-=1.5").to('.history-intro__img--n1', {
-    opacity: 1,
-    y: 0,
-    duration: 1
-  }, "-=.7").to('.history-intro__img--n2', {
-    opacity: 1,
-    y: 130,
-    duration: 1
-  }, "-=.5");
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline().to('.history-intro__title-block', {
+      y: 0,
+      opacity: 1,
+      stagger: 0.5,
+      'webkitFilter': 'blur(0px)',
+      'filter': 'blur(0px)',
+      duration: 2
+    }).to('.history-intro__col-img-back', {
+      opacity: 1,
+      duration: 1
+    }, "-=1.5").to('.history-intro__img--n1', {
+      opacity: 1,
+      y: 0,
+      duration: 1
+    }, "-=.7").to('.history-intro__img--n2', {
+      opacity: 1,
+      y: 130,
+      duration: 1
+    }, "-=.5");
+  });
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline().to('.history-intro__col-img-back', {
+      opacity: 1,
+      duration: 1
+    }, "-=1.5").to('.history-intro__img--n1', {
+      opacity: 1,
+      y: 0,
+      duration: 1
+    }, "-=.7").to('.history-intro__title-block', {
+      y: 0,
+      opacity: 1,
+      stagger: 0.5,
+      'webkitFilter': 'blur(0px)',
+      'filter': 'blur(0px)',
+      duration: 2
+    });
+  });
 });
 
 /***/ }),
@@ -553,26 +660,41 @@ document.addEventListener('DOMContentLoaded', function () {
     repeat: -1,
     yoyo: true
   });
-  var elemList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.history-timeline__elem-col');
+  var elemList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.history-timeline__elem');
   elemList.forEach(function (el) {
     var marker = el.querySelector('.history-timeline__marker');
     var title = el.querySelector('.history-timeline__title');
-    var text = el.querySelector('.history-timeline__text');
+    var textList = el.querySelectorAll('.history-timeline__text');
     var img = el.querySelector('.history-timeline__img');
-    var config = {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(title, {
       scrollTrigger: {
-        trigger: el,
-        start: "top 70%"
+        trigger: title,
+        start: "top 90%"
       },
       x: 0,
       opacity: 1
-    };
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(title, config);
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(text, config);
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, config);
+    });
+    textList.forEach(function (text) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(text, {
+        scrollTrigger: {
+          trigger: text,
+          start: "top 90%"
+        },
+        x: 0,
+        opacity: 1
+      });
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, {
+      scrollTrigger: {
+        trigger: img,
+        start: "top 90%"
+      },
+      x: 0,
+      opacity: 1
+    });
     gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(marker, {
       scrollTrigger: {
-        trigger: el,
+        trigger: marker,
         start: "top 90%"
       },
       scale: 1
@@ -847,27 +969,86 @@ document.addEventListener('DOMContentLoaded', function () {
   var target = document.querySelector('.product-grid');
   if (!target) return;
   var productList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.product-grid .product-card');
-  var haveFourCols = target.classList.contains('product-grid--page-product');
-  var counter = haveFourCols ? 4 : 3;
-  var productRowArr = [];
-  productList.forEach(function (product, index) {
-    productRowArr.push(product);
-    if (productRowArr.length >= counter || productList.length === index + 1) {
-      console.log(productRowArr);
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo([productRowArr], {
-        y: 100,
-        opacity: 0
-      }, {
-        scrollTrigger: {
-          trigger: productRowArr[0]
-        },
-        y: 0,
-        stagger: .3,
-        opacity: 1
+  var colCounter = target.classList.contains('product-grid--page-product') ? 4 : 3;
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  if (colCounter === 3) {
+    // Desktop
+    mm.add('(min-width: 1200px)', function () {
+      var count = 0;
+      productList.forEach(function (product) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(product, {
+          scrollTrigger: {
+            trigger: product
+          },
+          y: 0,
+          opacity: 1,
+          delay: function delay() {
+            return .3 * count;
+          }
+        });
+        count >= 2 ? count = 0 : count++;
       });
-      productRowArr = [];
-    }
-  });
+    });
+    // Tablet-mobile
+    mm.add('(max-width: 1199px)', function () {
+      productList.forEach(function (product) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(product, {
+          scrollTrigger: {
+            trigger: product
+          },
+          y: 0,
+          opacity: 1
+        });
+      });
+    });
+  } else {
+    // Desktop
+    mm.add('(min-width: 1200px)', function () {
+      var count = 0;
+      productList.forEach(function (product) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(product, {
+          scrollTrigger: {
+            trigger: product
+          },
+          y: 0,
+          opacity: 1,
+          delay: function delay() {
+            return .3 * count;
+          }
+        });
+        count >= 3 ? count = 0 : count++;
+      });
+    });
+    // Tablet
+    mm.add('(min-width: 768px) and (max-width: 1199px)', function () {
+      var count = 0;
+      productList.forEach(function (product) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(product, {
+          scrollTrigger: {
+            trigger: product
+          },
+          y: 0,
+          opacity: 1,
+          delay: function delay() {
+            return .3 * count;
+          }
+        });
+        count >= 2 ? count = 0 : count++;
+      });
+    });
+    // Mobile
+    mm.add('(max-width: 767px)', function () {
+      productList.forEach(function (product) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(product, {
+          scrollTrigger: {
+            trigger: product
+          },
+          y: 0,
+          opacity: 1
+        });
+      });
+    });
+  }
 });
 
 /***/ }),
@@ -882,18 +1063,74 @@ document.addEventListener('DOMContentLoaded', function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+/* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
 
+
+gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
 document.addEventListener('DOMContentLoaded', function () {
   var target = document.querySelector('.recipe-ingredients');
   if (!target) return;
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipe-ingredients__col', {
-    opacity: 1,
-    y: 0,
-    stagger: .5,
-    delay: 1,
-    scrollTrigger: {
-      trigger: '.recipe-ingredients__col'
-    }
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  var container = document.querySelector('.recipe-ingredients__col--white');
+  var pinned = document.querySelector('.recipe-ingredients__todo');
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"].create({
+      trigger: container,
+      pin: pinned,
+      pinType: 'fixed',
+      start: 'top 40px',
+      anticipatePin: 1,
+      end: function end() {
+        return "+=".concat(container.clientHeight - pinned.clientHeight);
+      }
+      //markers: true
+    });
+
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipe-ingredients__col--white', {
+      opacity: 1,
+      delay: 1,
+      scrollTrigger: {
+        trigger: '.recipe-ingredients__col',
+        start: '90px bottom'
+      }
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipe-ingredients__col--gray', {
+      opacity: 1,
+      y: 0,
+      delay: 1.5,
+      scrollTrigger: {
+        trigger: '.recipe-ingredients__col',
+        start: '90px bottom'
+      }
+    });
+  });
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipe-ingredients__col--gray', {
+      opacity: 1,
+      y: 0,
+      delay: 1,
+      scrollTrigger: {
+        trigger: '.recipe-ingredients__col'
+      }
+    });
+  });
+  var switcherLeft = document.querySelector('.recipe-ingredients__switcher--left');
+  var switcherRight = document.querySelector('.recipe-ingredients__switcher--right');
+  var anim = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+    paused: true
+  }).to('.recipe-ingredients__col--white', {
+    x: 0,
+    duration: .4
+  });
+  switcherLeft.addEventListener('click', function () {
+    anim.reverse();
+    document.body.classList.remove('overflow-hidden');
+  });
+  switcherRight.addEventListener('click', function () {
+    anim.play();
+    document.body.classList.add('overflow-hidden');
   });
 });
 
@@ -918,7 +1155,7 @@ document.addEventListener('DOMContentLoaded', function () {
     scrollTrigger: {
       trigger: '.recipe-intro'
     }
-  }).to(['.recipe-intro__back', '.recipe-intro__title', '.recipe-intro__features', '.recipe-intro__text', '.recipe-intro__bottom'], {
+  }).to(['.recipe-intro__top', '.recipe-intro__title', '.recipe-intro__features', '.recipe-intro__text', '.recipe-intro__bottom'], {
     opacity: 1,
     x: 0,
     delay: .5,
@@ -991,6 +1228,8 @@ document.addEventListener('DOMContentLoaded', function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 /* harmony import */ var gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! gsap/ScrollTrigger */ "./node_modules/gsap/ScrollTrigger.js");
+/* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
+
 
 
 gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"]);
@@ -1000,84 +1239,220 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // col 4
   if (target.classList.contains('recipes-grid--cols-4')) {
-    var colList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__col');
-    colList.forEach(function (col, index) {
-      if (index % 2 === 0) {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
-          y: -60
+    var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+
+    // Desktop
+    mm.add('(min-width: 1200px)', function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(4n)', '.recipes-grid__elem:nth-child(4n-2)'], {
+        y: -60
+      }, {
+        y: 60,
+        scrollTrigger: {
+          trigger: '.recipes-grid__elem:nth-child(4n)',
+          scrub: 1.2
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(4n-1)', '.recipes-grid__elem:nth-child(4n-3)'], {
+        y: 60
+      }, {
+        y: -60,
+        scrollTrigger: {
+          trigger: '.recipes-grid__elem:nth-child(4n-1)',
+          scrub: 1.2
+        }
+      });
+    });
+    // Tablet
+    mm.add('(min-width: 768px) and (max-width: 1199px)', function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(2n)'], {
+        y: -50
+      }, {
+        y: 50,
+        scrollTrigger: {
+          trigger: '.recipes-grid',
+          scrub: 1.2
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(2n)'], {
+        opacity: 0
+      }, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: '.recipes-grid'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(2n-1)'], {
+        y: 50
+      }, {
+        y: -50,
+        scrollTrigger: {
+          trigger: '.recipes-grid',
+          scrub: 1.2
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(2n-1)'], {
+        opacity: 0
+      }, {
+        opacity: 1,
+        scrollTrigger: {
+          trigger: '.recipes-grid'
+        }
+      });
+    });
+    // Mobile
+    mm.add('(max-width: 767px)', function () {
+      var recipesList = document.querySelectorAll('.recipes-grid__elem');
+      recipesList.forEach(function (recipe) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
+          opacity: 1,
+          y: 100
         }, {
-          y: 60,
+          opacity: 1,
+          y: 0,
           scrollTrigger: {
-            trigger: col,
-            scrub: 1.2
+            trigger: recipe,
+            scrub: 1.2,
+            end: "top 90%"
           }
         });
-      } else {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
-          y: 60
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
+          opacity: 0
         }, {
-          y: -60,
+          opacity: 1,
           scrollTrigger: {
-            trigger: col,
-            scrub: 1.2
+            trigger: recipe,
+            end: "top 90%"
           }
         });
-      }
+      });
     });
   }
 
   // col 3
   if (target.classList.contains('recipes-grid--cols-3')) {
-    var _colList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__col');
-    _colList.forEach(function (col, index) {
-      if (index % 2 === 0) {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
-          y: -60
-        }, {
-          y: 60,
-          scrollTrigger: {
-            trigger: col,
-            scrub: 1.2
-          }
-        });
-      } else {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
+    var _mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+    // Desktop
+    _mm.add('(min-width: 1200px)', function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(3n-1)'], {
+        y: -60
+      }, {
+        y: 60,
+        scrollTrigger: {
+          trigger: '.recipes-grid__elem:nth-child(3n-1)',
+          scrub: 1.2
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(3n)', '.recipes-grid__elem:nth-child(3n-2)'], {
+        y: 60
+      }, {
+        y: -60,
+        scrollTrigger: {
+          trigger: '.recipes-grid__elem:nth-child(3n)',
+          scrub: 1.2
+        }
+      });
+    });
+    // Tablet
+    _mm.add('(min-width: 768px) and (max-width: 1199px)', function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(2n)'], {
+        y: -60
+      }, {
+        y: 60,
+        scrollTrigger: {
+          trigger: '.recipes-grid__elem:nth-child(2n)',
+          scrub: 1.2
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(2n-1)'], {
+        y: 60
+      }, {
+        y: -60,
+        scrollTrigger: {
+          trigger: '.recipes-grid__elem:nth-child(3n)',
+          scrub: 1.2
+        }
+      });
+    });
+    // Mobile
+    _mm.add('(max-width: 767px)', function () {
+      var recipesList = document.querySelectorAll('.recipes-grid__elem');
+      recipesList.forEach(function (elem) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
           y: 60
         }, {
-          y: -60,
+          y: 0,
           scrollTrigger: {
-            trigger: col,
-            scrub: 1.2
+            trigger: elem
           }
         });
-      }
+      });
     });
   }
 
   // col 2
   if (target.classList.contains('recipes-grid--cols-2')) {
-    var _colList2 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__col');
-    _colList2.forEach(function (col, index) {
-      if (index % 2 === 0) {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
-          y: -60
-        }, {
-          y: 60,
-          scrollTrigger: {
-            trigger: col,
-            scrub: 1.2
+    var _mm2 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+    // Desktop
+    _mm2.add('(min-width: 1200px)', function () {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-grid__elem:nth-child(2n)', {
+        y: -60
+      }, {
+        y: 60,
+        scrollTrigger: {
+          trigger: '.recipes-grid__elem:nth-child(2n)',
+          scrub: 1.2
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-grid__elem:nth-child(2n-1)', {
+        y: 60
+      }, {
+        y: -60,
+        scrollTrigger: {
+          trigger: '.recipes-grid__elem:nth-child(2n-1)',
+          scrub: 1.2
+        }
+      });
+    });
+    // Tablet-mobile
+    _mm2.add('(max-width: 1199px)', function () {
+      var recipesSlider;
+      document.addEventListener('DOMContentLoaded', initRecipesSlider);
+      window.addEventListener('resize', initRecipesSlider, true);
+      function initRecipesSlider() {
+        var slider = document.querySelector('.recipe-other__col-grid');
+        if (!slider) return;
+        var width = window.innerWidth;
+        if (width >= 1200) {
+          if (recipesSlider !== undefined) {
+            recipesSlider.destroy(true, true);
+            recipesSlider = undefined;
           }
-        });
-      } else {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(col, {
-          y: 60
-        }, {
-          y: -60,
-          scrollTrigger: {
-            trigger: col,
-            scrub: 1.2
+        } else {
+          if (recipesSlider === undefined) {
+            recipesSlider = new swiper__WEBPACK_IMPORTED_MODULE_2__["default"](slider, {
+              modules: [swiper__WEBPACK_IMPORTED_MODULE_2__["Navigation"], swiper__WEBPACK_IMPORTED_MODULE_2__["Pagination"]],
+              slidesPerView: 1,
+              navigation: {
+                nextEl: '.slider-nav__btn--next',
+                prevEl: '.slider-nav__btn--prev'
+              },
+              pagination: {
+                el: '.slider-nav__pagination',
+                clickable: true,
+                bulletActiveClass: 'slider-nav__bullet--active',
+                renderBullet: function renderBullet(index, className) {
+                  return "<button class=\"slider-nav__bullet swiper-pagination-bullet\" aria-label=\"\u0421\u0442\u0440\u0430\u043D\u0438\u0446\u0430 ".concat(index, "\"></button>");
+                }
+              },
+              breakpoints: {
+                768: {
+                  slidesPerView: 2,
+                  spaceBetween: 28
+                }
+              }
+            });
           }
-        });
+        }
       }
     });
   }
@@ -1116,25 +1491,48 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__
 document.addEventListener('DOMContentLoaded', function () {
   var target = document.querySelector('.recipes-list');
   if (!target) return;
-  gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"].create({
-    trigger: ".recipes-list__col-text",
-    start: "top 121px",
-    end: "bottom bottom",
-    pin: '.recipes-list__img'
-    //markers: true
-  });
+  var container = document.querySelector('.recipes-list__container');
+  var img = document.querySelector('.recipes-list__img');
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
 
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__img', {
-    opacity: 0,
-    x: 200
-  }, {
-    opacity: 1,
-    x: 0,
-    duration: 1,
-    delay: .5,
-    scrollTrigger: {
-      trigger: '.recipes-list__img'
-    }
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap_ScrollTrigger__WEBPACK_IMPORTED_MODULE_1__["ScrollTrigger"].create({
+      trigger: img,
+      pin: '.recipes-list__img',
+      end: function end() {
+        return "+=".concat(container.clientHeight - img.clientHeight);
+      }
+      //markers: true
+    });
+
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__img', {
+      opacity: 0,
+      x: 200
+    }, {
+      opacity: 1,
+      x: 0,
+      duration: 1,
+      delay: .5,
+      scrollTrigger: {
+        trigger: '.recipes-list__img'
+      }
+    });
+  });
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__img', {
+      opacity: 0,
+      y: 60
+    }, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      delay: .5,
+      scrollTrigger: {
+        trigger: '.recipes-list__img'
+      }
+    });
   });
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__title1', {
     opacity: 0,
@@ -1162,14 +1560,13 @@ document.addEventListener('DOMContentLoaded', function () {
   textElems.forEach(function (elem) {
     gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
       opacity: 0,
-      y: 200
+      y: 100
     }, {
       opacity: 1,
       y: 0,
       duration: 1,
       scrollTrigger: {
-        trigger: elem,
-        start: 'top bottom'
+        trigger: elem
       }
     });
   });
@@ -1248,29 +1645,62 @@ document.addEventListener('DOMContentLoaded', function () {
     },
     opacity: 1
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__gallery-grid', {
-    y: 200
-  }, {
-    scrollTrigger: {
-      trigger: '.section-collection__gallery-grid',
-      scrub: 1.5,
-      // markers: true,
-      toggleActions: "restart none none none"
-    },
-    y: 0
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__gallery-grid', {
+      y: 200
+    }, {
+      scrollTrigger: {
+        trigger: '.section-collection__gallery-grid',
+        scrub: 1.5,
+        // markers: true,
+        toggleActions: "restart none none none"
+      },
+      y: 0
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-collection__product-link:nth-child(3n-1)', '.section-collection__product-link:last-child'], {
+      y: 200
+    }, {
+      scrollTrigger: {
+        trigger: '.section-collection__product-link:nth-child(3n-1)',
+        // markers: true,
+        start: 'top bottom',
+        end: '70% top',
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: -400
+    });
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-collection__gallery-col--n2'], {
-    y: 200
-  }, {
-    scrollTrigger: {
-      trigger: '.section-collection__gallery-col--n2',
-      // markers: true,
-      start: 'top bottom',
-      end: '70% top',
-      scrub: 1.5,
-      toggleActions: "restart none none none"
-    },
-    y: -600
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__product-link:nth-child(2n-1)', {
+      y: 30
+    }, {
+      scrollTrigger: {
+        trigger: '.section-collection__product-link:nth-child(2n-1)',
+        // markers: true,
+        start: 'top bottom',
+        end: '70% top',
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: -30
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-collection__product-link:nth-child(2n)', {
+      y: -30
+    }, {
+      scrollTrigger: {
+        trigger: '.section-collection__product-link:nth-child(2n)',
+        // markers: true,
+        start: 'top bottom',
+        end: '70% top',
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: 30
+    });
   });
 });
 
@@ -1378,31 +1808,64 @@ document.addEventListener('DOMContentLoaded', function () {
     y: 0,
     opacity: 1
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n2', {
-    y: 300,
-    opacity: 0
-  }, {
-    scrollTrigger: {
-      trigger: '.section-history__gallery',
-      scrub: 1.4,
-      // markers: true,
-      end: 'center center'
-    },
-    y: 0,
-    opacity: 1
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n2', {
+      y: 300,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: '.section-history__gallery',
+        scrub: 1.4,
+        // markers: true,
+        end: 'center center'
+      },
+      y: 0,
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n3', {
+      y: -200,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: '.section-history__gallery',
+        scrub: 1.3,
+        // markers: true,
+        end: 'center center'
+      },
+      y: 0,
+      opacity: 1
+    });
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n3', {
-    y: -200,
-    opacity: 0
-  }, {
-    scrollTrigger: {
-      trigger: '.section-history__gallery',
-      scrub: 1.3,
-      // markers: true,
-      end: 'center center'
-    },
-    y: 0,
-    opacity: 1
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n2', {
+      y: 0,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: '.section-history__gallery',
+        scrub: 1.4,
+        // markers: true,
+        end: 'center center'
+      },
+      y: -70,
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__img-box--n3', {
+      y: 0,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: '.section-history__gallery',
+        scrub: 1.3,
+        // markers: true,
+        end: 'center center'
+      },
+      y: -200,
+      opacity: 1
+    });
   });
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-history__gallery-back', {
     y: 100
@@ -1447,17 +1910,36 @@ document.addEventListener('DOMContentLoaded', function () {
     width: '100%',
     height: '100%'
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
-    y: -650
-  }, {
-    scrollTrigger: {
-      trigger: '.section-image-back-anim .section-image-back-anim__box',
-      //markers: true,
-      scrub: true,
-      start: '200px 40%',
-      end: "+=800px top"
-    },
-    y: 200
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
+      y: -650
+    }, {
+      scrollTrigger: {
+        trigger: '.section-image-back-anim .section-image-back-anim__box',
+        //markers: true,
+        scrub: true,
+        start: '200px 40%',
+        end: "+=800px top"
+      },
+      y: 200
+    });
+  });
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__box', {
+      y: -200
+    }, {
+      scrollTrigger: {
+        trigger: '.section-image-back-anim .section-image-back-anim__box',
+        //markers: true,
+        scrub: true,
+        start: '200px 40%',
+        end: "+=800px top"
+      },
+      y: 200
+    });
   });
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-image-back-anim .section-image-back-anim__img', {
     xPercent: -.6,
@@ -1558,19 +2040,22 @@ document.addEventListener('DOMContentLoaded', function () {
     y: 0,
     opacity: 1
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-market-preview__link', {
-    y: 100,
-    opacity: 0
-  }, {
-    scrollTrigger: {
-      trigger: '.section-market-preview__link',
-      // markers: true,
-      end: 'center center',
-      scrub: 1.5,
-      toggleActions: "restart none none none"
-    },
-    y: 0,
-    opacity: 1
+  var linkList = document.querySelectorAll('.section-market-preview__link');
+  linkList.forEach(function (link) {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(link, {
+      y: 100,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: link,
+        // markers: true,
+        end: 'center center',
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: 0,
+      opacity: 1
+    });
   });
   var recipes = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-market-preview__market-link');
   recipes.forEach(function (recipe) {
@@ -1655,18 +2140,38 @@ document.addEventListener('DOMContentLoaded', function () {
       opacity: 1
     });
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-news-preview__news-col--n2'], {
-    y: 200
-  }, {
-    scrollTrigger: {
-      trigger: '.section-news-preview__news-col--n2',
-      // markers: true,
-      start: 'top bottom',
-      end: '70% top',
-      scrub: 1.5,
-      toggleActions: "restart none none none"
-    },
-    y: -200
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-news-preview__news-col--n2'], {
+      y: 200
+    }, {
+      scrollTrigger: {
+        trigger: '.section-news-preview__news-col--n2',
+        // markers: true,
+        start: 'top bottom',
+        end: '70% top',
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: -200
+    });
+  });
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-news-preview__news-col--n2'], {
+      y: 30
+    }, {
+      scrollTrigger: {
+        trigger: '.section-news-preview__news-col--n2',
+        // markers: true,
+        start: 'top bottom',
+        end: '70% top',
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: -30
+    });
   });
 });
 
@@ -1689,62 +2194,127 @@ gsap__WEBPACK_IMPORTED_MODULE_0__["default"].registerPlugin(gsap_ScrollTrigger__
 document.addEventListener('DOMContentLoaded', function () {
   var target = document.querySelector('.section-recipes-preview');
   if (!target) return;
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__title', {
-    y: 50,
-    opacity: 0
-  }, {
-    scrollTrigger: {
-      trigger: '.section-recipes-preview__title',
-      // markers: true,
-      end: 'center center',
-      scrub: 1.5,
-      toggleActions: "restart none none none"
-    },
-    y: 0,
-    opacity: 1
-  });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__text', {
-    y: 75,
-    opacity: 0
-  }, {
-    scrollTrigger: {
-      trigger: '.section-recipes-preview__text',
-      // markers: true,
-      end: 'center center',
-      scrub: 1.5,
-      toggleActions: "restart none none none"
-    },
-    y: 0,
-    opacity: 1
-  });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__link', {
-    y: 100,
-    opacity: 0
-  }, {
-    scrollTrigger: {
-      trigger: '.section-recipes-preview__link',
-      // markers: true,
-      end: 'center center',
-      scrub: 1.5,
-      toggleActions: "restart none none none"
-    },
-    y: 0,
-    opacity: 1
-  });
-  var recipes = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-recipes-preview__recipe');
-  recipes.forEach(function (recipe) {
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  // Desktop
+  mm.add('(min-width: 1200px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__title', {
+      y: 50,
       opacity: 0
     }, {
       scrollTrigger: {
-        trigger: recipe,
-        scrub: 2,
+        trigger: '.section-recipes-preview__title',
         // markers: true,
-        start: "200px bottom",
-        end: "top 70%",
+        end: 'center center',
+        scrub: 1.5,
         toggleActions: "restart none none none"
       },
+      y: 0,
       opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__text', {
+      y: 75,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: '.section-recipes-preview__text',
+        // markers: true,
+        end: 'center center',
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: 0,
+      opacity: 1
+    });
+    var links = document.querySelectorAll('.section-recipes-preview__link');
+    links.forEach(function (link) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(link, {
+        y: 100,
+        opacity: 0
+      }, {
+        scrollTrigger: {
+          trigger: link,
+          // markers: true,
+          end: 'center center',
+          scrub: 1.5,
+          toggleActions: "restart none none none"
+        },
+        y: 0,
+        opacity: 1
+      });
+    });
+    var recipes = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-recipes-preview__recipe');
+    recipes.forEach(function (recipe) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
+        opacity: 0
+      }, {
+        scrollTrigger: {
+          trigger: recipe,
+          scrub: 2,
+          // markers: true,
+          end: "top 70%",
+          toggleActions: "restart none none none"
+        },
+        opacity: 1
+      });
+    });
+  });
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__title', {
+      y: 50,
+      opacity: 0
+    }, {
+      scrollTrigger: {
+        trigger: '.section-recipes-preview__title',
+        // markers: true,
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: 0,
+      opacity: 1
+    });
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-recipes-preview__text', {
+      y: 75
+    }, {
+      scrollTrigger: {
+        trigger: '.section-recipes-preview__text',
+        // markers: true,
+        scrub: 1.5,
+        toggleActions: "restart none none none"
+      },
+      y: 0
+    });
+    var links = document.querySelectorAll('.section-recipes-preview__link');
+    links.forEach(function (link) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(link, {
+        y: 100,
+        opacity: 0
+      }, {
+        scrollTrigger: {
+          trigger: link,
+          // markers: true,
+          end: 'center center',
+          scrub: 1.5,
+          toggleActions: "restart none none none"
+        },
+        y: 0,
+        opacity: 1
+      });
+    });
+    var recipes = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-recipes-preview__recipe');
+    recipes.forEach(function (recipe) {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(recipe, {
+        opacity: 0
+      }, {
+        scrollTrigger: {
+          trigger: recipe,
+          scrub: 2,
+          // markers: true,
+          end: "top 70%",
+          toggleActions: "restart none none none"
+        },
+        opacity: 1
+      });
     });
   });
   gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.section-recipes-preview__recipe-col--n2'], {
@@ -1888,6 +2458,61 @@ document.addEventListener('DOMContentLoaded', function () {
       scrub: 1.5
     }
   });
+  var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+  // Tablet-mobile
+  mm.add('(max-width: 1199px)', function () {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.section-we-produce__video-box--mobile', {
+      opacity: 0,
+      y: 100
+    }, {
+      opacity: 1,
+      y: 0,
+      scrollTrigger: {
+        trigger: '.section-we-produce__video-box--mobile',
+        // markers: true,
+        scrub: 1.5
+      }
+    });
+  });
+});
+
+/***/ }),
+
+/***/ "./src/js/sections/show-more.js":
+/*!**************************************!*\
+  !*** ./src/js/sections/show-more.js ***!
+  \**************************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var gsap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
+
+document.addEventListener('DOMContentLoaded', function () {
+  var blockList = document.querySelectorAll('.show-more');
+  if (blockList.length) {
+    blockList.forEach(function (block) {
+      var container = block.querySelector('.show-more__container');
+      var button = block.querySelector('.show-more__button');
+      if (!button || !block || !container) return;
+      button.addEventListener('click', function () {
+        block.classList.add('show-more--active');
+        var elems = document.querySelectorAll('.show-more__element');
+        elems.forEach(function (elem) {
+          gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
+            y: 100
+          }, {
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: elem
+            }
+          });
+        });
+      });
+    });
+  }
 });
 
 /***/ }),
@@ -1957,15 +2582,6 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type1 .technology-block__title-block'
         }
       });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.technology-block--type1 .technology-block__img-box--n1', '.technology-block--type1 .technology-block__img-box--n2'], {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-        scrollTrigger: {
-          trigger: '.technology-block--type1 .technology-block__img-box--n1'
-        }
-      });
       gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img-box--n3', {
         y: 0,
         opacity: 1,
@@ -1975,26 +2591,59 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type1 .technology-block__img-box--n3'
         }
       });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n3', {
-        x: -300,
-        scrollTrigger: {
-          trigger: '.technology-block--type1 .technology-block__img--n3',
-          scrub: 2
-        }
+      var mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+      // Desktop
+      mm.add('(min-width: 1200px)', function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.technology-block--type1 .technology-block__img-box--n1', '.technology-block--type1 .technology-block__img-box--n2'], {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 1,
+          scrollTrigger: {
+            trigger: '.technology-block--type1 .technology-block__img-box--n1'
+          }
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n1', {
+          y: 200,
+          scrollTrigger: {
+            trigger: '.technology-block--type1 .technology-block__img--n1',
+            scrub: 2
+          }
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n2', {
+          y: -50,
+          scrollTrigger: {
+            trigger: '.technology-block--type1 .technology-block__img--n2',
+            scrub: 2
+          }
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n3', {
+          x: -300,
+          scrollTrigger: {
+            trigger: '.technology-block--type1 .technology-block__img--n3',
+            scrub: 2
+          }
+        });
       });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n1', {
-        y: 200,
-        scrollTrigger: {
-          trigger: '.technology-block--type1 .technology-block__img--n1',
-          scrub: 2
-        }
-      });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n2', {
-        y: -50,
-        scrollTrigger: {
-          trigger: '.technology-block--type1 .technology-block__img--n2',
-          scrub: 2
-        }
+      // Tablet-mobile
+      mm.add('(max-width: 1199px)', function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img-box--n1', {
+          y: -30,
+          opacity: 1,
+          duration: .7
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img-box--n2', {
+          y: 30,
+          opacity: 1,
+          duration: .7
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n3', {
+          x: -70,
+          scrollTrigger: {
+            trigger: '.technology-block--type1 .technology-block__img--n3',
+            scrub: 2
+          }
+        });
       });
     }
 
@@ -2098,12 +2747,26 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type4 .technology-block__img-box--n2'
         }
       });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img--n2', {
-        x: -600,
-        scrollTrigger: {
-          trigger: '.technology-block--type4 .technology-block__img-box--n2',
-          scrub: 1.7
-        }
+      var _mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+      // Desktop
+      _mm.add('(min-width: 1200px)', function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img--n2', {
+          x: -600,
+          scrollTrigger: {
+            trigger: '.technology-block--type4 .technology-block__img-box--n2',
+            scrub: 1.7
+          }
+        });
+      });
+      // Tablet-mobile
+      _mm.add('(max-width: 1199px)', function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img--n2', {
+          x: 100,
+          scrollTrigger: {
+            trigger: '.technology-block--type4 .technology-block__img-box--n2',
+            scrub: 1.7
+          }
+        });
       });
     }
 
@@ -2267,24 +2930,6 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type9 .technology-block__img-box--n1'
         }
       });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n1', {
-        y: 200,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.technology-block--type9 .technology-block__img--n1',
-          scrub: 2,
-          start: "center bottom"
-        }
-      });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n2', {
-        y: -200,
-        duration: 1,
-        scrollTrigger: {
-          trigger: '.technology-block--type9 .technology-block__img--n2',
-          scrub: 2,
-          start: "center bottom"
-        }
-      });
       gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__title', {
         y: 0,
         opacity: 1,
@@ -2303,6 +2948,47 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type9 .technology-block__text'
         }
       });
+      var _mm2 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+      // Desktop
+      _mm2.add('(min-width: 1200px)', function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n1', {
+          y: 200,
+          duration: 1,
+          scrollTrigger: {
+            trigger: '.technology-block--type9 .technology-block__img--n1',
+            scrub: 2,
+            start: "center bottom"
+          }
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n2', {
+          y: -200,
+          duration: 1,
+          scrollTrigger: {
+            trigger: '.technology-block--type9 .technology-block__img--n2',
+            scrub: 2,
+            start: "center bottom"
+          }
+        });
+      });
+      // Tablet-mobile
+      _mm2.add('(max-width: 1199px)', function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n1', {
+          y: -60,
+          duration: 1,
+          scrollTrigger: {
+            trigger: '.technology-block--type9 .technology-block__img--n1',
+            scrub: 2
+          }
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n2', {
+          y: 60,
+          duration: 1,
+          scrollTrigger: {
+            trigger: '.technology-block--type9 .technology-block__img--n2',
+            scrub: 2
+          }
+        });
+      });
     }
 
     // Type 10
@@ -2314,14 +3000,6 @@ document.addEventListener('DOMContentLoaded', function () {
         stagger: .5,
         scrollTrigger: {
           trigger: '.technology-block--type10 .technology-block__img-box--n1'
-        }
-      });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img--n1', {
-        x: 100,
-        scrollTrigger: {
-          trigger: '.technology-block--type10 .technology-block__img--n1',
-          scrub: 2,
-          start: "center bottom"
         }
       });
       gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__title', {
@@ -2341,6 +3019,28 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollTrigger: {
           trigger: '.technology-block--type10 .technology-block__text'
         }
+      });
+      var _mm3 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+      // Desktop
+      _mm3.add('(min-width: 1200px)', function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img--n1', {
+          x: 100,
+          scrollTrigger: {
+            trigger: '.technology-block--type10 .technology-block__img--n1',
+            scrub: 2,
+            start: "center bottom"
+          }
+        });
+      });
+      // Tablet-mobile
+      _mm3.add('(max-width: 1199px)', function () {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img--n1', {
+          x: 40,
+          scrollTrigger: {
+            trigger: '.technology-block--type10 .technology-block__img--n1',
+            scrub: 2
+          }
+        });
       });
     }
 

@@ -6,18 +6,17 @@ append vars
 		isHeaderWhite = true
 		body.classList = "body-top-offset"
 block content
-	ul.news-nav.container
-		li.news-nav__elem
-			span.news-nav__link.news-nav__link--active Все
-				|
-				|
-				span.show-desktop-inline новости
-		li.news-nav__elem
-			a.news-nav__link(href="#") соцсети
-		li.news-nav__elem
-			a.news-nav__link(href="#") О нас пишут
-		li.news-nav__elem
-			a.news-nav__link(href="#") Акции
+	.container
+		ul.news-nav
+			li.news-nav__elem
+				span.news-nav__link.news-nav__link--active Все
+					span.show-desktop-inline &nbsp;новости
+			li.news-nav__elem
+				a.news-nav__link(href="#") соцсети
+			li.news-nav__elem
+				a.news-nav__link(href="#") О нас пишут
+			li.news-nav__elem
+				a.news-nav__link(href="#") Акции
 	// Text with image
 	.text-with-image.text-with-image--page-news.text-with-image--reverse
 		.container.text-with-image__container

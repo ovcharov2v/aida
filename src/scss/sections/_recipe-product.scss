@@ -2,6 +2,10 @@
 	padding-top: 42px;
 	padding-bottom: 30px;
 
+	@media print {
+		display: none !important;
+	}
+
 	@media (min-width: $breakpoint-desktop-min) {
 		padding-top: 55px;
 		padding-bottom: 100px;

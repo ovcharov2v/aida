@@ -1,14 +1,17 @@
 .news-nav {
-	display: flex;
-	margin-bottom: 15px;
-	padding-top: 32px;
-	padding-bottom: 12px;
-	max-width: 100%;
-	overflow-x: auto;
+	&__nav {
+		display: flex;
+		margin-bottom: 15px;
+		padding-top: 32px;
+		padding-bottom: 12px;
+		max-width: 100%;
+		overflow-x: auto;
 
-	@media (min-width: $breakpoint-desktop-min) {
-		padding-top: 27px;
-		padding-bottom: 27px;}
+		@media (min-width: $breakpoint-desktop-min) {
+			padding-top: 27px;
+			padding-bottom: 27px;
+		}
+	}
 
 	&__elem {
 		transform: translateY(-100px);
@@ -30,10 +33,14 @@
 		text-transform: uppercase;
 		white-space: nowrap;
 		transition: color $transition-default;
+		border: none;
+		background-color: $color-transparent;
+		font-family: inherit;
 
 		@media (min-width: $breakpoint-desktop-min) {
 			padding: 4px 50px;
-			font-size: 16px;}
+			font-size: 16px;
+		}
 
 		&:hover {
 			color: $color-black;
@@ -49,6 +56,27 @@
 
 		.news-nav__elem:last-child & {
 			padding-right: 0;
+		}
+	}
+
+	&__content-box {
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&__content {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transform: translateX(100vw);
+		width: 100%;
+		opacity: 0;
+
+		&--active {
+			position: relative;
+			transform: none;
+			opacity: 1;
 		}
 	}
 }

@@ -20,12 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 			//markers: true
 		});
 
-		gsap.fromTo('.recipes-list__img', {
-			opacity: 0,
-			x: 200
-		}, {
+		gsap.to('.recipes-list__img',  {
 			opacity: 1,
-			x: 0,
+			y:0,
 			duration: 1,
 			delay: .5,
 			scrollTrigger: {
@@ -35,12 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
 	})
 	// Tablet-mobile
 	mm.add('(max-width: 1199px)', () => {
-		gsap.fromTo('.recipes-list__img', {
-			opacity: 0,
-			y: 60
-		}, {
+		gsap.to('.recipes-list__img',  {
 			opacity: 1,
-			y: 0,
+			y:0,
 			duration: 1,
 			delay: .5,
 			scrollTrigger: {
@@ -49,30 +43,34 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	})
 
-	gsap.fromTo('.recipes-list__title1', {
-		opacity: 0,
-		x: -200
-	}, {
+	gsap.to('.recipes-list__title1-block', {
+		y: 0,
 		opacity: 1,
-		x: 0,
-		duration: 1,
-		scrollTrigger: {
-			trigger: '.recipes-list__title1'
-		}
+		stagger: 0.5,
+		'webkitFilter': 'blur(0px)',
+		'filter': 'blur(0px)',
+		duration: 2,
 	})
-	gsap.fromTo('.recipes-list__title2', {
-		opacity: 0,
-		x: 200
-	}, {
+	gsap.to('.recipes-list__title2-block', {
+		y: 0,
 		opacity: 1,
-		x: 0,
+		stagger: 0.5,
+		'webkitFilter': 'blur(0px)',
+		'filter': 'blur(0px)',
+		duration: 2,
+		delay: 1,
+	})
+	gsap.to('.recipes-list__text-box',  {
+		opacity: 1,
+		y:0,
 		duration: 1,
+		delay: 2.5,
 		scrollTrigger: {
-			trigger: '.recipes-list__title2'
+			trigger: '.recipes-list__text-box'
 		}
 	})
 	const textElems = document.querySelectorAll(['.recipes-list__text', '.recipes-list__list-elem'])
-	textElems.forEach((elem) => {
+	textElems.forEach((elem, index) => {
 		gsap.fromTo(elem, {
 			opacity: 0,
 			y: 100
@@ -80,6 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			opacity: 1,
 			y: 0,
 			duration: 1,
+			delay: () => index/10,
 			scrollTrigger: {
 				trigger: elem,
 			}

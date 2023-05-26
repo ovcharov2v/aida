@@ -1,5 +1,5 @@
 .technology-block {
-	overflow: hidden;
+	//overflow: hidden;
 
 	&--type1 {
 		padding-top: 70px;
@@ -32,7 +32,7 @@
 
 	&--type4 {
 		padding-top: 45px;
-		padding-bottom: 80px;
+		padding-bottom: 120px;
 	}
 
 	&--type5 {
@@ -85,7 +85,8 @@
 
 		@media (min-width: $breakpoint-desktop-min) {
 			padding-top: 70px;
-			padding-bottom: 120px;}
+			padding-bottom: 120px;
+		}
 	}
 
 	&--type11 {
@@ -94,7 +95,8 @@
 
 		@media (min-width: $breakpoint-desktop-min) {
 			padding-top: 90px;
-			padding-bottom: 156px;}
+			padding-bottom: 156px;
+		}
 	}
 
 	&__container {
@@ -310,14 +312,14 @@
 			}
 
 			.technology-block--type10 & {
-				position: absolute;
 				z-index: 1;
-				top: 10%;
-				left: 0;
 				max-width: 65%;
+				transform: translate(30px, 80px);
 
 				@media (min-width: $breakpoint-desktop-min) {
-					top: 10%;max-width: 100%;}
+					max-width: 100%;
+					transform: translate(30px, 200px);
+				}
 
 			}
 		}
@@ -338,12 +340,18 @@
 			}
 
 			.technology-block--type4 & {
-				//margin-left: auto;
-				//margin-top: 78px;
+				margin-left: auto;
 				max-width: 205px;
 				margin-bottom: 30px;
+				transform: translateY(200px);
+
+				@media (max-width: $breakpoint-desktop-min) {
+					display: none;
+				}
 
 				@media (min-width: $breakpoint-desktop-min) {
+					display: flex;
+					justify-content: flex-end;
 					max-width: 100%;
 					margin-bottom: 0;
 				}
@@ -378,11 +386,15 @@
 		&--n3 {
 			.technology-block--type1 & {
 				text-align: right;
-				transform: translateX(93px);
+				transform: translateY(200px);
 				max-height: 161px;
 
+				@media (max-width: $breakpoint-desktop-min) {
+					display: none;
+				}
+
 				@media (min-width: $breakpoint-desktop-min) {
-					max-height: auto;
+					max-height: unset;
 				}
 			}
 		}

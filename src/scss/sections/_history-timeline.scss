@@ -160,4 +160,13 @@
 			}
 		}
 	}
+
+	&__link {
+		color: $color-red;
+		transition: color $transition-default;
+
+		&:hover {
+			color: lighten($color-red, 10%);
+		}
+	}
 }

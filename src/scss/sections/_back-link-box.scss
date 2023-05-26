@@ -1,4 +1,8 @@
 .back-link-box {
 	padding-top: 28px;
 	padding-bottom: 45px;
+
+	@media print {
+		display: none !important;
+	}
 }

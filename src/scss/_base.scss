@@ -24,6 +24,15 @@ body {
 		@media (min-width: $breakpoint-desktop-min) {
 			padding-top: 136px;
 		}
+
+		@media print {
+			padding-top: 0 !important;
+		}
+	}
+
+	@media print {
+		filter: grayscale(1);
+		color: #000 !important;
 	}
 }
 

@@ -14,7 +14,12 @@
 
 .animation-start-opacity-show-bottom {
 	opacity: 0;
-	transform: translateY(100px);
+	transform: translateY(40px);
+
+	@media (min-width: $breakpoint-desktop-min) {
+		opacity: 0;
+		transform: translateY(100px);
+	}
 }
 
 .animation-start-opacity-show-top {

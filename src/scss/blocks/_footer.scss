@@ -8,6 +8,10 @@
 	padding-top: 129px;
 	color: $color-white;
 
+	@media print {
+		display: none !important;
+	}
+
 	&::before {
 		position: absolute;
 		z-index: -1;
@@ -147,9 +151,14 @@
 
 	&__copyright-link {
 		font-size: 16px;
+		transition: color $transition-default;
 
 		@media (min-width: $breakpoint-desktop-min) {
 			font-size: inherit;
+		}
+
+		&:hover {
+			color: $color-red;
 		}
 	}
 

@@ -6,70 +6,76 @@ append vars
 		isHeaderWhite = true
 		body.classList = "body-top-offset"
 block content
-	.container
-		ul.news-nav
-			li.news-nav__elem
-				span.news-nav__link.news-nav__link--active Все
-					span.show-desktop-inline &nbsp;новости
-			li.news-nav__elem
-				a.news-nav__link(href="#") соцсети
-			li.news-nav__elem
-				a.news-nav__link(href="#") О нас пишут
-			li.news-nav__elem
-				a.news-nav__link(href="#") Акции
-	// Text with image
-	.text-with-image.text-with-image--page-news.text-with-image--reverse
-		.container.text-with-image__container
-			.text-with-image__col-text
-				time.text-with-image__text.text-uppercase 13 апреля 2022
-				h1.h2.text-red.text-with-image__title Орскую макаронную фабрику посетил губернатор Оренбургской области
-				p.text-with-image__text 1 апреля 2022 г. Орскую Макаронную Фабрику, входящую в состав холдинга «Агро-Альянс», посетил губернатор Оренбургской области, Денис Паслер. Губернатору показали весь производственный цикл — от замеса теста...
-			.text-with-image__col-img
-				+picture("text-with-image/img3", "text-with-image__img", "jpg", "")
+	.news-nav
+		.container
+			ul.news-nav__nav
+				li.news-nav__elem
+					button.news-nav__link.news-nav__link--active(data-content="content1") Все
+						span.show-desktop-inline &nbsp;новости
+				li.news-nav__elem
+					button.news-nav__link(data-content="content2") соцсети
+				li.news-nav__elem
+					button.news-nav__link(data-content="content3") О нас пишут
+				li.news-nav__elem
+					button.news-nav__link(data-content="content4") Акции
+		.news-nav__content-box
+			- var n = 1;
+			while n <= 4
+				div.news-nav__content(id="content"+n, , class={"news-nav__content--active":n==1})
+					- n++
+					// Text with image
+					.text-with-image.text-with-image--page-news.text-with-image--reverse
+						.container.text-with-image__container
+							a.text-with-image__col-text(href="news-item.html")
+								time.text-with-image__text.text-uppercase 13 апреля 2022
+								h1.h2.text-red.text-with-image__title Орскую макаронную фабрику посетил губернатор Оренбургской области
+								p.text-with-image__text 1 апреля 2022 г. Орскую Макаронную Фабрику, входящую в состав холдинга «Агро-Альянс», посетил губернатор Оренбургской области, Денис Паслер. Губернатору показали весь производственный цикл — от замеса теста...
+							.text-with-image__col-img
+								+picture("text-with-image/img3", "text-with-image__img", "jpg", "")
 
-	// News-sample
-	.news-sample.container
-		// News
-		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
-			.news-sample__img-box
-				+picture("news-sample/img1", "news-sample__img", "jpg", "")
-				.news-sample__social-link(href="#", target="_blank", rel="noreferrer nofollow")
-					+svg("social-vk", true)(class="news-sample__social-link-icon")
-			.news-sample__text-box
-				p.news-sample__text 4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»
-				time.news-sample__time 21 октября 2022
-		// News
-		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
-			.news-sample__img-box
-				+picture("news-sample/img2", "news-sample__img", "jpg", "")
-			.news-sample__text-box
-				p.news-sample__text Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи
-				time.news-sample__time 21 октября 2022
-		// News
-		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
-			.news-sample__img-box
-				+picture("news-sample/img3", "news-sample__img", "jpg", "")
-			.news-sample__text-box
-				p.news-sample__text Покупаем онлайн: теперь наша продукция доступна к покупке на самых разных онлайн-площадках
-				time.news-sample__time 21 октября 2022
-		// News
-		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
-			.news-sample__img-box
-				+picture("news-sample/img4", "news-sample__img", "jpg", "")
-			.news-sample__text-box
-				p.news-sample__text Выпускаем линейку AIDA integrale – цельнозерновой пасты
-				time.news-sample__time 21 октября 2021
-		// News
-		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
-			.news-sample__img-box
-				+picture("news-sample/img5", "news-sample__img", "jpg", "")
-			.news-sample__text-box
-				p.news-sample__text Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини
-				time.news-sample__time 21 октября 2019
-		// News
-		a.news-sample__card.animation-start-opacity-show-bottom(href="#")
-			.news-sample__img-box
-				+picture("news-sample/img6", "news-sample__img", "jpg", "")
-			.news-sample__text-box
-				p.news-sample__text AIDA предстала перед потребителями в новой крафтовой упаковке.
-				time.news-sample__time 21 октября 2018
+					// News-sample
+					.news-sample.container
+						// News
+						a.news-sample__card.animation-start-opacity-show-bottom(href="news-item.html")
+							.news-sample__img-box
+								+picture("news-sample/img1", "news-sample__img", "jpg", "")
+								.news-sample__social-link
+									+svg("social-vk", true)(class="news-sample__social-link-icon")
+							.news-sample__text-box
+								p.news-sample__text 4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»
+								time.news-sample__time 21 октября 2022
+						// News
+						a.news-sample__card.animation-start-opacity-show-bottom(href="news-item.html")
+							.news-sample__img-box
+								+picture("news-sample/img2", "news-sample__img", "jpg", "")
+							.news-sample__text-box
+								p.news-sample__text Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи
+								time.news-sample__time 21 октября 2022
+						// News
+						a.news-sample__card.animation-start-opacity-show-bottom(href="news-item.html")
+							.news-sample__img-box
+								+picture("news-sample/img3", "news-sample__img", "jpg", "")
+							.news-sample__text-box
+								p.news-sample__text Покупаем онлайн: теперь наша продукция доступна к покупке на самых разных онлайн-площадках
+								time.news-sample__time 21 октября 2022
+						// News
+						a.news-sample__card.animation-start-opacity-show-bottom(href="news-item.html")
+							.news-sample__img-box
+								+picture("news-sample/img4", "news-sample__img", "jpg", "")
+							.news-sample__text-box
+								p.news-sample__text Выпускаем линейку AIDA integrale – цельнозерновой пасты
+								time.news-sample__time 21 октября 2021
+						// News
+						a.news-sample__card.animation-start-opacity-show-bottom(href="news-item.html")
+							.news-sample__img-box
+								+picture("news-sample/img5", "news-sample__img", "jpg", "")
+							.news-sample__text-box
+								p.news-sample__text Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини
+								time.news-sample__time 21 октября 2019
+						// News
+						a.news-sample__card.animation-start-opacity-show-bottom(href="news-item.html")
+							.news-sample__img-box
+								+picture("news-sample/img6", "news-sample__img", "jpg", "")
+							.news-sample__text-box
+								p.news-sample__text AIDA предстала перед потребителями в новой крафтовой упаковке.
+								time.news-sample__time 21 октября 2018

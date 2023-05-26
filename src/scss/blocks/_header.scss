@@ -10,6 +10,11 @@
 	color: $color-white;
 	transition: color 1s ease, background-color .4s ease-in;
 
+	@media print {
+		position: relative !important;
+		background-color: $color-transparent !important;
+	}
+
 	&--middle,
 	&--permanently-white {
 		background-color: $color-white;
@@ -46,6 +51,12 @@
 			@media (min-width: $breakpoint-desktop-min) {
 				width: 116px;
 			}
+		}
+
+		@media print {
+			transform: none !important;
+			opacity: 1 !important;
+			width: 116px !important;
 		}
 	}
 
@@ -89,6 +100,10 @@
 			box-shadow: none;
 			transform: none;
 			opacity: 1;
+		}
+
+		@media print {
+			display: none !important;
 		}
 	}
 
@@ -144,6 +159,10 @@
 			padding-top: 0;
 			padding-bottom: 2px;
 			transform: translateY(-100px);
+		}
+
+		@media print {
+			display: none !important;
 		}
 	}
 
@@ -206,6 +225,10 @@
 
 		@media (min-width: $breakpoint-desktop-min) {
 			display: none;
+		}
+
+		@media print {
+			display: none !important;
 		}
 	}
 

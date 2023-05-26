@@ -22,10 +22,8 @@ document.addEventListener('DOMContentLoaded', () => {
 					}
 				)
 
-
 				gsap.to('.technology-block--type1 .technology-block__img-box--n3',
 					{
-						y: 0,
 						opacity: 1,
 						duration: .7,
 						delay: 1,
@@ -64,11 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
 							scrub: 2
 						}
 					})
-				gsap.to('.technology-block--type1 .technology-block__img--n3',
+				gsap.to('.technology-block--type1 .technology-block__img-box--n3',
 					{
-						x: -300,
+						y: 0,
 						scrollTrigger: {
-							trigger: '.technology-block--type1 .technology-block__img--n3',
+							trigger: '.technology-block--type1 .technology-block__img-box--n3',
 							scrub: 2
 						}
 					})
@@ -87,11 +85,11 @@ document.addEventListener('DOMContentLoaded', () => {
 						opacity:1,
 						duration: .7,
 					})
-				gsap.to('.technology-block--type1 .technology-block__img--n3',
+				gsap.to('.technology-block--type1 .technology-block__img-box--n3',
 					{
-						x: -70,
+						y: -70,
 						scrollTrigger: {
-							trigger: '.technology-block--type1 .technology-block__img--n3',
+							trigger: '.technology-block--type1 .technology-block__img-box--n3',
 							scrub: 2
 						}
 					})
@@ -197,7 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			gsap.to('.technology-block--type4 .technology-block__img-box--n2', {
 				opacity: 1,
-				y: 0,
+				y: 150,
 				duration: 1,
 				scrollTrigger: {
 					trigger: '.technology-block--type4 .technology-block__img-box--n2'
@@ -207,9 +205,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			const mm = gsap.matchMedia()
 			// Desktop
-			mm.add('(min-width: 1200px)', () => {gsap.to('.technology-block--type4 .technology-block__img--n2',
+			mm.add('(min-width: 1200px)', () => {gsap.to('.technology-block--type4 .technology-block__img-box--n2',
 				{
-					x: -600,
+					y: 0,
 					scrollTrigger: {
 						trigger: '.technology-block--type4 .technology-block__img-box--n2',
 						scrub: 1.7
@@ -217,9 +215,9 @@ document.addEventListener('DOMContentLoaded', () => {
 				})
 			})
 			// Tablet-mobile
-			mm.add('(max-width: 1199px)', () => {gsap.to('.technology-block--type4 .technology-block__img--n2',
+			mm.add('(max-width: 1199px)', () => {gsap.to('.technology-block--type4 .technology-block__img-box--n2',
 				{
-					x: 100,
+					y:0,
 					scrollTrigger: {
 						trigger: '.technology-block--type4 .technology-block__img-box--n2',
 						scrub: 1.7
@@ -464,9 +462,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Type 10
 		if (target.classList.contains('technology-block--type10')) {
-			gsap.to(['.technology-block--type10 .technology-block__img-box--n1', '.technology-block--type10 .technology-block__img-box--n2'], {
+			gsap.to('.technology-block--type10 .technology-block__img-box--n1', {
 				opacity: 1,
+				duration: 1,
+				stagger: .5,
+				scrollTrigger: {
+					trigger: '.technology-block--type10 .technology-block__img-box--n1'
+				}
+			})
+			gsap.to('.technology-block--type10 .technology-block__img-box--n2', {
 				y: 0,
+				opacity: 1,
 				duration: 1,
 				stagger: .5,
 				scrollTrigger: {
@@ -497,10 +503,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			const mm = gsap.matchMedia()
 			// Desktop
 			mm.add('(min-width: 1200px)', () => {
-				gsap.to('.technology-block--type10 .technology-block__img--n1', {
-					x: 100,
+				gsap.to('.technology-block--type10 .technology-block__img-box--n1', {
+					y: 30,
 					scrollTrigger: {
-						trigger: '.technology-block--type10 .technology-block__img--n1',
+						trigger: '.technology-block--type10 .technology-block__img-box--n1',
 						scrub: 2,
 						start: "center bottom"
 					}
@@ -508,10 +514,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			})
 			// Tablet-mobile
 			mm.add('(max-width: 1199px)', () => {
-				gsap.to('.technology-block--type10 .technology-block__img--n1', {
-					x: 40,
+				gsap.to('.technology-block--type10 .technology-block__img-box--n1', {
+					y: 20,
 					scrollTrigger: {
-						trigger: '.technology-block--type10 .technology-block__img--n1',
+						trigger: '.technology-block--type10 .technology-block__img-box--n1',
 						scrub: 2,
 					}
 				})

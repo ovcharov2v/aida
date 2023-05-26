@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const boxList = gsap.utils.toArray('.section-image-back')
 
 	boxList.forEach((box) => {
-		const img = box.querySelector('.section-image-back__bg')
+		/*const img = box.querySelector('.section-image-back__bg')
 		gsap.to(img, {
 			scrollTrigger: {
 				trigger: box,
@@ -18,6 +18,20 @@ document.addEventListener('DOMContentLoaded', () => {
 				invalidateOnRefresh: true
 			},
 			backgroundPosition: "center top -"+(img.offsetHeight)/10+100+'px',
+			ease: "none",
+		});*/
+		const img = box.querySelector('.section-image-back__bg')
+		gsap.fromTo(img, {
+			yPercent: -10,
+			scale: 1.2,
+		}, {
+			scrollTrigger: {
+				trigger: box,
+				scrub: 1.7,
+				invalidateOnRefresh: true,
+			},
+			yPercent: 10,
+			scale: 1.2,
 			ease: "none",
 		});
 	})

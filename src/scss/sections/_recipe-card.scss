@@ -4,16 +4,23 @@
 
 	&__img-box {
 		position: relative;
+		overflow: hidden;
 	}
 
 	&__img {
 		display: block;
 		width: 100%;
 		object-fit: cover;
+		transition: transform .4s;
+
+		.recipe-card:hover & {
+			transform: scale(1.1);
+		}
 	}
 
 	&__label {
 		position: absolute;
+		z-index: 1;
 		top: 14px;
 		right: 11px;
 		padding: 1px 12px 3px;
@@ -47,14 +54,16 @@
 			padding: 31px 16px 24px;
 
 			@media (min-width: $breakpoint-desktop-min) {
-				padding: 46px 28px 13px;}
+				padding: 46px 28px 13px;
+			}
 		}
 
 		.recipe-card--big & {
 			padding: 31px 16px 24px;
 
 			@media (min-width: $breakpoint-desktop-min) {
-				padding: 62px 38px 38px;}
+				padding: 62px 38px 38px;
+			}
 		}
 	}
 
@@ -86,7 +95,8 @@
 			@media (min-width: $breakpoint-desktop-min) {
 				margin-bottom: 38px;
 				font-size: 28px;
-				line-height: 32px;}
+				line-height: 32px;
+			}
 		}
 
 		.recipe-card--big & {
@@ -98,7 +108,8 @@
 			@media (min-width: $breakpoint-desktop-min) {
 				margin-bottom: 56px;
 				font-size: 46px;
-				line-height: 52px;}
+				line-height: 52px;
+			}
 		}
 	}
 

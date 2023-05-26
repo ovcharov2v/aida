@@ -40,7 +40,7 @@ block content
 							+svg("social-dzen", true)(class="socials__link-icon")
 				.recipe-intro__print-box
 					p.recipe-intro__print-text Распечатать
-					a.recipe-intro__print-link(href="#", target="_blank", rel="noreferrer nofollow")
+					button.recipe-intro__print-link(onClick="window.print()")
 						+svg("print", true)(class="recipe-intro__print-link-icon")
 	// Recipe ingredients
 	section.recipe-ingredients.container

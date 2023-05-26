@@ -17,9 +17,11 @@ block content
 					|
 					span.history-intro__title-block AIDA
 			.history-intro__col-img
-				+picture("history-intro/img1", "history-intro__img history-intro__img--n1", "jpg", "")
+				.history-intro__img.history-intro__img--n1.animated-image
+					+picture("history-intro/img1", "animated-image__img", "jpg", "")
 				.history-intro__col-img-back
-				+picture("history-intro/img2", "history-intro__img history-intro__img--n2", "jpg", "")
+				.history-intro__img.history-intro__img--n2.animated-image
+					+picture("history-intro/img2", "animated-image__img", "jpg", "")
 
 	// Section History timeline
 	.history-timeline.container
@@ -80,7 +82,7 @@ block content
 				p.history-timeline__text AIDA появляется в онлайн-магазинах – теперь
 					|
 					|
-					a(href="#") купить
+					a.history-timeline__link(href="#") купить
 					|
 					|
 					|любимую пасту можно не выходя из дома.

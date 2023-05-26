@@ -865,6 +865,37 @@ document.addEventListener('DOMContentLoaded', function () {
     duration: 1,
     ease: 'ease-in-out'
   });
+  var newsNavLinks = document.querySelectorAll('.news-nav__link');
+  var animationBegin = false;
+  newsNavLinks.forEach(function (navLink) {
+    navLink.addEventListener('click', function () {
+      if (!navLink.classList.contains('news-nav__link--active') && !animationBegin) {
+        animationBegin = true;
+        target.querySelector('.news-nav__link--active').classList.remove('news-nav__link--active');
+        navLink.classList.add('news-nav__link--active');
+        var currentContent = target.querySelector('.news-nav__content--active');
+        var newContent = target.querySelector("#".concat(navLink.dataset.content));
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].timeline({
+          onComplete: function onComplete() {
+            currentContent.classList.remove('news-nav__content--active');
+            newContent.classList.add('news-nav__content--active');
+            animationBegin = false;
+          }
+        }).to(currentContent, {
+          x: '-100vw',
+          opacity: 0,
+          duration: 1
+        }).fromTo(newContent, {
+          x: '100vw',
+          opacity: 0
+        }, {
+          x: 0,
+          opacity: 1,
+          duration: 1
+        }, "-=0.9");
+      }
+    });
+  });
 });
 
 /***/ }),
@@ -1506,12 +1537,9 @@ document.addEventListener('DOMContentLoaded', function () {
       //markers: true
     });
 
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__img', {
-      opacity: 0,
-      x: 200
-    }, {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipes-list__img', {
       opacity: 1,
-      x: 0,
+      y: 0,
       duration: 1,
       delay: .5,
       scrollTrigger: {
@@ -1521,10 +1549,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
   // Tablet-mobile
   mm.add('(max-width: 1199px)', function () {
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__img', {
-      opacity: 0,
-      y: 60
-    }, {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipes-list__img', {
       opacity: 1,
       y: 0,
       duration: 1,
@@ -1534,30 +1559,34 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__title1', {
-    opacity: 0,
-    x: -200
-  }, {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipes-list__title1-block', {
+    y: 0,
     opacity: 1,
-    x: 0,
-    duration: 1,
-    scrollTrigger: {
-      trigger: '.recipes-list__title1'
-    }
+    stagger: 0.5,
+    'webkitFilter': 'blur(0px)',
+    'filter': 'blur(0px)',
+    duration: 2
   });
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-list__title2', {
-    opacity: 0,
-    x: 200
-  }, {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipes-list__title2-block', {
+    y: 0,
     opacity: 1,
-    x: 0,
+    stagger: 0.5,
+    'webkitFilter': 'blur(0px)',
+    'filter': 'blur(0px)',
+    duration: 2,
+    delay: 1
+  });
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.recipes-list__text-box', {
+    opacity: 1,
+    y: 0,
     duration: 1,
+    delay: 2.5,
     scrollTrigger: {
-      trigger: '.recipes-list__title2'
+      trigger: '.recipes-list__text-box'
     }
   });
   var textElems = document.querySelectorAll(['.recipes-list__text', '.recipes-list__list-elem']);
-  textElems.forEach(function (elem) {
+  textElems.forEach(function (elem, index) {
     gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(elem, {
       opacity: 0,
       y: 100
@@ -1565,6 +1594,9 @@ document.addEventListener('DOMContentLoaded', function () {
       opacity: 1,
       y: 0,
       duration: 1,
+      delay: function delay() {
+        return index / 10;
+      },
       scrollTrigger: {
         trigger: elem
       }
@@ -1980,14 +2012,28 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!target) return;
   var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-image-back');
   boxList.forEach(function (box) {
+    /*const img = box.querySelector('.section-image-back__bg')
+    gsap.to(img, {
+    	scrollTrigger: {
+    		trigger: box,
+    		scrub: 1.3,
+    		invalidateOnRefresh: true
+    	},
+    	backgroundPosition: "center top -"+(img.offsetHeight)/10+100+'px',
+    	ease: "none",
+    });*/
     var img = box.querySelector('.section-image-back__bg');
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(img, {
+    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(img, {
+      yPercent: -10,
+      scale: 1.2
+    }, {
       scrollTrigger: {
         trigger: box,
-        scrub: 1.3,
+        scrub: 1.7,
         invalidateOnRefresh: true
       },
-      backgroundPosition: "center top -" + img.offsetHeight / 10 + 100 + 'px',
+      yPercent: 10,
+      scale: 1.2,
       ease: "none"
     });
   });
@@ -2583,7 +2629,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
       gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img-box--n3', {
-        y: 0,
         opacity: 1,
         duration: .7,
         delay: 1,
@@ -2617,10 +2662,10 @@ document.addEventListener('DOMContentLoaded', function () {
             scrub: 2
           }
         });
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n3', {
-          x: -300,
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img-box--n3', {
+          y: 0,
           scrollTrigger: {
-            trigger: '.technology-block--type1 .technology-block__img--n3',
+            trigger: '.technology-block--type1 .technology-block__img-box--n3',
             scrub: 2
           }
         });
@@ -2637,10 +2682,10 @@ document.addEventListener('DOMContentLoaded', function () {
           opacity: 1,
           duration: .7
         });
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img--n3', {
-          x: -70,
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type1 .technology-block__img-box--n3', {
+          y: -70,
           scrollTrigger: {
-            trigger: '.technology-block--type1 .technology-block__img--n3',
+            trigger: '.technology-block--type1 .technology-block__img-box--n3',
             scrub: 2
           }
         });
@@ -2741,7 +2786,7 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img-box--n2', {
         opacity: 1,
-        y: 0,
+        y: 150,
         duration: 1,
         scrollTrigger: {
           trigger: '.technology-block--type4 .technology-block__img-box--n2'
@@ -2750,8 +2795,8 @@ document.addEventListener('DOMContentLoaded', function () {
       var _mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
       // Desktop
       _mm.add('(min-width: 1200px)', function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img--n2', {
-          x: -600,
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img-box--n2', {
+          y: 0,
           scrollTrigger: {
             trigger: '.technology-block--type4 .technology-block__img-box--n2',
             scrub: 1.7
@@ -2760,8 +2805,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       // Tablet-mobile
       _mm.add('(max-width: 1199px)', function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img--n2', {
-          x: 100,
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img-box--n2', {
+          y: 0,
           scrollTrigger: {
             trigger: '.technology-block--type4 .technology-block__img-box--n2',
             scrub: 1.7
@@ -2993,9 +3038,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Type 10
     if (target.classList.contains('technology-block--type10')) {
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.technology-block--type10 .technology-block__img-box--n1', '.technology-block--type10 .technology-block__img-box--n2'], {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img-box--n1', {
         opacity: 1,
+        duration: 1,
+        stagger: .5,
+        scrollTrigger: {
+          trigger: '.technology-block--type10 .technology-block__img-box--n1'
+        }
+      });
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img-box--n2', {
         y: 0,
+        opacity: 1,
         duration: 1,
         stagger: .5,
         scrollTrigger: {
@@ -3023,10 +3076,10 @@ document.addEventListener('DOMContentLoaded', function () {
       var _mm3 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
       // Desktop
       _mm3.add('(min-width: 1200px)', function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img--n1', {
-          x: 100,
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img-box--n1', {
+          y: 30,
           scrollTrigger: {
-            trigger: '.technology-block--type10 .technology-block__img--n1',
+            trigger: '.technology-block--type10 .technology-block__img-box--n1',
             scrub: 2,
             start: "center bottom"
           }
@@ -3034,10 +3087,10 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       // Tablet-mobile
       _mm3.add('(max-width: 1199px)', function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img--n1', {
-          x: 40,
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img-box--n1', {
+          y: 20,
           scrollTrigger: {
-            trigger: '.technology-block--type10 .technology-block__img--n1',
+            trigger: '.technology-block--type10 .technology-block__img-box--n1',
             scrub: 2
           }
         });

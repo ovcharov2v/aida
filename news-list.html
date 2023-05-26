@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="description" content="Описание AIDA">
 		<title>AIDA Новости</title>
-		<link rel="stylesheet" href="./css/main.css?v=1684969884291">
+		<link rel="stylesheet" href="./css/main.css?v=1685063309718">
 	</head>
 	<body class="body-top-offset">
 		<!-- Header-->
@@ -45,98 +45,359 @@
 				</button>
 			</div>
 		</header>
-		<div class="container">
-			<ul class="news-nav">
-				<li class="news-nav__elem"><span class="news-nav__link news-nav__link--active">Все<span class="show-desktop-inline">&nbsp;новости</span></span></li>
-				<li class="news-nav__elem"><a class="news-nav__link" href="#">соцсети</a></li>
-				<li class="news-nav__elem"><a class="news-nav__link" href="#">О нас пишут</a></li>
-				<li class="news-nav__elem"><a class="news-nav__link" href="#">Акции</a></li>
-			</ul>
-		</div>
-		<!-- Text with image-->
-		<div class="text-with-image text-with-image--page-news text-with-image--reverse">
-			<div class="container text-with-image__container">
-				<div class="text-with-image__col-text">
-					<time class="text-with-image__text text-uppercase">13 апреля 2022</time>
-					<h1 class="h2 text-red text-with-image__title">Орскую макаронную фабрику посетил губернатор Оренбургской области</h1>
-					<p class="text-with-image__text">1 апреля 2022 г. Орскую Макаронную Фабрику, входящую в состав холдинга «Агро-Альянс», посетил губернатор Оренбургской области, Денис Паслер. Губернатору показали весь производственный цикл — от замеса теста...</p>
+		<div class="news-nav">
+			<div class="container">
+				<ul class="news-nav__nav">
+					<li class="news-nav__elem">
+						<button class="news-nav__link news-nav__link--active" data-content="content1">Все<span class="show-desktop-inline">&nbsp;новости</span></button>
+					</li>
+					<li class="news-nav__elem">
+						<button class="news-nav__link" data-content="content2">соцсети</button>
+					</li>
+					<li class="news-nav__elem">
+						<button class="news-nav__link" data-content="content3">О нас пишут</button>
+					</li>
+					<li class="news-nav__elem">
+						<button class="news-nav__link" data-content="content4">Акции</button>
+					</li>
+				</ul>
+			</div>
+			<div class="news-nav__content-box">
+				<div class="news-nav__content news-nav__content--active" id="content1" >
+					<!-- Text with image-->
+					<div class="text-with-image text-with-image--page-news text-with-image--reverse">
+						<div class="container text-with-image__container"><a class="text-with-image__col-text" href="news-item.html">
+								<time class="text-with-image__text text-uppercase">13 апреля 2022</time>
+								<h1 class="h2 text-red text-with-image__title">Орскую макаронную фабрику посетил губернатор Оренбургской области</h1>
+								<p class="text-with-image__text">1 апреля 2022 г. Орскую Макаронную Фабрику, входящую в состав холдинга «Агро-Альянс», посетил губернатор Оренбургской области, Денис Паслер. Губернатору показали весь производственный цикл — от замеса теста...</p></a>
+							<div class="text-with-image__col-img">
+								<picture>
+									<source srcset="images/text-with-image/img3@1x.webp, images/text-with-image/img3@2x.webp 2x" type="image/webp"/><img class="text-with-image__img" src="images/text-with-image/img3@1x.jpg" srcset="images/text-with-image/img3@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+						</div>
+					</div>
+					<!-- News-sample-->
+					<div class="news-sample container">
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img1@1x.webp, images/news-sample/img1@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img1@1x.jpg" srcset="images/news-sample/img1@2x.jpg 2x" alt=""/>
+								</picture>
+								<div class="news-sample__social-link">
+									<svg class="news-sample__social-link-icon">
+										<use xlink:href="#social-vk"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img2@1x.webp, images/news-sample/img2@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img2@1x.jpg" srcset="images/news-sample/img2@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img3@1x.webp, images/news-sample/img3@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img3@1x.jpg" srcset="images/news-sample/img3@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Покупаем онлайн: теперь наша продукция доступна к покупке на самых разных онлайн-площадках</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img4@1x.webp, images/news-sample/img4@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img4@1x.jpg" srcset="images/news-sample/img4@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Выпускаем линейку AIDA integrale – цельнозерновой пасты</p>
+								<time class="news-sample__time">21 октября 2021</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img5@1x.webp, images/news-sample/img5@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img5@1x.jpg" srcset="images/news-sample/img5@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини</p>
+								<time class="news-sample__time">21 октября 2019</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img6@1x.webp, images/news-sample/img6@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img6@1x.jpg" srcset="images/news-sample/img6@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">AIDA предстала перед потребителями в новой крафтовой упаковке.</p>
+								<time class="news-sample__time">21 октября 2018</time>
+							</div></a>
+					</div>
 				</div>
-				<div class="text-with-image__col-img">
-					<picture>
-						<source srcset="images/text-with-image/img3@1x.webp, images/text-with-image/img3@2x.webp 2x" type="image/webp"/><img class="text-with-image__img" src="images/text-with-image/img3@1x.jpg" srcset="images/text-with-image/img3@2x.jpg 2x" alt=""/>
-					</picture>
+				<div class="news-nav__content" id="content2" >
+					<!-- Text with image-->
+					<div class="text-with-image text-with-image--page-news text-with-image--reverse">
+						<div class="container text-with-image__container"><a class="text-with-image__col-text" href="news-item.html">
+								<time class="text-with-image__text text-uppercase">13 апреля 2022</time>
+								<h1 class="h2 text-red text-with-image__title">Орскую макаронную фабрику посетил губернатор Оренбургской области</h1>
+								<p class="text-with-image__text">1 апреля 2022 г. Орскую Макаронную Фабрику, входящую в состав холдинга «Агро-Альянс», посетил губернатор Оренбургской области, Денис Паслер. Губернатору показали весь производственный цикл — от замеса теста...</p></a>
+							<div class="text-with-image__col-img">
+								<picture>
+									<source srcset="images/text-with-image/img3@1x.webp, images/text-with-image/img3@2x.webp 2x" type="image/webp"/><img class="text-with-image__img" src="images/text-with-image/img3@1x.jpg" srcset="images/text-with-image/img3@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+						</div>
+					</div>
+					<!-- News-sample-->
+					<div class="news-sample container">
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img1@1x.webp, images/news-sample/img1@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img1@1x.jpg" srcset="images/news-sample/img1@2x.jpg 2x" alt=""/>
+								</picture>
+								<div class="news-sample__social-link">
+									<svg class="news-sample__social-link-icon">
+										<use xlink:href="#social-vk"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img2@1x.webp, images/news-sample/img2@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img2@1x.jpg" srcset="images/news-sample/img2@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img3@1x.webp, images/news-sample/img3@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img3@1x.jpg" srcset="images/news-sample/img3@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Покупаем онлайн: теперь наша продукция доступна к покупке на самых разных онлайн-площадках</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img4@1x.webp, images/news-sample/img4@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img4@1x.jpg" srcset="images/news-sample/img4@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Выпускаем линейку AIDA integrale – цельнозерновой пасты</p>
+								<time class="news-sample__time">21 октября 2021</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img5@1x.webp, images/news-sample/img5@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img5@1x.jpg" srcset="images/news-sample/img5@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини</p>
+								<time class="news-sample__time">21 октября 2019</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img6@1x.webp, images/news-sample/img6@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img6@1x.jpg" srcset="images/news-sample/img6@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">AIDA предстала перед потребителями в новой крафтовой упаковке.</p>
+								<time class="news-sample__time">21 октября 2018</time>
+							</div></a>
+					</div>
+				</div>
+				<div class="news-nav__content" id="content3" >
+					<!-- Text with image-->
+					<div class="text-with-image text-with-image--page-news text-with-image--reverse">
+						<div class="container text-with-image__container"><a class="text-with-image__col-text" href="news-item.html">
+								<time class="text-with-image__text text-uppercase">13 апреля 2022</time>
+								<h1 class="h2 text-red text-with-image__title">Орскую макаронную фабрику посетил губернатор Оренбургской области</h1>
+								<p class="text-with-image__text">1 апреля 2022 г. Орскую Макаронную Фабрику, входящую в состав холдинга «Агро-Альянс», посетил губернатор Оренбургской области, Денис Паслер. Губернатору показали весь производственный цикл — от замеса теста...</p></a>
+							<div class="text-with-image__col-img">
+								<picture>
+									<source srcset="images/text-with-image/img3@1x.webp, images/text-with-image/img3@2x.webp 2x" type="image/webp"/><img class="text-with-image__img" src="images/text-with-image/img3@1x.jpg" srcset="images/text-with-image/img3@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+						</div>
+					</div>
+					<!-- News-sample-->
+					<div class="news-sample container">
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img1@1x.webp, images/news-sample/img1@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img1@1x.jpg" srcset="images/news-sample/img1@2x.jpg 2x" alt=""/>
+								</picture>
+								<div class="news-sample__social-link">
+									<svg class="news-sample__social-link-icon">
+										<use xlink:href="#social-vk"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img2@1x.webp, images/news-sample/img2@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img2@1x.jpg" srcset="images/news-sample/img2@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img3@1x.webp, images/news-sample/img3@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img3@1x.jpg" srcset="images/news-sample/img3@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Покупаем онлайн: теперь наша продукция доступна к покупке на самых разных онлайн-площадках</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img4@1x.webp, images/news-sample/img4@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img4@1x.jpg" srcset="images/news-sample/img4@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Выпускаем линейку AIDA integrale – цельнозерновой пасты</p>
+								<time class="news-sample__time">21 октября 2021</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img5@1x.webp, images/news-sample/img5@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img5@1x.jpg" srcset="images/news-sample/img5@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини</p>
+								<time class="news-sample__time">21 октября 2019</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img6@1x.webp, images/news-sample/img6@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img6@1x.jpg" srcset="images/news-sample/img6@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">AIDA предстала перед потребителями в новой крафтовой упаковке.</p>
+								<time class="news-sample__time">21 октября 2018</time>
+							</div></a>
+					</div>
+				</div>
+				<div class="news-nav__content" id="content4" >
+					<!-- Text with image-->
+					<div class="text-with-image text-with-image--page-news text-with-image--reverse">
+						<div class="container text-with-image__container"><a class="text-with-image__col-text" href="news-item.html">
+								<time class="text-with-image__text text-uppercase">13 апреля 2022</time>
+								<h1 class="h2 text-red text-with-image__title">Орскую макаронную фабрику посетил губернатор Оренбургской области</h1>
+								<p class="text-with-image__text">1 апреля 2022 г. Орскую Макаронную Фабрику, входящую в состав холдинга «Агро-Альянс», посетил губернатор Оренбургской области, Денис Паслер. Губернатору показали весь производственный цикл — от замеса теста...</p></a>
+							<div class="text-with-image__col-img">
+								<picture>
+									<source srcset="images/text-with-image/img3@1x.webp, images/text-with-image/img3@2x.webp 2x" type="image/webp"/><img class="text-with-image__img" src="images/text-with-image/img3@1x.jpg" srcset="images/text-with-image/img3@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+						</div>
+					</div>
+					<!-- News-sample-->
+					<div class="news-sample container">
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img1@1x.webp, images/news-sample/img1@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img1@1x.jpg" srcset="images/news-sample/img1@2x.jpg 2x" alt=""/>
+								</picture>
+								<div class="news-sample__social-link">
+									<svg class="news-sample__social-link-icon">
+										<use xlink:href="#social-vk"></use>
+									</svg>
+								</div>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img2@1x.webp, images/news-sample/img2@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img2@1x.jpg" srcset="images/news-sample/img2@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img3@1x.webp, images/news-sample/img3@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img3@1x.jpg" srcset="images/news-sample/img3@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Покупаем онлайн: теперь наша продукция доступна к покупке на самых разных онлайн-площадках</p>
+								<time class="news-sample__time">21 октября 2022</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img4@1x.webp, images/news-sample/img4@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img4@1x.jpg" srcset="images/news-sample/img4@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Выпускаем линейку AIDA integrale – цельнозерновой пасты</p>
+								<time class="news-sample__time">21 октября 2021</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img5@1x.webp, images/news-sample/img5@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img5@1x.jpg" srcset="images/news-sample/img5@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини</p>
+								<time class="news-sample__time">21 октября 2019</time>
+							</div></a>
+						<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="news-item.html">
+							<div class="news-sample__img-box">
+								<picture>
+									<source srcset="images/news-sample/img6@1x.webp, images/news-sample/img6@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img6@1x.jpg" srcset="images/news-sample/img6@2x.jpg 2x" alt=""/>
+								</picture>
+							</div>
+							<div class="news-sample__text-box">
+								<p class="news-sample__text">AIDA предстала перед потребителями в новой крафтовой упаковке.</p>
+								<time class="news-sample__time">21 октября 2018</time>
+							</div></a>
+					</div>
 				</div>
 			</div>
 		</div>
-		<!-- News-sample-->
-		<div class="news-sample container">
-			<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="#">
-				<div class="news-sample__img-box">
-					<picture>
-						<source srcset="images/news-sample/img1@1x.webp, images/news-sample/img1@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img1@1x.jpg" srcset="images/news-sample/img1@2x.jpg 2x" alt=""/>
-					</picture>
-					<div class="news-sample__social-link" href="#" target="_blank" rel="noreferrer nofollow">
-						<svg class="news-sample__social-link-icon">
-							<use xlink:href="#social-vk"></use>
-						</svg>
-					</div>
-				</div>
-				<div class="news-sample__text-box">
-					<p class="news-sample__text">4 продукта бренда AIDA получили золотые медали на Всероссийской агропромышленной выставке «Золотая осень»</p>
-					<time class="news-sample__time">21 октября 2022</time>
-				</div></a>
-			<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="#">
-				<div class="news-sample__img-box">
-					<picture>
-						<source srcset="images/news-sample/img2@1x.webp, images/news-sample/img2@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img2@1x.jpg" srcset="images/news-sample/img2@2x.jpg 2x" alt=""/>
-					</picture>
-				</div>
-				<div class="news-sample__text-box">
-					<p class="news-sample__text">Ассортимент пасты AIDA пополнился популярным продуктом: листы для лазаньи</p>
-					<time class="news-sample__time">21 октября 2022</time>
-				</div></a>
-			<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="#">
-				<div class="news-sample__img-box">
-					<picture>
-						<source srcset="images/news-sample/img3@1x.webp, images/news-sample/img3@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img3@1x.jpg" srcset="images/news-sample/img3@2x.jpg 2x" alt=""/>
-					</picture>
-				</div>
-				<div class="news-sample__text-box">
-					<p class="news-sample__text">Покупаем онлайн: теперь наша продукция доступна к покупке на самых разных онлайн-площадках</p>
-					<time class="news-sample__time">21 октября 2022</time>
-				</div></a>
-			<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="#">
-				<div class="news-sample__img-box">
-					<picture>
-						<source srcset="images/news-sample/img4@1x.webp, images/news-sample/img4@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img4@1x.jpg" srcset="images/news-sample/img4@2x.jpg 2x" alt=""/>
-					</picture>
-				</div>
-				<div class="news-sample__text-box">
-					<p class="news-sample__text">Выпускаем линейку AIDA integrale – цельнозерновой пасты</p>
-					<time class="news-sample__time">21 октября 2021</time>
-				</div></a>
-			<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="#">
-				<div class="news-sample__img-box">
-					<picture>
-						<source srcset="images/news-sample/img5@1x.webp, images/news-sample/img5@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img5@1x.jpg" srcset="images/news-sample/img5@2x.jpg 2x" alt=""/>
-					</picture>
-				</div>
-				<div class="news-sample__text-box">
-					<p class="news-sample__text">Портфель бренда пополнился листами для лазаньи, гнёздами тальятелли и копеллини</p>
-					<time class="news-sample__time">21 октября 2019</time>
-				</div></a>
-			<!-- News--><a class="news-sample__card animation-start-opacity-show-bottom" href="#">
-				<div class="news-sample__img-box">
-					<picture>
-						<source srcset="images/news-sample/img6@1x.webp, images/news-sample/img6@2x.webp 2x" type="image/webp"/><img class="news-sample__img" src="images/news-sample/img6@1x.jpg" srcset="images/news-sample/img6@2x.jpg 2x" alt=""/>
-					</picture>
-				</div>
-				<div class="news-sample__text-box">
-					<p class="news-sample__text">AIDA предстала перед потребителями в новой крафтовой упаковке.</p>
-					<time class="news-sample__time">21 октября 2018</time>
-				</div></a>
-		</div>
-		<footer class="footer js-modal-success-box">
+		<footer class="footer _js-modal-success-box">
 			<div class="container footer__container">
 				<div class="footer__contacts">
 					<div class="footer__contacts-col">
@@ -154,13 +415,6 @@
 									</svg></a></li>
 						</ul>
 					</div>
-					<div class="footer__contacts-col footer__contacts-col--subscribe">
-						<p class="footer__contacts-title">Подпишитесь на рассылку</p>
-						<form class="footer__form js-modal-success-trigger" action="#">
-							<input class="footer__form-input" type="email" placeholder="Email" required>
-							<button class="button button--gold footer__form-submit" type="submit">Отправить</button>
-						</form>
-					</div>
 				</div>
 				<div class="footer__copyright"><a class="footer__copyright-link" href="#">Политика</a>
 					<div class="footer__copyright-text-box">
@@ -173,21 +427,10 @@
 				<source src="videos/footer.mp4" type="video/mp4">
 			</video>
 			<!-- Success modal-->
-			<div class="modal-success">
-				<div class="container modal-success__container">
-					<div class="modal-success__window">
-						<button class="modal-success__close" aria-label="Закрыть">
-							<svg class="modal-success__close-icon">
-								<use xlink:href="#modal-close"></use>
-							</svg>
-						</button>
-						<p class="h4 modal-success__text">Спасибо,<br>сообщение отправлено</p>
-					</div>
-				</div>
-			</div>
+			<!--include modal-success-->
 		</footer>
-		<script src="./js/vendor.js?v=1684969884291"></script>
-		<script src="./js/main.js?v=1684969884291"></script><img class="hidden" src="images/svg-sprite/static/sprite.svg"><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1685063309719"></script>
+		<script src="./js/main.js?v=1685063309719"></script><img class="hidden" src="images/svg-sprite/static/sprite.svg"><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13" id="recipe-time">
 		<path d="M4.8457 7.33887L6.26493 7.33887" stroke="currentColor" stroke-width="0.747384"></path>
 		<circle cx="5.31908" cy="7.35423" r="4.74031" stroke="currentColor" stroke-width="0.747384"></circle>

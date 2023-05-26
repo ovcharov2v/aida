@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width">
 		<meta name="description" content="Описание AIDA">
 		<title>AIDA История</title>
-		<link rel="stylesheet" href="./css/main.css?v=1684969883722">
+		<link rel="stylesheet" href="./css/main.css?v=1685063309106">
 	</head>
 	<body>
 		<!-- Header-->
@@ -54,13 +54,17 @@
 					</h1>
 				</div>
 				<div class="history-intro__col-img">
-					<picture>
-						<source srcset="images/history-intro/img1@1x.webp, images/history-intro/img1@2x.webp 2x" type="image/webp"/><img class="history-intro__img history-intro__img--n1" src="images/history-intro/img1@1x.jpg" srcset="images/history-intro/img1@2x.jpg 2x" alt=""/>
-					</picture>
+					<div class="history-intro__img history-intro__img--n1 animated-image">
+						<picture>
+							<source srcset="images/history-intro/img1@1x.webp, images/history-intro/img1@2x.webp 2x" type="image/webp"/><img class="animated-image__img" src="images/history-intro/img1@1x.jpg" srcset="images/history-intro/img1@2x.jpg 2x" alt=""/>
+						</picture>
+					</div>
 					<div class="history-intro__col-img-back"></div>
-					<picture>
-						<source srcset="images/history-intro/img2@1x.webp, images/history-intro/img2@2x.webp 2x" type="image/webp"/><img class="history-intro__img history-intro__img--n2" src="images/history-intro/img2@1x.jpg" srcset="images/history-intro/img2@2x.jpg 2x" alt=""/>
-					</picture>
+					<div class="history-intro__img history-intro__img--n2 animated-image">
+						<picture>
+							<source srcset="images/history-intro/img2@1x.webp, images/history-intro/img2@2x.webp 2x" type="image/webp"/><img class="animated-image__img" src="images/history-intro/img2@1x.jpg" srcset="images/history-intro/img2@2x.jpg 2x" alt=""/>
+						</picture>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -136,7 +140,7 @@
 					<h2 class="history-timeline__title">2020<br>Мы продолжаем расти</h2>
 					<p class="history-timeline__text">
 						AIDA появляется в онлайн-магазинах – теперь
-						<a href="#">купить</a>
+						<a class="history-timeline__link" href="#">купить</a>
 						
 						любимую пасту можно не выходя из дома.
 					</p>
@@ -185,7 +189,7 @@
 				</p>
 			</div>
 		</div>
-		<footer class="footer js-modal-success-box">
+		<footer class="footer _js-modal-success-box">
 			<div class="container footer__container">
 				<div class="footer__contacts">
 					<div class="footer__contacts-col">
@@ -203,13 +207,6 @@
 									</svg></a></li>
 						</ul>
 					</div>
-					<div class="footer__contacts-col footer__contacts-col--subscribe">
-						<p class="footer__contacts-title">Подпишитесь на рассылку</p>
-						<form class="footer__form js-modal-success-trigger" action="#">
-							<input class="footer__form-input" type="email" placeholder="Email" required>
-							<button class="button button--gold footer__form-submit" type="submit">Отправить</button>
-						</form>
-					</div>
 				</div>
 				<div class="footer__copyright"><a class="footer__copyright-link" href="#">Политика</a>
 					<div class="footer__copyright-text-box">
@@ -222,21 +219,10 @@
 				<source src="videos/footer.mp4" type="video/mp4">
 			</video>
 			<!-- Success modal-->
-			<div class="modal-success">
-				<div class="container modal-success__container">
-					<div class="modal-success__window">
-						<button class="modal-success__close" aria-label="Закрыть">
-							<svg class="modal-success__close-icon">
-								<use xlink:href="#modal-close"></use>
-							</svg>
-						</button>
-						<p class="h4 modal-success__text">Спасибо,<br>сообщение отправлено</p>
-					</div>
-				</div>
-			</div>
+			<!--include modal-success-->
 		</footer>
-		<script src="./js/vendor.js?v=1684969883722"></script>
-		<script src="./js/main.js?v=1684969883722"></script><img class="hidden" src="images/svg-sprite/static/sprite.svg"><svg width="0" height="0" class="hidden">
+		<script src="./js/vendor.js?v=1685063309107"></script>
+		<script src="./js/main.js?v=1685063309107"></script><img class="hidden" src="images/svg-sprite/static/sprite.svg"><svg width="0" height="0" class="hidden">
 	<symbol fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 13" id="recipe-time">
 		<path d="M4.8457 7.33887L6.26493 7.33887" stroke="currentColor" stroke-width="0.747384"></path>
 		<circle cx="5.31908" cy="7.35423" r="4.74031" stroke="currentColor" stroke-width="0.747384"></circle>

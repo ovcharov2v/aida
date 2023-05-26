@@ -47,7 +47,13 @@
 		grid-template-columns: repeat(2, minmax(155px, 1fr));
 		grid-auto-rows: 93px;
 		grid-gap: 7px 7px;
+
 		@media (min-width: $breakpoint-desktop-min) {
+			grid-template-columns: repeat(2, minmax(250px, 1fr));
+			grid-auto-rows: 140px;
+			grid-gap: 14px 14px;}
+
+		@media (min-width: 1400px) {
 			grid-template-columns: repeat(3, minmax(308px, 1fr));
 			grid-auto-rows: 180px;
 			grid-gap: 14px 14px;}

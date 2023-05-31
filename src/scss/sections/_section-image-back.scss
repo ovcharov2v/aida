@@ -47,6 +47,10 @@
 			@include background-image("../images/section-image-back/bg3");
 		}
 
+		.section-image-back--bg4 & {
+			@include background-image("../images/section-image-back/bg4");
+		}
+
 		.section-image-back--bg5 & {
 			@include background-image("../images/section-image-back/bg5");
 		}

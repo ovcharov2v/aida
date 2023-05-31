@@ -101,6 +101,13 @@
 			line-height: 32px;
 		}
 
+		&>span {
+			max-width: 50%;
+			&:nth-child(2n) {
+				text-align: right;
+			}
+		}
+
 		.product-card--small & {
 			font-size: 18px;
 			line-height: 21px;

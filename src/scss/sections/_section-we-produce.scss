@@ -1,10 +1,11 @@
 .section-we-produce {
 	padding-top: 97px;
-	padding-bottom: 394px;
+	padding-bottom: 140px;
 
 	@media (min-width: $breakpoint-desktop-min) {
 		padding-top: 97px;
-		padding-bottom: 394px;}
+		padding-bottom: 140px;
+	}
 
 	&__grid {
 		display: flex;
@@ -15,7 +16,8 @@
 			display: grid;
 			grid-template: auto / 478px auto;
 			column-gap: 73px;
-			margin-bottom: 149px;}
+			margin-bottom: 149px;
+		}
 	}
 
 	&__row {
@@ -26,7 +28,8 @@
 		@media (min-width: $breakpoint-desktop-min) {
 			display: flex;
 			align-items: flex-end;
-			justify-content: flex-end;}
+			justify-content: flex-end;
+		}
 	}
 
 	&__content {
@@ -40,7 +43,8 @@
 		width: 100%;
 
 		@media (min-width: $breakpoint-desktop-min) {
-			width: 442px;}
+			width: 442px;
+		}
 	}
 
 	&__img {
@@ -61,7 +65,8 @@
 		line-height: 30px;
 
 		@media (min-width: $breakpoint-desktop-min) {
-			margin-bottom: 50px;}
+			margin-bottom: 50px;
+		}
 	}
 
 	&__link {

@@ -2012,16 +2012,6 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!target) return;
   var boxList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.section-image-back');
   boxList.forEach(function (box) {
-    /*const img = box.querySelector('.section-image-back__bg')
-    gsap.to(img, {
-    	scrollTrigger: {
-    		trigger: box,
-    		scrub: 1.3,
-    		invalidateOnRefresh: true
-    	},
-    	backgroundPosition: "center top -"+(img.offsetHeight)/10+100+'px',
-    	ease: "none",
-    });*/
     var img = box.querySelector('.section-image-back__bg');
     gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(img, {
       yPercent: -10,

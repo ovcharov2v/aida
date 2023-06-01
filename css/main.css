@@ -2029,7 +2029,6 @@ input, textarea {
   .section-recipes-preview__recipe-img {
     display: block;
     width: 100%;
-    margin-bottom: 31px;
     -webkit-transition: -webkit-transform .4s;
     transition: -webkit-transform .4s;
     -o-transition: transform .4s;
@@ -2294,7 +2293,8 @@ input, textarea {
     color: #060606; }
     @media (min-width: 1200px) {
       .history-intro__title {
-        margin-bottom: 122px; } }
+        margin-top: 30px;
+        line-height: 105px; } }
   .history-intro__title-block {
     display: inline-block;
     opacity: 0;
@@ -2339,9 +2339,9 @@ input, textarea {
     @media (min-width: 1200px) {
       .history-intro__col-img-back {
         top: 11%;
-        left: 12%;
-        width: 57%;
-        height: 97%; } }
+        left: -34%;
+        width: 102%;
+        height: 104%; } }
   .history-intro__img {
     display: block;
     opacity: 0; }
@@ -2524,7 +2524,7 @@ input, textarea {
   @media (min-width: 1200px) {
     .join-us {
       padding: 65px 0 58px;
-      font-size: 26px;
+      font-size: 28px;
       line-height: 28px; } }
   .join-us__text {
     max-width: 800px;

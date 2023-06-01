@@ -30,7 +30,9 @@
 		color: $color-black;
 
 		@media (min-width: $breakpoint-desktop-min) {
-			margin-bottom: 122px;}
+			margin-top: 30px;
+			line-height: 105px;
+		}
 	}
 
 	&__title-block {
@@ -69,9 +71,10 @@
 
 		@media (min-width: $breakpoint-desktop-min) {
 			top: 11%;
-			left: 12%;
-			width: 57%;
-			height: 97%;}
+			left: -34%;
+			width: 102%;
+			height: 104%;
+		}
 	}
 
 	&__img {

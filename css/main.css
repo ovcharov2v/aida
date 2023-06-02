@@ -2924,7 +2924,6 @@ input, textarea {
     @media (min-width: 1200px) {
       .technology-block--type4 .technology-block__col-text {
         display: block;
-        padding-top: 93px;
         margin-bottom: 0; } }
   .technology-block--type7 .technology-block__col-text {
     margin-bottom: 40px; }
@@ -3262,6 +3261,11 @@ input, textarea {
   @media (min-width: 1200px) {
     .recipes-grid--cols-2 .recipes-grid__elem:not(:last-child) {
       margin-bottom: 12px; } }
+  @media (min-width: 1200px) {
+    .recipes-grid--cols-3 .recipes-grid__elem:last-child {
+      -ms-grid-column: 2;
+      -ms-grid-column-span: 1;
+      grid-column: 2/3; } }
 
 .recipe-features {
   display: -webkit-box;

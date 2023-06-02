@@ -1364,22 +1364,24 @@ document.addEventListener('DOMContentLoaded', function () {
     var _mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
     // Desktop
     _mm.add('(min-width: 1200px)', function () {
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(3n-1)'], {
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(3n-1)', '.recipes-grid__elem:last-child'], {
         y: -60
       }, {
-        y: 60,
+        y: 0,
         scrollTrigger: {
           trigger: '.recipes-grid__elem:nth-child(3n-1)',
+          end: 'top -300%',
           scrub: 1.2
         }
       });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(3n)', '.recipes-grid__elem:nth-child(3n-2)'], {
-        y: 60
+      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:not(:last-child):nth-child(3n)', '.recipes-grid__elem:not(:last-child):nth-child(3n-2)'], {
+        y: 220
       }, {
-        y: -60,
+        y: 100,
         scrollTrigger: {
           trigger: '.recipes-grid__elem:nth-child(3n)',
-          scrub: 1.2
+          scrub: 1.2,
+          end: 'top -300%'
         }
       });
     });
@@ -2733,35 +2735,6 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type3 .technology-block__col-img'
         }
       });
-      var _mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
-      // Desktop
-      _mm.add('(min-width: 1200px)', function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.technology-block--type3 .technology-block__img-box--n2', {
-          y: 200
-        }, {
-          y: 30,
-          scrollTrigger: {
-            trigger: '.technology-block--type3 .technology-block__img-box--n2',
-            scrub: 1.7
-            //start: "top 110%",
-            //markers: true,
-          }
-        });
-      });
-      // Tablet-mobile
-      _mm.add('(max-width: 1199px)', function () {
-        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.technology-block--type3 .technology-block__img-box--n2', {
-          y: 140
-        }, {
-          y: 70,
-          scrollTrigger: {
-            trigger: '.technology-block--type3 .technology-block__img-box--n2',
-            scrub: 1.7
-            //start: "top 110%",
-            //markers: true,
-          }
-        });
-      });
     }
 
     // Type 4
@@ -2800,9 +2773,9 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type4 .technology-block__img-box--n2'
         }
       });
-      var _mm2 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+      var _mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
       // Desktop
-      _mm2.add('(min-width: 1200px)', function () {
+      _mm.add('(min-width: 1200px)', function () {
         gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img-box--n2', {
           y: 0,
           scrollTrigger: {
@@ -2812,7 +2785,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
       // Tablet-mobile
-      _mm2.add('(max-width: 1199px)', function () {
+      _mm.add('(max-width: 1199px)', function () {
         gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type4 .technology-block__img-box--n2', {
           y: 0,
           scrollTrigger: {
@@ -3001,9 +2974,9 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type9 .technology-block__text'
         }
       });
-      var _mm3 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+      var _mm2 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
       // Desktop
-      _mm3.add('(min-width: 1200px)', function () {
+      _mm2.add('(min-width: 1200px)', function () {
         gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n1', {
           y: 200,
           duration: 1,
@@ -3024,7 +2997,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
       // Tablet-mobile
-      _mm3.add('(max-width: 1199px)', function () {
+      _mm2.add('(max-width: 1199px)', function () {
         gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type9 .technology-block__img--n1', {
           y: -60,
           duration: 1,
@@ -3081,9 +3054,9 @@ document.addEventListener('DOMContentLoaded', function () {
           trigger: '.technology-block--type10 .technology-block__text'
         }
       });
-      var _mm4 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
+      var _mm3 = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
       // Desktop
-      _mm4.add('(min-width: 1200px)', function () {
+      _mm3.add('(min-width: 1200px)', function () {
         gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img-box--n1', {
           y: 30,
           scrollTrigger: {
@@ -3094,7 +3067,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
       });
       // Tablet-mobile
-      _mm4.add('(max-width: 1199px)', function () {
+      _mm3.add('(max-width: 1199px)', function () {
         gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to('.technology-block--type10 .technology-block__img-box--n1', {
           y: 20,
           scrollTrigger: {

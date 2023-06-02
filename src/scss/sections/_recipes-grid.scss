@@ -32,13 +32,13 @@
 
 		@media (min-width: $breakpoint-tablet-min) {
 			grid-template: auto / repeat(2, 1fr);
-			grid-gap: 19px 19px;
+			grid-gap: 30px 19px;
 		}
 
 		@media (min-width: $breakpoint-desktop-min) {
 			padding-top: 37px;
 			grid-template: auto / repeat(3, 1fr);
-			grid-gap: 19px 19px;
+			grid-gap: 82px 40px;
 		}
 	}
 

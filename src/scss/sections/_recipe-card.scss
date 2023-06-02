@@ -1,5 +1,6 @@
 .recipe-card {
-	display: block;
+	display: flex;
+	flex-direction: column-reverse;
 	background-color: #FAFAFA;
 
 	&__img-box {

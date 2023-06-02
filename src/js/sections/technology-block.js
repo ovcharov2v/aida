@@ -151,32 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
 					trigger: '.technology-block--type3 .technology-block__col-img'
 				}
 			})
-
-			const mm = gsap.matchMedia()
-			// Desktop
-			mm.add('(min-width: 1200px)', () => {
-				gsap.fromTo('.technology-block--type3 .technology-block__img-box--n2', {y: 200}, {
-					y: 30,
-					scrollTrigger: {
-						trigger: '.technology-block--type3 .technology-block__img-box--n2',
-						scrub: 1.7,
-						//start: "top 110%",
-						//markers: true,
-					}
-				})
-			})
-			// Tablet-mobile
-			mm.add('(max-width: 1199px)', () => {
-				gsap.fromTo('.technology-block--type3 .technology-block__img-box--n2', {y: 140}, {
-					y: 70,
-					scrollTrigger: {
-						trigger: '.technology-block--type3 .technology-block__img-box--n2',
-						scrub: 1.7,
-						//start: "top 110%",
-						//markers: true,
-					}
-				})
-			})
 		}
 
 		// Type 4

@@ -105,22 +105,24 @@ document.addEventListener('DOMContentLoaded', () => {
 		const mm = gsap.matchMedia()
 		// Desktop
 		mm.add('(min-width: 1200px)', () => {
-			gsap.fromTo(['.recipes-grid__elem:nth-child(3n-1)'], {
+			gsap.fromTo(['.recipes-grid__elem:nth-child(3n-1)', '.recipes-grid__elem:last-child'], {
 				y: -60
 			}, {
-				y: 60,
+				y: 0,
 				scrollTrigger: {
 					trigger: '.recipes-grid__elem:nth-child(3n-1)',
+					end: 'top -300%',
 					scrub: 1.2
 				}
 			})
-			gsap.fromTo(['.recipes-grid__elem:nth-child(3n)', '.recipes-grid__elem:nth-child(3n-2)'], {
-				y: 60
+			gsap.fromTo(['.recipes-grid__elem:not(:last-child):nth-child(3n)', '.recipes-grid__elem:not(:last-child):nth-child(3n-2)'], {
+				y: 220
 			}, {
-				y: -60,
+				y: 100,
 				scrollTrigger: {
 					trigger: '.recipes-grid__elem:nth-child(3n)',
-					scrub: 1.2
+					scrub: 1.2,
+					end: 'top -300%',
 				}
 			})
 		})

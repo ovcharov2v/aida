@@ -1364,26 +1364,56 @@ document.addEventListener('DOMContentLoaded', function () {
     var _mm = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].matchMedia();
     // Desktop
     _mm.add('(min-width: 1200px)', function () {
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(3n-1)', '.recipes-grid__elem:last-child'], {
-        y: -60
-      }, {
-        y: 0,
-        scrollTrigger: {
-          trigger: '.recipes-grid__elem:nth-child(3n-1)',
-          end: 'top -300%',
-          scrub: 1.2
-        }
-      });
-      gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:not(:last-child):nth-child(3n)', '.recipes-grid__elem:not(:last-child):nth-child(3n-2)'], {
-        y: 220
-      }, {
-        y: 100,
-        scrollTrigger: {
-          trigger: '.recipes-grid__elem:nth-child(3n)',
-          scrub: 1.2,
-          end: 'top -300%'
-        }
-      });
+      if (target.classList.contains('recipes-grid--products')) {
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo('.recipes-grid--cols-3', {
+          y: 200
+        }, {
+          scrollTrigger: {
+            trigger: '.recipes-grid--cols-3',
+            scrub: 1.5,
+            // markers: true,
+            toggleActions: "restart none none none"
+          },
+          y: 0
+        });
+        gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(['.recipes-grid__elem:nth-child(3n-1)', '.recipes-grid__elem:last-child'], {
+          y: 200
+        }, {
+          scrollTrigger: {
+            trigger: '.recipes-grid__elem:nth-child(3n-1)',
+            // markers: true,
+            start: 'top bottom',
+            end: '70% top',
+            scrub: 1.5,
+            toggleActions: "restart none none none"
+          },
+          y: -400
+        });
+      } else {
+        var cardList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__elem');
+        var counter = 1;
+        cardList.forEach(function (card, index) {
+          counter > 3 ? counter = 1 : false;
+          gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(card, {
+            opacity: 0,
+            y: 100
+          }, {
+            opacity: 1,
+            y: 0,
+            delay: function delay() {
+              return 0.1 * counter;
+            },
+            scrollTrigger: {
+              trigger: card,
+              start: "top bottom",
+              end: "top 70%"
+              //scrub: true,
+            }
+          });
+
+          counter++;
+        });
+      }
     });
     // Tablet
     _mm.add('(min-width: 768px) and (max-width: 1199px)', function () {
@@ -1489,20 +1519,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
-  var cardList = gsap__WEBPACK_IMPORTED_MODULE_0__["default"].utils.toArray('.recipes-grid__elem');
-  cardList.forEach(function (card) {
-    gsap__WEBPACK_IMPORTED_MODULE_0__["default"].fromTo(card, {
-      opacity: 0
-    }, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: card,
-        start: "top bottom",
-        end: "top 70%",
-        scrub: true
-      }
-    });
-  });
 });
 
 /***/ }),

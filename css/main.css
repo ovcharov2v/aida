@@ -3256,13 +3256,17 @@ input, textarea {
         -ms-grid-columns: 1fr 40px 1fr 40px 1fr;
             grid-template: auto/repeat(3, 1fr);
         grid-gap: 82px 40px; } }
+  @media (min-width: 1200px) {
+    .recipes-grid--products {
+      margin-top: -100px;
+      margin-bottom: -300px; } }
   .recipes-grid--cols-4 .recipes-grid__elem:not(:last-child) {
     margin-bottom: 13px; }
   @media (min-width: 1200px) {
     .recipes-grid--cols-2 .recipes-grid__elem:not(:last-child) {
       margin-bottom: 12px; } }
   @media (min-width: 1200px) {
-    .recipes-grid--cols-3 .recipes-grid__elem:last-child {
+    .recipes-grid--cols-3.recipes-grid--products .recipes-grid__elem:last-child {
       -ms-grid-column: 2;
       -ms-grid-column-span: 1;
       grid-column: 2/3; } }

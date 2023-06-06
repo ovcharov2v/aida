@@ -42,6 +42,13 @@
 		}
 	}
 
+	&--products {
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-top: -100px;
+			margin-bottom: -300px;
+		}
+	}
+
 	&__elem {
 		.recipes-grid--cols-4 & {
 			&:not(:last-child) {
@@ -57,7 +64,7 @@
 			}
 		}
 
-		.recipes-grid--cols-3 & {
+		.recipes-grid--cols-3.recipes-grid--products & {
 			&:last-child {
 				@media (min-width: $breakpoint-desktop-min) {
 					grid-column: 2/3;

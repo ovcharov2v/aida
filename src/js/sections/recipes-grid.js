@@ -105,26 +105,60 @@ document.addEventListener('DOMContentLoaded', () => {
 		const mm = gsap.matchMedia()
 		// Desktop
 		mm.add('(min-width: 1200px)', () => {
-			gsap.fromTo(['.recipes-grid__elem:nth-child(3n-1)', '.recipes-grid__elem:last-child'], {
-				y: -60
-			}, {
-				y: 0,
-				scrollTrigger: {
-					trigger: '.recipes-grid__elem:nth-child(3n-1)',
-					end: 'top -300%',
-					scrub: 1.2
-				}
-			})
-			gsap.fromTo(['.recipes-grid__elem:not(:last-child):nth-child(3n)', '.recipes-grid__elem:not(:last-child):nth-child(3n-2)'], {
-				y: 220
-			}, {
-				y: 100,
-				scrollTrigger: {
-					trigger: '.recipes-grid__elem:nth-child(3n)',
-					scrub: 1.2,
-					end: 'top -300%',
-				}
-			})
+			if (target.classList.contains('recipes-grid--products')) {
+				gsap.fromTo('.recipes-grid--cols-3',
+					{
+						y: 200,
+					},
+					{
+						scrollTrigger: {
+							trigger: '.recipes-grid--cols-3',
+							scrub: 1.5,
+							// markers: true,
+							toggleActions: "restart none none none"
+						},
+						y: 0,
+					}
+				)
+				gsap.fromTo(['.recipes-grid__elem:nth-child(3n-1)', '.recipes-grid__elem:last-child'],
+					{
+						y: 200,
+					},
+					{
+						scrollTrigger: {
+							trigger: '.recipes-grid__elem:nth-child(3n-1)',
+							// markers: true,
+							start: 'top bottom',
+							end: '70% top',
+							scrub: 1.5,
+							toggleActions: "restart none none none"
+						},
+						y: -400,
+					}
+				)
+			}
+			else {
+				const cardList = gsap.utils.toArray('.recipes-grid__elem')
+				let counter = 1
+				cardList.forEach((card, index) => {
+					counter > 3 ? counter = 1 : false
+					gsap.fromTo(card, {
+						opacity: 0,
+						y: 100
+					}, {
+						opacity: 1,
+						y: 0,
+						delay: () =>0.1*counter,
+						scrollTrigger: {
+							trigger: card,
+							start: "top bottom",
+							end: "top 70%",
+							//scrub: true,
+						}
+					})
+					counter ++
+				})
+			}
 		})
 		// Tablet
 		mm.add('(min-width: 768px) and (max-width: 1199px)', () => {
@@ -239,19 +273,6 @@ document.addEventListener('DOMContentLoaded', () => {
 		})
 	}
 
-	const cardList = gsap.utils.toArray('.recipes-grid__elem')
-	cardList.forEach((card) => {
-		gsap.fromTo(card, {
-			opacity: 0
-		}, {
-			opacity: 1,
-			scrollTrigger: {
-				trigger: card,
-				start: "top bottom",
-				end: "top 70%",
-				scrub: true,
-			}
-		})
-	})
+
 })
 

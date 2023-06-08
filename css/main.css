@@ -855,6 +855,8 @@ input, textarea {
       -webkit-transform: scaleX(1);
           -ms-transform: scaleX(1);
               transform: scaleX(1); }
+    .header__nav-link--active {
+      font-weight: 600; }
   .header__lang-list {
     display: -webkit-box;
     display: -ms-flexbox;

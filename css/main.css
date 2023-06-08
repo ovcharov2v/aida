@@ -822,6 +822,7 @@ input, textarea {
            -moz-column-gap: 35px;
                 column-gap: 35px; } }
   .header__nav-link {
+    position: relative;
     font-size: 16px;
     line-height: 24px;
     font-weight: 500;
@@ -831,8 +832,29 @@ input, textarea {
     @media (min-width: 1200px) {
       .header__nav-link {
         font-size: 22px; } }
-    .header__nav-link:hover {
-      color: #7D0000; }
+    .header__nav-link::after {
+      position: absolute;
+      bottom: 0;
+      left: 1px;
+      right: 0;
+      height: 0.005em;
+      background-color: currentColor;
+      -webkit-transform: scaleX(0);
+          -ms-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0 0;
+          -ms-transform-origin: 0 0;
+              transform-origin: 0 0;
+      -webkit-transition: -webkit-transform 0.2s ease;
+      transition: -webkit-transform 0.2s ease;
+      -o-transition: transform 0.2s ease;
+      transition: transform 0.2s ease;
+      transition: transform 0.2s ease, -webkit-transform 0.2s ease;
+      content: ""; }
+    .header__nav-link:hover::after {
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1); }
   .header__lang-list {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1188,6 +1210,7 @@ input, textarea {
         text-align: left; } }
 
 .market {
+  position: relative;
   display: block;
   background-color: #fff;
   border: 1px solid rgba(190, 190, 190, 0.3); }

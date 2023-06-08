@@ -23,7 +23,7 @@ block content
 				button.section-hero-main__next-btn(aria-label="Scroll next")
 					+svg("arrow-down")(class="section-hero-main__next-icon")
 				a.button.button--white.section-hero-main__link-btn(href="#") Насладись вкусом
-		video.section-hero-main__video-bg(preload='true', autoplay, loop, muted, poster="images/section-hero-main/video-cover.jpg")
+		video.section-hero-main__video-bg(preload='true', autoplay, loop, muted, poster="images/section-hero-main/video-cover.jpg", playsinline)
 			source(src='videos/intro.mp4', type='video/mp4')
 			//-source(src='videos/footer.ogv', type='video/ogv')
 			//-source(src='videos/footer.webm', type='video/webm')
@@ -105,7 +105,7 @@ block content
 	section.section-we-produce.container
 		.section-we-produce__grid
 			.section-we-produce__video-box.animated-image.animated-image--technology1.show-desktop
-				video.animated-image__img(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg")
+				video.animated-image__img(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg", playsinline)
 					source(src='videos/field.mp4', type='video/mp4')
 			.section-we-produce__content
 				h2.h2.text-semibold.text-red.section-we-produce__title
@@ -116,7 +116,7 @@ block content
 				a.button.button--gold.button--uppercase.section-we-produce__link(href="#") О технологии
 		.section-we-produce__row
 			.section-we-produce__video-box.section-we-produce__video-box--mobile.animated-image.animated-image--technology1.hide-desktop
-				video.animated-image__img(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg")
+				video.animated-image__img(preload='true', autoplay, loop, muted, poster="images/section-we-produce/video-cover.jpg", playsinline)
 					source(src='videos/field.mp4', type='video/mp4')
 			.section-we-produce__img-box.animated-image.animated-image--technology1
 				+picture("section-we-produce/img2", "section-we-produce__img animated-image__img", "jpg", "")
@@ -135,7 +135,7 @@ block content
 					.section-recipes-preview__recipe-col.section-recipes-preview__recipe-col--n1
 						a.section-recipes-preview__recipe(href="#")
 							.section-recipes-preview__video-box
-								video.section-recipes-preview__video(preload='true', autoplay, loop, muted, poster="images/section-recipes-preview/video-cover.jpg")
+								video.section-recipes-preview__video(preload='true', autoplay, loop, muted, poster="images/section-recipes-preview/video-cover.jpg", playsinline)
 									source(src='videos/pasta.mp4', type='video/mp4')
 							p.section-recipes-preview__recipe-title Цельнозерновая паста с тунцом
 						a.section-recipes-preview__recipe(href="#")

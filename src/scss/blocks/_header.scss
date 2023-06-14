@@ -15,6 +15,10 @@
 		background-color: $color-transparent !important;
 	}
 
+	&--top {
+		color: $color-black;
+	}
+
 	&--middle,
 	&--permanently-white {
 		background-color: $color-white;

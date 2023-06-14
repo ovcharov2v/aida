@@ -690,6 +690,8 @@ input, textarea {
     .header {
       position: relative !important;
       background-color: rgba(0, 0, 0, 0) !important; } }
+  .header--top {
+    color: #060606; }
   .header--middle, .header--permanently-white {
     background-color: #fff;
     color: #060606; }
@@ -1485,21 +1487,12 @@ input, textarea {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
+  color: #060606;
   min-height: 100vh;
   overflow: hidden; }
   @media (min-width: 1200px) {
     .section-hero-main {
       padding-bottom: 129px; } }
-  .section-hero-main::before {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-    content: ""; }
   .section-hero-main__container {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;

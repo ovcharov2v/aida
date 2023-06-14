@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	document.addEventListener('loader-animation-complete', () => {
 		gsap.timeline({})
-			.to('.section-hero-main__link-btn', {
+			/*.to('.section-hero-main__link-btn', {
 				opacity: 1,
 				duration: .7,
 				delay: 2,
-			})
+			})*/
 			.to('.section-hero-main__title-block',
 				{
 					y: 0,

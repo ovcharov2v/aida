@@ -111,4 +111,14 @@
 			max-width: 560px;
 		}
 	}
+
+	&__labels {
+		opacity: 0;
+		transform: translateX(100px);
+		margin-top: 36px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			margin-top: 50px;
+		}
+	}
 }

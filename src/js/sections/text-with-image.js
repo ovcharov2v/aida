@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	if (!target) return
 
 
-	gsap.to(['.text-with-image__img', '.text-with-image__title', '.text-with-image__text'], {
+	gsap.to(['.text-with-image__img', '.text-with-image__title', '.text-with-image__text', '.text-with-image__labels'], {
 		scrollTrigger: {
 			trigger: target
 		},

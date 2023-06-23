@@ -1,0 +1,30 @@
+.label-list {
+	display: flex;
+	gap: 11px;
+
+	@media (min-width: $breakpoint-desktop-min) {
+		gap: 30px;
+	}
+
+	&--mobile-center {
+		justify-content: center;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			justify-content: flex-start;
+		}
+	}
+
+	&__elem {
+		flex-shrink: 0;
+		width: 43px;
+
+		@media (min-width: $breakpoint-desktop-min) {
+			width: 102px;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+	}
+}

@@ -22,7 +22,13 @@ block content
 				|
 				|
 				| Мука цельнозерновая из твёрдых сортов пшеницы, вода питьевая
-			a.button.button--gold.button--uppercase.product-features__button(href="#") Купить
+			.product-features__btn-row
+				a.button.button--gold.button--uppercase.product-features__button(href="#") Купить
+				ul.label-list
+					li.label-list__elem
+						+picture("labels/label2", "label-list__img")
+					li.label-list__elem
+						+picture("labels/label1", "label-list__img")
 		.product-features__col.product-features__col--img.product-features__col--gray.product-features__col--border-right
 			+picture("product-features/img2", "product-features__img", "jpg", "")
 		.product-features__col.product-features__col--data

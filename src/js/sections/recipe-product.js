@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	const target = document.querySelector('.recipe-product')
 	if (!target) return
 
-	gsap.to(['.recipe-product__title', '.recipe-product__button', '.recipe-product__img'], {
+	gsap.to(['.recipe-product__title', '.recipe-product__button', '.recipe-product__img', '.recipe-product__labels'], {
 			opacity: 1,
 			y:0,
 			stagger: .2,

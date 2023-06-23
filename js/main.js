@@ -1236,7 +1236,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   var target = document.querySelector('.recipe-product');
   if (!target) return;
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.recipe-product__title', '.recipe-product__button', '.recipe-product__img'], {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.recipe-product__title', '.recipe-product__button', '.recipe-product__img', '.recipe-product__labels'], {
     opacity: 1,
     y: 0,
     stagger: .2,
@@ -3144,7 +3144,7 @@ __webpack_require__.r(__webpack_exports__);
 document.addEventListener('DOMContentLoaded', function () {
   var target = document.querySelector('.text-with-image');
   if (!target) return;
-  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.text-with-image__img', '.text-with-image__title', '.text-with-image__text'], {
+  gsap__WEBPACK_IMPORTED_MODULE_0__["default"].to(['.text-with-image__img', '.text-with-image__title', '.text-with-image__text', '.text-with-image__labels'], {
     scrollTrigger: {
       trigger: target
     },

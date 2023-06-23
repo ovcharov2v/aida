@@ -1473,6 +1473,34 @@ input, textarea {
           -ms-transform: rotate(-90deg);
               transform: rotate(-90deg); }
 
+.label-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 11px; }
+  @media (min-width: 1200px) {
+    .label-list {
+      gap: 30px; } }
+  .label-list--mobile-center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (min-width: 1200px) {
+      .label-list--mobile-center {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start; } }
+  .label-list__elem {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    width: 43px; }
+    @media (min-width: 1200px) {
+      .label-list__elem {
+        width: 102px; } }
+  .label-list__img {
+    display: block;
+    width: 100%; }
+
 .section-hero-main {
   position: relative;
   z-index: 0;
@@ -3106,6 +3134,15 @@ input, textarea {
               transform: translateX(100px); }
     .text-with-image--page-news .text-with-image__text {
       max-width: 560px; }
+  .text-with-image__labels {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+        -ms-transform: translateX(100px);
+            transform: translateX(100px);
+    margin-top: 36px; }
+    @media (min-width: 1200px) {
+      .text-with-image__labels {
+        margin-top: 50px; } }
 
 .recipes-list {
   overflow: hidden; }
@@ -3934,6 +3971,11 @@ input, textarea {
         grid-column: 2/3; } }
   .recipe-product__img {
     max-width: 100%; }
+  .recipe-product__labels {
+    margin-top: 30px; }
+    @media (min-width: 1200px) {
+      .recipe-product__labels {
+        margin-top: 50px; } }
 
 .recipe-other {
   padding-top: 84px;
@@ -4278,11 +4320,9 @@ input, textarea {
         margin-bottom: 23px;
         font-size: 18px; } }
   .product-features__button {
-    margin-top: 33px;
     min-width: 100px; }
     @media (min-width: 1200px) {
       .product-features__button {
-        margin-top: 50px;
         width: 100%;
         max-width: 240px; } }
   .product-features__sub-title {
@@ -4376,6 +4416,20 @@ input, textarea {
     @media (min-width: 1200px) {
       .product-features__line {
         margin: 30px 0 60px; } }
+  .product-features__btn-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 33px; }
+    @media (min-width: 1200px) {
+      .product-features__btn-row {
+        margin-top: 50px; } }
 
 .products-sample {
   padding-top: 34px;

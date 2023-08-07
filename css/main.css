@@ -1520,9 +1520,9 @@ input, textarea {
   min-height: 100vh;
   height: var(--app-height);
   overflow: hidden;
-  -webkit-transition: height 0.2s ease;
-  -o-transition: height 0.2s ease;
-  transition: height 0.2s ease; }
+  -webkit-transition: height 1s linear;
+  -o-transition: height 1s linear;
+  transition: height 1s linear; }
   @media (min-width: 1200px) {
     .section-hero-main {
       padding-bottom: 129px; } }

@@ -323,7 +323,8 @@ body {
   line-height: 20px;
   font-weight: 500;
   color: #8A8A8A;
-  -webkit-text-size-adjust: none; }
+  -webkit-text-size-adjust: none;
+  -webkit-backface-visibility: hidden; }
   @media (min-width: 1200px) {
     body {
       font-size: 28px;
@@ -1517,6 +1518,7 @@ input, textarea {
   background-repeat: no-repeat;
   color: #060606;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
   overflow: hidden; }
   @media (min-width: 1200px) {
     .section-hero-main {

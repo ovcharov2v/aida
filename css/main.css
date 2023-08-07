@@ -1518,8 +1518,11 @@ input, textarea {
   background-repeat: no-repeat;
   color: #060606;
   min-height: 100vh;
-  min-height: var(--app-height);
-  overflow: hidden; }
+  height: var(--app-height);
+  overflow: hidden;
+  -webkit-transition: height 0.2s ease;
+  -o-transition: height 0.2s ease;
+  transition: height 0.2s ease; }
   @media (min-width: 1200px) {
     .section-hero-main {
       padding-bottom: 129px; } }

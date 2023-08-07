@@ -1,5 +1,6 @@
 import './vendor';
 import './helpers/check-webp-support';
+import './helpers/_100vh';
 
 import './sections/loader';
 import './sections/header';

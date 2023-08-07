@@ -12,6 +12,7 @@ body {
 	font-weight: 500;
 	color: $color-gray;
 	-webkit-text-size-adjust: none;
+	-webkit-backface-visibility: hidden;
 
 	@media (min-width: $breakpoint-desktop-min) {
 		font-size: 28px;

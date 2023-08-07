@@ -9,6 +9,7 @@
 	background-repeat: no-repeat;
 	color: $color-black;
 	min-height: 100vh;
+	max-height: var(--app-height);
 	overflow: hidden;
 
 	@media (min-width: $breakpoint-desktop-min) {
